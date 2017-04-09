@@ -28,11 +28,19 @@ class Player extends FlxSprite
             .add(Idle, Jump, Conditions.isJumping)
             .add(Idle, Crouch, Conditions.isCrouching)
             .add(Idle, Fall, Conditions.isFalling)
+            .add(Idle, Run, Conditions.isRunning)
 
             .add(Walk, Idle, Conditions.isNotWalking)
             .add(Walk, Jump, Conditions.isJumping)
             .add(Walk, Push, Conditions.isPushing)
             .add(Walk, Fall, Conditions.isFalling)
+            .add(Walk, Run, Conditions.isRunning)
+
+            .add(Run, Idle, Conditions.runToIdle)
+            .add(Run, Walk, Conditions.runToWalk)
+            .add(Run, Push, Conditions.isPushing)
+            .add(Run, Fall, Conditions.isFalling)
+            .add(Run, SuperJump, Conditions.isJumping)
 
             .add(Crouch, SuperJump, Conditions.isJumping)
             .add(Crouch, Reco, Conditions.isNotCrouching)
@@ -60,6 +68,7 @@ class Player extends FlxSprite
         animation.add("push", [for (i in 30...38) i], 6, true);
         animation.add("idle", [for (i in 0...10) i], 6, true);
         animation.add("walk", [for (i in 10...20) i], 12, true);
+        animation.add("run", [for (i in 10...20) i], 24, true);
         animation.add("jump", [for (i in 20...25) i], 24, false);
         animation.add("fall", [for (i in 0...3) 24-i], 6, false);
         animation.add("reco", [for (i in 25...30) i], 24, false);

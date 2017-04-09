@@ -11,8 +11,20 @@ class Conditions
     public static function isWalking(owner:Player):Bool {
         return FlxG.keys.anyPressed([LEFT, RIGHT]);
     }
+    public static function isRunning(owner:Player):Bool {
+        return FlxG.keys.anyPressed([SHIFT]);
+    }
+    public static function isNotRunning(owner:Player):Bool {
+        return !isRunning(owner);
+    }
     public static function isNotWalking(owner:Player):Bool {
         return !isWalking(owner);
+    }
+    public static function runToIdle(owner:Player):Bool {
+        return isNotWalking(owner) && isNotRunning(owner);
+    }
+    public static function runToWalk(owner:Player):Bool {
+        return isWalking(owner) && isNotRunning(owner);
     }
     public static function isCrouching(owner:Player):Bool {
         return FlxG.keys.anyPressed([DOWN]);

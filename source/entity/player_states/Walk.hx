@@ -14,7 +14,5 @@ class Walk extends FlxFSMState<Player>
     
     override public function update(elapsed:Float, owner:Player, fsm:FlxFSM<Player>):Void 
     {
-        if (owner.speedFactor < 1.3)
-            owner.speedFactor += 0.01;
     }
 }
