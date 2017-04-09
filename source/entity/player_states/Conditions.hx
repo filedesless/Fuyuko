@@ -12,7 +12,7 @@ class Conditions
         return FlxG.keys.anyPressed([LEFT, RIGHT]);
     }
     public static function isRunning(owner:Player):Bool {
-        return FlxG.keys.anyPressed([SHIFT]);
+        return FlxG.keys.anyPressed([SHIFT]) && isWalking(owner);
     }
     public static function isNotRunning(owner:Player):Bool {
         return !isRunning(owner);
@@ -21,7 +21,7 @@ class Conditions
         return !isWalking(owner);
     }
     public static function runToIdle(owner:Player):Bool {
-        return isNotWalking(owner) && isNotRunning(owner);
+        return isNotWalking(owner) || isNotRunning(owner);
     }
     public static function runToWalk(owner:Player):Bool {
         return isWalking(owner) && isNotRunning(owner);

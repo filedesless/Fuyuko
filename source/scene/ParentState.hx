@@ -25,6 +25,7 @@ class ParentState extends FlxState {
     private var _player:Player;
     public var player_start:FlxPoint = new FlxPoint(128, 128);
     var _level:FlxTilemap;
+    var _lvlConfig:String;
     var _rect:FlxRect = new FlxRect();
     var _stalagmites:FlxTypedGroup<Stalagmite> = new FlxTypedGroup<Stalagmite>();
     var _lightCubes:FlxTypedGroup<LightCube> = new FlxTypedGroup<LightCube>();
@@ -40,8 +41,6 @@ class ParentState extends FlxState {
         FlxG.watch.add(FlxG, "worldBounds");
         FlxG.mouse.visible = false;
         FlxG.watch.add(this, "subState");
-
-        // bgColor = FlxColor.GRAY;
 
         loadEvents();
         setCamera();
@@ -86,21 +85,38 @@ class ParentState extends FlxState {
             _level = new FlxTilemap();
             _level.loadMapFromCSV(tileMap, tileSet, tileWidth, tileHeight);
             
+            _player = new Player();
+
             add(_level);
-
-            _player = new Player(player_start.x, player_start.y);
-
-            _entities.add(_player);
 
             FlxG.worldBounds.setSize(_level.width, _level.width);
         }
     
     function loadEvents() {
+        var json:scene.levels.EntityList = haxe.Json.parse(_lvlConfig);
+        for (obj in json.objects)
+        {
+            switch (obj.name) {
+                case "platform":
+                    _platforms.add(new Platform(obj.x, obj.y, _player));
+                case "stalagmite":
+                    _stalagmites.add(new Stalagmite(obj.x, obj.y));
+                case "stalagtite":
+                    _stalagtites_ice.add(new Stalagtite_ice(obj.x, obj.y, _player));
+                case "spawn":
+                    player_start.set(obj.x, obj.y);
+                case "moveable_blox":
+                    _lightCubes.add(new LightCube(obj.x, obj.y));
+            }
+        }
+
         _entities.add(_stalagmites);
         _entities.add(_lightCubes);
         _entities.add(_stalagtites_ice);
         _entities.add(_iceCubes);
         _entities.add(_platforms);
+        _player.setPosition(player_start.x, player_start.y);
+        _entities.add(_player);
         add(_entities);
     }
 

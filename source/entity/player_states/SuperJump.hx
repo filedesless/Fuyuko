@@ -14,7 +14,7 @@ class SuperJump extends FlxFSMState<Player>
         owner.animation.play("jump");
         count = 0;
         jumped = false;
-        owner.speedFactor = 0;
+        owner.speedFactor = 0.75;
     }
     
     override public function update(elapsed:Float, owner:Player, fsm:FlxFSM<Player>):Void 

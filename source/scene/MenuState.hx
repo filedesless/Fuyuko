@@ -6,7 +6,7 @@ import flixel.FlxSprite;
 import flixel.util.FlxColor;
 import flixel.util.FlxAxes;
 
-import scene.levels.LvlDemo;
+import scene.levels.Lvl1;
 
 import felix.FelixMagicButton;
 
@@ -33,8 +33,8 @@ class MenuState extends FlxState
         FlxG.watch.add(FlxG.save, "data");
 
         var bg:FlxSprite = new FlxSprite();
-        bg.loadGraphic(AssetPaths.sakuratree__png, true, 500, 281);
-        bg.animation.add("def", [for (i in 0...25) i], 10, true);
+        bg.loadGraphic(AssetPaths.cherry_blossom__png, true, 480, 180);
+        bg.animation.add("def", [for (i in 0...90) i], 24, true);
         bg.animation.play("def");
         bg.setGraphicSize(FlxG.width, FlxG.height);
         bg.updateHitbox();
@@ -46,7 +46,7 @@ class MenuState extends FlxState
         #if flash
         felix.FelixSound.playBackground(AssetPaths.menu__mp3);
         #else
-        felix.FelixSound.playBackground(AssetPaths.menu__ogg);
+        felix.FelixSound.playBackground(AssetPaths.forest__ogg);
         #end
 
         var logo = new FlxSprite(0, 0, AssetPaths.logo_transparent__png);
@@ -111,7 +111,7 @@ class MenuState extends FlxState
     }
 
     private function start_lvl1():Void {
-        FlxG.switchState(new LvlDemo());
+        FlxG.switchState(new Lvl1());
     }
 
     private function quitter():Void {
