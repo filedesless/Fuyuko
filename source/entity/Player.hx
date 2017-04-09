@@ -55,6 +55,7 @@ class Player extends FlxSprite
             
             .add(Push, Idle, Conditions.isNotPushing)
             .add(Push, Jump, Conditions.isJumping)
+            .add(Push, Fall, Conditions.isFalling)
 
             .start(Idle);
 

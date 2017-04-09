@@ -6,14 +6,16 @@ class Run extends FlxFSMState<Player>
 {
     override public function enter(owner:Player, fsm:FlxFSM<Player>):Void 
     {
-        owner.animation.play("run");
+        owner.animation.play("reco");
         owner.speedFactor = 1.2;
     }
     
     override public function update(elapsed:Float, owner:Player, fsm:FlxFSM<Player>):Void 
     {
+        if (owner.animation.finished && owner.animation.curAnim.name != "run")
+            owner.animation.play("run");
         Player_Sounds.playWalkSound();
-        if (owner.speedFactor < 1.5)
+        if (owner.speedFactor < 1.75)
             owner.speedFactor += 0.01;
     }
 }
