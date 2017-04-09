@@ -39,7 +39,7 @@ class FelixSave {
             if (val != null && val <= 100 && val >= 0)
                 return ambient_music = val; // calls setter
             else // shit, choke
-                return 100;
+                return ambient_music = 50;
         } else // cache hit
             return ambient_music;
     }
@@ -69,7 +69,7 @@ class FelixSave {
             if (val != null && val <= 100 && val >= 0)
                 return background_music = val;
             else // shit, choke
-                return 100;
+                return background_music = 50;
         } else // cache hit
             return background_music;
     }
@@ -99,7 +99,7 @@ class FelixSave {
             if (val != null && val <= 100 && val >= 0)
                 return sound_effects = val;
             else // shit, choke
-                return 100;
+                return sound_effects = 50;
         } else // cache hit
             return sound_effects;
     }
@@ -115,6 +115,36 @@ class FelixSave {
             sound_effects = newValue;
         }
         return sound_effects; // calls getter
+    }
+
+    /** Volume of the UI sound effect, from 0 to 100 **/
+    @:isVar static var ui_sound(get, set):Float = -1;
+    /**
+        Gets the sound effects volume from save
+        @return     A float, should be between 0 and (default) 100
+    **/
+    public static function get_ui_sound():Float {
+        if (ui_sound == -1) { // mem cache miss, fetch from disk
+            var val:Null<Float> = FlxG.save.data.ui_sound;
+            if (val != null && val <= 100 && val >= 0)
+                return ui_sound = val;
+            else // shit, choke
+                return ui_sound = 50;
+        } else // cache hit
+            return ui_sound;
+    }
+    /**
+        Saves the given sound effects volume to disk
+        @param  newValue    A float between 0 and 100
+        @return             The actual value of the sound effects's volume
+    **/
+    public static function set_ui_sound(newValue:Float):Float {
+        if (newValue <= 100 && newValue >= 0) {
+            FlxG.save.data.ui_sound = newValue;
+            FlxG.save.flush();
+            ui_sound = newValue;
+        }
+        return ui_sound; // calls getter
     }
 
 }

@@ -71,7 +71,7 @@ class MenuState extends FlxState
         btnOptions = new FelixMagicButton(
             null,
             FlxG.camera.height * 5 / 10,
-            this, "Options", options
+            this, "Options", clickOptions
         );
 
         btnCinematique = new FelixMagicButton(
@@ -110,7 +110,12 @@ class MenuState extends FlxState
         FlxG.camera.fade(FlxColor.BLACK, 1, false, start_lvl1);
     }
 
+    private function clickOptions():Void {
+        FlxG.camera.fade(FlxColor.BLACK, 1, false, options);
+    }
+
     private function start_lvl1():Void {
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 1, true);
         FlxG.switchState(new Lvl1());
     }
 
@@ -119,6 +124,7 @@ class MenuState extends FlxState
     }
 
     private function options():Void {
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 1, true);
         openSubState(new OptionSubState());
     }
 }

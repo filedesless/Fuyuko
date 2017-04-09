@@ -3,7 +3,6 @@ package scene;
 import flixel.FlxCamera;
 import flixel.FlxSubState;
 import flixel.FlxG;
-import flixel.util.FlxAxes;
 import flixel.util.FlxColor;
 
 import addons.FlxSlider;
@@ -14,11 +13,16 @@ import felix.FelixSound;
 class OptionSubState extends FlxSubState {
     var _backgroundVolume:Int = 100;
     var _backgroundSlider:FlxSlider;
+
     var _sfxVolume:Int = 100;
     var _sfxSlider:FlxSlider;
+
     var _ambientVolume:Int = 100;
     var _ambientSlider:FlxSlider;
-    var _camera:FlxCamera;
+
+    var _uiVolume:Int = 100;
+    var _uiSlider:FlxSlider;
+
     var i:Int = 0;
 
     override public function new(bgColor = 0xB0000000) {
@@ -27,13 +31,11 @@ class OptionSubState extends FlxSubState {
 
     override public function create():Void {
         super.create();
-        
-        _camera = FlxG.camera.copyFrom(FlxG.camera);
-        FlxG.cameras.reset();
 
         _backgroundVolume = Math.floor(FelixSound.getBackgroundVolume());
         _sfxVolume = Math.floor(FelixSound.getSfxVolume());
         _ambientVolume = Math.floor(FelixSound.getAmbientVolume());
+        _uiVolume = Math.floor(FelixSound.getUiVolume());
 
         _backgroundSlider = new FlxSlider(
             this, "_backgroundVolume",
@@ -59,9 +61,17 @@ class OptionSubState extends FlxSubState {
             FlxColor.WHITE, FlxColor.BLUE);
         _ambientSlider.setTexts("Volume ambiant");
 
+        _uiSlider = new FlxSlider(
+            this, "_uiVolume",
+            FlxG.camera.width / 2 - 150,
+            FlxG.camera.height / 2 - 15 + 45*3,
+            0, 100, 300, 30, 5,
+            FlxColor.WHITE, FlxColor.BLUE);
+        _uiSlider.setTexts("Volume de l'interface");
+
         var btn:FelixMagicButton = new FelixMagicButton(
             null, FlxG.camera.height * 5 / 6, 
-            this, "Retour", exit
+            this, "Retour", click_exit
         );
 
         add(new FelixMagicButton(
@@ -75,24 +85,30 @@ class OptionSubState extends FlxSubState {
         add(_backgroundSlider);
         add(_sfxSlider);
         add(_ambientSlider);
+        add(_uiSlider);
     }
     
     override public function update(elapsed:Float):Void {
         switch (i++) {
-            case 20: FelixSound.setBackgroundVolume(_backgroundVolume);
-            case 40: FelixSound.setAmbientVolume(_ambientVolume);
-            case 60: FelixSound.setSfxVolume(_sfxVolume); i = 0;
+            case 15: FelixSound.setBackgroundVolume(_backgroundVolume);
+            case 30: FelixSound.setAmbientVolume(_ambientVolume);
+            case 45: FelixSound.setSfxVolume(_sfxVolume);
+            case 60: FelixSound.setUiVolume(_uiVolume); i = 0;
         }
 
         if (FlxG.keys.anyJustPressed([ESCAPE])) {
-            exit();
+            click_exit();
         }
 
         super.update(elapsed);
     }
 
+    function click_exit():Void {
+        FlxG.camera.fade(FlxColor.BLACK, 1, false, exit);
+    }
+
     function exit():Void {
-        FlxG.camera = FlxG.camera.copyFrom(_camera);
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 1, true);
         close();
     }
 }

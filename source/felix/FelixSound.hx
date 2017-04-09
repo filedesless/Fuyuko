@@ -95,4 +95,31 @@ class FelixSound {
     static public function isSfxPlaying():Bool {
         return sfx.playing;
     }
+
+    static private var ui:FlxSound = new FlxSound();
+    /**
+        Plays the given sound as the sfx music, taking volume from saved settings
+
+        @param  path    String pointing to the music file.
+    **/
+    static public function payUi(path:String):Void {
+        playGeneric(path, ui, getUiVolume(), false);
+    }
+    /**
+        Get the volume from the sound effects music channel
+
+        @return     A value from 0 to 100
+    **/
+    static public function getUiVolume():Float {
+        return felix.FelixSave.get_ui_sound();
+    }
+    /**
+        Set the sound effects volume of the music channel
+
+        @param  newValue    A value from 0 to 100
+    **/
+    static public function setUiVolume(newValue:Float):Void {
+        felix.FelixSave.set_ui_sound(newValue);
+        ui.volume = 0.01 * felix.FelixSave.get_ui_sound();
+    }
 }
