@@ -34,6 +34,7 @@
 	<assets path="assets/sprites" include="*.png" />
 	<!--<assets path="assets/sounds" include="*.mp3" if="flash" />-->
 	<assets path="assets/sounds" include="*.ogg" unless="flash" />
+	<assets path="assets/sounds/walk" include="*.ogg" unless="flash" />
 	<assets path="assets/sounds" include="*.wav" />
 	<assets path="assets/tilemap" include="*.csv" />
 	<assets path="assets/tileset" include="*.png" />

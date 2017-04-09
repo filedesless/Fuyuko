@@ -92,4 +92,7 @@ class FelixSound {
         felix.FelixSave.set_sound_effects(newValue);
         sfx.volume = 0.01 * felix.FelixSave.get_sound_effects();
     }
+    static public function isSfxPlaying():Bool {
+        return sfx.playing;
+    }
 }

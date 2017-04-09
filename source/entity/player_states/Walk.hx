@@ -14,5 +14,6 @@ class Walk extends FlxFSMState<Player>
     
     override public function update(elapsed:Float, owner:Player, fsm:FlxFSM<Player>):Void 
     {
+        Player_Sounds.playWalkSound();
     }
 }

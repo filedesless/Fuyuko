@@ -12,6 +12,7 @@ class Run extends FlxFSMState<Player>
     
     override public function update(elapsed:Float, owner:Player, fsm:FlxFSM<Player>):Void 
     {
+        Player_Sounds.playWalkSound();
         if (owner.speedFactor < 1.5)
             owner.speedFactor += 0.01;
     }
