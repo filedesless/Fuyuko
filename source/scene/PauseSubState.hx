@@ -1,5 +1,6 @@
 package scene;
 
+import flixel.util.FlxColor;
 import flixel.FlxCamera.FlxCameraFollowStyle;
 import flixel.math.FlxRect;
 import flixel.FlxSubState;
@@ -53,23 +54,30 @@ class PauseSubState extends FlxSubState {
         if (FlxG.keys.anyJustPressed([ESCAPE, P])) {
             exit();
         }
-        FlxG.camera.follow(_player, FlxCameraFollowStyle.PLATFORMER);
-        FlxG.camera.setScrollBoundsRect(_rect.x, _rect.y, _rect.width, _rect.height);
 
         super.update(elapsed);
     }
 
-    private function exit():Void {
+    function exit():Void {
         FlxG.mouse.visible = false;
         close();
     }
 
-    // TODO: fix black background
-    private function options():Void {
+    function click_options():Void {
+        FlxG.camera.fade(FlxColor.BLACK, 1, false, options);
+    }
+
+    function options():Void {
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 1, true);
         openSubState(new OptionSubState());
     }
 
-    private function quitter():Void {
+    function click_quitter():Void {
+        FlxG.camera.fade(FlxColor.BLACK, 1, false, quitter);
+    }
+
+    function quitter():Void {
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 1, true);
         FlxG.switchState(new MenuState());
     }
 }
