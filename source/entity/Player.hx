@@ -21,7 +21,7 @@ class Player extends FlxSprite
 
         health = 100;
         solid = true;
-        
+
         fsm = new FlxFSM<Player>(this);
         fsm.transitions
             .add(Idle, Walk, Conditions.isWalking)
@@ -63,7 +63,7 @@ class Player extends FlxSprite
         drag.x = 100;
 
         loadGraphic(AssetPaths.monstercat_char__png, true, 128, 256);
-        scale.set(0.5, 0.5);
+        scale.set(0.45, 0.45);
         updateHitbox();
 
         animation.add("push", [for (i in 30...38) i], 6, true);
