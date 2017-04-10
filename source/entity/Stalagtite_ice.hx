@@ -15,7 +15,7 @@ class Stalagtite_ice extends FlxSprite {
 
     public override function new(X:Float, Y:Float, player:Player) {
         super(X, Y);
-        loadGraphic(AssetPaths.stalactites_ice__png, false, 128, 128);
+        loadGraphic(AssetPaths.iceStalactites__png, false, 128, 128);
         _player = player;
 
         fsm = new FlxFSM<Stalagtite_ice>(this);
