@@ -161,6 +161,9 @@ class ParentState extends FlxState {
 
         handleCircle();
 
+        if (!_player.isOnScreen())
+            _player.kill();
+
         super.update(elapsed);
     }
 
