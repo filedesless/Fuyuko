@@ -44,6 +44,7 @@ class OptionSubState extends FlxSubState {
             0, 100, 300, 30, 6,
             FlxColor.WHITE, FlxColor.BLUE);
         _backgroundSlider.setTexts("Volume de la musique");
+        _backgroundSlider.scrollFactor.set(); // makes it follow camera around
 
         _sfxSlider = new FlxSlider(
             this, "_sfxVolume", 
@@ -52,6 +53,7 @@ class OptionSubState extends FlxSubState {
             0, 100, 300, 30, 5,
             FlxColor.WHITE, FlxColor.BLUE);
         _sfxSlider.setTexts("Volume des effets");
+        _sfxSlider.scrollFactor.set(); // makes it follow camera around
 
         _ambientSlider = new FlxSlider(
             this, "_ambientVolume",
@@ -60,6 +62,7 @@ class OptionSubState extends FlxSubState {
             0, 100, 300, 30, 5,
             FlxColor.WHITE, FlxColor.BLUE);
         _ambientSlider.setTexts("Volume ambiant");
+        _ambientSlider.scrollFactor.set(); // makes it follow camera around
 
         _uiSlider = new FlxSlider(
             this, "_uiVolume",
@@ -68,6 +71,7 @@ class OptionSubState extends FlxSubState {
             0, 100, 300, 30, 5,
             FlxColor.WHITE, FlxColor.BLUE);
         _uiSlider.setTexts("Volume de l'interface");
+        _uiSlider.scrollFactor.set(); // makes it follow camera around
 
         var btn:FelixMagicButton = new FelixMagicButton(
             null, FlxG.camera.height * 5 / 6, 

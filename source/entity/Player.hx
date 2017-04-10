@@ -62,7 +62,7 @@ class Player extends FlxSprite
         acceleration.y = GRAVITY;
         drag.x = 100;
 
-        loadGraphic(AssetPaths.monstercat_char__png, true, 128, 256);
+        loadGraphic(AssetPaths.charsheet_fuyuko__png, true, 128, 256);
         scale.set(0.45, 0.45);
         updateHitbox();
 
