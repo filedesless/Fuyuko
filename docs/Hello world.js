@@ -28,32 +28,88 @@ ApplicationMain.create = function() {
 	types.push("IMAGE");
 	urls.push("assets/images/logo_transparent.png");
 	types.push("IMAGE");
-	urls.push("assets/sprites/char1-idle6.png");
+	urls.push("assets/sprites/bestiary/ekunaa/beast_ekuna.png");
 	types.push("IMAGE");
-	urls.push("assets/sprites/char1-walk9.png");
+	urls.push("assets/sprites/bestiary/ekunaa/char_ekunaa.png");
 	types.push("IMAGE");
-	urls.push("assets/sprites/char1_jump4.png");
+	urls.push("assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/bestiary/fuyuko/beast_fuyuko.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/bestiary/fuyuko/char_fuyuko.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/bestiary/shokuka/beast_Shokuka.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/bestiary/shokuka/char_shokuka.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/bestiary/shokuka/charsheet_shokuka.png");
 	types.push("IMAGE");
 	urls.push("assets/sprites/cherry_blossom.png");
 	types.push("IMAGE");
 	urls.push("assets/sprites/grunge.png");
 	types.push("IMAGE");
-	urls.push("assets/sprites/ice_cube.png");
+	urls.push("assets/sprites/object/iceCube.png");
 	types.push("IMAGE");
-	urls.push("assets/sprites/icePlatform.png");
+	urls.push("assets/sprites/object/icecube_animation.png");
 	types.push("IMAGE");
-	urls.push("assets/sprites/monstercat_char.png");
+	urls.push("assets/sprites/object/icePlatform.png");
 	types.push("IMAGE");
-	urls.push("assets/sprites/monstercat_char_old.png");
+	urls.push("assets/sprites/object/iceStalactites.png");
 	types.push("IMAGE");
-	urls.push("assets/sprites/movable_bloc.png");
+	urls.push("assets/sprites/object/lightCube.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/object/stalactites.png");
 	types.push("IMAGE");
 	urls.push("assets/sprites/sakuratree.png");
 	types.push("IMAGE");
-	urls.push("assets/sprites/stalactites.png");
+	urls.push("assets/sprites/bestiary/ekunaa/beast_ekuna.png");
 	types.push("IMAGE");
-	urls.push("assets/sprites/stalactites_ice.png");
+	urls.push("assets/sprites/bestiary/ekunaa/char_ekunaa.png");
 	types.push("IMAGE");
+	urls.push("assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/bestiary/fuyuko/beast_fuyuko.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/bestiary/fuyuko/char_fuyuko.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/bestiary/shokuka/beast_Shokuka.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/bestiary/shokuka/char_shokuka.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/bestiary/shokuka/charsheet_shokuka.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/object/iceCube.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/object/icecube_animation.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/object/icePlatform.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/object/iceStalactites.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/object/lightCube.png");
+	types.push("IMAGE");
+	urls.push("assets/sprites/object/stalactites.png");
+	types.push("IMAGE");
+	urls.push("assets/sounds/heartbeat_fast.ogg");
+	types.push("SOUND");
+	urls.push("assets/sounds/heartbeat_fast_reverb.ogg");
+	types.push("SOUND");
+	urls.push("assets/sounds/heartbeat_slow.ogg");
+	types.push("SOUND");
+	urls.push("assets/sounds/heartbeat_slow_reverb.ogg");
+	types.push("SOUND");
+	urls.push("assets/sounds/hurt1.ogg");
+	types.push("SOUND");
+	urls.push("assets/sounds/hurt2.ogg");
+	types.push("SOUND");
+	urls.push("assets/sounds/jump.ogg");
+	types.push("SOUND");
+	urls.push("assets/sounds/lightcube_pushed.ogg");
+	types.push("SOUND");
 	urls.push("assets/sounds/load.ogg");
 	types.push("SOUND");
 	urls.push("assets/sounds/sharp_echo.ogg");
@@ -250,8 +306,6 @@ ApplicationMain.create = function() {
 	types.push("TEXT");
 	urls.push("assets/tileset/tileset.png");
 	types.push("IMAGE");
-	urls.push("assets/tileset/tileset16.png");
-	types.push("IMAGE");
 	urls.push("Fantasque Sans Mono Regular");
 	types.push("FONT");
 	urls.push("assets/music/cave_theme.ogg");
@@ -294,7 +348,7 @@ ApplicationMain.init = function() {
 	}
 };
 ApplicationMain.main = function() {
-	ApplicationMain.config = { build : "782", company : "HaxeFlixel", file : "Hello world", fps : 60, name : "Hello world", orientation : "", packageName : "com.example.myapp", version : "0.0.1", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : false, height : 768, parameters : "{}", resizable : false, stencilBuffer : true, title : "Hello world", vsync : true, width : 1024, x : null, y : null}]};
+	ApplicationMain.config = { build : "828", company : "HaxeFlixel", file : "Hello world", fps : 60, name : "Hello world", orientation : "", packageName : "com.example.myapp", version : "0.0.1", windows : [{ antialiasing : 0, background : 0, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : false, height : 768, parameters : "{}", resizable : false, stencilBuffer : true, title : "Hello world", vsync : true, width : 1024, x : null, y : null}]};
 };
 ApplicationMain.start = function() {
 	var hasMain = false;
@@ -2382,1606 +2436,1957 @@ var DefaultAssetLibrary = function() {
 		_this5.h["assets/images/logo_transparent.png"] = value2;
 	}
 	var _this6 = this.path;
-	if(__map_reserved["assets/sprites/char1-idle6.png"] != null) {
-		_this6.setReserved("assets/sprites/char1-idle6.png","assets/sprites/char1-idle6.png");
+	if(__map_reserved["assets/sprites/bestiary/ekunaa/beast_ekuna.png"] != null) {
+		_this6.setReserved("assets/sprites/bestiary/ekunaa/beast_ekuna.png","assets/sprites/bestiary/ekunaa/beast_ekuna.png");
 	} else {
-		_this6.h["assets/sprites/char1-idle6.png"] = "assets/sprites/char1-idle6.png";
+		_this6.h["assets/sprites/bestiary/ekunaa/beast_ekuna.png"] = "assets/sprites/bestiary/ekunaa/beast_ekuna.png";
 	}
 	var _this7 = this.type;
 	var value3 = "IMAGE";
-	if(__map_reserved["assets/sprites/char1-idle6.png"] != null) {
-		_this7.setReserved("assets/sprites/char1-idle6.png",value3);
+	if(__map_reserved["assets/sprites/bestiary/ekunaa/beast_ekuna.png"] != null) {
+		_this7.setReserved("assets/sprites/bestiary/ekunaa/beast_ekuna.png",value3);
 	} else {
-		_this7.h["assets/sprites/char1-idle6.png"] = value3;
+		_this7.h["assets/sprites/bestiary/ekunaa/beast_ekuna.png"] = value3;
 	}
 	var _this8 = this.path;
-	if(__map_reserved["assets/sprites/char1-walk9.png"] != null) {
-		_this8.setReserved("assets/sprites/char1-walk9.png","assets/sprites/char1-walk9.png");
+	if(__map_reserved["assets/sprites/bestiary/ekunaa/char_ekunaa.png"] != null) {
+		_this8.setReserved("assets/sprites/bestiary/ekunaa/char_ekunaa.png","assets/sprites/bestiary/ekunaa/char_ekunaa.png");
 	} else {
-		_this8.h["assets/sprites/char1-walk9.png"] = "assets/sprites/char1-walk9.png";
+		_this8.h["assets/sprites/bestiary/ekunaa/char_ekunaa.png"] = "assets/sprites/bestiary/ekunaa/char_ekunaa.png";
 	}
 	var _this9 = this.type;
 	var value4 = "IMAGE";
-	if(__map_reserved["assets/sprites/char1-walk9.png"] != null) {
-		_this9.setReserved("assets/sprites/char1-walk9.png",value4);
+	if(__map_reserved["assets/sprites/bestiary/ekunaa/char_ekunaa.png"] != null) {
+		_this9.setReserved("assets/sprites/bestiary/ekunaa/char_ekunaa.png",value4);
 	} else {
-		_this9.h["assets/sprites/char1-walk9.png"] = value4;
+		_this9.h["assets/sprites/bestiary/ekunaa/char_ekunaa.png"] = value4;
 	}
 	var _this10 = this.path;
-	if(__map_reserved["assets/sprites/char1_jump4.png"] != null) {
-		_this10.setReserved("assets/sprites/char1_jump4.png","assets/sprites/char1_jump4.png");
+	if(__map_reserved["assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png"] != null) {
+		_this10.setReserved("assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png","assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png");
 	} else {
-		_this10.h["assets/sprites/char1_jump4.png"] = "assets/sprites/char1_jump4.png";
+		_this10.h["assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png"] = "assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png";
 	}
 	var _this11 = this.type;
 	var value5 = "IMAGE";
-	if(__map_reserved["assets/sprites/char1_jump4.png"] != null) {
-		_this11.setReserved("assets/sprites/char1_jump4.png",value5);
+	if(__map_reserved["assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png"] != null) {
+		_this11.setReserved("assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png",value5);
 	} else {
-		_this11.h["assets/sprites/char1_jump4.png"] = value5;
+		_this11.h["assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png"] = value5;
 	}
 	var _this12 = this.path;
-	if(__map_reserved["assets/sprites/cherry_blossom.png"] != null) {
-		_this12.setReserved("assets/sprites/cherry_blossom.png","assets/sprites/cherry_blossom.png");
+	if(__map_reserved["assets/sprites/bestiary/fuyuko/beast_fuyuko.png"] != null) {
+		_this12.setReserved("assets/sprites/bestiary/fuyuko/beast_fuyuko.png","assets/sprites/bestiary/fuyuko/beast_fuyuko.png");
 	} else {
-		_this12.h["assets/sprites/cherry_blossom.png"] = "assets/sprites/cherry_blossom.png";
+		_this12.h["assets/sprites/bestiary/fuyuko/beast_fuyuko.png"] = "assets/sprites/bestiary/fuyuko/beast_fuyuko.png";
 	}
 	var _this13 = this.type;
 	var value6 = "IMAGE";
-	if(__map_reserved["assets/sprites/cherry_blossom.png"] != null) {
-		_this13.setReserved("assets/sprites/cherry_blossom.png",value6);
+	if(__map_reserved["assets/sprites/bestiary/fuyuko/beast_fuyuko.png"] != null) {
+		_this13.setReserved("assets/sprites/bestiary/fuyuko/beast_fuyuko.png",value6);
 	} else {
-		_this13.h["assets/sprites/cherry_blossom.png"] = value6;
+		_this13.h["assets/sprites/bestiary/fuyuko/beast_fuyuko.png"] = value6;
 	}
 	var _this14 = this.path;
-	if(__map_reserved["assets/sprites/grunge.png"] != null) {
-		_this14.setReserved("assets/sprites/grunge.png","assets/sprites/grunge.png");
+	if(__map_reserved["assets/sprites/bestiary/fuyuko/char_fuyuko.png"] != null) {
+		_this14.setReserved("assets/sprites/bestiary/fuyuko/char_fuyuko.png","assets/sprites/bestiary/fuyuko/char_fuyuko.png");
 	} else {
-		_this14.h["assets/sprites/grunge.png"] = "assets/sprites/grunge.png";
+		_this14.h["assets/sprites/bestiary/fuyuko/char_fuyuko.png"] = "assets/sprites/bestiary/fuyuko/char_fuyuko.png";
 	}
 	var _this15 = this.type;
 	var value7 = "IMAGE";
-	if(__map_reserved["assets/sprites/grunge.png"] != null) {
-		_this15.setReserved("assets/sprites/grunge.png",value7);
+	if(__map_reserved["assets/sprites/bestiary/fuyuko/char_fuyuko.png"] != null) {
+		_this15.setReserved("assets/sprites/bestiary/fuyuko/char_fuyuko.png",value7);
 	} else {
-		_this15.h["assets/sprites/grunge.png"] = value7;
+		_this15.h["assets/sprites/bestiary/fuyuko/char_fuyuko.png"] = value7;
 	}
 	var _this16 = this.path;
-	if(__map_reserved["assets/sprites/ice_cube.png"] != null) {
-		_this16.setReserved("assets/sprites/ice_cube.png","assets/sprites/ice_cube.png");
+	if(__map_reserved["assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png"] != null) {
+		_this16.setReserved("assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png","assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png");
 	} else {
-		_this16.h["assets/sprites/ice_cube.png"] = "assets/sprites/ice_cube.png";
+		_this16.h["assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png"] = "assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png";
 	}
 	var _this17 = this.type;
 	var value8 = "IMAGE";
-	if(__map_reserved["assets/sprites/ice_cube.png"] != null) {
-		_this17.setReserved("assets/sprites/ice_cube.png",value8);
+	if(__map_reserved["assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png"] != null) {
+		_this17.setReserved("assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png",value8);
 	} else {
-		_this17.h["assets/sprites/ice_cube.png"] = value8;
+		_this17.h["assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png"] = value8;
 	}
 	var _this18 = this.path;
-	if(__map_reserved["assets/sprites/icePlatform.png"] != null) {
-		_this18.setReserved("assets/sprites/icePlatform.png","assets/sprites/icePlatform.png");
+	if(__map_reserved["assets/sprites/bestiary/shokuka/beast_Shokuka.png"] != null) {
+		_this18.setReserved("assets/sprites/bestiary/shokuka/beast_Shokuka.png","assets/sprites/bestiary/shokuka/beast_Shokuka.png");
 	} else {
-		_this18.h["assets/sprites/icePlatform.png"] = "assets/sprites/icePlatform.png";
+		_this18.h["assets/sprites/bestiary/shokuka/beast_Shokuka.png"] = "assets/sprites/bestiary/shokuka/beast_Shokuka.png";
 	}
 	var _this19 = this.type;
 	var value9 = "IMAGE";
-	if(__map_reserved["assets/sprites/icePlatform.png"] != null) {
-		_this19.setReserved("assets/sprites/icePlatform.png",value9);
+	if(__map_reserved["assets/sprites/bestiary/shokuka/beast_Shokuka.png"] != null) {
+		_this19.setReserved("assets/sprites/bestiary/shokuka/beast_Shokuka.png",value9);
 	} else {
-		_this19.h["assets/sprites/icePlatform.png"] = value9;
+		_this19.h["assets/sprites/bestiary/shokuka/beast_Shokuka.png"] = value9;
 	}
 	var _this20 = this.path;
-	if(__map_reserved["assets/sprites/monstercat_char.png"] != null) {
-		_this20.setReserved("assets/sprites/monstercat_char.png","assets/sprites/monstercat_char.png");
+	if(__map_reserved["assets/sprites/bestiary/shokuka/char_shokuka.png"] != null) {
+		_this20.setReserved("assets/sprites/bestiary/shokuka/char_shokuka.png","assets/sprites/bestiary/shokuka/char_shokuka.png");
 	} else {
-		_this20.h["assets/sprites/monstercat_char.png"] = "assets/sprites/monstercat_char.png";
+		_this20.h["assets/sprites/bestiary/shokuka/char_shokuka.png"] = "assets/sprites/bestiary/shokuka/char_shokuka.png";
 	}
 	var _this21 = this.type;
 	var value10 = "IMAGE";
-	if(__map_reserved["assets/sprites/monstercat_char.png"] != null) {
-		_this21.setReserved("assets/sprites/monstercat_char.png",value10);
+	if(__map_reserved["assets/sprites/bestiary/shokuka/char_shokuka.png"] != null) {
+		_this21.setReserved("assets/sprites/bestiary/shokuka/char_shokuka.png",value10);
 	} else {
-		_this21.h["assets/sprites/monstercat_char.png"] = value10;
+		_this21.h["assets/sprites/bestiary/shokuka/char_shokuka.png"] = value10;
 	}
 	var _this22 = this.path;
-	if(__map_reserved["assets/sprites/monstercat_char_old.png"] != null) {
-		_this22.setReserved("assets/sprites/monstercat_char_old.png","assets/sprites/monstercat_char_old.png");
+	if(__map_reserved["assets/sprites/bestiary/shokuka/charsheet_shokuka.png"] != null) {
+		_this22.setReserved("assets/sprites/bestiary/shokuka/charsheet_shokuka.png","assets/sprites/bestiary/shokuka/charsheet_shokuka.png");
 	} else {
-		_this22.h["assets/sprites/monstercat_char_old.png"] = "assets/sprites/monstercat_char_old.png";
+		_this22.h["assets/sprites/bestiary/shokuka/charsheet_shokuka.png"] = "assets/sprites/bestiary/shokuka/charsheet_shokuka.png";
 	}
 	var _this23 = this.type;
 	var value11 = "IMAGE";
-	if(__map_reserved["assets/sprites/monstercat_char_old.png"] != null) {
-		_this23.setReserved("assets/sprites/monstercat_char_old.png",value11);
+	if(__map_reserved["assets/sprites/bestiary/shokuka/charsheet_shokuka.png"] != null) {
+		_this23.setReserved("assets/sprites/bestiary/shokuka/charsheet_shokuka.png",value11);
 	} else {
-		_this23.h["assets/sprites/monstercat_char_old.png"] = value11;
+		_this23.h["assets/sprites/bestiary/shokuka/charsheet_shokuka.png"] = value11;
 	}
 	var _this24 = this.path;
-	if(__map_reserved["assets/sprites/movable_bloc.png"] != null) {
-		_this24.setReserved("assets/sprites/movable_bloc.png","assets/sprites/movable_bloc.png");
+	if(__map_reserved["assets/sprites/cherry_blossom.png"] != null) {
+		_this24.setReserved("assets/sprites/cherry_blossom.png","assets/sprites/cherry_blossom.png");
 	} else {
-		_this24.h["assets/sprites/movable_bloc.png"] = "assets/sprites/movable_bloc.png";
+		_this24.h["assets/sprites/cherry_blossom.png"] = "assets/sprites/cherry_blossom.png";
 	}
 	var _this25 = this.type;
 	var value12 = "IMAGE";
-	if(__map_reserved["assets/sprites/movable_bloc.png"] != null) {
-		_this25.setReserved("assets/sprites/movable_bloc.png",value12);
+	if(__map_reserved["assets/sprites/cherry_blossom.png"] != null) {
+		_this25.setReserved("assets/sprites/cherry_blossom.png",value12);
 	} else {
-		_this25.h["assets/sprites/movable_bloc.png"] = value12;
+		_this25.h["assets/sprites/cherry_blossom.png"] = value12;
 	}
 	var _this26 = this.path;
-	if(__map_reserved["assets/sprites/sakuratree.png"] != null) {
-		_this26.setReserved("assets/sprites/sakuratree.png","assets/sprites/sakuratree.png");
+	if(__map_reserved["assets/sprites/grunge.png"] != null) {
+		_this26.setReserved("assets/sprites/grunge.png","assets/sprites/grunge.png");
 	} else {
-		_this26.h["assets/sprites/sakuratree.png"] = "assets/sprites/sakuratree.png";
+		_this26.h["assets/sprites/grunge.png"] = "assets/sprites/grunge.png";
 	}
 	var _this27 = this.type;
 	var value13 = "IMAGE";
-	if(__map_reserved["assets/sprites/sakuratree.png"] != null) {
-		_this27.setReserved("assets/sprites/sakuratree.png",value13);
+	if(__map_reserved["assets/sprites/grunge.png"] != null) {
+		_this27.setReserved("assets/sprites/grunge.png",value13);
 	} else {
-		_this27.h["assets/sprites/sakuratree.png"] = value13;
+		_this27.h["assets/sprites/grunge.png"] = value13;
 	}
 	var _this28 = this.path;
-	if(__map_reserved["assets/sprites/stalactites.png"] != null) {
-		_this28.setReserved("assets/sprites/stalactites.png","assets/sprites/stalactites.png");
+	if(__map_reserved["assets/sprites/object/iceCube.png"] != null) {
+		_this28.setReserved("assets/sprites/object/iceCube.png","assets/sprites/object/iceCube.png");
 	} else {
-		_this28.h["assets/sprites/stalactites.png"] = "assets/sprites/stalactites.png";
+		_this28.h["assets/sprites/object/iceCube.png"] = "assets/sprites/object/iceCube.png";
 	}
 	var _this29 = this.type;
 	var value14 = "IMAGE";
-	if(__map_reserved["assets/sprites/stalactites.png"] != null) {
-		_this29.setReserved("assets/sprites/stalactites.png",value14);
+	if(__map_reserved["assets/sprites/object/iceCube.png"] != null) {
+		_this29.setReserved("assets/sprites/object/iceCube.png",value14);
 	} else {
-		_this29.h["assets/sprites/stalactites.png"] = value14;
+		_this29.h["assets/sprites/object/iceCube.png"] = value14;
 	}
 	var _this30 = this.path;
-	if(__map_reserved["assets/sprites/stalactites_ice.png"] != null) {
-		_this30.setReserved("assets/sprites/stalactites_ice.png","assets/sprites/stalactites_ice.png");
+	if(__map_reserved["assets/sprites/object/icecube_animation.png"] != null) {
+		_this30.setReserved("assets/sprites/object/icecube_animation.png","assets/sprites/object/icecube_animation.png");
 	} else {
-		_this30.h["assets/sprites/stalactites_ice.png"] = "assets/sprites/stalactites_ice.png";
+		_this30.h["assets/sprites/object/icecube_animation.png"] = "assets/sprites/object/icecube_animation.png";
 	}
 	var _this31 = this.type;
 	var value15 = "IMAGE";
-	if(__map_reserved["assets/sprites/stalactites_ice.png"] != null) {
-		_this31.setReserved("assets/sprites/stalactites_ice.png",value15);
+	if(__map_reserved["assets/sprites/object/icecube_animation.png"] != null) {
+		_this31.setReserved("assets/sprites/object/icecube_animation.png",value15);
 	} else {
-		_this31.h["assets/sprites/stalactites_ice.png"] = value15;
+		_this31.h["assets/sprites/object/icecube_animation.png"] = value15;
 	}
 	var _this32 = this.path;
-	if(__map_reserved["assets/sounds/load.ogg"] != null) {
-		_this32.setReserved("assets/sounds/load.ogg","assets/sounds/load.ogg");
+	if(__map_reserved["assets/sprites/object/icePlatform.png"] != null) {
+		_this32.setReserved("assets/sprites/object/icePlatform.png","assets/sprites/object/icePlatform.png");
 	} else {
-		_this32.h["assets/sounds/load.ogg"] = "assets/sounds/load.ogg";
+		_this32.h["assets/sprites/object/icePlatform.png"] = "assets/sprites/object/icePlatform.png";
 	}
 	var _this33 = this.type;
-	var value16 = "SOUND";
-	if(__map_reserved["assets/sounds/load.ogg"] != null) {
-		_this33.setReserved("assets/sounds/load.ogg",value16);
+	var value16 = "IMAGE";
+	if(__map_reserved["assets/sprites/object/icePlatform.png"] != null) {
+		_this33.setReserved("assets/sprites/object/icePlatform.png",value16);
 	} else {
-		_this33.h["assets/sounds/load.ogg"] = value16;
+		_this33.h["assets/sprites/object/icePlatform.png"] = value16;
 	}
 	var _this34 = this.path;
-	if(__map_reserved["assets/sounds/sharp_echo.ogg"] != null) {
-		_this34.setReserved("assets/sounds/sharp_echo.ogg","assets/sounds/sharp_echo.ogg");
+	if(__map_reserved["assets/sprites/object/iceStalactites.png"] != null) {
+		_this34.setReserved("assets/sprites/object/iceStalactites.png","assets/sprites/object/iceStalactites.png");
 	} else {
-		_this34.h["assets/sounds/sharp_echo.ogg"] = "assets/sounds/sharp_echo.ogg";
+		_this34.h["assets/sprites/object/iceStalactites.png"] = "assets/sprites/object/iceStalactites.png";
 	}
 	var _this35 = this.type;
-	var value17 = "SOUND";
-	if(__map_reserved["assets/sounds/sharp_echo.ogg"] != null) {
-		_this35.setReserved("assets/sounds/sharp_echo.ogg",value17);
+	var value17 = "IMAGE";
+	if(__map_reserved["assets/sprites/object/iceStalactites.png"] != null) {
+		_this35.setReserved("assets/sprites/object/iceStalactites.png",value17);
 	} else {
-		_this35.h["assets/sounds/sharp_echo.ogg"] = value17;
+		_this35.h["assets/sprites/object/iceStalactites.png"] = value17;
 	}
 	var _this36 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] != null) {
-		_this36.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg");
+	if(__map_reserved["assets/sprites/object/lightCube.png"] != null) {
+		_this36.setReserved("assets/sprites/object/lightCube.png","assets/sprites/object/lightCube.png");
 	} else {
-		_this36.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg";
+		_this36.h["assets/sprites/object/lightCube.png"] = "assets/sprites/object/lightCube.png";
 	}
 	var _this37 = this.type;
-	var value18 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] != null) {
-		_this37.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg",value18);
+	var value18 = "IMAGE";
+	if(__map_reserved["assets/sprites/object/lightCube.png"] != null) {
+		_this37.setReserved("assets/sprites/object/lightCube.png",value18);
 	} else {
-		_this37.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] = value18;
+		_this37.h["assets/sprites/object/lightCube.png"] = value18;
 	}
 	var _this38 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] != null) {
-		_this38.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg");
+	if(__map_reserved["assets/sprites/object/stalactites.png"] != null) {
+		_this38.setReserved("assets/sprites/object/stalactites.png","assets/sprites/object/stalactites.png");
 	} else {
-		_this38.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg";
+		_this38.h["assets/sprites/object/stalactites.png"] = "assets/sprites/object/stalactites.png";
 	}
 	var _this39 = this.type;
-	var value19 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] != null) {
-		_this39.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg",value19);
+	var value19 = "IMAGE";
+	if(__map_reserved["assets/sprites/object/stalactites.png"] != null) {
+		_this39.setReserved("assets/sprites/object/stalactites.png",value19);
 	} else {
-		_this39.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] = value19;
+		_this39.h["assets/sprites/object/stalactites.png"] = value19;
 	}
 	var _this40 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] != null) {
-		_this40.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg");
+	if(__map_reserved["assets/sprites/sakuratree.png"] != null) {
+		_this40.setReserved("assets/sprites/sakuratree.png","assets/sprites/sakuratree.png");
 	} else {
-		_this40.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg";
+		_this40.h["assets/sprites/sakuratree.png"] = "assets/sprites/sakuratree.png";
 	}
 	var _this41 = this.type;
-	var value20 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] != null) {
-		_this41.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg",value20);
+	var value20 = "IMAGE";
+	if(__map_reserved["assets/sprites/sakuratree.png"] != null) {
+		_this41.setReserved("assets/sprites/sakuratree.png",value20);
 	} else {
-		_this41.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] = value20;
+		_this41.h["assets/sprites/sakuratree.png"] = value20;
 	}
 	var _this42 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] != null) {
-		_this42.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg");
+	if(__map_reserved["assets/sprites/bestiary/ekunaa/beast_ekuna.png"] != null) {
+		_this42.setReserved("assets/sprites/bestiary/ekunaa/beast_ekuna.png","assets/sprites/bestiary/ekunaa/beast_ekuna.png");
 	} else {
-		_this42.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg";
+		_this42.h["assets/sprites/bestiary/ekunaa/beast_ekuna.png"] = "assets/sprites/bestiary/ekunaa/beast_ekuna.png";
 	}
 	var _this43 = this.type;
-	var value21 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] != null) {
-		_this43.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg",value21);
+	var value21 = "IMAGE";
+	if(__map_reserved["assets/sprites/bestiary/ekunaa/beast_ekuna.png"] != null) {
+		_this43.setReserved("assets/sprites/bestiary/ekunaa/beast_ekuna.png",value21);
 	} else {
-		_this43.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] = value21;
+		_this43.h["assets/sprites/bestiary/ekunaa/beast_ekuna.png"] = value21;
 	}
 	var _this44 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] != null) {
-		_this44.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg");
+	if(__map_reserved["assets/sprites/bestiary/ekunaa/char_ekunaa.png"] != null) {
+		_this44.setReserved("assets/sprites/bestiary/ekunaa/char_ekunaa.png","assets/sprites/bestiary/ekunaa/char_ekunaa.png");
 	} else {
-		_this44.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg";
+		_this44.h["assets/sprites/bestiary/ekunaa/char_ekunaa.png"] = "assets/sprites/bestiary/ekunaa/char_ekunaa.png";
 	}
 	var _this45 = this.type;
-	var value22 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] != null) {
-		_this45.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg",value22);
+	var value22 = "IMAGE";
+	if(__map_reserved["assets/sprites/bestiary/ekunaa/char_ekunaa.png"] != null) {
+		_this45.setReserved("assets/sprites/bestiary/ekunaa/char_ekunaa.png",value22);
 	} else {
-		_this45.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] = value22;
+		_this45.h["assets/sprites/bestiary/ekunaa/char_ekunaa.png"] = value22;
 	}
 	var _this46 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] != null) {
-		_this46.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg");
+	if(__map_reserved["assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png"] != null) {
+		_this46.setReserved("assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png","assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png");
 	} else {
-		_this46.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg";
+		_this46.h["assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png"] = "assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png";
 	}
 	var _this47 = this.type;
-	var value23 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] != null) {
-		_this47.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg",value23);
+	var value23 = "IMAGE";
+	if(__map_reserved["assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png"] != null) {
+		_this47.setReserved("assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png",value23);
 	} else {
-		_this47.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] = value23;
+		_this47.h["assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png"] = value23;
 	}
 	var _this48 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] != null) {
-		_this48.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg");
+	if(__map_reserved["assets/sprites/bestiary/fuyuko/beast_fuyuko.png"] != null) {
+		_this48.setReserved("assets/sprites/bestiary/fuyuko/beast_fuyuko.png","assets/sprites/bestiary/fuyuko/beast_fuyuko.png");
 	} else {
-		_this48.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg";
+		_this48.h["assets/sprites/bestiary/fuyuko/beast_fuyuko.png"] = "assets/sprites/bestiary/fuyuko/beast_fuyuko.png";
 	}
 	var _this49 = this.type;
-	var value24 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] != null) {
-		_this49.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg",value24);
+	var value24 = "IMAGE";
+	if(__map_reserved["assets/sprites/bestiary/fuyuko/beast_fuyuko.png"] != null) {
+		_this49.setReserved("assets/sprites/bestiary/fuyuko/beast_fuyuko.png",value24);
 	} else {
-		_this49.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] = value24;
+		_this49.h["assets/sprites/bestiary/fuyuko/beast_fuyuko.png"] = value24;
 	}
 	var _this50 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] != null) {
-		_this50.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg");
+	if(__map_reserved["assets/sprites/bestiary/fuyuko/char_fuyuko.png"] != null) {
+		_this50.setReserved("assets/sprites/bestiary/fuyuko/char_fuyuko.png","assets/sprites/bestiary/fuyuko/char_fuyuko.png");
 	} else {
-		_this50.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg";
+		_this50.h["assets/sprites/bestiary/fuyuko/char_fuyuko.png"] = "assets/sprites/bestiary/fuyuko/char_fuyuko.png";
 	}
 	var _this51 = this.type;
-	var value25 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] != null) {
-		_this51.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg",value25);
+	var value25 = "IMAGE";
+	if(__map_reserved["assets/sprites/bestiary/fuyuko/char_fuyuko.png"] != null) {
+		_this51.setReserved("assets/sprites/bestiary/fuyuko/char_fuyuko.png",value25);
 	} else {
-		_this51.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] = value25;
+		_this51.h["assets/sprites/bestiary/fuyuko/char_fuyuko.png"] = value25;
 	}
 	var _this52 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] != null) {
-		_this52.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg");
+	if(__map_reserved["assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png"] != null) {
+		_this52.setReserved("assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png","assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png");
 	} else {
-		_this52.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg";
+		_this52.h["assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png"] = "assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png";
 	}
 	var _this53 = this.type;
-	var value26 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] != null) {
-		_this53.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg",value26);
+	var value26 = "IMAGE";
+	if(__map_reserved["assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png"] != null) {
+		_this53.setReserved("assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png",value26);
 	} else {
-		_this53.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] = value26;
+		_this53.h["assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png"] = value26;
 	}
 	var _this54 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] != null) {
-		_this54.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg");
+	if(__map_reserved["assets/sprites/bestiary/shokuka/beast_Shokuka.png"] != null) {
+		_this54.setReserved("assets/sprites/bestiary/shokuka/beast_Shokuka.png","assets/sprites/bestiary/shokuka/beast_Shokuka.png");
 	} else {
-		_this54.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg";
+		_this54.h["assets/sprites/bestiary/shokuka/beast_Shokuka.png"] = "assets/sprites/bestiary/shokuka/beast_Shokuka.png";
 	}
 	var _this55 = this.type;
-	var value27 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] != null) {
-		_this55.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg",value27);
+	var value27 = "IMAGE";
+	if(__map_reserved["assets/sprites/bestiary/shokuka/beast_Shokuka.png"] != null) {
+		_this55.setReserved("assets/sprites/bestiary/shokuka/beast_Shokuka.png",value27);
 	} else {
-		_this55.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] = value27;
+		_this55.h["assets/sprites/bestiary/shokuka/beast_Shokuka.png"] = value27;
 	}
 	var _this56 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] != null) {
-		_this56.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg");
+	if(__map_reserved["assets/sprites/bestiary/shokuka/char_shokuka.png"] != null) {
+		_this56.setReserved("assets/sprites/bestiary/shokuka/char_shokuka.png","assets/sprites/bestiary/shokuka/char_shokuka.png");
 	} else {
-		_this56.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg";
+		_this56.h["assets/sprites/bestiary/shokuka/char_shokuka.png"] = "assets/sprites/bestiary/shokuka/char_shokuka.png";
 	}
 	var _this57 = this.type;
-	var value28 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] != null) {
-		_this57.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg",value28);
+	var value28 = "IMAGE";
+	if(__map_reserved["assets/sprites/bestiary/shokuka/char_shokuka.png"] != null) {
+		_this57.setReserved("assets/sprites/bestiary/shokuka/char_shokuka.png",value28);
 	} else {
-		_this57.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] = value28;
+		_this57.h["assets/sprites/bestiary/shokuka/char_shokuka.png"] = value28;
 	}
 	var _this58 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] != null) {
-		_this58.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg");
+	if(__map_reserved["assets/sprites/bestiary/shokuka/charsheet_shokuka.png"] != null) {
+		_this58.setReserved("assets/sprites/bestiary/shokuka/charsheet_shokuka.png","assets/sprites/bestiary/shokuka/charsheet_shokuka.png");
 	} else {
-		_this58.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg";
+		_this58.h["assets/sprites/bestiary/shokuka/charsheet_shokuka.png"] = "assets/sprites/bestiary/shokuka/charsheet_shokuka.png";
 	}
 	var _this59 = this.type;
-	var value29 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] != null) {
-		_this59.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg",value29);
+	var value29 = "IMAGE";
+	if(__map_reserved["assets/sprites/bestiary/shokuka/charsheet_shokuka.png"] != null) {
+		_this59.setReserved("assets/sprites/bestiary/shokuka/charsheet_shokuka.png",value29);
 	} else {
-		_this59.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] = value29;
+		_this59.h["assets/sprites/bestiary/shokuka/charsheet_shokuka.png"] = value29;
 	}
 	var _this60 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] != null) {
-		_this60.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg");
+	if(__map_reserved["assets/sprites/object/iceCube.png"] != null) {
+		_this60.setReserved("assets/sprites/object/iceCube.png","assets/sprites/object/iceCube.png");
 	} else {
-		_this60.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg";
+		_this60.h["assets/sprites/object/iceCube.png"] = "assets/sprites/object/iceCube.png";
 	}
 	var _this61 = this.type;
-	var value30 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] != null) {
-		_this61.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg",value30);
+	var value30 = "IMAGE";
+	if(__map_reserved["assets/sprites/object/iceCube.png"] != null) {
+		_this61.setReserved("assets/sprites/object/iceCube.png",value30);
 	} else {
-		_this61.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] = value30;
+		_this61.h["assets/sprites/object/iceCube.png"] = value30;
 	}
 	var _this62 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] != null) {
-		_this62.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg");
+	if(__map_reserved["assets/sprites/object/icecube_animation.png"] != null) {
+		_this62.setReserved("assets/sprites/object/icecube_animation.png","assets/sprites/object/icecube_animation.png");
 	} else {
-		_this62.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg";
+		_this62.h["assets/sprites/object/icecube_animation.png"] = "assets/sprites/object/icecube_animation.png";
 	}
 	var _this63 = this.type;
-	var value31 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] != null) {
-		_this63.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg",value31);
+	var value31 = "IMAGE";
+	if(__map_reserved["assets/sprites/object/icecube_animation.png"] != null) {
+		_this63.setReserved("assets/sprites/object/icecube_animation.png",value31);
 	} else {
-		_this63.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] = value31;
+		_this63.h["assets/sprites/object/icecube_animation.png"] = value31;
 	}
 	var _this64 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] != null) {
-		_this64.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg");
+	if(__map_reserved["assets/sprites/object/icePlatform.png"] != null) {
+		_this64.setReserved("assets/sprites/object/icePlatform.png","assets/sprites/object/icePlatform.png");
 	} else {
-		_this64.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg";
+		_this64.h["assets/sprites/object/icePlatform.png"] = "assets/sprites/object/icePlatform.png";
 	}
 	var _this65 = this.type;
-	var value32 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] != null) {
-		_this65.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg",value32);
+	var value32 = "IMAGE";
+	if(__map_reserved["assets/sprites/object/icePlatform.png"] != null) {
+		_this65.setReserved("assets/sprites/object/icePlatform.png",value32);
 	} else {
-		_this65.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] = value32;
+		_this65.h["assets/sprites/object/icePlatform.png"] = value32;
 	}
 	var _this66 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] != null) {
-		_this66.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg");
+	if(__map_reserved["assets/sprites/object/iceStalactites.png"] != null) {
+		_this66.setReserved("assets/sprites/object/iceStalactites.png","assets/sprites/object/iceStalactites.png");
 	} else {
-		_this66.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg";
+		_this66.h["assets/sprites/object/iceStalactites.png"] = "assets/sprites/object/iceStalactites.png";
 	}
 	var _this67 = this.type;
-	var value33 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] != null) {
-		_this67.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg",value33);
+	var value33 = "IMAGE";
+	if(__map_reserved["assets/sprites/object/iceStalactites.png"] != null) {
+		_this67.setReserved("assets/sprites/object/iceStalactites.png",value33);
 	} else {
-		_this67.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] = value33;
+		_this67.h["assets/sprites/object/iceStalactites.png"] = value33;
 	}
 	var _this68 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] != null) {
-		_this68.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg");
+	if(__map_reserved["assets/sprites/object/lightCube.png"] != null) {
+		_this68.setReserved("assets/sprites/object/lightCube.png","assets/sprites/object/lightCube.png");
 	} else {
-		_this68.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg";
+		_this68.h["assets/sprites/object/lightCube.png"] = "assets/sprites/object/lightCube.png";
 	}
 	var _this69 = this.type;
-	var value34 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] != null) {
-		_this69.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg",value34);
+	var value34 = "IMAGE";
+	if(__map_reserved["assets/sprites/object/lightCube.png"] != null) {
+		_this69.setReserved("assets/sprites/object/lightCube.png",value34);
 	} else {
-		_this69.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] = value34;
+		_this69.h["assets/sprites/object/lightCube.png"] = value34;
 	}
 	var _this70 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] != null) {
-		_this70.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg");
+	if(__map_reserved["assets/sprites/object/stalactites.png"] != null) {
+		_this70.setReserved("assets/sprites/object/stalactites.png","assets/sprites/object/stalactites.png");
 	} else {
-		_this70.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg";
+		_this70.h["assets/sprites/object/stalactites.png"] = "assets/sprites/object/stalactites.png";
 	}
 	var _this71 = this.type;
-	var value35 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] != null) {
-		_this71.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg",value35);
+	var value35 = "IMAGE";
+	if(__map_reserved["assets/sprites/object/stalactites.png"] != null) {
+		_this71.setReserved("assets/sprites/object/stalactites.png",value35);
 	} else {
-		_this71.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] = value35;
+		_this71.h["assets/sprites/object/stalactites.png"] = value35;
 	}
 	var _this72 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] != null) {
-		_this72.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg");
+	if(__map_reserved["assets/sounds/heartbeat_fast.ogg"] != null) {
+		_this72.setReserved("assets/sounds/heartbeat_fast.ogg","assets/sounds/heartbeat_fast.ogg");
 	} else {
-		_this72.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg";
+		_this72.h["assets/sounds/heartbeat_fast.ogg"] = "assets/sounds/heartbeat_fast.ogg";
 	}
 	var _this73 = this.type;
 	var value36 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] != null) {
-		_this73.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg",value36);
+	if(__map_reserved["assets/sounds/heartbeat_fast.ogg"] != null) {
+		_this73.setReserved("assets/sounds/heartbeat_fast.ogg",value36);
 	} else {
-		_this73.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] = value36;
+		_this73.h["assets/sounds/heartbeat_fast.ogg"] = value36;
 	}
 	var _this74 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] != null) {
-		_this74.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg");
+	if(__map_reserved["assets/sounds/heartbeat_fast_reverb.ogg"] != null) {
+		_this74.setReserved("assets/sounds/heartbeat_fast_reverb.ogg","assets/sounds/heartbeat_fast_reverb.ogg");
 	} else {
-		_this74.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg";
+		_this74.h["assets/sounds/heartbeat_fast_reverb.ogg"] = "assets/sounds/heartbeat_fast_reverb.ogg";
 	}
 	var _this75 = this.type;
 	var value37 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] != null) {
-		_this75.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg",value37);
+	if(__map_reserved["assets/sounds/heartbeat_fast_reverb.ogg"] != null) {
+		_this75.setReserved("assets/sounds/heartbeat_fast_reverb.ogg",value37);
 	} else {
-		_this75.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] = value37;
+		_this75.h["assets/sounds/heartbeat_fast_reverb.ogg"] = value37;
 	}
 	var _this76 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] != null) {
-		_this76.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg");
+	if(__map_reserved["assets/sounds/heartbeat_slow.ogg"] != null) {
+		_this76.setReserved("assets/sounds/heartbeat_slow.ogg","assets/sounds/heartbeat_slow.ogg");
 	} else {
-		_this76.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg";
+		_this76.h["assets/sounds/heartbeat_slow.ogg"] = "assets/sounds/heartbeat_slow.ogg";
 	}
 	var _this77 = this.type;
 	var value38 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] != null) {
-		_this77.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg",value38);
+	if(__map_reserved["assets/sounds/heartbeat_slow.ogg"] != null) {
+		_this77.setReserved("assets/sounds/heartbeat_slow.ogg",value38);
 	} else {
-		_this77.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] = value38;
+		_this77.h["assets/sounds/heartbeat_slow.ogg"] = value38;
 	}
 	var _this78 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] != null) {
-		_this78.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg");
+	if(__map_reserved["assets/sounds/heartbeat_slow_reverb.ogg"] != null) {
+		_this78.setReserved("assets/sounds/heartbeat_slow_reverb.ogg","assets/sounds/heartbeat_slow_reverb.ogg");
 	} else {
-		_this78.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg";
+		_this78.h["assets/sounds/heartbeat_slow_reverb.ogg"] = "assets/sounds/heartbeat_slow_reverb.ogg";
 	}
 	var _this79 = this.type;
 	var value39 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] != null) {
-		_this79.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg",value39);
+	if(__map_reserved["assets/sounds/heartbeat_slow_reverb.ogg"] != null) {
+		_this79.setReserved("assets/sounds/heartbeat_slow_reverb.ogg",value39);
 	} else {
-		_this79.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] = value39;
+		_this79.h["assets/sounds/heartbeat_slow_reverb.ogg"] = value39;
 	}
 	var _this80 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] != null) {
-		_this80.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg");
+	if(__map_reserved["assets/sounds/hurt1.ogg"] != null) {
+		_this80.setReserved("assets/sounds/hurt1.ogg","assets/sounds/hurt1.ogg");
 	} else {
-		_this80.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg";
+		_this80.h["assets/sounds/hurt1.ogg"] = "assets/sounds/hurt1.ogg";
 	}
 	var _this81 = this.type;
 	var value40 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] != null) {
-		_this81.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg",value40);
+	if(__map_reserved["assets/sounds/hurt1.ogg"] != null) {
+		_this81.setReserved("assets/sounds/hurt1.ogg",value40);
 	} else {
-		_this81.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] = value40;
+		_this81.h["assets/sounds/hurt1.ogg"] = value40;
 	}
 	var _this82 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] != null) {
-		_this82.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg");
+	if(__map_reserved["assets/sounds/hurt2.ogg"] != null) {
+		_this82.setReserved("assets/sounds/hurt2.ogg","assets/sounds/hurt2.ogg");
 	} else {
-		_this82.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg";
+		_this82.h["assets/sounds/hurt2.ogg"] = "assets/sounds/hurt2.ogg";
 	}
 	var _this83 = this.type;
 	var value41 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] != null) {
-		_this83.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg",value41);
+	if(__map_reserved["assets/sounds/hurt2.ogg"] != null) {
+		_this83.setReserved("assets/sounds/hurt2.ogg",value41);
 	} else {
-		_this83.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] = value41;
+		_this83.h["assets/sounds/hurt2.ogg"] = value41;
 	}
 	var _this84 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] != null) {
-		_this84.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg");
+	if(__map_reserved["assets/sounds/jump.ogg"] != null) {
+		_this84.setReserved("assets/sounds/jump.ogg","assets/sounds/jump.ogg");
 	} else {
-		_this84.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg";
+		_this84.h["assets/sounds/jump.ogg"] = "assets/sounds/jump.ogg";
 	}
 	var _this85 = this.type;
 	var value42 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] != null) {
-		_this85.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg",value42);
+	if(__map_reserved["assets/sounds/jump.ogg"] != null) {
+		_this85.setReserved("assets/sounds/jump.ogg",value42);
 	} else {
-		_this85.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] = value42;
+		_this85.h["assets/sounds/jump.ogg"] = value42;
 	}
 	var _this86 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] != null) {
-		_this86.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg");
+	if(__map_reserved["assets/sounds/lightcube_pushed.ogg"] != null) {
+		_this86.setReserved("assets/sounds/lightcube_pushed.ogg","assets/sounds/lightcube_pushed.ogg");
 	} else {
-		_this86.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg";
+		_this86.h["assets/sounds/lightcube_pushed.ogg"] = "assets/sounds/lightcube_pushed.ogg";
 	}
 	var _this87 = this.type;
 	var value43 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] != null) {
-		_this87.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg",value43);
+	if(__map_reserved["assets/sounds/lightcube_pushed.ogg"] != null) {
+		_this87.setReserved("assets/sounds/lightcube_pushed.ogg",value43);
 	} else {
-		_this87.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] = value43;
+		_this87.h["assets/sounds/lightcube_pushed.ogg"] = value43;
 	}
 	var _this88 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] != null) {
-		_this88.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg");
+	if(__map_reserved["assets/sounds/load.ogg"] != null) {
+		_this88.setReserved("assets/sounds/load.ogg","assets/sounds/load.ogg");
 	} else {
-		_this88.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg";
+		_this88.h["assets/sounds/load.ogg"] = "assets/sounds/load.ogg";
 	}
 	var _this89 = this.type;
 	var value44 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] != null) {
-		_this89.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg",value44);
+	if(__map_reserved["assets/sounds/load.ogg"] != null) {
+		_this89.setReserved("assets/sounds/load.ogg",value44);
 	} else {
-		_this89.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] = value44;
+		_this89.h["assets/sounds/load.ogg"] = value44;
 	}
 	var _this90 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] != null) {
-		_this90.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg");
+	if(__map_reserved["assets/sounds/sharp_echo.ogg"] != null) {
+		_this90.setReserved("assets/sounds/sharp_echo.ogg","assets/sounds/sharp_echo.ogg");
 	} else {
-		_this90.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg";
+		_this90.h["assets/sounds/sharp_echo.ogg"] = "assets/sounds/sharp_echo.ogg";
 	}
 	var _this91 = this.type;
 	var value45 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] != null) {
-		_this91.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg",value45);
+	if(__map_reserved["assets/sounds/sharp_echo.ogg"] != null) {
+		_this91.setReserved("assets/sounds/sharp_echo.ogg",value45);
 	} else {
-		_this91.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] = value45;
+		_this91.h["assets/sounds/sharp_echo.ogg"] = value45;
 	}
 	var _this92 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] != null) {
-		_this92.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] != null) {
+		_this92.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg");
 	} else {
-		_this92.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg";
+		_this92.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg";
 	}
 	var _this93 = this.type;
 	var value46 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] != null) {
-		_this93.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg",value46);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] != null) {
+		_this93.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg",value46);
 	} else {
-		_this93.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] = value46;
+		_this93.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] = value46;
 	}
 	var _this94 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] != null) {
-		_this94.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] != null) {
+		_this94.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg");
 	} else {
-		_this94.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg";
+		_this94.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg";
 	}
 	var _this95 = this.type;
 	var value47 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] != null) {
-		_this95.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg",value47);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] != null) {
+		_this95.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg",value47);
 	} else {
-		_this95.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] = value47;
+		_this95.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] = value47;
 	}
 	var _this96 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] != null) {
-		_this96.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] != null) {
+		_this96.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg");
 	} else {
-		_this96.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg";
+		_this96.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg";
 	}
 	var _this97 = this.type;
 	var value48 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] != null) {
-		_this97.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg",value48);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] != null) {
+		_this97.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg",value48);
 	} else {
-		_this97.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] = value48;
+		_this97.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] = value48;
 	}
 	var _this98 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] != null) {
-		_this98.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] != null) {
+		_this98.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg");
 	} else {
-		_this98.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg";
+		_this98.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg";
 	}
 	var _this99 = this.type;
 	var value49 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] != null) {
-		_this99.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg",value49);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] != null) {
+		_this99.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg",value49);
 	} else {
-		_this99.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] = value49;
+		_this99.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] = value49;
 	}
 	var _this100 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] != null) {
-		_this100.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] != null) {
+		_this100.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg");
 	} else {
-		_this100.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg";
+		_this100.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg";
 	}
 	var _this101 = this.type;
 	var value50 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] != null) {
-		_this101.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg",value50);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] != null) {
+		_this101.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg",value50);
 	} else {
-		_this101.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] = value50;
+		_this101.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] = value50;
 	}
 	var _this102 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] != null) {
-		_this102.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] != null) {
+		_this102.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg");
 	} else {
-		_this102.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg";
+		_this102.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg";
 	}
 	var _this103 = this.type;
 	var value51 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] != null) {
-		_this103.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg",value51);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] != null) {
+		_this103.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg",value51);
 	} else {
-		_this103.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] = value51;
+		_this103.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] = value51;
 	}
 	var _this104 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] != null) {
-		_this104.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] != null) {
+		_this104.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg");
 	} else {
-		_this104.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg";
+		_this104.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg";
 	}
 	var _this105 = this.type;
 	var value52 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] != null) {
-		_this105.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg",value52);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] != null) {
+		_this105.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg",value52);
 	} else {
-		_this105.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] = value52;
+		_this105.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] = value52;
 	}
 	var _this106 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] != null) {
-		_this106.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] != null) {
+		_this106.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg");
 	} else {
-		_this106.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg";
+		_this106.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg";
 	}
 	var _this107 = this.type;
 	var value53 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] != null) {
-		_this107.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg",value53);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] != null) {
+		_this107.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg",value53);
 	} else {
-		_this107.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] = value53;
+		_this107.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] = value53;
 	}
 	var _this108 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] != null) {
-		_this108.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] != null) {
+		_this108.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg");
 	} else {
-		_this108.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg";
+		_this108.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg";
 	}
 	var _this109 = this.type;
 	var value54 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] != null) {
-		_this109.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg",value54);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] != null) {
+		_this109.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg",value54);
 	} else {
-		_this109.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] = value54;
+		_this109.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] = value54;
 	}
 	var _this110 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] != null) {
-		_this110.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] != null) {
+		_this110.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg");
 	} else {
-		_this110.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg";
+		_this110.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg";
 	}
 	var _this111 = this.type;
 	var value55 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] != null) {
-		_this111.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg",value55);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] != null) {
+		_this111.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg",value55);
 	} else {
-		_this111.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] = value55;
+		_this111.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] = value55;
 	}
 	var _this112 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] != null) {
-		_this112.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] != null) {
+		_this112.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg");
 	} else {
-		_this112.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg";
+		_this112.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg";
 	}
 	var _this113 = this.type;
 	var value56 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] != null) {
-		_this113.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg",value56);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] != null) {
+		_this113.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg",value56);
 	} else {
-		_this113.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] = value56;
+		_this113.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] = value56;
 	}
 	var _this114 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] != null) {
-		_this114.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] != null) {
+		_this114.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg");
 	} else {
-		_this114.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg";
+		_this114.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg";
 	}
 	var _this115 = this.type;
 	var value57 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] != null) {
-		_this115.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg",value57);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] != null) {
+		_this115.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg",value57);
 	} else {
-		_this115.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] = value57;
+		_this115.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] = value57;
 	}
 	var _this116 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] != null) {
-		_this116.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] != null) {
+		_this116.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg");
 	} else {
-		_this116.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg";
+		_this116.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg";
 	}
 	var _this117 = this.type;
 	var value58 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] != null) {
-		_this117.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg",value58);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] != null) {
+		_this117.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg",value58);
 	} else {
-		_this117.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] = value58;
+		_this117.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] = value58;
 	}
 	var _this118 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] != null) {
-		_this118.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] != null) {
+		_this118.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg");
 	} else {
-		_this118.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg";
+		_this118.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg";
 	}
 	var _this119 = this.type;
 	var value59 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] != null) {
-		_this119.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg",value59);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] != null) {
+		_this119.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg",value59);
 	} else {
-		_this119.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] = value59;
+		_this119.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] = value59;
 	}
 	var _this120 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] != null) {
-		_this120.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] != null) {
+		_this120.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg");
 	} else {
-		_this120.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg";
+		_this120.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg";
 	}
 	var _this121 = this.type;
 	var value60 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] != null) {
-		_this121.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg",value60);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] != null) {
+		_this121.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg",value60);
 	} else {
-		_this121.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] = value60;
+		_this121.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] = value60;
 	}
 	var _this122 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] != null) {
-		_this122.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] != null) {
+		_this122.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg");
 	} else {
-		_this122.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg";
+		_this122.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg";
 	}
 	var _this123 = this.type;
 	var value61 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] != null) {
-		_this123.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg",value61);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] != null) {
+		_this123.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg",value61);
 	} else {
-		_this123.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] = value61;
+		_this123.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] = value61;
 	}
 	var _this124 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] != null) {
-		_this124.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] != null) {
+		_this124.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg");
 	} else {
-		_this124.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg";
+		_this124.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg";
 	}
 	var _this125 = this.type;
 	var value62 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] != null) {
-		_this125.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg",value62);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] != null) {
+		_this125.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg",value62);
 	} else {
-		_this125.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] = value62;
+		_this125.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] = value62;
 	}
 	var _this126 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] != null) {
-		_this126.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] != null) {
+		_this126.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg");
 	} else {
-		_this126.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg";
+		_this126.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg";
 	}
 	var _this127 = this.type;
 	var value63 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] != null) {
-		_this127.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg",value63);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] != null) {
+		_this127.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg",value63);
 	} else {
-		_this127.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] = value63;
+		_this127.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] = value63;
 	}
 	var _this128 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] != null) {
-		_this128.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] != null) {
+		_this128.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg");
 	} else {
-		_this128.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg";
+		_this128.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg";
 	}
 	var _this129 = this.type;
 	var value64 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] != null) {
-		_this129.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg",value64);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] != null) {
+		_this129.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg",value64);
 	} else {
-		_this129.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] = value64;
+		_this129.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] = value64;
 	}
 	var _this130 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] != null) {
-		_this130.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] != null) {
+		_this130.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg");
 	} else {
-		_this130.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg";
+		_this130.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg";
 	}
 	var _this131 = this.type;
 	var value65 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] != null) {
-		_this131.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg",value65);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] != null) {
+		_this131.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg",value65);
 	} else {
-		_this131.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] = value65;
+		_this131.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] = value65;
 	}
 	var _this132 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] != null) {
-		_this132.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] != null) {
+		_this132.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg");
 	} else {
-		_this132.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg";
+		_this132.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg";
 	}
 	var _this133 = this.type;
 	var value66 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] != null) {
-		_this133.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg",value66);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] != null) {
+		_this133.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg",value66);
 	} else {
-		_this133.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] = value66;
+		_this133.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] = value66;
 	}
 	var _this134 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] != null) {
-		_this134.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] != null) {
+		_this134.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg");
 	} else {
-		_this134.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg";
+		_this134.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg";
 	}
 	var _this135 = this.type;
 	var value67 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] != null) {
-		_this135.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg",value67);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] != null) {
+		_this135.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg",value67);
 	} else {
-		_this135.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] = value67;
+		_this135.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] = value67;
 	}
 	var _this136 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] != null) {
-		_this136.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] != null) {
+		_this136.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg");
 	} else {
-		_this136.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg";
+		_this136.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg";
 	}
 	var _this137 = this.type;
 	var value68 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] != null) {
-		_this137.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg",value68);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] != null) {
+		_this137.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg",value68);
 	} else {
-		_this137.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] = value68;
+		_this137.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] = value68;
 	}
 	var _this138 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] != null) {
-		_this138.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] != null) {
+		_this138.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg");
 	} else {
-		_this138.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg";
+		_this138.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg";
 	}
 	var _this139 = this.type;
 	var value69 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] != null) {
-		_this139.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg",value69);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] != null) {
+		_this139.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg",value69);
 	} else {
-		_this139.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] = value69;
+		_this139.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] = value69;
 	}
 	var _this140 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] != null) {
-		_this140.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] != null) {
+		_this140.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg");
 	} else {
-		_this140.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg";
+		_this140.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg";
 	}
 	var _this141 = this.type;
 	var value70 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] != null) {
-		_this141.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg",value70);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] != null) {
+		_this141.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg",value70);
 	} else {
-		_this141.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] = value70;
+		_this141.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] = value70;
 	}
 	var _this142 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] != null) {
-		_this142.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] != null) {
+		_this142.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg");
 	} else {
-		_this142.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg";
+		_this142.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg";
 	}
 	var _this143 = this.type;
 	var value71 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] != null) {
-		_this143.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg",value71);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] != null) {
+		_this143.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg",value71);
 	} else {
-		_this143.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] = value71;
+		_this143.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] = value71;
 	}
 	var _this144 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] != null) {
-		_this144.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] != null) {
+		_this144.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg");
 	} else {
-		_this144.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg";
+		_this144.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg";
 	}
 	var _this145 = this.type;
 	var value72 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] != null) {
-		_this145.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg",value72);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] != null) {
+		_this145.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg",value72);
 	} else {
-		_this145.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] = value72;
+		_this145.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] = value72;
 	}
 	var _this146 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] != null) {
-		_this146.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] != null) {
+		_this146.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg");
 	} else {
-		_this146.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg";
+		_this146.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg";
 	}
 	var _this147 = this.type;
 	var value73 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] != null) {
-		_this147.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg",value73);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] != null) {
+		_this147.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg",value73);
 	} else {
-		_this147.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] = value73;
+		_this147.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] = value73;
 	}
 	var _this148 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] != null) {
-		_this148.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] != null) {
+		_this148.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg");
 	} else {
-		_this148.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg";
+		_this148.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg";
 	}
 	var _this149 = this.type;
 	var value74 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] != null) {
-		_this149.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg",value74);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] != null) {
+		_this149.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg",value74);
 	} else {
-		_this149.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] = value74;
+		_this149.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] = value74;
 	}
 	var _this150 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] != null) {
-		_this150.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] != null) {
+		_this150.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg");
 	} else {
-		_this150.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg";
+		_this150.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg";
 	}
 	var _this151 = this.type;
 	var value75 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] != null) {
-		_this151.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg",value75);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] != null) {
+		_this151.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg",value75);
 	} else {
-		_this151.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] = value75;
+		_this151.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] = value75;
 	}
 	var _this152 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] != null) {
-		_this152.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] != null) {
+		_this152.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg");
 	} else {
-		_this152.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg";
+		_this152.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg";
 	}
 	var _this153 = this.type;
 	var value76 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] != null) {
-		_this153.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg",value76);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] != null) {
+		_this153.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg",value76);
 	} else {
-		_this153.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] = value76;
+		_this153.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] = value76;
 	}
 	var _this154 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] != null) {
-		_this154.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] != null) {
+		_this154.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg");
 	} else {
-		_this154.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg";
+		_this154.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg";
 	}
 	var _this155 = this.type;
 	var value77 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] != null) {
-		_this155.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg",value77);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] != null) {
+		_this155.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg",value77);
 	} else {
-		_this155.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] = value77;
+		_this155.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] = value77;
 	}
 	var _this156 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] != null) {
-		_this156.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] != null) {
+		_this156.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg");
 	} else {
-		_this156.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg";
+		_this156.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg";
 	}
 	var _this157 = this.type;
 	var value78 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] != null) {
-		_this157.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg",value78);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] != null) {
+		_this157.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg",value78);
 	} else {
-		_this157.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] = value78;
+		_this157.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] = value78;
 	}
 	var _this158 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] != null) {
-		_this158.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] != null) {
+		_this158.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg");
 	} else {
-		_this158.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg";
+		_this158.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg";
 	}
 	var _this159 = this.type;
 	var value79 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] != null) {
-		_this159.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg",value79);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] != null) {
+		_this159.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg",value79);
 	} else {
-		_this159.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] = value79;
+		_this159.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] = value79;
 	}
 	var _this160 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] != null) {
-		_this160.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] != null) {
+		_this160.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg");
 	} else {
-		_this160.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg";
+		_this160.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg";
 	}
 	var _this161 = this.type;
 	var value80 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] != null) {
-		_this161.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg",value80);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] != null) {
+		_this161.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg",value80);
 	} else {
-		_this161.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] = value80;
+		_this161.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] = value80;
 	}
 	var _this162 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] != null) {
-		_this162.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] != null) {
+		_this162.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg");
 	} else {
-		_this162.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg";
+		_this162.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg";
 	}
 	var _this163 = this.type;
 	var value81 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] != null) {
-		_this163.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg",value81);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] != null) {
+		_this163.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg",value81);
 	} else {
-		_this163.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] = value81;
+		_this163.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] = value81;
 	}
 	var _this164 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] != null) {
-		_this164.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] != null) {
+		_this164.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg");
 	} else {
-		_this164.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg";
+		_this164.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg";
 	}
 	var _this165 = this.type;
 	var value82 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] != null) {
-		_this165.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg",value82);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] != null) {
+		_this165.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg",value82);
 	} else {
-		_this165.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] = value82;
+		_this165.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] = value82;
 	}
 	var _this166 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] != null) {
-		_this166.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] != null) {
+		_this166.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg");
 	} else {
-		_this166.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg";
+		_this166.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg";
 	}
 	var _this167 = this.type;
 	var value83 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] != null) {
-		_this167.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg",value83);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] != null) {
+		_this167.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg",value83);
 	} else {
-		_this167.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] = value83;
+		_this167.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] = value83;
 	}
 	var _this168 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] != null) {
-		_this168.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] != null) {
+		_this168.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg");
 	} else {
-		_this168.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg";
+		_this168.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg";
 	}
 	var _this169 = this.type;
 	var value84 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] != null) {
-		_this169.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg",value84);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] != null) {
+		_this169.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg",value84);
 	} else {
-		_this169.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] = value84;
+		_this169.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] = value84;
 	}
 	var _this170 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] != null) {
-		_this170.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] != null) {
+		_this170.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg");
 	} else {
-		_this170.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg";
+		_this170.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg";
 	}
 	var _this171 = this.type;
 	var value85 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] != null) {
-		_this171.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg",value85);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] != null) {
+		_this171.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg",value85);
 	} else {
-		_this171.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] = value85;
+		_this171.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] = value85;
 	}
 	var _this172 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] != null) {
-		_this172.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] != null) {
+		_this172.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg");
 	} else {
-		_this172.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg";
+		_this172.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg";
 	}
 	var _this173 = this.type;
 	var value86 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] != null) {
-		_this173.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg",value86);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] != null) {
+		_this173.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg",value86);
 	} else {
-		_this173.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] = value86;
+		_this173.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] = value86;
 	}
 	var _this174 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] != null) {
-		_this174.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] != null) {
+		_this174.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg");
 	} else {
-		_this174.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg";
+		_this174.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg";
 	}
 	var _this175 = this.type;
 	var value87 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] != null) {
-		_this175.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg",value87);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] != null) {
+		_this175.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg",value87);
 	} else {
-		_this175.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] = value87;
+		_this175.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] = value87;
 	}
 	var _this176 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] != null) {
-		_this176.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] != null) {
+		_this176.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg");
 	} else {
-		_this176.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg";
+		_this176.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg";
 	}
 	var _this177 = this.type;
 	var value88 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] != null) {
-		_this177.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg",value88);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] != null) {
+		_this177.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg",value88);
 	} else {
-		_this177.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] = value88;
+		_this177.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_01.ogg"] = value88;
 	}
 	var _this178 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] != null) {
-		_this178.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] != null) {
+		_this178.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg");
 	} else {
-		_this178.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg";
+		_this178.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg";
 	}
 	var _this179 = this.type;
 	var value89 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] != null) {
-		_this179.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg",value89);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] != null) {
+		_this179.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg",value89);
 	} else {
-		_this179.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] = value89;
+		_this179.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_02.ogg"] = value89;
 	}
 	var _this180 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] != null) {
-		_this180.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] != null) {
+		_this180.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg");
 	} else {
-		_this180.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg";
+		_this180.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg";
 	}
 	var _this181 = this.type;
 	var value90 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] != null) {
-		_this181.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg",value90);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] != null) {
+		_this181.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg",value90);
 	} else {
-		_this181.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] = value90;
+		_this181.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_03.ogg"] = value90;
 	}
 	var _this182 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] != null) {
-		_this182.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] != null) {
+		_this182.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg");
 	} else {
-		_this182.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg";
+		_this182.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg";
 	}
 	var _this183 = this.type;
 	var value91 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] != null) {
-		_this183.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg",value91);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] != null) {
+		_this183.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg",value91);
 	} else {
-		_this183.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] = value91;
+		_this183.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_04.ogg"] = value91;
 	}
 	var _this184 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] != null) {
-		_this184.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] != null) {
+		_this184.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg");
 	} else {
-		_this184.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg";
+		_this184.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg";
 	}
 	var _this185 = this.type;
 	var value92 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] != null) {
-		_this185.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg",value92);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] != null) {
+		_this185.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg",value92);
 	} else {
-		_this185.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] = value92;
+		_this185.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_05.ogg"] = value92;
 	}
 	var _this186 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] != null) {
-		_this186.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] != null) {
+		_this186.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg");
 	} else {
-		_this186.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg";
+		_this186.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg";
 	}
 	var _this187 = this.type;
 	var value93 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] != null) {
-		_this187.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg",value93);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] != null) {
+		_this187.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg",value93);
 	} else {
-		_this187.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] = value93;
+		_this187.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_06.ogg"] = value93;
 	}
 	var _this188 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] != null) {
-		_this188.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] != null) {
+		_this188.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg");
 	} else {
-		_this188.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg";
+		_this188.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg";
 	}
 	var _this189 = this.type;
 	var value94 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] != null) {
-		_this189.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg",value94);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] != null) {
+		_this189.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg",value94);
 	} else {
-		_this189.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] = value94;
+		_this189.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_07.ogg"] = value94;
 	}
 	var _this190 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] != null) {
-		_this190.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] != null) {
+		_this190.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg");
 	} else {
-		_this190.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg";
+		_this190.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg";
 	}
 	var _this191 = this.type;
 	var value95 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] != null) {
-		_this191.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg",value95);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] != null) {
+		_this191.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg",value95);
 	} else {
-		_this191.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] = value95;
+		_this191.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_08.ogg"] = value95;
 	}
 	var _this192 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] != null) {
-		_this192.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] != null) {
+		_this192.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg");
 	} else {
-		_this192.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg";
+		_this192.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg";
 	}
 	var _this193 = this.type;
 	var value96 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] != null) {
-		_this193.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg",value96);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] != null) {
+		_this193.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg",value96);
 	} else {
-		_this193.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] = value96;
+		_this193.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_09.ogg"] = value96;
 	}
 	var _this194 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] != null) {
-		_this194.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] != null) {
+		_this194.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg");
 	} else {
-		_this194.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg";
+		_this194.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg";
 	}
 	var _this195 = this.type;
 	var value97 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] != null) {
-		_this195.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg",value97);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] != null) {
+		_this195.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg",value97);
 	} else {
-		_this195.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] = value97;
+		_this195.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_10.ogg"] = value97;
 	}
 	var _this196 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] != null) {
-		_this196.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] != null) {
+		_this196.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg");
 	} else {
-		_this196.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg";
+		_this196.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg";
 	}
 	var _this197 = this.type;
 	var value98 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] != null) {
-		_this197.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg",value98);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] != null) {
+		_this197.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg",value98);
 	} else {
-		_this197.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] = value98;
+		_this197.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_11.ogg"] = value98;
 	}
 	var _this198 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] != null) {
-		_this198.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] != null) {
+		_this198.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg");
 	} else {
-		_this198.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg";
+		_this198.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg";
 	}
 	var _this199 = this.type;
 	var value99 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] != null) {
-		_this199.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg",value99);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] != null) {
+		_this199.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg",value99);
 	} else {
-		_this199.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] = value99;
+		_this199.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_12.ogg"] = value99;
 	}
 	var _this200 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] != null) {
-		_this200.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] != null) {
+		_this200.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg");
 	} else {
-		_this200.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg";
+		_this200.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg";
 	}
 	var _this201 = this.type;
 	var value100 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] != null) {
-		_this201.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg",value100);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] != null) {
+		_this201.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg",value100);
 	} else {
-		_this201.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] = value100;
+		_this201.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_13.ogg"] = value100;
 	}
 	var _this202 = this.path;
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] != null) {
-		_this202.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] != null) {
+		_this202.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg");
 	} else {
-		_this202.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg";
+		_this202.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg";
 	}
 	var _this203 = this.type;
 	var value101 = "SOUND";
-	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] != null) {
-		_this203.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg",value101);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] != null) {
+		_this203.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg",value101);
 	} else {
-		_this203.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] = value101;
+		_this203.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_14.ogg"] = value101;
 	}
 	var _this204 = this.path;
-	if(__map_reserved["assets/sounds/load.wav"] != null) {
-		_this204.setReserved("assets/sounds/load.wav","assets/sounds/load.wav");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] != null) {
+		_this204.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg");
 	} else {
-		_this204.h["assets/sounds/load.wav"] = "assets/sounds/load.wav";
+		_this204.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg";
 	}
 	var _this205 = this.type;
 	var value102 = "SOUND";
-	if(__map_reserved["assets/sounds/load.wav"] != null) {
-		_this205.setReserved("assets/sounds/load.wav",value102);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] != null) {
+		_this205.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg",value102);
 	} else {
-		_this205.h["assets/sounds/load.wav"] = value102;
+		_this205.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_15.ogg"] = value102;
 	}
 	var _this206 = this.path;
-	if(__map_reserved["assets/sounds/misc_menu.wav"] != null) {
-		_this206.setReserved("assets/sounds/misc_menu.wav","assets/sounds/misc_menu.wav");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] != null) {
+		_this206.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg");
 	} else {
-		_this206.h["assets/sounds/misc_menu.wav"] = "assets/sounds/misc_menu.wav";
+		_this206.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg";
 	}
 	var _this207 = this.type;
 	var value103 = "SOUND";
-	if(__map_reserved["assets/sounds/misc_menu.wav"] != null) {
-		_this207.setReserved("assets/sounds/misc_menu.wav",value103);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] != null) {
+		_this207.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg",value103);
 	} else {
-		_this207.h["assets/sounds/misc_menu.wav"] = value103;
+		_this207.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_16.ogg"] = value103;
 	}
 	var _this208 = this.path;
-	if(__map_reserved["assets/sounds/misc_menu_2.wav"] != null) {
-		_this208.setReserved("assets/sounds/misc_menu_2.wav","assets/sounds/misc_menu_2.wav");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] != null) {
+		_this208.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg");
 	} else {
-		_this208.h["assets/sounds/misc_menu_2.wav"] = "assets/sounds/misc_menu_2.wav";
+		_this208.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg";
 	}
 	var _this209 = this.type;
 	var value104 = "SOUND";
-	if(__map_reserved["assets/sounds/misc_menu_2.wav"] != null) {
-		_this209.setReserved("assets/sounds/misc_menu_2.wav",value104);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] != null) {
+		_this209.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg",value104);
 	} else {
-		_this209.h["assets/sounds/misc_menu_2.wav"] = value104;
+		_this209.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_17.ogg"] = value104;
 	}
 	var _this210 = this.path;
-	if(__map_reserved["assets/sounds/misc_menu_4.wav"] != null) {
-		_this210.setReserved("assets/sounds/misc_menu_4.wav","assets/sounds/misc_menu_4.wav");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] != null) {
+		_this210.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg");
 	} else {
-		_this210.h["assets/sounds/misc_menu_4.wav"] = "assets/sounds/misc_menu_4.wav";
+		_this210.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg";
 	}
 	var _this211 = this.type;
 	var value105 = "SOUND";
-	if(__map_reserved["assets/sounds/misc_menu_4.wav"] != null) {
-		_this211.setReserved("assets/sounds/misc_menu_4.wav",value105);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] != null) {
+		_this211.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg",value105);
 	} else {
-		_this211.h["assets/sounds/misc_menu_4.wav"] = value105;
+		_this211.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_18.ogg"] = value105;
 	}
 	var _this212 = this.path;
-	if(__map_reserved["assets/sounds/sharp_echo.wav"] != null) {
-		_this212.setReserved("assets/sounds/sharp_echo.wav","assets/sounds/sharp_echo.wav");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] != null) {
+		_this212.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg");
 	} else {
-		_this212.h["assets/sounds/sharp_echo.wav"] = "assets/sounds/sharp_echo.wav";
+		_this212.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg";
 	}
 	var _this213 = this.type;
 	var value106 = "SOUND";
-	if(__map_reserved["assets/sounds/sharp_echo.wav"] != null) {
-		_this213.setReserved("assets/sounds/sharp_echo.wav",value106);
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] != null) {
+		_this213.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg",value106);
 	} else {
-		_this213.h["assets/sounds/sharp_echo.wav"] = value106;
+		_this213.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_01.ogg"] = value106;
 	}
 	var _this214 = this.path;
-	if(__map_reserved["assets/tilemap/Lvl1.csv"] != null) {
-		_this214.setReserved("assets/tilemap/Lvl1.csv","assets/tilemap/Lvl1.csv");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] != null) {
+		_this214.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg");
 	} else {
-		_this214.h["assets/tilemap/Lvl1.csv"] = "assets/tilemap/Lvl1.csv";
+		_this214.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg";
 	}
 	var _this215 = this.type;
-	var value107 = "TEXT";
-	if(__map_reserved["assets/tilemap/Lvl1.csv"] != null) {
-		_this215.setReserved("assets/tilemap/Lvl1.csv",value107);
+	var value107 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] != null) {
+		_this215.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg",value107);
 	} else {
-		_this215.h["assets/tilemap/Lvl1.csv"] = value107;
+		_this215.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_02.ogg"] = value107;
 	}
 	var _this216 = this.path;
-	if(__map_reserved["assets/tilemap/Lvl1.json"] != null) {
-		_this216.setReserved("assets/tilemap/Lvl1.json","assets/tilemap/Lvl1.json");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] != null) {
+		_this216.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg");
 	} else {
-		_this216.h["assets/tilemap/Lvl1.json"] = "assets/tilemap/Lvl1.json";
+		_this216.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg";
 	}
 	var _this217 = this.type;
-	var value108 = "TEXT";
-	if(__map_reserved["assets/tilemap/Lvl1.json"] != null) {
-		_this217.setReserved("assets/tilemap/Lvl1.json",value108);
+	var value108 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] != null) {
+		_this217.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg",value108);
 	} else {
-		_this217.h["assets/tilemap/Lvl1.json"] = value108;
+		_this217.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_03.ogg"] = value108;
 	}
 	var _this218 = this.path;
-	if(__map_reserved["assets/tilemap/Lvl2.csv"] != null) {
-		_this218.setReserved("assets/tilemap/Lvl2.csv","assets/tilemap/Lvl2.csv");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] != null) {
+		_this218.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg");
 	} else {
-		_this218.h["assets/tilemap/Lvl2.csv"] = "assets/tilemap/Lvl2.csv";
+		_this218.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg";
 	}
 	var _this219 = this.type;
-	var value109 = "TEXT";
-	if(__map_reserved["assets/tilemap/Lvl2.csv"] != null) {
-		_this219.setReserved("assets/tilemap/Lvl2.csv",value109);
+	var value109 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] != null) {
+		_this219.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg",value109);
 	} else {
-		_this219.h["assets/tilemap/Lvl2.csv"] = value109;
+		_this219.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_04.ogg"] = value109;
 	}
 	var _this220 = this.path;
-	if(__map_reserved["assets/tilemap/Lvl3.csv"] != null) {
-		_this220.setReserved("assets/tilemap/Lvl3.csv","assets/tilemap/Lvl3.csv");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] != null) {
+		_this220.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg");
 	} else {
-		_this220.h["assets/tilemap/Lvl3.csv"] = "assets/tilemap/Lvl3.csv";
+		_this220.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg";
 	}
 	var _this221 = this.type;
-	var value110 = "TEXT";
-	if(__map_reserved["assets/tilemap/Lvl3.csv"] != null) {
-		_this221.setReserved("assets/tilemap/Lvl3.csv",value110);
+	var value110 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] != null) {
+		_this221.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg",value110);
 	} else {
-		_this221.h["assets/tilemap/Lvl3.csv"] = value110;
+		_this221.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_05.ogg"] = value110;
 	}
 	var _this222 = this.path;
-	if(__map_reserved["assets/tilemap/LvlDemo.csv"] != null) {
-		_this222.setReserved("assets/tilemap/LvlDemo.csv","assets/tilemap/LvlDemo.csv");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] != null) {
+		_this222.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg");
 	} else {
-		_this222.h["assets/tilemap/LvlDemo.csv"] = "assets/tilemap/LvlDemo.csv";
+		_this222.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg";
 	}
 	var _this223 = this.type;
-	var value111 = "TEXT";
-	if(__map_reserved["assets/tilemap/LvlDemo.csv"] != null) {
-		_this223.setReserved("assets/tilemap/LvlDemo.csv",value111);
+	var value111 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] != null) {
+		_this223.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg",value111);
 	} else {
-		_this223.h["assets/tilemap/LvlDemo.csv"] = value111;
+		_this223.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_06.ogg"] = value111;
 	}
 	var _this224 = this.path;
-	if(__map_reserved["assets/tilemap/tilemap.csv"] != null) {
-		_this224.setReserved("assets/tilemap/tilemap.csv","assets/tilemap/tilemap.csv");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] != null) {
+		_this224.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg");
 	} else {
-		_this224.h["assets/tilemap/tilemap.csv"] = "assets/tilemap/tilemap.csv";
+		_this224.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg";
 	}
 	var _this225 = this.type;
-	var value112 = "TEXT";
-	if(__map_reserved["assets/tilemap/tilemap.csv"] != null) {
-		_this225.setReserved("assets/tilemap/tilemap.csv",value112);
+	var value112 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] != null) {
+		_this225.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg",value112);
 	} else {
-		_this225.h["assets/tilemap/tilemap.csv"] = value112;
+		_this225.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_07.ogg"] = value112;
 	}
 	var _this226 = this.path;
-	if(__map_reserved["assets/tileset/tileset.png"] != null) {
-		_this226.setReserved("assets/tileset/tileset.png","assets/tileset/tileset.png");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] != null) {
+		_this226.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg");
 	} else {
-		_this226.h["assets/tileset/tileset.png"] = "assets/tileset/tileset.png";
+		_this226.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg";
 	}
 	var _this227 = this.type;
-	var value113 = "IMAGE";
-	if(__map_reserved["assets/tileset/tileset.png"] != null) {
-		_this227.setReserved("assets/tileset/tileset.png",value113);
+	var value113 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] != null) {
+		_this227.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg",value113);
 	} else {
-		_this227.h["assets/tileset/tileset.png"] = value113;
+		_this227.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_08.ogg"] = value113;
 	}
 	var _this228 = this.path;
-	if(__map_reserved["assets/tileset/tileset16.png"] != null) {
-		_this228.setReserved("assets/tileset/tileset16.png","assets/tileset/tileset16.png");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] != null) {
+		_this228.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg");
 	} else {
-		_this228.h["assets/tileset/tileset16.png"] = "assets/tileset/tileset16.png";
+		_this228.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg";
 	}
 	var _this229 = this.type;
-	var value114 = "IMAGE";
-	if(__map_reserved["assets/tileset/tileset16.png"] != null) {
-		_this229.setReserved("assets/tileset/tileset16.png",value114);
+	var value114 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] != null) {
+		_this229.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg",value114);
 	} else {
-		_this229.h["assets/tileset/tileset16.png"] = value114;
+		_this229.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_09.ogg"] = value114;
 	}
-	var _this230 = this.className;
-	var value115 = _$_$ASSET_$_$assets_$fonts_$fantasquesansmono_$regular_$ttf;
-	if(__map_reserved["assets/fonts/FantasqueSansMono-Regular.ttf"] != null) {
-		_this230.setReserved("assets/fonts/FantasqueSansMono-Regular.ttf",value115);
+	var _this230 = this.path;
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] != null) {
+		_this230.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg");
 	} else {
-		_this230.h["assets/fonts/FantasqueSansMono-Regular.ttf"] = value115;
+		_this230.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg";
 	}
 	var _this231 = this.type;
-	var value116 = "FONT";
-	if(__map_reserved["assets/fonts/FantasqueSansMono-Regular.ttf"] != null) {
-		_this231.setReserved("assets/fonts/FantasqueSansMono-Regular.ttf",value116);
+	var value115 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] != null) {
+		_this231.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg",value115);
 	} else {
-		_this231.h["assets/fonts/FantasqueSansMono-Regular.ttf"] = value116;
+		_this231.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_10.ogg"] = value115;
 	}
 	var _this232 = this.path;
-	if(__map_reserved["assets/music/cave_theme.ogg"] != null) {
-		_this232.setReserved("assets/music/cave_theme.ogg","assets/music/cave_theme.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] != null) {
+		_this232.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg");
 	} else {
-		_this232.h["assets/music/cave_theme.ogg"] = "assets/music/cave_theme.ogg";
+		_this232.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg";
 	}
 	var _this233 = this.type;
-	var value117 = "MUSIC";
-	if(__map_reserved["assets/music/cave_theme.ogg"] != null) {
-		_this233.setReserved("assets/music/cave_theme.ogg",value117);
+	var value116 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] != null) {
+		_this233.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg",value116);
 	} else {
-		_this233.h["assets/music/cave_theme.ogg"] = value117;
+		_this233.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_11.ogg"] = value116;
 	}
 	var _this234 = this.path;
-	if(__map_reserved["assets/music/forest.ogg"] != null) {
-		_this234.setReserved("assets/music/forest.ogg","assets/music/forest.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] != null) {
+		_this234.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg");
 	} else {
-		_this234.h["assets/music/forest.ogg"] = "assets/music/forest.ogg";
+		_this234.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg";
 	}
 	var _this235 = this.type;
-	var value118 = "MUSIC";
-	if(__map_reserved["assets/music/forest.ogg"] != null) {
-		_this235.setReserved("assets/music/forest.ogg",value118);
+	var value117 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] != null) {
+		_this235.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg",value117);
 	} else {
-		_this235.h["assets/music/forest.ogg"] = value118;
+		_this235.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_12.ogg"] = value117;
 	}
 	var _this236 = this.path;
-	if(__map_reserved["assets/music/lvl1.ogg"] != null) {
-		_this236.setReserved("assets/music/lvl1.ogg","assets/music/lvl1.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] != null) {
+		_this236.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg");
 	} else {
-		_this236.h["assets/music/lvl1.ogg"] = "assets/music/lvl1.ogg";
+		_this236.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg";
 	}
 	var _this237 = this.type;
-	var value119 = "MUSIC";
-	if(__map_reserved["assets/music/lvl1.ogg"] != null) {
-		_this237.setReserved("assets/music/lvl1.ogg",value119);
+	var value118 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] != null) {
+		_this237.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg",value118);
 	} else {
-		_this237.h["assets/music/lvl1.ogg"] = value119;
+		_this237.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_13.ogg"] = value118;
 	}
 	var _this238 = this.path;
-	if(__map_reserved["assets/music/menu.ogg"] != null) {
-		_this238.setReserved("assets/music/menu.ogg","assets/music/menu.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] != null) {
+		_this238.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg");
 	} else {
-		_this238.h["assets/music/menu.ogg"] = "assets/music/menu.ogg";
+		_this238.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg";
 	}
 	var _this239 = this.type;
-	var value120 = "MUSIC";
-	if(__map_reserved["assets/music/menu.ogg"] != null) {
-		_this239.setReserved("assets/music/menu.ogg",value120);
+	var value119 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] != null) {
+		_this239.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg",value119);
 	} else {
-		_this239.h["assets/music/menu.ogg"] = value120;
+		_this239.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_14.ogg"] = value119;
 	}
 	var _this240 = this.path;
-	if(__map_reserved["flixel/sounds/beep.ogg"] != null) {
-		_this240.setReserved("flixel/sounds/beep.ogg","flixel/sounds/beep.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] != null) {
+		_this240.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg");
 	} else {
-		_this240.h["flixel/sounds/beep.ogg"] = "flixel/sounds/beep.ogg";
+		_this240.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg";
 	}
 	var _this241 = this.type;
-	var value121 = "SOUND";
-	if(__map_reserved["flixel/sounds/beep.ogg"] != null) {
-		_this241.setReserved("flixel/sounds/beep.ogg",value121);
+	var value120 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] != null) {
+		_this241.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg",value120);
 	} else {
-		_this241.h["flixel/sounds/beep.ogg"] = value121;
+		_this241.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_15.ogg"] = value120;
 	}
 	var _this242 = this.path;
-	if(__map_reserved["flixel/sounds/flixel.ogg"] != null) {
-		_this242.setReserved("flixel/sounds/flixel.ogg","flixel/sounds/flixel.ogg");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] != null) {
+		_this242.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg");
 	} else {
-		_this242.h["flixel/sounds/flixel.ogg"] = "flixel/sounds/flixel.ogg";
+		_this242.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg";
 	}
 	var _this243 = this.type;
-	var value122 = "SOUND";
-	if(__map_reserved["flixel/sounds/flixel.ogg"] != null) {
-		_this243.setReserved("flixel/sounds/flixel.ogg",value122);
+	var value121 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] != null) {
+		_this243.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg",value121);
 	} else {
-		_this243.h["flixel/sounds/flixel.ogg"] = value122;
+		_this243.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_16.ogg"] = value121;
 	}
-	var _this244 = this.className;
-	var value123 = _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf;
-	if(__map_reserved["flixel/fonts/nokiafc22.ttf"] != null) {
-		_this244.setReserved("flixel/fonts/nokiafc22.ttf",value123);
+	var _this244 = this.path;
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] != null) {
+		_this244.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg");
 	} else {
-		_this244.h["flixel/fonts/nokiafc22.ttf"] = value123;
+		_this244.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg";
 	}
 	var _this245 = this.type;
-	var value124 = "FONT";
-	if(__map_reserved["flixel/fonts/nokiafc22.ttf"] != null) {
-		_this245.setReserved("flixel/fonts/nokiafc22.ttf",value124);
+	var value122 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] != null) {
+		_this245.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg",value122);
 	} else {
-		_this245.h["flixel/fonts/nokiafc22.ttf"] = value124;
+		_this245.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_17.ogg"] = value122;
 	}
-	var _this246 = this.className;
-	var value125 = _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf;
-	if(__map_reserved["flixel/fonts/monsterrat.ttf"] != null) {
-		_this246.setReserved("flixel/fonts/monsterrat.ttf",value125);
+	var _this246 = this.path;
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] != null) {
+		_this246.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg");
 	} else {
-		_this246.h["flixel/fonts/monsterrat.ttf"] = value125;
+		_this246.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg";
 	}
 	var _this247 = this.type;
-	var value126 = "FONT";
-	if(__map_reserved["flixel/fonts/monsterrat.ttf"] != null) {
-		_this247.setReserved("flixel/fonts/monsterrat.ttf",value126);
+	var value123 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] != null) {
+		_this247.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg",value123);
 	} else {
-		_this247.h["flixel/fonts/monsterrat.ttf"] = value126;
+		_this247.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_18.ogg"] = value123;
 	}
 	var _this248 = this.path;
-	if(__map_reserved["flixel/images/ui/button.png"] != null) {
-		_this248.setReserved("flixel/images/ui/button.png","flixel/images/ui/button.png");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] != null) {
+		_this248.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg");
 	} else {
-		_this248.h["flixel/images/ui/button.png"] = "flixel/images/ui/button.png";
+		_this248.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg";
 	}
 	var _this249 = this.type;
-	var value127 = "IMAGE";
-	if(__map_reserved["flixel/images/ui/button.png"] != null) {
-		_this249.setReserved("flixel/images/ui/button.png",value127);
+	var value124 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] != null) {
+		_this249.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg",value124);
 	} else {
-		_this249.h["flixel/images/ui/button.png"] = value127;
+		_this249.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_19.ogg"] = value124;
 	}
 	var _this250 = this.path;
-	if(__map_reserved["flixel/images/logo/default.png"] != null) {
-		_this250.setReserved("flixel/images/logo/default.png","flixel/images/logo/default.png");
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] != null) {
+		_this250.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg");
 	} else {
-		_this250.h["flixel/images/logo/default.png"] = "flixel/images/logo/default.png";
+		_this250.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg";
 	}
 	var _this251 = this.type;
-	var value128 = "IMAGE";
-	if(__map_reserved["flixel/images/logo/default.png"] != null) {
-		_this251.setReserved("flixel/images/logo/default.png",value128);
+	var value125 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] != null) {
+		_this251.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg",value125);
 	} else {
-		_this251.h["flixel/images/logo/default.png"] = value128;
+		_this251.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_20.ogg"] = value125;
+	}
+	var _this252 = this.path;
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] != null) {
+		_this252.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg");
+	} else {
+		_this252.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg";
+	}
+	var _this253 = this.type;
+	var value126 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] != null) {
+		_this253.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg",value126);
+	} else {
+		_this253.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_21.ogg"] = value126;
+	}
+	var _this254 = this.path;
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] != null) {
+		_this254.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg");
+	} else {
+		_this254.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg";
+	}
+	var _this255 = this.type;
+	var value127 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] != null) {
+		_this255.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg",value127);
+	} else {
+		_this255.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg"] = value127;
+	}
+	var _this256 = this.path;
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] != null) {
+		_this256.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg");
+	} else {
+		_this256.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg";
+	}
+	var _this257 = this.type;
+	var value128 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] != null) {
+		_this257.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg",value128);
+	} else {
+		_this257.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg"] = value128;
+	}
+	var _this258 = this.path;
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] != null) {
+		_this258.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg","assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg");
+	} else {
+		_this258.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg";
+	}
+	var _this259 = this.type;
+	var value129 = "SOUND";
+	if(__map_reserved["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] != null) {
+		_this259.setReserved("assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg",value129);
+	} else {
+		_this259.h["assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg"] = value129;
+	}
+	var _this260 = this.path;
+	if(__map_reserved["assets/sounds/load.wav"] != null) {
+		_this260.setReserved("assets/sounds/load.wav","assets/sounds/load.wav");
+	} else {
+		_this260.h["assets/sounds/load.wav"] = "assets/sounds/load.wav";
+	}
+	var _this261 = this.type;
+	var value130 = "SOUND";
+	if(__map_reserved["assets/sounds/load.wav"] != null) {
+		_this261.setReserved("assets/sounds/load.wav",value130);
+	} else {
+		_this261.h["assets/sounds/load.wav"] = value130;
+	}
+	var _this262 = this.path;
+	if(__map_reserved["assets/sounds/misc_menu.wav"] != null) {
+		_this262.setReserved("assets/sounds/misc_menu.wav","assets/sounds/misc_menu.wav");
+	} else {
+		_this262.h["assets/sounds/misc_menu.wav"] = "assets/sounds/misc_menu.wav";
+	}
+	var _this263 = this.type;
+	var value131 = "SOUND";
+	if(__map_reserved["assets/sounds/misc_menu.wav"] != null) {
+		_this263.setReserved("assets/sounds/misc_menu.wav",value131);
+	} else {
+		_this263.h["assets/sounds/misc_menu.wav"] = value131;
+	}
+	var _this264 = this.path;
+	if(__map_reserved["assets/sounds/misc_menu_2.wav"] != null) {
+		_this264.setReserved("assets/sounds/misc_menu_2.wav","assets/sounds/misc_menu_2.wav");
+	} else {
+		_this264.h["assets/sounds/misc_menu_2.wav"] = "assets/sounds/misc_menu_2.wav";
+	}
+	var _this265 = this.type;
+	var value132 = "SOUND";
+	if(__map_reserved["assets/sounds/misc_menu_2.wav"] != null) {
+		_this265.setReserved("assets/sounds/misc_menu_2.wav",value132);
+	} else {
+		_this265.h["assets/sounds/misc_menu_2.wav"] = value132;
+	}
+	var _this266 = this.path;
+	if(__map_reserved["assets/sounds/misc_menu_4.wav"] != null) {
+		_this266.setReserved("assets/sounds/misc_menu_4.wav","assets/sounds/misc_menu_4.wav");
+	} else {
+		_this266.h["assets/sounds/misc_menu_4.wav"] = "assets/sounds/misc_menu_4.wav";
+	}
+	var _this267 = this.type;
+	var value133 = "SOUND";
+	if(__map_reserved["assets/sounds/misc_menu_4.wav"] != null) {
+		_this267.setReserved("assets/sounds/misc_menu_4.wav",value133);
+	} else {
+		_this267.h["assets/sounds/misc_menu_4.wav"] = value133;
+	}
+	var _this268 = this.path;
+	if(__map_reserved["assets/sounds/sharp_echo.wav"] != null) {
+		_this268.setReserved("assets/sounds/sharp_echo.wav","assets/sounds/sharp_echo.wav");
+	} else {
+		_this268.h["assets/sounds/sharp_echo.wav"] = "assets/sounds/sharp_echo.wav";
+	}
+	var _this269 = this.type;
+	var value134 = "SOUND";
+	if(__map_reserved["assets/sounds/sharp_echo.wav"] != null) {
+		_this269.setReserved("assets/sounds/sharp_echo.wav",value134);
+	} else {
+		_this269.h["assets/sounds/sharp_echo.wav"] = value134;
+	}
+	var _this270 = this.path;
+	if(__map_reserved["assets/tilemap/Lvl1.csv"] != null) {
+		_this270.setReserved("assets/tilemap/Lvl1.csv","assets/tilemap/Lvl1.csv");
+	} else {
+		_this270.h["assets/tilemap/Lvl1.csv"] = "assets/tilemap/Lvl1.csv";
+	}
+	var _this271 = this.type;
+	var value135 = "TEXT";
+	if(__map_reserved["assets/tilemap/Lvl1.csv"] != null) {
+		_this271.setReserved("assets/tilemap/Lvl1.csv",value135);
+	} else {
+		_this271.h["assets/tilemap/Lvl1.csv"] = value135;
+	}
+	var _this272 = this.path;
+	if(__map_reserved["assets/tilemap/Lvl1.json"] != null) {
+		_this272.setReserved("assets/tilemap/Lvl1.json","assets/tilemap/Lvl1.json");
+	} else {
+		_this272.h["assets/tilemap/Lvl1.json"] = "assets/tilemap/Lvl1.json";
+	}
+	var _this273 = this.type;
+	var value136 = "TEXT";
+	if(__map_reserved["assets/tilemap/Lvl1.json"] != null) {
+		_this273.setReserved("assets/tilemap/Lvl1.json",value136);
+	} else {
+		_this273.h["assets/tilemap/Lvl1.json"] = value136;
+	}
+	var _this274 = this.path;
+	if(__map_reserved["assets/tilemap/Lvl2.csv"] != null) {
+		_this274.setReserved("assets/tilemap/Lvl2.csv","assets/tilemap/Lvl2.csv");
+	} else {
+		_this274.h["assets/tilemap/Lvl2.csv"] = "assets/tilemap/Lvl2.csv";
+	}
+	var _this275 = this.type;
+	var value137 = "TEXT";
+	if(__map_reserved["assets/tilemap/Lvl2.csv"] != null) {
+		_this275.setReserved("assets/tilemap/Lvl2.csv",value137);
+	} else {
+		_this275.h["assets/tilemap/Lvl2.csv"] = value137;
+	}
+	var _this276 = this.path;
+	if(__map_reserved["assets/tilemap/Lvl3.csv"] != null) {
+		_this276.setReserved("assets/tilemap/Lvl3.csv","assets/tilemap/Lvl3.csv");
+	} else {
+		_this276.h["assets/tilemap/Lvl3.csv"] = "assets/tilemap/Lvl3.csv";
+	}
+	var _this277 = this.type;
+	var value138 = "TEXT";
+	if(__map_reserved["assets/tilemap/Lvl3.csv"] != null) {
+		_this277.setReserved("assets/tilemap/Lvl3.csv",value138);
+	} else {
+		_this277.h["assets/tilemap/Lvl3.csv"] = value138;
+	}
+	var _this278 = this.path;
+	if(__map_reserved["assets/tilemap/LvlDemo.csv"] != null) {
+		_this278.setReserved("assets/tilemap/LvlDemo.csv","assets/tilemap/LvlDemo.csv");
+	} else {
+		_this278.h["assets/tilemap/LvlDemo.csv"] = "assets/tilemap/LvlDemo.csv";
+	}
+	var _this279 = this.type;
+	var value139 = "TEXT";
+	if(__map_reserved["assets/tilemap/LvlDemo.csv"] != null) {
+		_this279.setReserved("assets/tilemap/LvlDemo.csv",value139);
+	} else {
+		_this279.h["assets/tilemap/LvlDemo.csv"] = value139;
+	}
+	var _this280 = this.path;
+	if(__map_reserved["assets/tilemap/tilemap.csv"] != null) {
+		_this280.setReserved("assets/tilemap/tilemap.csv","assets/tilemap/tilemap.csv");
+	} else {
+		_this280.h["assets/tilemap/tilemap.csv"] = "assets/tilemap/tilemap.csv";
+	}
+	var _this281 = this.type;
+	var value140 = "TEXT";
+	if(__map_reserved["assets/tilemap/tilemap.csv"] != null) {
+		_this281.setReserved("assets/tilemap/tilemap.csv",value140);
+	} else {
+		_this281.h["assets/tilemap/tilemap.csv"] = value140;
+	}
+	var _this282 = this.path;
+	if(__map_reserved["assets/tileset/tileset.png"] != null) {
+		_this282.setReserved("assets/tileset/tileset.png","assets/tileset/tileset.png");
+	} else {
+		_this282.h["assets/tileset/tileset.png"] = "assets/tileset/tileset.png";
+	}
+	var _this283 = this.type;
+	var value141 = "IMAGE";
+	if(__map_reserved["assets/tileset/tileset.png"] != null) {
+		_this283.setReserved("assets/tileset/tileset.png",value141);
+	} else {
+		_this283.h["assets/tileset/tileset.png"] = value141;
+	}
+	var _this284 = this.className;
+	var value142 = _$_$ASSET_$_$assets_$fonts_$fantasquesansmono_$regular_$ttf;
+	if(__map_reserved["assets/fonts/FantasqueSansMono-Regular.ttf"] != null) {
+		_this284.setReserved("assets/fonts/FantasqueSansMono-Regular.ttf",value142);
+	} else {
+		_this284.h["assets/fonts/FantasqueSansMono-Regular.ttf"] = value142;
+	}
+	var _this285 = this.type;
+	var value143 = "FONT";
+	if(__map_reserved["assets/fonts/FantasqueSansMono-Regular.ttf"] != null) {
+		_this285.setReserved("assets/fonts/FantasqueSansMono-Regular.ttf",value143);
+	} else {
+		_this285.h["assets/fonts/FantasqueSansMono-Regular.ttf"] = value143;
+	}
+	var _this286 = this.path;
+	if(__map_reserved["assets/music/cave_theme.ogg"] != null) {
+		_this286.setReserved("assets/music/cave_theme.ogg","assets/music/cave_theme.ogg");
+	} else {
+		_this286.h["assets/music/cave_theme.ogg"] = "assets/music/cave_theme.ogg";
+	}
+	var _this287 = this.type;
+	var value144 = "MUSIC";
+	if(__map_reserved["assets/music/cave_theme.ogg"] != null) {
+		_this287.setReserved("assets/music/cave_theme.ogg",value144);
+	} else {
+		_this287.h["assets/music/cave_theme.ogg"] = value144;
+	}
+	var _this288 = this.path;
+	if(__map_reserved["assets/music/forest.ogg"] != null) {
+		_this288.setReserved("assets/music/forest.ogg","assets/music/forest.ogg");
+	} else {
+		_this288.h["assets/music/forest.ogg"] = "assets/music/forest.ogg";
+	}
+	var _this289 = this.type;
+	var value145 = "MUSIC";
+	if(__map_reserved["assets/music/forest.ogg"] != null) {
+		_this289.setReserved("assets/music/forest.ogg",value145);
+	} else {
+		_this289.h["assets/music/forest.ogg"] = value145;
+	}
+	var _this290 = this.path;
+	if(__map_reserved["assets/music/lvl1.ogg"] != null) {
+		_this290.setReserved("assets/music/lvl1.ogg","assets/music/lvl1.ogg");
+	} else {
+		_this290.h["assets/music/lvl1.ogg"] = "assets/music/lvl1.ogg";
+	}
+	var _this291 = this.type;
+	var value146 = "MUSIC";
+	if(__map_reserved["assets/music/lvl1.ogg"] != null) {
+		_this291.setReserved("assets/music/lvl1.ogg",value146);
+	} else {
+		_this291.h["assets/music/lvl1.ogg"] = value146;
+	}
+	var _this292 = this.path;
+	if(__map_reserved["assets/music/menu.ogg"] != null) {
+		_this292.setReserved("assets/music/menu.ogg","assets/music/menu.ogg");
+	} else {
+		_this292.h["assets/music/menu.ogg"] = "assets/music/menu.ogg";
+	}
+	var _this293 = this.type;
+	var value147 = "MUSIC";
+	if(__map_reserved["assets/music/menu.ogg"] != null) {
+		_this293.setReserved("assets/music/menu.ogg",value147);
+	} else {
+		_this293.h["assets/music/menu.ogg"] = value147;
+	}
+	var _this294 = this.path;
+	if(__map_reserved["flixel/sounds/beep.ogg"] != null) {
+		_this294.setReserved("flixel/sounds/beep.ogg","flixel/sounds/beep.ogg");
+	} else {
+		_this294.h["flixel/sounds/beep.ogg"] = "flixel/sounds/beep.ogg";
+	}
+	var _this295 = this.type;
+	var value148 = "SOUND";
+	if(__map_reserved["flixel/sounds/beep.ogg"] != null) {
+		_this295.setReserved("flixel/sounds/beep.ogg",value148);
+	} else {
+		_this295.h["flixel/sounds/beep.ogg"] = value148;
+	}
+	var _this296 = this.path;
+	if(__map_reserved["flixel/sounds/flixel.ogg"] != null) {
+		_this296.setReserved("flixel/sounds/flixel.ogg","flixel/sounds/flixel.ogg");
+	} else {
+		_this296.h["flixel/sounds/flixel.ogg"] = "flixel/sounds/flixel.ogg";
+	}
+	var _this297 = this.type;
+	var value149 = "SOUND";
+	if(__map_reserved["flixel/sounds/flixel.ogg"] != null) {
+		_this297.setReserved("flixel/sounds/flixel.ogg",value149);
+	} else {
+		_this297.h["flixel/sounds/flixel.ogg"] = value149;
+	}
+	var _this298 = this.className;
+	var value150 = _$_$ASSET_$_$flixel_$fonts_$nokiafc22_$ttf;
+	if(__map_reserved["flixel/fonts/nokiafc22.ttf"] != null) {
+		_this298.setReserved("flixel/fonts/nokiafc22.ttf",value150);
+	} else {
+		_this298.h["flixel/fonts/nokiafc22.ttf"] = value150;
+	}
+	var _this299 = this.type;
+	var value151 = "FONT";
+	if(__map_reserved["flixel/fonts/nokiafc22.ttf"] != null) {
+		_this299.setReserved("flixel/fonts/nokiafc22.ttf",value151);
+	} else {
+		_this299.h["flixel/fonts/nokiafc22.ttf"] = value151;
+	}
+	var _this300 = this.className;
+	var value152 = _$_$ASSET_$_$flixel_$fonts_$monsterrat_$ttf;
+	if(__map_reserved["flixel/fonts/monsterrat.ttf"] != null) {
+		_this300.setReserved("flixel/fonts/monsterrat.ttf",value152);
+	} else {
+		_this300.h["flixel/fonts/monsterrat.ttf"] = value152;
+	}
+	var _this301 = this.type;
+	var value153 = "FONT";
+	if(__map_reserved["flixel/fonts/monsterrat.ttf"] != null) {
+		_this301.setReserved("flixel/fonts/monsterrat.ttf",value153);
+	} else {
+		_this301.h["flixel/fonts/monsterrat.ttf"] = value153;
+	}
+	var _this302 = this.path;
+	if(__map_reserved["flixel/images/ui/button.png"] != null) {
+		_this302.setReserved("flixel/images/ui/button.png","flixel/images/ui/button.png");
+	} else {
+		_this302.h["flixel/images/ui/button.png"] = "flixel/images/ui/button.png";
+	}
+	var _this303 = this.type;
+	var value154 = "IMAGE";
+	if(__map_reserved["flixel/images/ui/button.png"] != null) {
+		_this303.setReserved("flixel/images/ui/button.png",value154);
+	} else {
+		_this303.h["flixel/images/ui/button.png"] = value154;
+	}
+	var _this304 = this.path;
+	if(__map_reserved["flixel/images/logo/default.png"] != null) {
+		_this304.setReserved("flixel/images/logo/default.png","flixel/images/logo/default.png");
+	} else {
+		_this304.h["flixel/images/logo/default.png"] = "flixel/images/logo/default.png";
+	}
+	var _this305 = this.type;
+	var value155 = "IMAGE";
+	if(__map_reserved["flixel/images/logo/default.png"] != null) {
+		_this305.setReserved("flixel/images/logo/default.png",value155);
+	} else {
+		_this305.h["flixel/images/logo/default.png"] = value155;
 	}
 	var assetsPrefix = null;
 	if(ApplicationMain.config != null && Object.prototype.hasOwnProperty.call(ApplicationMain.config,"assetsPrefix")) {
@@ -3991,13 +4396,13 @@ var DefaultAssetLibrary = function() {
 		var k = this.path.keys();
 		while(k.hasNext()) {
 			var k1 = k.next();
-			var _this252 = this.path;
-			var value129 = assetsPrefix + (__map_reserved[k1] != null ? _this252.getReserved(k1) : _this252.h[k1]);
-			var _this253 = this.path;
+			var _this306 = this.path;
+			var value156 = assetsPrefix + (__map_reserved[k1] != null ? _this306.getReserved(k1) : _this306.h[k1]);
+			var _this307 = this.path;
 			if(__map_reserved[k1] != null) {
-				_this253.setReserved(k1,value129);
+				_this307.setReserved(k1,value156);
 			} else {
-				_this253.h[k1] = value129;
+				_this307.h[k1] = value156;
 			}
 		}
 	}
@@ -8779,7 +9184,7 @@ addons_FlxSlider.prototype = $extend(flixel_group_FlxTypedSpriteGroup.prototype,
 });
 var entity_IceCube = function(X,Y) {
 	flixel_FlxSprite.call(this,X,Y);
-	this.loadGraphic("assets/sprites/ice_cube.png",false,128,128);
+	this.loadGraphic("assets/sprites/object/iceCube.png",false,128,128);
 };
 $hxClasses["entity.IceCube"] = entity_IceCube;
 entity_IceCube.__name__ = ["entity","IceCube"];
@@ -8789,7 +9194,7 @@ entity_IceCube.prototype = $extend(flixel_FlxSprite.prototype,{
 });
 var entity_LightCube = function(X,Y) {
 	flixel_FlxSprite.call(this,X,Y);
-	this.loadGraphic("assets/sprites/movable_bloc.png",false,128,128);
+	this.loadGraphic("assets/sprites/object/lightCube.png",false,128,128);
 	this.acceleration.set_y(1200);
 };
 $hxClasses["entity.LightCube"] = entity_LightCube;
@@ -8806,7 +9211,7 @@ var entity_Platform = function(X,Y,player) {
 	this.ready = false;
 	this.triggered = false;
 	flixel_FlxSprite.call(this,X,Y);
-	this.loadGraphic("assets/sprites/icePlatform.png",false,64,64);
+	this.loadGraphic("assets/sprites/object/icePlatform.png",false,64,64);
 	this.set_immovable(true);
 	this._player = player;
 	this.initialPosition = new flixel_math_FlxPoint(X,Y);
@@ -8840,7 +9245,7 @@ var entity_Player = function(X,Y) {
 	this.fsm.transitions.add(entity_player_$states_Idle,entity_player_$states_Walk,entity_player_$states_Conditions.isWalking).add(entity_player_$states_Idle,entity_player_$states_Jump,entity_player_$states_Conditions.isJumping).add(entity_player_$states_Idle,entity_player_$states_Crouch,entity_player_$states_Conditions.isCrouching).add(entity_player_$states_Idle,entity_player_$states_Fall,entity_player_$states_Conditions.isFalling).add(entity_player_$states_Idle,entity_player_$states_Run,entity_player_$states_Conditions.isRunning).add(entity_player_$states_Walk,entity_player_$states_Idle,entity_player_$states_Conditions.isNotWalking).add(entity_player_$states_Walk,entity_player_$states_Jump,entity_player_$states_Conditions.isJumping).add(entity_player_$states_Walk,entity_player_$states_Push,entity_player_$states_Conditions.isPushing).add(entity_player_$states_Walk,entity_player_$states_Fall,entity_player_$states_Conditions.isFalling).add(entity_player_$states_Walk,entity_player_$states_Run,entity_player_$states_Conditions.isRunning).add(entity_player_$states_Run,entity_player_$states_Idle,entity_player_$states_Conditions.runToIdle).add(entity_player_$states_Run,entity_player_$states_Walk,entity_player_$states_Conditions.runToWalk).add(entity_player_$states_Run,entity_player_$states_Push,entity_player_$states_Conditions.isPushing).add(entity_player_$states_Run,entity_player_$states_Fall,entity_player_$states_Conditions.isFalling).add(entity_player_$states_Run,entity_player_$states_SuperJump,entity_player_$states_Conditions.isJumping).add(entity_player_$states_Crouch,entity_player_$states_SuperJump,entity_player_$states_Conditions.isJumping).add(entity_player_$states_Crouch,entity_player_$states_Reco,entity_player_$states_Conditions.isNotCrouching).add(entity_player_$states_Jump,entity_player_$states_Fall,entity_player_$states_Conditions.isFallingAfterJump).add(entity_player_$states_SuperJump,entity_player_$states_Fall,entity_player_$states_Conditions.isFallingAfterJump).add(entity_player_$states_Fall,entity_player_$states_Reco,entity_player_$states_Conditions.isGrounded).add(entity_player_$states_Reco,entity_player_$states_Idle,entity_player_$states_Conditions.isDone).add(entity_player_$states_Push,entity_player_$states_Idle,entity_player_$states_Conditions.isNotPushing).add(entity_player_$states_Push,entity_player_$states_Jump,entity_player_$states_Conditions.isJumping).add(entity_player_$states_Push,entity_player_$states_Fall,entity_player_$states_Conditions.isFalling).start(entity_player_$states_Idle);
 	this.acceleration.set_y(this.GRAVITY);
 	this.drag.set_x(100);
-	this.loadGraphic("assets/sprites/monstercat_char.png",true,128,256);
+	this.loadGraphic("assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png",true,128,256);
 	this.scale.set(0.45,0.45);
 	this.updateHitbox();
 	var tmp = this.animation;
@@ -8918,7 +9323,7 @@ entity_Player.prototype = $extend(flixel_FlxSprite.prototype,{
 			this.health -= damage;
 			flixel_effects_FlxFlicker.flicker(this,1,0.1,true);
 			flixel_FlxG.camera.shake(0.005,0.1);
-			if(this.health < 0) {
+			if(this.health <= 0) {
 				this.kill();
 			}
 		}
@@ -8928,7 +9333,7 @@ entity_Player.prototype = $extend(flixel_FlxSprite.prototype,{
 var entity_Stalagmite = function(X,Y) {
 	this.damage = 10;
 	flixel_FlxSprite.call(this,X,Y);
-	this.loadGraphic("assets/sprites/stalactites.png",false,128,128);
+	this.loadGraphic("assets/sprites/object/stalactites.png",false,128,128);
 	this.set_flipY(true);
 };
 $hxClasses["entity.Stalagmite"] = entity_Stalagmite;
@@ -8942,7 +9347,7 @@ var entity_Stalagtite_$ice = function(X,Y,player) {
 	this.ready = false;
 	this.triggered = false;
 	flixel_FlxSprite.call(this,X,Y);
-	this.loadGraphic("assets/sprites/stalactites_ice.png",false,128,128);
+	this.loadGraphic("assets/sprites/object/iceStalactites.png",false,128,128);
 	this._player = player;
 	this.fsm = new addons_FlxFSM(this);
 	this.fsm.transitions.add(entity_stalagtite_$ice_$states_Idle,entity_stalagtite_$ice_$states_Triggered,entity_stalagtite_$ice_$states_Conditions.isTriggered).add(entity_stalagtite_$ice_$states_Idle,entity_stalagtite_$ice_$states_Done,entity_stalagtite_$ice_$states_Conditions.hasHit).add(entity_stalagtite_$ice_$states_Triggered,entity_stalagtite_$ice_$states_Falling,entity_stalagtite_$ice_$states_Conditions.isReady).add(entity_stalagtite_$ice_$states_Triggered,entity_stalagtite_$ice_$states_Done,entity_stalagtite_$ice_$states_Conditions.hasHit).add(entity_stalagtite_$ice_$states_Falling,entity_stalagtite_$ice_$states_Done,entity_stalagtite_$ice_$states_Conditions.hasHit).start(entity_stalagtite_$ice_$states_Idle);
@@ -77775,14 +78180,18 @@ scene_OptionSubState.prototype = $extend(flixel_FlxSubState.prototype,{
 		this._sfxVolume = Math.floor(felix_FelixSound.getSfxVolume());
 		this._ambientVolume = Math.floor(felix_FelixSound.getAmbientVolume());
 		this._uiVolume = Math.floor(felix_FelixSound.getUiVolume());
-		this._backgroundSlider = new addons_FlxSlider(this,"_backgroundVolume",flixel_FlxG.camera.width / 2 - 150,flixel_FlxG.camera.height / 2 - 100 - 15 - 45,0,100,300,30,6,-1,-16776961);
+		this._backgroundSlider = new addons_FlxSlider(this,"_backgroundVolume",flixel_FlxG.camera.width / 2 - 150,flixel_FlxG.camera.height / 2 - 100 - 15 - 45,0,100,300,30,6,-1,-16711681);
 		this._backgroundSlider.setTexts("Volume de la musique");
-		this._sfxSlider = new addons_FlxSlider(this,"_sfxVolume",flixel_FlxG.camera.width / 2 - 150,flixel_FlxG.camera.height / 2 - 15 - 45,0,100,300,30,5,-1,-16776961);
+		this._backgroundSlider.scrollFactor.set();
+		this._sfxSlider = new addons_FlxSlider(this,"_sfxVolume",flixel_FlxG.camera.width / 2 - 150,flixel_FlxG.camera.height / 2 - 15 - 45,0,100,300,30,5,-1,-16711681);
 		this._sfxSlider.setTexts("Volume des effets");
-		this._ambientSlider = new addons_FlxSlider(this,"_ambientVolume",flixel_FlxG.camera.width / 2 - 150,flixel_FlxG.camera.height / 2 - 15 + 45,0,100,300,30,5,-1,-16776961);
+		this._sfxSlider.scrollFactor.set();
+		this._ambientSlider = new addons_FlxSlider(this,"_ambientVolume",flixel_FlxG.camera.width / 2 - 150,flixel_FlxG.camera.height / 2 - 15 + 45,0,100,300,30,5,-1,-16711681);
 		this._ambientSlider.setTexts("Volume ambiant");
-		this._uiSlider = new addons_FlxSlider(this,"_uiVolume",flixel_FlxG.camera.width / 2 - 150,flixel_FlxG.camera.height / 2 - 15 + 135,0,100,300,30,5,-1,-16776961);
+		this._ambientSlider.scrollFactor.set();
+		this._uiSlider = new addons_FlxSlider(this,"_uiVolume",flixel_FlxG.camera.width / 2 - 150,flixel_FlxG.camera.height / 2 - 15 + 135,0,100,300,30,5,-1,-16711681);
 		this._uiSlider.setTexts("Volume de l'interface");
+		this._uiSlider.scrollFactor.set();
 		var btn = new felix_FelixMagicButton(null,flixel_FlxG.camera.height * 5 / 6,this,"Retour",$bind(this,this.click_exit));
 		this.add(new felix_FelixMagicButton(null,flixel_FlxG.camera.height / 6,this,"Plein écran",function() {
 			flixel_FlxG.set_fullscreen(!flixel_FlxG.get_fullscreen());
@@ -77825,6 +78234,8 @@ scene_OptionSubState.prototype = $extend(flixel_FlxSubState.prototype,{
 });
 var scene_ParentState = function(MaxSize) {
 	this._diffFactor = 1;
+	this._circleFactor = new flixel_math_FlxPoint(1,1);
+	this._circle = new flixel_FlxSprite();
 	this._screen = new flixel_FlxSprite();
 	this._entities = new flixel_group_FlxTypedGroup();
 	this._platforms = new flixel_group_FlxTypedGroup();
@@ -77844,13 +78255,12 @@ scene_ParentState.prototype = $extend(flixel_FlxState.prototype,{
 		flixel_FlxG.mouse.set_visible(false);
 		this.loadEvents();
 		this.setCamera();
-		this._screen.makeGraphic(flixel_FlxG.width * 3,flixel_FlxG.height * 3,-16777216);
+		this._screen.makeGraphic(flixel_FlxG.width * 2,flixel_FlxG.height * 2,-16777216);
 		this.add(this._screen);
-		var _circle = new flixel_FlxSprite();
-		_circle.makeGraphic(Math.ceil(this._screen.get_width()),Math.ceil(this._screen.get_height()),352321791,true);
-		flixel_util_FlxSpriteUtil.drawCircle(_circle,-1,-1,200,-16777216);
-		_circle.get_pixels().colorTransform(new openfl_geom_Rectangle(0,0,_circle.get_width(),_circle.get_height()),new openfl_geom_ColorTransform(0,0,0,-1,0,0,0,255));
-		flixel_util_FlxSpriteUtil.alphaMaskFlxSprite(this._screen,_circle,this._screen);
+		this._circle.makeGraphic(Math.ceil(this._screen.get_width()),Math.ceil(this._screen.get_height()),352321791,true);
+		flixel_util_FlxSpriteUtil.drawCircle(this._circle,-1,-1,128,-16777216);
+		this._circle.get_pixels().colorTransform(new openfl_geom_Rectangle(0,0,this._circle.get_width(),this._circle.get_height()),new openfl_geom_ColorTransform(0,0,0,-1,0,0,0,255));
+		flixel_util_FlxSpriteUtil.alphaMaskFlxSprite(this._screen,this._circle,this._screen);
 		flixel_FlxState.prototype.create.call(this);
 	}
 	,loadMap: function(tileMap,tileSet,tileWidth,tileHeight) {
@@ -77895,6 +78305,9 @@ scene_ParentState.prototype = $extend(flixel_FlxState.prototype,{
 			var obj = _g1[_g];
 			++_g;
 			switch(obj.name) {
+			case "circle":
+				this._circleFactor.set(obj.width,obj.height);
+				break;
 			case "moveable_blox":
 				this._lightCubes.add(new entity_LightCube(obj.x,obj.y));
 				break;
@@ -77912,13 +78325,13 @@ scene_ParentState.prototype = $extend(flixel_FlxState.prototype,{
 				break;
 			}
 		}
-		this._entities.add(this._stalagmites);
 		this._entities.add(this._lightCubes);
 		this._entities.add(this._stalagtites_ice);
 		this._entities.add(this._iceCubes);
 		this._entities.add(this._platforms);
 		this._player.setPosition(this.player_start.x,this.player_start.y);
 		this._entities.add(this._player);
+		this._entities.add(this._stalagmites);
 		this.add(this._entities);
 	}
 	,update: function(elapsed) {
@@ -77958,7 +78371,11 @@ scene_ParentState.prototype = $extend(flixel_FlxState.prototype,{
 			this.openSubState(new scene_PauseSubState(this._player,this._rect));
 			this.setCamera();
 		}
+		this.handleCircle();
 		flixel_FlxState.prototype.update.call(this,elapsed);
+	}
+	,handleCircle: function() {
+		this._screen.scale.set(this._circleFactor.x * (this._player.health + 40) / 50,this._circleFactor.y * (this._player.health + 40) / 50);
 	}
 	,setCamera: function() {
 		flixel_FlxG.camera.follow(this._player,flixel_FlxCameraFollowStyle.PLATFORMER);
@@ -78018,18 +78435,24 @@ scene_PauseSubState.prototype = $extend(flixel_FlxSubState.prototype,{
 		if(flixel_FlxG.keys.checkKeyArrayState([27,80],2)) {
 			this.exit();
 		}
-		flixel_FlxG.camera.follow(this._player,flixel_FlxCameraFollowStyle.PLATFORMER);
-		flixel_FlxG.camera.setScrollBoundsRect(this._rect.x,this._rect.y,this._rect.width,this._rect.height);
 		flixel_FlxSubState.prototype.update.call(this,elapsed);
 	}
 	,exit: function() {
 		flixel_FlxG.mouse.set_visible(false);
 		this.close();
 	}
+	,click_options: function() {
+		flixel_FlxG.camera.fade(-16777216,1,false,$bind(this,this.options));
+	}
 	,options: function() {
-		this.openSubState(new scene_OptionSubState());
+		flixel_FlxG.camera.fade(0,1,true);
+		this.openSubState(new scene_OptionSubState(-268435435));
+	}
+	,click_quitter: function() {
+		flixel_FlxG.camera.fade(-16777216,1,false,$bind(this,this.quitter));
 	}
 	,quitter: function() {
+		flixel_FlxG.camera.fade(0,1,true);
 		var nextState = new scene_MenuState();
 		if(flixel_FlxG.game._state.switchTo(nextState)) {
 			flixel_FlxG.game._requestedState = nextState;
@@ -78133,6 +78556,14 @@ AssetPaths.lvl1__ogg = "assets/music/lvl1.ogg";
 AssetPaths.menu__mp3 = "assets/music/menu.mp3";
 AssetPaths.menu__ogg = "assets/music/menu.ogg";
 AssetPaths.music_goes_here__txt = "assets/music/music-goes-here.txt";
+AssetPaths.heartbeat_fast__ogg = "assets/sounds/heartbeat_fast.ogg";
+AssetPaths.heartbeat_fast_reverb__ogg = "assets/sounds/heartbeat_fast_reverb.ogg";
+AssetPaths.heartbeat_slow__ogg = "assets/sounds/heartbeat_slow.ogg";
+AssetPaths.heartbeat_slow_reverb__ogg = "assets/sounds/heartbeat_slow_reverb.ogg";
+AssetPaths.hurt1__ogg = "assets/sounds/hurt1.ogg";
+AssetPaths.hurt2__ogg = "assets/sounds/hurt2.ogg";
+AssetPaths.jump__ogg = "assets/sounds/jump.ogg";
+AssetPaths.lightcube_pushed__ogg = "assets/sounds/lightcube_pushed.ogg";
 AssetPaths.load__ogg = "assets/sounds/load.ogg";
 AssetPaths.load__wav = "assets/sounds/load.wav";
 AssetPaths.misc_menu__wav = "assets/sounds/misc_menu.wav";
@@ -78182,20 +78613,25 @@ AssetPaths.Corsica_S_Walking_on_snow_covered_gravel_and_ice_21__ogg = "assets/so
 AssetPaths.Corsica_S_Walking_on_snow_covered_gravel_and_ice_22__ogg = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_22.ogg";
 AssetPaths.Corsica_S_Walking_on_snow_covered_gravel_and_ice_23__ogg = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_23.ogg";
 AssetPaths.Corsica_S_Walking_on_snow_covered_gravel_and_ice_24__ogg = "assets/sounds/walk/Corsica_S-Walking_on_snow_covered_gravel_and_ice_24.ogg";
-AssetPaths.char1_idle6__png = "assets/sprites/char1-idle6.png";
-AssetPaths.char1_walk9__png = "assets/sprites/char1-walk9.png";
-AssetPaths.char1_jump4__png = "assets/sprites/char1_jump4.png";
+AssetPaths.beast_ekuna__png = "assets/sprites/bestiary/ekunaa/beast_ekuna.png";
+AssetPaths.char_ekunaa__png = "assets/sprites/bestiary/ekunaa/char_ekunaa.png";
+AssetPaths.charsheet_ekunaa__png = "assets/sprites/bestiary/ekunaa/charsheet_ekunaa.png";
+AssetPaths.animation__rtf = "assets/sprites/bestiary/fuyuko/animation.rtf";
+AssetPaths.beast_fuyuko__png = "assets/sprites/bestiary/fuyuko/beast_fuyuko.png";
+AssetPaths.char_fuyuko__png = "assets/sprites/bestiary/fuyuko/char_fuyuko.png";
+AssetPaths.charsheet_fuyuko__png = "assets/sprites/bestiary/fuyuko/charsheet_fuyuko.png";
+AssetPaths.beast_Shokuka__png = "assets/sprites/bestiary/shokuka/beast_Shokuka.png";
+AssetPaths.char_shokuka__png = "assets/sprites/bestiary/shokuka/char_shokuka.png";
+AssetPaths.charsheet_shokuka__png = "assets/sprites/bestiary/shokuka/charsheet_shokuka.png";
 AssetPaths.cherry_blossom__png = "assets/sprites/cherry_blossom.png";
 AssetPaths.grunge__png = "assets/sprites/grunge.png";
-AssetPaths.ice_cube__png = "assets/sprites/ice_cube.png";
-AssetPaths.icePlatform__png = "assets/sprites/icePlatform.png";
-AssetPaths.monstercar_animations__rtf = "assets/sprites/monstercar_animations.rtf";
-AssetPaths.monstercat_char__png = "assets/sprites/monstercat_char.png";
-AssetPaths.monstercat_char_old__png = "assets/sprites/monstercat_char_old.png";
-AssetPaths.movable_bloc__png = "assets/sprites/movable_bloc.png";
+AssetPaths.iceCube__png = "assets/sprites/object/iceCube.png";
+AssetPaths.icecube_animation__png = "assets/sprites/object/icecube_animation.png";
+AssetPaths.icePlatform__png = "assets/sprites/object/icePlatform.png";
+AssetPaths.iceStalactites__png = "assets/sprites/object/iceStalactites.png";
+AssetPaths.lightCube__png = "assets/sprites/object/lightCube.png";
+AssetPaths.stalactites__png = "assets/sprites/object/stalactites.png";
 AssetPaths.sakuratree__png = "assets/sprites/sakuratree.png";
-AssetPaths.stalactites__png = "assets/sprites/stalactites.png";
-AssetPaths.stalactites_ice__png = "assets/sprites/stalactites_ice.png";
 AssetPaths.demo_lvl_Postion____rtf = "assets/tilemap/demo-lvl-Postion..rtf";
 AssetPaths.Lvl1__csv = "assets/tilemap/Lvl1.csv";
 AssetPaths.Lvl1__json = "assets/tilemap/Lvl1.json";
@@ -78204,7 +78640,6 @@ AssetPaths.Lvl3__csv = "assets/tilemap/Lvl3.csv";
 AssetPaths.LvlDemo__csv = "assets/tilemap/LvlDemo.csv";
 AssetPaths.tilemap__csv = "assets/tilemap/tilemap.csv";
 AssetPaths.tileset__png = "assets/tileset/tileset.png";
-AssetPaths.tileset16__png = "assets/tileset/tileset16.png";
 openfl_text_Font.__registeredFonts = [];
 Xml.Element = 0;
 Xml.PCData = 1;
