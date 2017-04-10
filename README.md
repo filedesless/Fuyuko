@@ -8,4 +8,4 @@ Might work on html5/flash too.
 
 
 Playable prototype at:
-https://yggdrasil.nosasquatch.ws/~felix/fuyuko/
+https://aiglebleu.github.io/Fuyuko/
