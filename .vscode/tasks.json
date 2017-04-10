@@ -76,6 +76,12 @@
 			}
 		},
 		{
+			"taskName": "html5 publish",
+			"suppressTaskName": true,
+			"command": "cp",
+			"args": ["-r", "export/html5/bin/", "docs/"]
+		},
+		{
 			"taskName": "html5 debug",
 			"suppressTaskName": true,
 			"args": ["test", "html5", "-debug"],
