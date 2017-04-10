@@ -117,7 +117,7 @@ class Player extends FlxSprite
             health -= damage;
             FlxFlicker.flicker(this, 1, 0.1, true);
             FlxG.camera.shake(0.005, 0.1);
-            if (health < 0) {
+            if (health <= 0) {
                 kill();
             }
         }

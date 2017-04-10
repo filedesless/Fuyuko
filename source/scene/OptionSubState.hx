@@ -42,7 +42,7 @@ class OptionSubState extends FlxSubState {
             FlxG.camera.width / 2 - 150,
             FlxG.camera.height / 2 - 100 - 15 - 45,
             0, 100, 300, 30, 6,
-            FlxColor.WHITE, FlxColor.BLUE);
+            FlxColor.WHITE, FlxColor.CYAN);
         _backgroundSlider.setTexts("Volume de la musique");
         _backgroundSlider.scrollFactor.set(); // makes it follow camera around
 
@@ -51,7 +51,7 @@ class OptionSubState extends FlxSubState {
             FlxG.camera.width / 2 - 150,
             FlxG.camera.height / 2 - 15 - 45,
             0, 100, 300, 30, 5,
-            FlxColor.WHITE, FlxColor.BLUE);
+            FlxColor.WHITE, FlxColor.CYAN);
         _sfxSlider.setTexts("Volume des effets");
         _sfxSlider.scrollFactor.set(); // makes it follow camera around
 
@@ -60,7 +60,7 @@ class OptionSubState extends FlxSubState {
             FlxG.camera.width / 2 - 150,
             FlxG.camera.height / 2 - 15 + 45,
             0, 100, 300, 30, 5,
-            FlxColor.WHITE, FlxColor.BLUE);
+            FlxColor.WHITE, FlxColor.CYAN);
         _ambientSlider.setTexts("Volume ambiant");
         _ambientSlider.scrollFactor.set(); // makes it follow camera around
 
@@ -69,7 +69,7 @@ class OptionSubState extends FlxSubState {
             FlxG.camera.width / 2 - 150,
             FlxG.camera.height / 2 - 15 + 45*3,
             0, 100, 300, 30, 5,
-            FlxColor.WHITE, FlxColor.BLUE);
+            FlxColor.WHITE, FlxColor.CYAN);
         _uiSlider.setTexts("Volume de l'interface");
         _uiSlider.scrollFactor.set(); // makes it follow camera around
 

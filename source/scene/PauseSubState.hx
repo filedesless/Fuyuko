@@ -69,7 +69,7 @@ class PauseSubState extends FlxSubState {
 
     function options():Void {
         FlxG.camera.fade(FlxColor.TRANSPARENT, 1, true);
-        openSubState(new OptionSubState());
+        openSubState(new OptionSubState(0xF0000015));
     }
 
     function click_quitter():Void {

@@ -34,6 +34,8 @@ class ParentState extends FlxState {
     var _platforms:FlxTypedGroup<Platform> = new FlxTypedGroup<Platform>();
     var _entities:FlxGroup = new FlxGroup();
     var _screen:FlxSprite = new FlxSprite();
+    var _circle:FlxSprite = new FlxSprite();
+    var _circleFactor:FlxPoint = new FlxPoint(1, 1);
 
     var _diffFactor:Float = 1;
 
@@ -45,13 +47,12 @@ class ParentState extends FlxState {
         loadEvents();
         setCamera();
 
-        _screen.makeGraphic(FlxG.width * 3, FlxG.height * 3, FlxColor.BLACK);
+        _screen.makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
         
         add(_screen);
 
-        var _circle:FlxSprite = new FlxSprite();
         _circle.makeGraphic(Math.ceil(_screen.width), Math.ceil(_screen.height), 0x150000FF, true);
-        FlxSpriteUtil.drawCircle(_circle, -1, -1, 200, FlxColor.BLACK);
+        FlxSpriteUtil.drawCircle(_circle, -1, -1, 128, FlxColor.BLACK);
 
         _circle.pixels.colorTransform(new Rectangle(0, 0, _circle.width, _circle.height), new ColorTransform(0,0,0,-1,0,0,0,255));
         FlxSpriteUtil.alphaMaskFlxSprite(_screen, _circle, _screen);
@@ -107,16 +108,18 @@ class ParentState extends FlxState {
                     player_start.set(obj.x, obj.y);
                 case "moveable_blox":
                     _lightCubes.add(new LightCube(obj.x, obj.y));
+                case "circle":
+                    _circleFactor.set(obj.width, obj.height);
             }
         }
 
-        _entities.add(_stalagmites);
         _entities.add(_lightCubes);
         _entities.add(_stalagtites_ice);
         _entities.add(_iceCubes);
         _entities.add(_platforms);
         _player.setPosition(player_start.x, player_start.y);
         _entities.add(_player);
+        _entities.add(_stalagmites);
         add(_entities);
     }
 
@@ -155,7 +158,18 @@ class ParentState extends FlxState {
             setCamera();
         }
 
+
+        handleCircle();
+
         super.update(elapsed);
+    }
+
+    function handleCircle():Void {
+        var _max:Float = 300;
+        _screen.scale.set(
+            _circleFactor.x * (_player.health + 40) / 50,
+            _circleFactor.y * (_player.health + 40) / 50
+        );
     }
 
     function setCamera():Void {
