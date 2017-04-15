@@ -78,12 +78,18 @@ class OptionSubState extends FlxSubState {
             this, "Retour", click_exit
         );
 
-        add(new FelixMagicButton(
+        var btnFullscreen = new FelixMagicButton(
             null, FlxG.camera.height * 1 / 6,
             this, "Plein écran", function():Void { 
                 FlxG.fullscreen = !FlxG.fullscreen;
             }
-        ));
+        );
+
+        add(btnFullscreen);
+
+        #if html5
+        btnFullscreen.disable();
+        #end
 
         add(btn);
         add(_backgroundSlider);
@@ -108,11 +114,17 @@ class OptionSubState extends FlxSubState {
     }
 
     function click_exit():Void {
+        #if html5
+        exit();
+        #else
         FlxG.camera.fade(FlxColor.BLACK, 0.5, false, exit);
+        #end
     }
 
     function exit():Void {
+        #if !html5
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
+        #end
         close();
     }
 }

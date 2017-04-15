@@ -85,12 +85,18 @@ class MenuState extends FlxState
             FlxG.camera.height * 6 / 10,
             this, "Bestiaire", clickBestiaire
         );
-
+     
         btnQuitter = new FelixMagicButton(
             null,
             FlxG.camera.height * 8 / 10,
             this, "Quitter", quitter
         );
+        #if html5
+        btnQuitter.disable();
+        #end
+
+        if (felix.FelixSave.get_level_completed() <= 0)
+            btnContinue.disable();
 
         add(btnNewGame);
         add(btnContinue);
@@ -107,29 +113,47 @@ class MenuState extends FlxState
 
     // starts game in a second
     function clickPlay():Void {
+        #if html5
+        start_lvl1();
+        #else
         FlxG.camera.fade(FlxColor.BLACK, 0.5, false, start_lvl1);
+        #end
     }
 
     function clickOptions():Void {
+        #if html5
+        options();
+        #else
         FlxG.camera.fade(FlxColor.BLACK, 0.5, false, options);
+        #end
     }
 
     function clickBestiaire():Void {
+        #if html5
+        bestiary();
+        #else
         FlxG.camera.fade(FlxColor.BLACK, 0.5, false, bestiary);
+        #end
     }
 
     function start_lvl1():Void {
+        #if !html5
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
+        #end
         FlxG.switchState(new Lvl1());
     }
 
     function options():Void {
+        #if !html5
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
+        #end
         openSubState(new OptionSubState());
     }
 
     function bestiary():Void {
+        #if !html5
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
+        #end
         FlxG.switchState(new BestiaryState());
     }
 

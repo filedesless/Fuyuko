@@ -1,5 +1,6 @@
 package felix;
 
+import flixel.system.FlxSound;
 import flixel.util.helpers.FlxBounds;
 import flixel.FlxG;
 import flixel.FlxState;
@@ -70,5 +71,17 @@ class FelixMagicButton extends FlxSpriteGroup {
         button.destroy();
         _emitter.destroy();
         super.destroy();
+    }
+
+    public function disable():Void {
+        button.statusAnimations = ["pressed", "pressed", "pressed"];
+        button.onOver.callback = function() { };
+        button.onDown.callback = function() { };
+        button.onUp.callback = function() { };
+        button.onOver.sound = new FlxSound();
+        button.onUp.sound = new FlxSound();
+        button.color = FlxColor.GRAY;
+        button.label.borderColor = FlxColor.GRAY;
+        button.label.color = FlxColor.BLACK;
     }
 }

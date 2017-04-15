@@ -175,11 +175,17 @@ class BestiaryState extends FlxState {
     }
 
     function clickQuitter():Void {
+        #if html5
+        quitter();
+        #else
         FlxG.camera.fade(FlxColor.BLACK, 0.5, false, quitter);
+        #end
     }
 
     function quitter():Void {
+        #if !html5
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
+        #end
         FlxG.switchState(new MenuState());
     }
 }
