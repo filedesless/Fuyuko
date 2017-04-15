@@ -64,20 +64,23 @@ class PauseSubState extends FlxSubState {
     }
 
     function click_options():Void {
-        FlxG.camera.fade(FlxColor.BLACK, 1, false, options);
+        FlxG.camera.fade(FlxColor.BLACK, 0.5, false, options);
     }
 
     function options():Void {
-        FlxG.camera.fade(FlxColor.TRANSPARENT, 1, true);
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         openSubState(new OptionSubState(0xF0000015));
     }
 
     function click_quitter():Void {
-        FlxG.camera.fade(FlxColor.BLACK, 1, false, quitter);
+        FlxG.camera.fade(FlxColor.BLACK, 0.5, false, quitter);
     }
 
     function quitter():Void {
-        FlxG.camera.fade(FlxColor.TRANSPARENT, 1, true);
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, false, actuallyQuit);
+    }
+
+    function actuallyQuit():Void {
         FlxG.switchState(new MenuState());
     }
 }

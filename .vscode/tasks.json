@@ -101,6 +101,7 @@
 		},
 		{
 			"taskName": "neko release",
+			"isBuildCommand": true,
 			"suppressTaskName": true,
 			"args": ["test", "neko"],
 			"problemMatcher": {
@@ -193,7 +194,6 @@
 			"taskName": "cpp debug",
 			"suppressTaskName": true,
 			"args": ["test", "cpp", "-debug"],
-			"isBuildCommand": true,
 			"problemMatcher": {
 				"owner": "haxe",
 				"pattern": {

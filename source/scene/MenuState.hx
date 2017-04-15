@@ -77,13 +77,13 @@ class MenuState extends FlxState
         btnCinematique = new FelixMagicButton(
             FlxG.camera.width / 2 - btnOptions.width - 20,
             FlxG.camera.height * 6 / 10,
-            this, "Cinématique", clickPlay
+            this, "Cinématique"
         );
 
         btnBestiaire = new FelixMagicButton(
             FlxG.camera.width / 2 + 20,
             FlxG.camera.height * 6 / 10,
-            this, "Bestiaire", clickPlay
+            this, "Bestiaire", clickBestiaire
         );
 
         btnQuitter = new FelixMagicButton(
@@ -106,25 +106,36 @@ class MenuState extends FlxState
     }
 
     // starts game in a second
-    private function clickPlay():Void {
-        FlxG.camera.fade(FlxColor.BLACK, 1, false, start_lvl1);
+    function clickPlay():Void {
+        FlxG.camera.fade(FlxColor.BLACK, 0.5, false, start_lvl1);
     }
 
-    private function clickOptions():Void {
-        FlxG.camera.fade(FlxColor.BLACK, 1, false, options);
+    function clickOptions():Void {
+        FlxG.camera.fade(FlxColor.BLACK, 0.5, false, options);
     }
 
-    private function start_lvl1():Void {
-        FlxG.camera.fade(FlxColor.TRANSPARENT, 1, true);
+    function clickBestiaire():Void {
+        FlxG.camera.fade(FlxColor.BLACK, 0.5, false, bestiary);
+    }
+
+    function start_lvl1():Void {
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         FlxG.switchState(new Lvl1());
     }
 
-    private function quitter():Void {
+    function options():Void {
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
+        openSubState(new OptionSubState());
+    }
+
+    function bestiary():Void {
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
+        FlxG.switchState(new BestiaryState());
+    }
+
+    function quitter():Void {
         System.exit(0);
     }
 
-    private function options():Void {
-        FlxG.camera.fade(FlxColor.TRANSPARENT, 1, true);
-        openSubState(new OptionSubState());
-    }
+    
 }

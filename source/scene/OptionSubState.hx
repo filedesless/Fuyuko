@@ -108,11 +108,11 @@ class OptionSubState extends FlxSubState {
     }
 
     function click_exit():Void {
-        FlxG.camera.fade(FlxColor.BLACK, 1, false, exit);
+        FlxG.camera.fade(FlxColor.BLACK, 0.5, false, exit);
     }
 
     function exit():Void {
-        FlxG.camera.fade(FlxColor.TRANSPARENT, 1, true);
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         close();
     }
 }
