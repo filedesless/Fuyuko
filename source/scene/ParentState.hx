@@ -168,7 +168,6 @@ class ParentState extends FlxState {
     }
 
     function handleCircle():Void {
-        var _max:Float = 300;
         _screen.scale.set(
             _circleFactor.x * (_player.health + 40) / 50,
             _circleFactor.y * (_player.health + 40) / 50

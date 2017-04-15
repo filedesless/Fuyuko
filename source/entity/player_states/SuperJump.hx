@@ -1,8 +1,6 @@
 package entity.player_states;
 
 import addons.FlxFSM;
-import flixel.FlxObject;
-import flixel.FlxG;
 
 class SuperJump extends FlxFSMState<Player>
 {

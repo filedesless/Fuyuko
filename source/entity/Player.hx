@@ -1,8 +1,6 @@
 package entity;
 
 import flixel.effects.FlxFlicker;
-import flixel.util.FlxSpriteUtil;
-import flixel.util.FlxColor;
 import flixel.FlxObject;
 import flixel.FlxSprite;
 import flixel.FlxG;

@@ -1,7 +1,6 @@
 package scene;
 
 import flixel.util.FlxColor;
-import flixel.FlxCamera.FlxCameraFollowStyle;
 import flixel.math.FlxRect;
 import flixel.FlxSubState;
 import flixel.FlxG;

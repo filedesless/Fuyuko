@@ -1,6 +1,5 @@
 package scene;
 
-import flixel.FlxCamera;
 import flixel.FlxSubState;
 import flixel.FlxG;
 import flixel.util.FlxColor;
