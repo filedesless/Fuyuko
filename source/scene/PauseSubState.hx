@@ -46,7 +46,7 @@ class PauseSubState extends FlxSubState {
         
         add(new FelixMagicButton(
             null, FlxG.camera.height * 2 / 3, 
-            this, "Quitter", quitter
+            this, "Quitter", click_quitter
         ));
     }
 
@@ -73,10 +73,7 @@ class PauseSubState extends FlxSubState {
     }
 
     function click_quitter():Void {
-        FlxG.camera.fade(FlxColor.BLACK, 0.5, false, quitter);
-    }
-
-    function quitter():Void {
+        felix.FelixSound.stopAmbientVolume();
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, false, actuallyQuit);
     }
 

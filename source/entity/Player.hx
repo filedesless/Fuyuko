@@ -82,7 +82,6 @@ class Player extends FlxSprite
         FlxG.watch.add(fsm, "state");
         FlxG.watch.add(this, "health");
 
-
         setFacingFlip(FlxObject.RIGHT, false, false);
         setFacingFlip(FlxObject.LEFT, true, false);
     }
@@ -116,6 +115,14 @@ class Player extends FlxSprite
         if (alive && !FlxFlicker.isFlickering(this)) {
             health -= damage;
             FlxFlicker.flicker(this, 1, 0.1, true);
+
+            felix.FelixSound.playSfx(AssetPaths.hurt2__ogg);
+            
+            if (health < 50)
+                felix.FelixSound.playAmbient(AssetPaths.heartbeat_fast__ogg);
+            else if (health < 80)
+                felix.FelixSound.playAmbient(AssetPaths.heartbeat_slow__ogg);
+
             FlxG.camera.shake(0.005, 0.1);
             if (health <= 0) {
                 kill();

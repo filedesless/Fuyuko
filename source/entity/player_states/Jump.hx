@@ -15,6 +15,7 @@ class Jump extends FlxFSMState<Player>
         count = 0;
         jumped = false;
         owner.speedFactor = 0;
+        felix.FelixSound.playSfx(AssetPaths.jump__ogg);
     }
     
     override public function update(elapsed:Float, owner:Player, fsm:FlxFSM<Player>):Void 
@@ -25,7 +26,7 @@ class Jump extends FlxFSMState<Player>
             owner.speedFactor = 1;
         }
 
-        if (jumped && owner.speedFactor > 0.4)
-            owner.speedFactor -= 0.01;
+        // if (jumped && owner.speedFactor > 0.4)
+        //     owner.speedFactor -= 0.01;
     }
 }

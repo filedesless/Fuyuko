@@ -17,12 +17,12 @@ class FelixSound {
         @param  sound   Channel in which to play the sound
         @param  volume  Float between 0 and 100 as saved
     **/
-    static private function playGeneric(path:String, sound:FlxSound, volume:Float, looped:Bool = true):Void {
+    static private function playGeneric(path:String, sound:FlxSound, volume:Float, looped:Bool = true, forceRestart:Bool = false):Void {
         if (sound.playing)
             sound.fadeOut(1, 0);
 
         sound.loadEmbedded(path, looped);
-        sound.play();
+        sound.play(forceRestart);
         sound.volume = volume * 0.01;
         sound.fadeIn(1, 0, sound.volume);
     }
@@ -37,6 +37,9 @@ class FelixSound {
     static public function setAmbientVolume(newValue:Float):Void {
         felix.FelixSave.set_ambient_music(newValue);
         ambient.volume = 0.01 * felix.FelixSave.get_ambient_music();
+    }
+    static public function stopAmbientVolume():Void {
+        ambient.stop();
     }
 
     static var background:FlxSound = new FlxSound();
@@ -78,7 +81,7 @@ class FelixSound {
         @param  path    String pointing to the music file.
     **/
     static public function playSfx(path:String):Void {
-        playGeneric(path, sfx, getSfxVolume(), false);
+        playGeneric(path, sfx, getSfxVolume(), false, true);
     }
     /**
         Get the volume from the sound effects music channel
