@@ -109,6 +109,8 @@ class ParentState extends FlxState {
                     _entities.add(new LightCube(obj.x, obj.y, _player, _level));
                 case "circle":
                     _circleFactor.set(obj.width, obj.height);
+                case "checkpoint":
+                    add(new entity.Torch(obj.x, obj.y, _player, _level));
             }
         }
 
