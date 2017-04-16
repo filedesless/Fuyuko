@@ -1,14 +1,13 @@
 package scene;
 
-import flixel.tile.FlxTilemap;
-import flash.geom.ColorTransform;
-import openfl.geom.Rectangle;
+import flash.display.BlendMode;
+import flixel.util.FlxColor;
 import flixel.util.FlxSpriteUtil;
+import flixel.tile.FlxTilemap;
 import flixel.FlxG;
 import flixel.FlxState;
 import flixel.FlxCamera;
 import flixel.FlxSprite;
-import flixel.util.FlxColor;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
 import flixel.group.FlxGroup;
@@ -27,11 +26,10 @@ class ParentState extends FlxState {
     var _lvlConfig:String;
     var _rect:FlxRect = new FlxRect();
 
-    var _entities:FlxTypedGroup<Entity> = new FlxTypedGroup<Entity>();
-    
-    var _screen:FlxSprite = new FlxSprite();
     var _circle:FlxSprite = new FlxSprite();
-    var _circleFactor:FlxPoint = new FlxPoint(1, 1);
+
+    var _entities:FlxTypedGroup<Entity> = new FlxTypedGroup<Entity>();
+    var _darkness:Darkmap;
 
     override public function create():Void {
         FlxG.watch.add(FlxG, "worldBounds");
@@ -42,19 +40,6 @@ class ParentState extends FlxState {
 
         loadEvents();
         setCamera();
-
-        _screen.makeGraphic(FlxG.width * 2, FlxG.height * 2, FlxColor.BLACK);
-        
-        add(_screen);
-
-        _circle.makeGraphic(Math.ceil(_screen.width), Math.ceil(_screen.height), 0x150000FF, true);
-        FlxSpriteUtil.drawCircle(_circle, -1, -1, 128, FlxColor.BLACK);
-
-        _circle.pixels.colorTransform(
-            new Rectangle(0, 0, _circle.width, _circle.height), 
-            new ColorTransform(0,0,0,-1,0,0,0,255)
-        );
-        FlxSpriteUtil.alphaMaskFlxSprite(_screen, _circle, _screen);
 
         super.create();
     }
@@ -108,22 +93,21 @@ class ParentState extends FlxState {
                 case "moveable_blox":
                     _entities.add(new LightCube(obj.x, obj.y, _player, _level));
                 case "circle":
-                    _circleFactor.set(obj.width, obj.height);
+                    // _circleFactor.set(obj.width, obj.height);
                 case "checkpoint":
-                    add(new entity.Torch(obj.x, obj.y, _player, _level));
+                    _entities.add(new entity.Torch(obj.x, obj.y, _player, _level));
             }
         }
 
         _player.setPosition(player_start.x, player_start.y);
+        _darkness = new Darkmap(0, 0, _player, _entities);
         add(_entities);
         add(_player);
+        add(_darkness);
     }
 
     override public function update(elapsed:Float):Void {
         super.update(elapsed);
-
-        _screen.x = _player.x - _screen.width / 2 + _player.width / 2;
-        _screen.y = _player.y - _screen.height / 2 + _player.height / 2;
 
         FlxG.collide(_entities);
         FlxG.collide(_player, _level);
@@ -133,18 +117,10 @@ class ParentState extends FlxState {
             setCamera();
         }
 
-        handleCircle();
-
         if (!_player.inWorldBounds())
             _player.kill();
     }
 
-    function handleCircle():Void {
-        _screen.scale.set(
-            _circleFactor.x * (_player.health + 40) / 50,
-            _circleFactor.y * (_player.health + 40) / 50
-        );
-    }
 
     function setCamera():Void {
         FlxG.camera.follow(_player, FlxCameraFollowStyle.PLATFORMER);
