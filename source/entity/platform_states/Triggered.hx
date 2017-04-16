@@ -1,7 +1,5 @@
 package entity.platform_states;
 
-import flixel.FlxObject;
-import flixel.FlxG;
 import addons.FlxFSM;
 
 class Triggered extends FlxFSMState<Platform>
@@ -15,15 +13,13 @@ class Triggered extends FlxFSMState<Platform>
 
     override public function update(elapsed:Float, owner:Platform, fsm:FlxFSM<Platform>):Void 
     {
-        if (++i >= 64) {
+        if (++i >= 32) {
             if (owner.angularVelocity == 0)
                 owner.angularVelocity = 90;
             if (i % 5 == 0)
                 owner.angularVelocity *= -1;
-            if (i >= 128)        
-            {
+            if (i >= 64)        
                 owner.ready = true;
-            }                
         }
     }
 

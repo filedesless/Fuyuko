@@ -6,12 +6,17 @@ import flixel.FlxSprite;
 import flixel.FlxG;
 import entity.player_states.*;
 import addons.FlxFSM;
+import flixel.system.FlxSound;
 
 class Player extends FlxSprite
 {
     var GRAVITY:Int = 600;
     var fsm:FlxFSM<Player>;
     public var speedFactor:Float = 1;
+    public var diffFactor:Float = 1;
+
+    var _heartSound:FlxSound = new FlxSound();
+    var _hurtSound:FlxSound = new FlxSound();
 
     public function new(?X:Float=0, ?Y:Float=0)
     {
@@ -114,12 +119,15 @@ class Player extends FlxSprite
             health -= damage;
             FlxFlicker.flicker(this, 1, 0.1, true);
 
-            felix.FelixSound.playSfx(AssetPaths.hurt2__ogg);
+            felix.FelixSound.playGeneric(AssetPaths.hurt2__ogg, 
+                _hurtSound, felix.FelixSave.get_sound_effects(), false);
             
             if (health < 50)
-                felix.FelixSound.playAmbient(AssetPaths.heartbeat_fast__ogg);
+                felix.FelixSound.playGeneric(AssetPaths.heartbeat_fast__ogg, 
+                    _heartSound, felix.FelixSave.get_ambient_music());
             else if (health < 80)
-                felix.FelixSound.playAmbient(AssetPaths.heartbeat_slow__ogg);
+                felix.FelixSound.playGeneric(AssetPaths.heartbeat_slow__ogg, 
+                    _heartSound, felix.FelixSave.get_ambient_music());
 
             FlxG.camera.shake(0.005, 0.1);
             if (health <= 0) {

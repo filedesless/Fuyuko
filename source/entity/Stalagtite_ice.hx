@@ -1,30 +1,28 @@
 package entity;
 
-import flixel.FlxObject;
 import flixel.FlxG;
-import flixel.FlxSprite;
+import flixel.tile.FlxTilemap;
+import flixel.FlxObject;
 import entity.stalagtite_ice_states.*;
 import addons.FlxFSM;
 
-class Stalagtite_ice extends FlxSprite {
+class Stalagtite_ice extends Entity {
     public var triggered:Bool = false;
     public var ready:Bool = false;
     public var damage:Float = 5;
-    var _player:Player;
     var fsm:FlxFSM<Stalagtite_ice>;
 
-    public override function new(X:Float, Y:Float, player:Player) {
-        super(X, Y);
+    public override function new(X:Float, Y:Float, player:Player, level:FlxTilemap) {
+        super(X, Y, player, level);
         loadGraphic(AssetPaths.iceStalactites__png, false, 128, 128);
         _player = player;
+
+        immovable = true;
 
         fsm = new FlxFSM<Stalagtite_ice>(this);
         fsm.transitions
             .add(Idle, Triggered, Conditions.isTriggered)
-            .add(Idle, Done, Conditions.hasHit)
             .add(Triggered, Falling, Conditions.isReady)
-            .add(Triggered, Done, Conditions.hasHit)
-            .add(Falling, Done, Conditions.hasHit)
             .start(Idle);
     }
 
@@ -33,7 +31,15 @@ class Stalagtite_ice extends FlxSprite {
             _player.y > this.y && _player.y < this.y + 8*64) {
             this.triggered = true;
         }
-        FlxObject.updateTouchingFlags(_player, this);
+        
+        if (FlxG.pixelPerfectOverlap(_player, this)) {
+            _player.hurt(damage * _player.diffFactor);
+            kill();
+        }
+
+        if (velocity.y > 0)
+            if (overlaps(_level)) kill();
+
         fsm.update(elapsed);
         super.update(elapsed);
     }

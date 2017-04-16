@@ -1,7 +1,5 @@
 package entity.stalagtite_ice_states;
 
-import flixel.FlxObject;
-import flixel.FlxG;
 import addons.FlxFSM;
 
 class Falling extends FlxFSMState<Stalagtite_ice>

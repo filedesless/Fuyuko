@@ -1,11 +1,12 @@
 package entity;
 
-import flixel.FlxSprite;
+import flixel.tile.FlxTilemap;
 
-class IceCube extends FlxSprite {
-    public override function new(X:Float, Y:Float) {
-        super(X, Y);
+class IceCube extends Entity {
+    public override function new(X:Float, Y:Float, player:Player, level:FlxTilemap) {
+        super(X, Y, player, level);
         loadGraphic(AssetPaths.iceCube__png, false, 128, 128);
+        immovable = true;
     }
     
 }

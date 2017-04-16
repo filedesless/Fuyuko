@@ -1,9 +1,11 @@
 package entity.player_states;
 
+import flixel.system.FlxSound;
 import flixel.math.FlxRandom;
 
 class Player_Sounds {
     static var path:String = "assets/sounds/walk/";
+    static var _walkSound:FlxSound = new FlxSound();
     static var sounds:Array<String> = [
         "Corsica_S-Walking_on_snow_covered_gravel_01.ogg",
         "Corsica_S-Walking_on_snow_covered_gravel_02.ogg",
@@ -49,11 +51,12 @@ class Player_Sounds {
     ];
 
     public static function playWalkSound():Void {
-        if (!felix.FelixSound.isSfxPlaying())
+        if (!_walkSound.playing)
         {
             var rnd:FlxRandom = new FlxRandom();
             var snd = sounds[rnd.int(0, sounds.length-1)];
-            felix.FelixSound.playSfx(path + snd);
+            felix.FelixSound.playGeneric(path + snd, 
+                _walkSound, felix.FelixSave.get_sound_effects(), false);
         }
     }
 }

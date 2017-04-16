@@ -23,20 +23,20 @@ class LvlDemo extends ParentState {
     }
 
     override public function loadEvents() {
-        _stalagmites.add(new Stalagmite(7*64, 18*64));
-        _stalagmites.add(new Stalagmite(8*64, 18*64));
+        // _stalagmites.add(new Stalagmite(7*64, 18*64));
+        // _stalagmites.add(new Stalagmite(8*64, 18*64));
 
-        _stalagtites_ice.add(new Stalagtite_ice(10*64, 2*64, _player));
-        _stalagtites_ice.add(new Stalagtite_ice(10*64, 11*64, _player));
-        _stalagtites_ice.add(new Stalagtite_ice(15*64, 10*64, _player));
+        // _stalagtites_ice.add(new Stalagtite_ice(10*64, 2*64, _player));
+        // _stalagtites_ice.add(new Stalagtite_ice(10*64, 11*64, _player));
+        // _stalagtites_ice.add(new Stalagtite_ice(15*64, 10*64, _player));
 
-        _lightCubes.add(new LightCube(12*64, 15*64));
+        // _lightCubes.add(new LightCube(12*64, 15*64));
 
-        _iceCubes.add(new IceCube(14*64, 7*64));
+        // _iceCubes.add(new IceCube(14*64, 7*64));
 
-        _platforms.add(new Platform(5*64, 5*64, _player));
-        _platforms.add(new Platform(8*64, 6*64, _player));
-        _platforms.add(new Platform(11*64, 7*64, _player));
+        // _platforms.add(new Platform(5*64, 5*64, _player));
+        // _platforms.add(new Platform(8*64, 6*64, _player));
+        // _platforms.add(new Platform(11*64, 7*64, _player));
 
         super.loadEvents();
     }

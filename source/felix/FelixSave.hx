@@ -91,7 +91,7 @@ class FelixSave {
     @:isVar static var sound_effects(get, set):Float = -1;
     /**
         Gets the sound effects volume from save
-        @return     A float, should be between 0 and (default) 100
+        @return     A float, should be between 0 and 100, defaults to 50
     **/
     public static function get_sound_effects():Float {
         if (sound_effects == -1) { // mem cache miss, fetch from disk

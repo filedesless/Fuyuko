@@ -1,7 +1,6 @@
 package entity.platform_states;
 
 import flixel.FlxObject;
-import flixel.FlxG;
 
 class Conditions
 {
@@ -11,10 +10,10 @@ class Conditions
     public static function isReady(owner:Platform):Bool {
         return owner.ready;
     }
-    public static function hasHit(owner:Platform):Bool {
-        return owner.isTouching(FlxObject.DOWN);
+    public static function isInvisible(owner:Platform):Bool {
+        return !owner.visible;
     }
-    public static function isAlive(owner:Platform):Bool {
-        return owner.alive;
+    public static function isVisible(owner:Platform):Bool {
+        return owner.visible;
     }
 }

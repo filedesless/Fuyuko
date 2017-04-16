@@ -32,8 +32,8 @@ class OptionSubState extends FlxSubState {
         super.create();
 
         _backgroundVolume = Math.floor(FelixSound.getBackgroundVolume());
-        _sfxVolume = Math.floor(FelixSound.getSfxVolume());
-        _ambientVolume = Math.floor(FelixSound.getAmbientVolume());
+        _sfxVolume = Math.floor(felix.FelixSave.get_sound_effects());
+        _ambientVolume = Math.floor(felix.FelixSave.get_ambient_music());
         _uiVolume = Math.floor(FelixSound.getUiVolume());
 
         _backgroundSlider = new FlxSlider(
@@ -100,8 +100,8 @@ class OptionSubState extends FlxSubState {
     override public function update(elapsed:Float):Void {
         switch (i++) {
             case 15: FelixSound.setBackgroundVolume(_backgroundVolume);
-            case 30: FelixSound.setAmbientVolume(_ambientVolume);
-            case 45: FelixSound.setSfxVolume(_sfxVolume);
+            case 30: felix.FelixSave.set_ambient_music(_ambientVolume);
+            case 45: felix.FelixSave.set_sound_effects(_sfxVolume);
             case 60: FelixSound.setUiVolume(_uiVolume); i = 0;
         }
 

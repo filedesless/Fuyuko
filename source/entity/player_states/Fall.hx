@@ -7,6 +7,7 @@ class Fall extends FlxFSMState<Player>
     override public function enter(owner:Player, fsm:FlxFSM<Player>):Void 
     {
         owner.animation.play("fall");
+        if (owner.speedFactor == 0) owner.speedFactor = 1;
     }
     
     override public function update(elapsed:Float, owner:Player, fsm:FlxFSM<Player>):Void 

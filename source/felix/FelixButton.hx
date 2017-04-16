@@ -25,11 +25,11 @@ class FelixButton extends FlxButton {
         labelOffsets = [ center, center, center ];
 
         #if flash
-        onOver.sound = FlxG.sound.load(AssetPaths.sharp_echo__wav, felix.FelixSound.getSfxVolume() * 0.01);
-        onUp.sound = FlxG.sound.load(AssetPaths.load__wav, felix.FelixSound.getSfxVolume() * 0.01);
+        onOver.sound = FlxG.sound.load(AssetPaths.sharp_echo__wav, felix.FelixSave.get_sound_effects() * 0.01);
+        onUp.sound = FlxG.sound.load(AssetPaths.load__wav, felix.FelixSave.get_sound_effects() * 0.01);
         #else
-        onOver.sound = FlxG.sound.load(AssetPaths.sharp_echo__ogg, felix.FelixSound.getSfxVolume() * 0.01);
-        onUp.sound = FlxG.sound.load(AssetPaths.load__ogg, felix.FelixSound.getSfxVolume() * 0.01);
+        onOver.sound = FlxG.sound.load(AssetPaths.sharp_echo__ogg, felix.FelixSave.get_sound_effects() * 0.01);
+        onUp.sound = FlxG.sound.load(AssetPaths.load__ogg, felix.FelixSave.get_sound_effects() * 0.01);
         #end
     }
 

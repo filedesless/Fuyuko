@@ -72,7 +72,6 @@ class PauseSubState extends FlxSubState {
     }
 
     function click_quitter():Void {
-        felix.FelixSound.stopAmbientVolume();
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, false, actuallyQuit);
     }
 

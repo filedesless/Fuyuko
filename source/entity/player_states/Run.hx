@@ -6,7 +6,7 @@ class Run extends FlxFSMState<Player>
 {
     override public function enter(owner:Player, fsm:FlxFSM<Player>):Void 
     {
-        owner.animation.play("reco");
+        owner.animation.play("crouch");
         owner.speedFactor = 1.2;
     }
     

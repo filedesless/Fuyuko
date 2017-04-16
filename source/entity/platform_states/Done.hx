@@ -7,7 +7,7 @@ import addons.FlxFSM;
 class Done extends FlxFSMState<Platform>
 {
     override public function enter(owner:Platform, fsm:FlxFSM<Platform>):Void {
-        owner.kill();
+        owner.velocity.y = 0;
     }
 
     override public function update(elapsed:Float, owner:Platform, fsm:FlxFSM<Platform>):Void {
