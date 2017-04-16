@@ -7,16 +7,15 @@ import flixel.FlxState;
 import flixel.util.FlxColor;
 import flixel.group.FlxSpriteGroup;
 import flixel.effects.particles.FlxEmitter;
-
+import flixel.ui.FlxButton;
 
 class FelixMagicButton extends FlxSpriteGroup {
     public var button:FelixButton;
+    public var enabled(default, null):Bool = true;
     var _emitter:FlxEmitter;
     var _callback:Void->Void;
 
-    var _disabled:Bool = false;
-    var _disabledTime:Float = 0;
-    var _cnt:Float = 0;
+    var _oldBtn:FlxButton = new FlxButton(0, 0, "cache");
 
     public function new (?X:Float, ?Y:Float, state:FlxState, ?text:Null<String>, ?onClick:Null<Void -> Void>, ?fontSize:Null<Int>) {
         var posX:Float = 0;
@@ -60,9 +59,9 @@ class FelixMagicButton extends FlxSpriteGroup {
     override public function update(elapsed:Float):Void {
         _emitter.setPosition(button.getMidpoint().x, button.getMidpoint().y);
 
-        if (!button.getBoundingBox(FlxG.camera).containsPoint(FlxG.mouse.getPosition())) {
-            _emitter.kill();
-        }
+        // if (!button.getBoundingBox(FlxG.camera).containsPoint(FlxG.mouse.getPosition())) {
+        //     _emitter.kill();
+        // }
         
         super.update(elapsed);
     }
@@ -74,14 +73,39 @@ class FelixMagicButton extends FlxSpriteGroup {
     }
 
     public function disable():Void {
+        if (!enabled) return;
         button.statusAnimations = ["pressed", "pressed", "pressed"];
+        _oldBtn.onOver.callback = button.onOver.callback;
         button.onOver.callback = function() { };
+        _oldBtn.onDown.callback = button.onDown.callback;
         button.onDown.callback = function() { };
+        _oldBtn.onUp.callback = button.onUp.callback;
         button.onUp.callback = function() { };
+        _oldBtn.onOver.sound = button.onOver.sound;
         button.onOver.sound = new FlxSound();
+        _oldBtn.onUp.sound = button.onUp.sound;
         button.onUp.sound = new FlxSound();
+        _oldBtn.color = button.color;
         button.color = FlxColor.GRAY;
+        if (button.label.borderColor != null) 
+            _oldBtn.label.borderColor = button.label.borderColor;
         button.label.borderColor = FlxColor.GRAY;
+        _oldBtn.label.color = button.label.color;
         button.label.color = FlxColor.BLACK;
+        enabled = false;
+    }
+
+    public function enable():Void {
+        if (enabled) return;
+        button.statusAnimations = ["normal", "highlight", "pressed"];
+        button.onOver.callback = _oldBtn.onOver.callback;
+        button.onDown.callback = _oldBtn.onDown.callback;
+        button.onUp.callback = _oldBtn.onUp.callback;
+        button.onOver.sound = _oldBtn.onOver.sound;
+        button.onUp.sound = _oldBtn.onUp.sound;
+        button.color = _oldBtn.color;
+        button.label.borderColor = _oldBtn.label.borderColor;
+        button.label.color = _oldBtn.label.color;
+        enabled = true;
     }
 }

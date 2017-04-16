@@ -36,7 +36,9 @@ class FelixButton extends FlxButton {
     public override function update(elapsed:Float) {
         super.update(elapsed);
 
-        onOver.sound.volume = felix.FelixSound.getUiVolume() * 0.01;
-        onUp.sound.volume = felix.FelixSound.getUiVolume() * 0.01;
+        if (onOver.sound != null)
+            onOver.sound.volume = felix.FelixSound.getUiVolume() * 0.01;
+        if (onUp.sound != null)
+            onUp.sound.volume = felix.FelixSound.getUiVolume() * 0.01;
     }
 }
