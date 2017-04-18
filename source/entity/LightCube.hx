@@ -19,6 +19,8 @@ class LightCube extends Entity {
 
         if (overlaps(_player))
             playerTouchesLightCube();
+        else if (_soundChannel.playing)
+            _soundChannel.stop();
 
         super.update(elapsed);
     }
@@ -49,6 +51,7 @@ class LightCube extends Entity {
                     FlxObject.separate(_player, this);
                     this.velocity.x = 0; // immobilizes it
                 }
+                if (_soundChannel.playing) _soundChannel.stop();
             } else {
                 this.velocity.x = 0;
             }
