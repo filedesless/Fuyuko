@@ -31,13 +31,13 @@ class Darkmap extends FlxSprite {
         FlxSpriteUtil.drawCircle(this, 
             _player.getScreenPosition().x + _player.width / 2, 
             _player.getScreenPosition().y + _player.height / 2, 
-            160 + 4 * Math.sin(Math.floor(_cnt / 15)), 0xFFD0D0FF
+            _player.getLightRadius(), 0xFFD0D0FF
         );
         _entities.forEachOfType(entity.Torch, function(t:entity.Torch):Void {
             FlxSpriteUtil.drawCircle(this, 
                 t.getScreenPosition().x + t.width / 2,
                 t.getScreenPosition().y + t.height / 2, 
-                128 + 3 * Math.sin(Math.floor((_cnt + 3) / 8)), 0xFFD0D0FF
+                t.getLightRadius(), 0xFFD0D0FF
             );
         });
 

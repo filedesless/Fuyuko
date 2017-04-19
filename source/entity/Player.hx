@@ -7,8 +7,9 @@ import flixel.FlxG;
 import entity.player_states.*;
 import addons.FlxFSM;
 import flixel.system.FlxSound;
+import flixel.math.FlxPoint;
 
-class Player extends FlxSprite
+class Player extends FlxSprite implements ILightSource
 {
     var GRAVITY:Int = 600;
     var fsm:FlxFSM<Player>;
@@ -17,7 +18,11 @@ class Player extends FlxSprite
 
     var _heartSound:FlxSound = new FlxSound();
     var _hurtSound:FlxSound = new FlxSound();
+    var _cnt:Int = 0;
 
+    public var baseLight:Int = 320;
+    public var center:FlxPoint = new FlxPoint();
+    
     public function new(?X:Float=0, ?Y:Float=0)
     {
         super(X, Y);
@@ -110,6 +115,9 @@ class Player extends FlxSprite
         else
             velocity.x = 0;
 
+        _cnt++;
+
+        center = getMidpoint(center);
         fsm.update(elapsed);
         super.update(elapsed);
     }
@@ -134,5 +142,9 @@ class Player extends FlxSprite
                 kill();
             }
         }
+    }
+
+    public function getLightRadius():Float {
+        return (baseLight + 8 * Math.sin(Math.floor(_cnt / 15))) * (health + 10) / 100 ;
     }
 }

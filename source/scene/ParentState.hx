@@ -119,6 +119,8 @@ class ParentState extends FlxState {
 
         if (!_player.inWorldBounds())
             _player.kill();
+
+        handleLight();
     }
 
 
@@ -128,4 +130,16 @@ class ParentState extends FlxState {
         FlxG.camera.setScrollBoundsRect(_rect.x, _rect.y, _rect.width, _rect.height);
     }
 
+    function handleLight():Void {
+        _entities.forEachOfType(ILightSource, function(light:ILightSource):Void {
+            // lousy overlap check
+            var rad:Float = light.getLightRadius();
+            trace(light.center);
+            if (_player.center.x < light.center.x + rad && _player.center.x > light.center.x - rad)
+                if (_player.center.y < light.center.y + rad && _player.center.y > light.center.y - rad) {
+                    _player.health += 1;
+                    light.health -= 1;
+                }
+        });
+    }
 }
