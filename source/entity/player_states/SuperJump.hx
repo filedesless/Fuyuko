@@ -22,7 +22,7 @@ class SuperJump extends FlxFSMState<Player>
     override public function update(elapsed:Float, owner:Player, fsm:FlxFSM<Player>):Void 
     {
         if (!jumped && count++ > 7) {
-            owner.velocity.y = -400;
+            owner.velocity.y = -450;
             jumped = true;
             owner.speedFactor = 1;
         }
