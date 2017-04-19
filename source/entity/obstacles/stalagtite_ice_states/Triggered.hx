@@ -1,4 +1,4 @@
-package entity.stalagtite_ice_states;
+package entity.obstacles.stalagtite_ice_states;
 
 import flixel.FlxObject;
 import flixel.FlxG;

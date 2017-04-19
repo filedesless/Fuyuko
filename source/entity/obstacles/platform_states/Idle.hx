@@ -1,22 +1,18 @@
-package entity.platform_states;
+package entity.obstacles.platform_states;
 
 import flixel.FlxObject;
 import flixel.FlxG;
 import addons.FlxFSM;
 
-class Falling extends FlxFSMState<Platform>
+class Idle extends FlxFSMState<Platform>
 {
     override public function enter(owner:Platform, fsm:FlxFSM<Platform>):Void 
     {
-        owner.velocity.y = 600;
+        owner.reviveTimer = 0;
+        owner.angle = 0;
     }
 
     override public function update(elapsed:Float, owner:Platform, fsm:FlxFSM<Platform>):Void 
     {
     }
-
-    override public function exit(owner:Platform):Void {
-        owner.velocity.y = 0;
-    }
-
 }

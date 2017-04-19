@@ -1,8 +1,5 @@
 package scene;
 
-import flash.display.BlendMode;
-import flixel.util.FlxColor;
-import flixel.util.FlxSpriteUtil;
 import flixel.tile.FlxTilemap;
 import flixel.FlxG;
 import flixel.FlxState;
@@ -12,7 +9,11 @@ import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
 import flixel.group.FlxGroup;
 
-import entity.*;
+import entity.obstacles.*;
+import entity.monsters.*;
+import entity.misc.*;
+import entity.Player;
+import entity.Entity;
 
 import scene.PauseSubState;
 
@@ -95,9 +96,9 @@ class ParentState extends FlxState {
                 case "circle":
                     // _circleFactor.set(obj.width, obj.height);
                 case "checkpoint":
-                    _entities.add(new entity.Torch(obj.x, obj.y, _player, _level));
+                    _entities.add(new Torch(obj.x, obj.y, _player, _level));
                 case "ekunaa":
-                    _entities.add(new entity.Ekunaa(obj.x, obj.y, _player, _level));
+                    _entities.add(new Ekunaa(obj.x, obj.y, _player, _level));
             }
         }
 

@@ -1,4 +1,4 @@
-package entity;
+package entity.misc;
 
 import flixel.tile.FlxTilemap;
 import flixel.math.FlxPoint;

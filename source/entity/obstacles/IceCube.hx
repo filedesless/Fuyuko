@@ -1,4 +1,4 @@
-package entity;
+package entity.obstacles;
 
 import flixel.tile.FlxTilemap;
 

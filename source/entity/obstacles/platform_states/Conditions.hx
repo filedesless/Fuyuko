@@ -1,4 +1,4 @@
-package entity.platform_states;
+package entity.obstacles.platform_states;
 
 import flixel.FlxObject;
 

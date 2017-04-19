@@ -8,6 +8,8 @@ import flixel.util.FlxSpriteUtil;
 import flixel.FlxSprite;
 import flixel.FlxG;
 
+import entity.misc.Torch;
+
 class Darkmap extends FlxSprite {
     var _circleFactor:Float = 0;
 
@@ -33,7 +35,7 @@ class Darkmap extends FlxSprite {
             _player.getScreenPosition().y + _player.height / 2, 
             _player.getLightRadius(), 0xFFD0D0FF
         );
-        _entities.forEachOfType(entity.Torch, function(t:entity.Torch):Void {
+        _entities.forEachOfType(Torch, function(t:Torch):Void {
             FlxSpriteUtil.drawCircle(this, 
                 t.getScreenPosition().x + t.width / 2,
                 t.getScreenPosition().y + t.height / 2, 

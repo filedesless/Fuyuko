@@ -8,6 +8,7 @@ import entity.player_states.*;
 import addons.FlxFSM;
 import flixel.system.FlxSound;
 import flixel.math.FlxPoint;
+import entity.misc.ILightSource;
 
 class Player extends FlxSprite implements ILightSource
 {

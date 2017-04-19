@@ -8,7 +8,7 @@ import flixel.util.FlxAxes;
 import flixel.FlxState;
 import flixel.group.FlxSpriteGroup;
 import flixel.FlxSprite;
-import entity.Loading;
+import entity.misc.Loading;
 
 class BestiaryState extends FlxState {
     var _groupFuyuko:FlxSpriteGroup;
@@ -35,7 +35,7 @@ class BestiaryState extends FlxState {
     var _load:Loading;
 
     override public function create():Void {
-        _load = new entity.Loading();
+        _load = new Loading();
         _load.screenCenter(FlxAxes.XY);
         add(_load);
 

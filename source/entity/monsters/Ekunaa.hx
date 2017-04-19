@@ -1,4 +1,4 @@
-package entity;
+package entity.monsters;
 
 import flixel.FlxG;
 import entity.Entity;

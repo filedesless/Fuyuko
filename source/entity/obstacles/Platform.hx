@@ -1,8 +1,8 @@
-package entity;
+package entity.obstacles;
 
 import flixel.tile.FlxTilemap;
 import flixel.FlxObject;
-import entity.platform_states.*;
+import entity.obstacles.platform_states.*;
 import addons.FlxFSM;
 import flixel.math.FlxPoint;
 
