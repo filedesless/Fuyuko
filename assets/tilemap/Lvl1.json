@@ -17,6 +17,17 @@
     },
     {
      "height":128,
+     "id":2,
+     "name":"ekunaa",
+     "rotation":0,
+     "type":"",
+     "visible":true,
+     "width":64,
+     "x":2000,
+     "y":524
+    },
+    {
+     "height":128,
      "id":4,
      "name":"checkpoint",
      "rotation":0,

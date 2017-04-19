@@ -96,6 +96,8 @@ class ParentState extends FlxState {
                     // _circleFactor.set(obj.width, obj.height);
                 case "checkpoint":
                     _entities.add(new entity.Torch(obj.x, obj.y, _player, _level));
+                case "ekunaa":
+                    _entities.add(new entity.Ekunaa(obj.x, obj.y, _player, _level));
             }
         }
 
@@ -134,12 +136,11 @@ class ParentState extends FlxState {
         _entities.forEachOfType(ILightSource, function(light:ILightSource):Void {
             // lousy overlap check
             var rad:Float = light.getLightRadius();
-            trace(light.center);
-            if (_player.center.x < light.center.x + rad && _player.center.x > light.center.x - rad)
-                if (_player.center.y < light.center.y + rad && _player.center.y > light.center.y - rad) {
-                    _player.health += 1;
-                    light.health -= 1;
-                }
+            var rect:FlxRect = new FlxRect(light.center.x - rad, light.center.y - rad, 2*rad, 2*rad);
+            if (rect.containsPoint(_player.center)) {
+                _player.health += 1;
+                light.health -= 1;
+            }
         });
     }
 }
