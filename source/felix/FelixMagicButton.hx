@@ -38,10 +38,7 @@ class FelixMagicButton extends FlxSpriteGroup {
         add(button);
 
         _emitter = new FlxEmitter(0, 0, 150);
-        _emitter.setPosition(
-            FlxG.camera.scroll.x + button.x + button.width / 2,
-            FlxG.camera.scroll.y + button.y + button.height / 2
-        );
+        
         _emitter.makeParticles(5, 5, FlxColor.CYAN, 150);
         _emitter.launchMode = FlxEmitterMode.CIRCLE;
         state.add(_emitter);
@@ -57,7 +54,10 @@ class FelixMagicButton extends FlxSpriteGroup {
     }
 
     override public function update(elapsed:Float):Void {
-        _emitter.setPosition(button.getMidpoint().x, button.getMidpoint().y);
+        _emitter.setPosition(
+            FlxG.camera.scroll.x + button.x + button.width / 2,
+            FlxG.camera.scroll.y + button.y + button.height / 2
+        );
 
         // if (!button.getBoundingBox(FlxG.camera).containsPoint(FlxG.mouse.getPosition())) {
         //     _emitter.kill();

@@ -96,8 +96,8 @@ class Player extends FlxSprite implements ILightSource
     }
 
     public override function update(elapsed:Float):Void {
-        var pressingLeft:Bool = FlxG.keys.anyPressed([LEFT]);
-        var pressingRight:Bool = FlxG.keys.anyPressed([RIGHT]);
+        var pressingLeft:Bool = FlxG.keys.anyPressed([LEFT, A]);
+        var pressingRight:Bool = FlxG.keys.anyPressed([RIGHT, D]);
 
         if (pressingLeft && !pressingRight) {
             velocity.x = -300 * speedFactor;

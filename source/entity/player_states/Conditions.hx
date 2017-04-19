@@ -6,10 +6,10 @@ import flixel.FlxG;
 class Conditions
 {
     public static function isIdle(owner:Player):Bool {
-        return !FlxG.keys.anyPressed([LEFT, RIGHT, UP, DOWN]);
+        return !FlxG.keys.anyPressed([LEFT, RIGHT, UP, DOWN, A, S, D, W]);
     }
     public static function isWalking(owner:Player):Bool {
-        return FlxG.keys.anyPressed([LEFT, RIGHT]);
+        return FlxG.keys.anyPressed([LEFT, RIGHT, A, D]);
     }
     public static function isRunning(owner:Player):Bool {
         return FlxG.keys.anyPressed([SHIFT]) && isWalking(owner);
@@ -27,13 +27,13 @@ class Conditions
         return isWalking(owner) && isNotRunning(owner);
     }
     public static function isCrouching(owner:Player):Bool {
-        return FlxG.keys.anyPressed([DOWN]);
+        return FlxG.keys.anyPressed([DOWN, S]);
     }
     public static function isNotCrouching(owner:Player):Bool {
         return !isCrouching(owner);
     }
     public static function isJumping(owner:Player):Bool {
-        return FlxG.keys.anyPressed([UP, SPACE]);
+        return FlxG.keys.anyPressed([UP, SPACE, W]);
     }
     public static function isFalling(owner:Player):Bool {
         return (owner.velocity.y >= 20);
@@ -48,8 +48,8 @@ class Conditions
         return owner.animation.finished;
     }
     public static function isPushing(owner:Player):Bool {
-        return (FlxG.keys.anyPressed([LEFT]) && owner.isTouching(FlxObject.LEFT)) ||
-            (FlxG.keys.anyPressed([RIGHT]) && owner.isTouching(FlxObject.RIGHT));
+        return (FlxG.keys.anyPressed([LEFT, A]) && owner.isTouching(FlxObject.LEFT)) ||
+            (FlxG.keys.anyPressed([RIGHT, D]) && owner.isTouching(FlxObject.RIGHT));
     }
     public static function isNotPushing(owner:Player):Bool {
         return !isPushing(owner);
