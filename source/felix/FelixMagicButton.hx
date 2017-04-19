@@ -87,7 +87,7 @@ class FelixMagicButton extends FlxSpriteGroup {
         button.onUp.sound = new FlxSound();
         _oldBtn.color = button.color;
         button.color = FlxColor.GRAY;
-        if (button.label.borderColor != null) 
+        if (button.label.borderColor != 0x00000000) 
             _oldBtn.label.borderColor = button.label.borderColor;
         button.label.borderColor = FlxColor.GRAY;
         _oldBtn.label.color = button.label.color;
