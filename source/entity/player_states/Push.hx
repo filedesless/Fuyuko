@@ -1,8 +1,6 @@
 package entity.player_states;
 
-import flixel.FlxObject;
 import addons.FlxFSM;
-import flixel.FlxG;
 
 class Push extends FlxFSMState<Player>
 {

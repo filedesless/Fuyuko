@@ -1,7 +1,5 @@
 package entity.player_states;
 
-import flixel.FlxObject;
-import flixel.FlxG;
 import addons.FlxFSM;
 
 class Idle extends FlxFSMState<Player>

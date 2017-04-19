@@ -2,7 +2,6 @@ package entity.obstacles;
 
 import flixel.FlxG;
 import flixel.tile.FlxTilemap;
-import flixel.FlxObject;
 import entity.obstacles.stalagtite_ice_states.*;
 import addons.FlxFSM;
 

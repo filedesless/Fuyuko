@@ -1,7 +1,5 @@
 package entity.obstacles.platform_states;
 
-import flixel.FlxObject;
-import flixel.FlxG;
 import addons.FlxFSM;
 
 class Idle extends FlxFSMState<Platform>

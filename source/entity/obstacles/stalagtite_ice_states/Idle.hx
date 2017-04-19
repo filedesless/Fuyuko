@@ -1,7 +1,5 @@
 package entity.obstacles.stalagtite_ice_states;
 
-import flixel.FlxObject;
-import flixel.FlxG;
 import addons.FlxFSM;
 
 class Idle extends FlxFSMState<Stalagtite_ice>
