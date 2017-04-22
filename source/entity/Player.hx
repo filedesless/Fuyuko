@@ -21,7 +21,7 @@ class Player extends FlxSprite implements ILightSource
     var _hurtSound:FlxSound = new FlxSound();
     var _cnt:Int = 0;
 
-    public var baseLight:Int = 320;
+    public var baseLight:Int = 160;
     public var center:FlxPoint = new FlxPoint();
     
     public function new(?X:Float=0, ?Y:Float=0)

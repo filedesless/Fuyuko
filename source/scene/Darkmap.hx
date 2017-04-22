@@ -29,19 +29,26 @@ class Darkmap extends FlxSprite {
     }
 
     override public function update(elapsed:Float):Void {
-        makeGraphic(FlxG.width, FlxG.height, 0xFA000000, true);
-        FlxSpriteUtil.drawCircle(this, 
-            _player.getScreenPosition().x + _player.width / 2, 
-            _player.getScreenPosition().y + _player.height / 2, 
-            _player.getLightRadius(), 0xFFD0D0FF
-        );
-        _entities.forEachOfType(Torch, function(t:Torch):Void {
+        var greenLine:LineStyle = { color: 0xFF00FF00, thickness : 10 };
+        var blueLine:LineStyle = { color: 0xFF0000FF, thickness : 5 };
+
+        if (_cnt % 2 == 0) {
+            makeGraphic(FlxG.width, FlxG.height, 0xFA000000, true);
             FlxSpriteUtil.drawCircle(this, 
-                t.getScreenPosition().x + t.width / 2,
-                t.getScreenPosition().y + t.height / 2, 
-                t.getLightRadius(), 0xFFD0D0FF
+                _player.getScreenPosition().x + _player.width / 2, 
+                _player.getScreenPosition().y + _player.height / 2,
+                _player.getLightRadius(), 0xFFD0D0FF, greenLine, { smoothing : false }
             );
-        });
+            _entities.forEachOfType(Torch, function(t:Torch):Void {
+                if (t.isOnScreen())
+                    FlxSpriteUtil.drawCircle(this, 
+                        t.getScreenPosition().x + t.width / 2,
+                        t.getScreenPosition().y + t.height / 2, 
+                        t.getLightRadius(), 0xFFD0D0FF, blueLine, { smoothing: true }
+                    );
+            });
+        }
+        
 
         _cnt++;
         super.update(elapsed);
