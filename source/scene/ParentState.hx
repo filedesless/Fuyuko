@@ -136,7 +136,7 @@ class ParentState extends FlxState {
     }
 
     function handleLight():Void {
-        _entities.forEachOfType(ILightSource, function(light:ILightSource):Void {
+        _entities.forEachOfType(ICollectableLight, function(light:ICollectableLight):Void {
             // lousy overlap check
             var rad:Float = light.getLightRadius();
             var rect:FlxRect = new FlxRect(light.center.x - rad, light.center.y - rad, 2*rad, 2*rad);

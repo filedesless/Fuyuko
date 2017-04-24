@@ -31,6 +31,13 @@ class MenuState extends FlxState
         FlxG.scaleMode = new flixel.system.scaleModes.FillScaleMode();
         FlxG.watch.addMouse();
         FlxG.watch.add(FlxG.save, "data");
+        
+        #if mac
+        if (!felix.FelixSave.get_setup_done()) {
+            Sys.command("defaults write -g ApplePressAndHoldEnabled -bool false");
+            trace("executed");
+        }
+        #end
 
         var bg:FlxSprite = new FlxSprite();
         bg.loadGraphic(AssetPaths.cherry_blossom__png, true, 480, 180);

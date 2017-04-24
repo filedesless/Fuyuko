@@ -37,7 +37,6 @@ class Player extends FlxSprite implements ILightSource
             .add(Idle, Jump, Conditions.isJumping)
             .add(Idle, Crouch, Conditions.isCrouching)
             .add(Idle, Fall, Conditions.isFalling)
-            .add(Idle, Run, Conditions.isRunning)
 
             .add(Walk, Idle, Conditions.isNotWalking)
             .add(Walk, Jump, Conditions.isJumping)
@@ -88,7 +87,6 @@ class Player extends FlxSprite implements ILightSource
         FlxG.watch.add(velocity, "y", "VelocityY");
         FlxG.watch.add(this, "x");
         FlxG.watch.add(this, "y");
-        FlxG.watch.add(fsm, "state");
         FlxG.watch.add(this, "health");
 
         setFacingFlip(FlxObject.RIGHT, false, false);

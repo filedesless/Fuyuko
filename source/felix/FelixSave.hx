@@ -27,6 +27,27 @@ class FelixSave {
         return level_completed;
     }
 
+    @:isVar static var setup_done(get, set):Bool = false;
+
+    public static function get_setup_done():Bool {
+        if (FlxG.save.data.setup_done != null)
+            return FlxG.save.data.setup_done;
+        return false;
+    }
+    /**
+        Sets the setup flag to true or false
+        @param  newValue    A boolean value indicating wether or not the setup was done
+        @return The value saved
+    **/
+    public static function set_setup_done(newValue:Bool):Bool {
+        if (newValue != setup_done) {
+            FlxG.save.data.setup_done = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return setup_done;
+    }
+
     /** Volume of the ambient music, from 0 to 100 **/
     @:isVar static var ambient_music(get, set):Float = -1;
     /**
