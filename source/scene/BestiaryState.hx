@@ -232,10 +232,10 @@ class BestiaryState extends FlxState {
         if (_cnt == 50) {
             _canvasShokuka = new FlxSprite(0, 0, AssetPaths.beast_Shokuka__png);
             _entityShokuka = new FlxSprite();
-            _entityShokuka.loadGraphic(AssetPaths.charsheet_shokuka__png, true, 634, 637);
-            _entityShokuka.scale.set(0.2, 0.2);
+            _entityShokuka.loadGraphic(AssetPaths.charsheet_shokuka__png, true, 317, 534);
+            _entityShokuka.scale.set(0.38, 0.38);
             _entityShokuka.updateHitbox();
-            _entityShokuka.setPosition(135, 110);
+            _entityShokuka.setPosition(135, 80);
         }
         
         if (_cnt == 55) {

@@ -8,7 +8,7 @@ import flixel.util.FlxSpriteUtil;
 import flixel.FlxSprite;
 import flixel.FlxG;
 
-import entity.misc.Torch;
+import entity.misc.ILightSource;
 
 class Darkmap extends FlxSprite {
     var _circleFactor:Float = 0;
@@ -39,13 +39,16 @@ class Darkmap extends FlxSprite {
                 _player.getScreenPosition().y + _player.height / 2,
                 _player.getLightRadius(), 0xFFD0D0FF, greenLine, { smoothing : false }
             );
-            _entities.forEachOfType(Torch, function(t:Torch):Void {
-                if (t.isOnScreen())
-                    FlxSpriteUtil.drawCircle(this, 
-                        t.getScreenPosition().x + t.width / 2,
-                        t.getScreenPosition().y + t.height / 2, 
-                        t.getLightRadius(), 0xFFD0D0FF, blueLine, { smoothing: true }
-                    );
+            _entities.forEach(function(entity:Entity):Void {
+                try {
+                    var lightSource:ILightSource = cast(entity, ILightSource);
+                    if (entity.isOnScreen())
+                        FlxSpriteUtil.drawCircle(this, 
+                            entity.getScreenPosition().x + entity.width / 2,
+                            entity.getScreenPosition().y + entity.height / 2, 
+                            lightSource.getLightRadius(), 0xFFD0D0FF, blueLine, { smoothing: true }
+                        );
+                } catch (err:String) if (err != "Class cast error") throw err;
             });
         }
         

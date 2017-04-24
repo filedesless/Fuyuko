@@ -19,7 +19,7 @@ class MenuState extends FlxState
 {
     var btnNewGame:FelixMagicButton;
     var btnContinue:FelixMagicButton;
-    var btnCinematique:FelixMagicButton;
+    var btnBonus:FelixMagicButton;
     var btnOptions:FelixMagicButton;
     var btnBestiaire:FelixMagicButton;
     var btnQuitter:FelixMagicButton;
@@ -74,10 +74,10 @@ class MenuState extends FlxState
             this, "Options", clickOptions
         );
 
-        btnCinematique = new FelixMagicButton(
+        btnBonus = new FelixMagicButton(
             FlxG.camera.width / 2 - btnOptions.width - 20,
             FlxG.camera.height * 6 / 10,
-            this, "Cinématique"
+            this, "Bonus"
         );
 
         btnBestiaire = new FelixMagicButton(
@@ -100,7 +100,7 @@ class MenuState extends FlxState
 
         add(btnNewGame);
         add(btnContinue);
-        add(btnCinematique);
+        add(btnBonus);
         add(btnBestiaire);
         add(btnOptions);
         add(btnQuitter);

@@ -99,6 +99,8 @@ class ParentState extends FlxState {
                     _entities.add(new Torch(obj.x, obj.y, _player, _level));
                 case "ekunaa":
                     _entities.add(new Ekunaa(obj.x, obj.y, _player, _level));
+                case "lightball":
+                    _entities.add(new LightBall(obj.x, obj.y, _player, _level));
             }
         }
 
