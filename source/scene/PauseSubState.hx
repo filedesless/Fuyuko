@@ -31,8 +31,6 @@ class PauseSubState extends FlxSubState {
 
         persistentDraw = false;
 
-        FlxG.mouse.visible = true;
-
         add(new FelixMagicButton(
             null, FlxG.camera.height / 3,
             this, "Retour", exit
@@ -58,7 +56,6 @@ class PauseSubState extends FlxSubState {
     }
 
     function exit():Void {
-        FlxG.mouse.visible = false;
         close();
     }
 

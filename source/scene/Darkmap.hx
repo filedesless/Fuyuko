@@ -13,9 +13,6 @@ import entity.misc.ILightSource;
 class Darkmap extends FlxSprite {
     var _circleFactor:Float = 0;
 
-    var greenLine:LineStyle = { color: 0xFF00FF00, thickness : 10 };
-    var blueLine:LineStyle = { color: 0xFF0000FF, thickness : 5 };
-
     var _player:Player;
     var _entities:FlxTypedGroup<Entity>;
 
@@ -36,16 +33,16 @@ class Darkmap extends FlxSprite {
         FlxSpriteUtil.drawCircle(this, 
             _player.getScreenPosition().x + _player.width / 2, 
             _player.getScreenPosition().y + _player.height / 2,
-            _player.getLightRadius(), 0xFFD0D0FF, greenLine
+            _player.getLightRadius(), 0xFFD0D0FF
         );
-        _entities.forEach(function(entity:Entity):Void {
+        _entities.forEachAlive(function(entity:Entity):Void {
             try {
                 var lightSource:ILightSource = cast(entity, ILightSource);
                 if (entity.isOnScreen())
                     FlxSpriteUtil.drawCircle(this, 
                         entity.getScreenPosition().x + entity.width / 2,
                         entity.getScreenPosition().y + entity.height / 2, 
-                        lightSource.getLightRadius(), 0xFFD0D0FF, blueLine
+                        lightSource.getLightRadius(), 0xFFD0D0FF
                     );
             } catch (err:String) if (err != "Class cast error") throw err;
         });

@@ -1,5 +1,7 @@
 package scene;
 
+import flixel.effects.FlxFlicker;
+import flixel.util.FlxPath;
 import flixel.tile.FlxTilemap;
 import flixel.FlxG;
 import flixel.FlxState;
@@ -34,9 +36,6 @@ class ParentState extends FlxState {
 
     override public function create():Void {
         FlxG.watch.add(FlxG, "worldBounds");
-        #if !debug
-        FlxG.mouse.visible = false;
-        #end
         FlxG.watch.add(this, "subState");
 
         loadEvents();
@@ -136,6 +135,30 @@ class ParentState extends FlxState {
     }
 
     function handleLight():Void {
+        if (FlxG.mouse.justReleased) {
+            if (_player.health > 20 && !FlxFlicker.isFlickering(_player)) {
+                _player.hurt(5);
+                var lilThing:entity.misc.LightBall = null;
+                _entities.forEachDead(function(entity:Entity):Void {
+                    try {
+                        lilThing = cast (entity, entity.misc.LightBall);
+                    } catch (err:String) if (err != "Class cast error") throw err;
+                });
+                if (lilThing == null)
+                    lilThing = new entity.misc.LightBall(_player.x, _player.y, _player, _level);
+                else {
+                    lilThing.revive();
+                    lilThing.reset(_player.x, _player.y);
+                }
+
+                var path = new FlxPath();
+                var points:Array<FlxPoint> = [new FlxPoint(FlxG.mouse.x, FlxG.mouse.y)];
+                lilThing.path = path;
+                path.start(points, 400, FlxPath.FORWARD);
+                _entities.add(lilThing);
+            }
+        }
+
         _entities.forEachOfType(ICollectableLight, function(light:ICollectableLight):Void {
             // lousy overlap check
             var rad:Float = light.getLightRadius();

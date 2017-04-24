@@ -19,6 +19,7 @@ class Player extends FlxSprite implements ILightSource
 
     var _heartSound:FlxSound = new FlxSound();
     var _hurtSound:FlxSound = new FlxSound();
+    var _healSound:FlxSound = new FlxSound();
     var _cnt:Int = 0;
 
     public var baseLight:Int = 160;
@@ -94,8 +95,8 @@ class Player extends FlxSprite implements ILightSource
     }
 
     public override function update(elapsed:Float):Void {
-        var pressingLeft:Bool = FlxG.keys.anyPressed([LEFT, A]);
-        var pressingRight:Bool = FlxG.keys.anyPressed([RIGHT, D]);
+        var pressingLeft:Bool = FlxG.keys.pressed.A;
+        var pressingRight:Bool = FlxG.keys.pressed.D;
 
         if (pressingLeft && !pressingRight) {
             velocity.x = -300 * speedFactor;
@@ -141,6 +142,24 @@ class Player extends FlxSprite implements ILightSource
                 kill();
             }
         }
+    }
+
+    public function heal(damage:Float):Bool {
+        if (alive && !FlxFlicker.isFlickering(this)) {
+            health += damage;
+
+            felix.FelixSound.playGeneric(AssetPaths.load__ogg, 
+                _healSound, felix.FelixSave.get_sound_effects(), false);
+            
+            if (health < 50)
+                felix.FelixSound.playGeneric(AssetPaths.heartbeat_fast__ogg, 
+                    _heartSound, felix.FelixSave.get_ambient_music());
+            else if (health < 80)
+                felix.FelixSound.playGeneric(AssetPaths.heartbeat_slow__ogg, 
+                    _heartSound, felix.FelixSave.get_ambient_music());
+            return true;
+        }
+        return false;
     }
 
     public function getLightRadius():Float {

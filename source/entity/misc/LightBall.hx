@@ -1,5 +1,6 @@
 package entity.misc;
 
+import flixel.FlxG;
 import entity.Entity;
 import entity.Player;
 import flixel.tile.FlxTilemap;
@@ -22,6 +23,16 @@ class LightBall extends Entity implements ILightSource {
 
     public override function update(elapsed:Float):Void {
         velocity.y = Math.sin(_cnt++ * 0.1) * 25;
+
+        immovable = false;
+        FlxG.collide(this, _level);
+        immovable = true;
+
+        if (overlaps(_player)) {
+            if (_player.heal(5))
+                kill();
+        }
+
         super.update(elapsed);
     }
 
