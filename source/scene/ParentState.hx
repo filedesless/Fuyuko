@@ -175,7 +175,6 @@ class ParentState extends FlxState {
             if (Std.is(entity, LightBall)) {
                 var light = cast (entity, LightBall);
                 _entities.forEachOfType(LightBall, function(otherBall:LightBall):Void {
-                    trace(otherBall == light);
                     if (light != otherBall && otherBall.alive) {
                         if (light.overlaps(otherBall))
                             light.absorb(otherBall);
