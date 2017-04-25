@@ -1,6 +1,5 @@
 package scene;
 
-import flixel.util.FlxSpriteUtil;
 import flixel.effects.FlxFlicker;
 import flixel.util.FlxPath;
 import flixel.tile.FlxTilemap;
@@ -137,7 +136,7 @@ class ParentState extends FlxState {
 
     function handleLight():Void {
         if (FlxG.mouse.justReleased) {
-            if (_player.health > 20 && !FlxFlicker.isFlickering(_player) && _player.canShoot) {
+            if (_player.health > 20 && !FlxFlicker.isFlickering(_player)) {
                 _player.hurt(5);
                 var lilThing:LightBall = null;
                 var found = false;

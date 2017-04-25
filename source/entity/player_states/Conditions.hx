@@ -1,5 +1,6 @@
 package entity.player_states;
 
+import flixel.effects.FlxFlicker;
 import flixel.FlxObject;
 import flixel.FlxG;
 
@@ -33,7 +34,7 @@ class Conditions
         return !isCrouching(owner);
     }
     public static function isJumping(owner:Player):Bool {
-        return FlxG.keys.anyPressed([SPACE, W]);
+        return FlxG.keys.anyPressed([SPACE, W]) && isGrounded(owner);
     }
     public static function isFalling(owner:Player):Bool {
         return (owner.velocity.y >= 20);
@@ -55,6 +56,6 @@ class Conditions
         return !isPushing(owner);
     }
     public static function isShooting(owner:Player):Bool {
-        return FlxG.mouse.justReleased;
+        return FlxG.mouse.justReleased && owner.health > 20 && !FlxFlicker.isFlickering(owner);
     }
 }

@@ -40,14 +40,15 @@ class LightCube extends Entity {
                 this.velocity.set();
             }
         } else {
+            var _direction = if (isTouching(FlxObject.LEFT)) FlxObject.RIGHT else FlxObject.LEFT;
             if (!_soundChannel.playing)
                 felix.FelixSound.playGeneric(AssetPaths.lightcube_pushed__ogg, 
                     _soundChannel, felix.FelixSave.get_sound_effects(), false);
             FlxObject.updateTouchingFlags(this, _level); // check if it's in the wall
-            if (this.isTouching(_player.facing)) {
+            if (this.isTouching(_direction)) {
                 FlxObject.separate(this, _level);
                 _player.velocity.x = 0;
-                if (_player.isTouching(_player.facing)) {
+                if (_player.isTouching(_direction)) {
                     FlxObject.separate(_player, this);
                     this.velocity.x = 0; // immobilizes it
                 }

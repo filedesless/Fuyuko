@@ -21,7 +21,6 @@ class Player extends FlxSprite implements ILightSource
     var _hurtSound:FlxSound = new FlxSound();
     var _healSound:FlxSound = new FlxSound();
     var _cnt:Int = 0;
-    var _isShooting:Bool = false;
 
     public var baseLight:Int = 200;
     public var center:FlxPoint = new FlxPoint();
@@ -43,33 +42,43 @@ class Player extends FlxSprite implements ILightSource
             .add(Idle, Jump, Conditions.isJumping)
             .add(Idle, Crouch, Conditions.isCrouching)
             .add(Idle, Fall, Conditions.isFalling)
+            .add(Idle, Shooting, Conditions.isShooting)
 
             .add(Walk, Idle, Conditions.isNotWalking)
             .add(Walk, Jump, Conditions.isJumping)
             .add(Walk, Push, Conditions.isPushing)
             .add(Walk, Fall, Conditions.isFalling)
             .add(Walk, Run, Conditions.isRunning)
+            .add(Walk, Shooting, Conditions.isShooting)
 
             .add(Run, Idle, Conditions.runToIdle)
             .add(Run, Walk, Conditions.runToWalk)
             .add(Run, Push, Conditions.isPushing)
             .add(Run, Fall, Conditions.isFalling)
             .add(Run, SuperJump, Conditions.isJumping)
+            .add(Run, Shooting, Conditions.isShooting)
 
             .add(Crouch, SuperJump, Conditions.isJumping)
             .add(Crouch, Reco, Conditions.isNotCrouching)
+            .add(Crouch, Shooting, Conditions.isShooting)
 
             .add(Jump, Fall, Conditions.isFallingAfterJump)
+            .add(Jump, Shooting, Conditions.isShooting)
 
             .add(SuperJump, Fall, Conditions.isFallingAfterJump)
+            .add(SuperJump, Shooting, Conditions.isShooting)
 
             .add(Fall, Reco, Conditions.isGrounded)
+            .add(Fall, Shooting, Conditions.isShooting)
 
             .add(Reco, Idle, Conditions.isDone)
             
             .add(Push, Idle, Conditions.isNotPushing)
             .add(Push, Jump, Conditions.isJumping)
             .add(Push, Fall, Conditions.isFalling)
+            .add(Push, Shooting, Conditions.isShooting)
+
+            .add(Shooting, Idle, Conditions.isDone)
 
             .start(Idle);
 
@@ -81,6 +90,7 @@ class Player extends FlxSprite implements ILightSource
         updateHitbox();
 
         animation.add("push", [for (i in 30...38) i], 6, true);
+        animation.add("shoot", [for (i in 30...38) i], 24, false);
         animation.add("idle", [for (i in 0...10) i], 6, true);
         animation.add("walk", [for (i in 10...20) i], 12, true);
         animation.add("run", [for (i in 10...20) i], 24, true);
@@ -113,6 +123,13 @@ class Player extends FlxSprite implements ILightSource
             facing = FlxObject.RIGHT;
         }
 
+        facing = switch ([pressingLeft, pressingRight, animation.name == "shoot"]) {
+            case [_, _, true]: if (FlxG.mouse.x > x) FlxObject.RIGHT else FlxObject.LEFT;
+            case [true, false, false]: FlxObject.LEFT;
+            case [false, true, false]: FlxObject.RIGHT;
+            case _: facing;
+        }
+
         if (velocity.x < -20)
             velocity.x += 20;
         else if (velocity.x > 20)
@@ -120,8 +137,10 @@ class Player extends FlxSprite implements ILightSource
         else
             velocity.x = 0;
 
-        if (_isShooting)
-            animation.play("push");            
+        if (health <= 50) {
+            var percent = (50 - health) / 50; // 0 to 1
+            FlxG.camera.shake(percent * 0.01, 1);
+        }
 
         _cnt++;
 

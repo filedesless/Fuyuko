@@ -12,6 +12,8 @@ class Torch extends Entity implements ICollectableLight {
         super(X, Y, player, level);
         loadGraphic(AssetPaths.animated_torch__png, true, 32, 64);
 
+        immovable = true;
+
         health = 100;
 
         animation.add("idle", [for (i in 0...9) i], 12, true);
