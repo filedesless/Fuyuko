@@ -4,6 +4,14 @@ import flixel.FlxG;
 import flixel.system.FlxSound;
 
 class FelixSound {
+    static var _sounds:Array<FlxSound> = new Array<FlxSound>();
+    static public function register(sound:FlxSound):Void {
+        _sounds.push(sound);
+    }
+    static public function closeSounds():Void {
+        for (sound in _sounds) sound.stop();
+    }
+
     #if debug
     static public function debug() {
         FlxG.watch.add(background, "volume");
