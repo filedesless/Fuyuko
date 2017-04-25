@@ -147,6 +147,7 @@ class ParentState extends FlxState {
                 lilThing = cast (entity, LightBall);
                 lilThing.reset(_player.x, _player.y);
                 lilThing.health = 5;
+                lilThing.doneFirstPath = false;
                 found = true;
             }
         });
@@ -185,6 +186,7 @@ class ParentState extends FlxState {
             }
         }
 
+        // steal light from collectables (crystal, fire, torch)
         _entities.forEachAlive(function(entity:Entity):Void {
             // lousy overlap check
             if (Std.is(entity, ICollectableLight)) {
@@ -197,24 +199,27 @@ class ParentState extends FlxState {
                 }
             }
 
+            // Lightballs movement
             if (Std.is(entity, LightBall)) {
                 var light = cast (entity, LightBall);
-                _entities.forEachOfType(LightBall, function(otherBall:LightBall):Void {
-                    if (light != otherBall && otherBall.alive) {
-                        if (light.overlaps(otherBall))
-                            light.absorb(otherBall);
-                        else {
+                if (light.doneFirstPath) 
+                    _entities.forEachOfType(LightBall, function(otherBall:LightBall):Void {
+                        if (light != otherBall && otherBall.alive) {
                             var rad1:Float = light.getLightRadius();
                             var mid1:FlxPoint = light.getMidpoint();
                             var rad2:Float = otherBall.getLightRadius();
                             var mid2:FlxPoint = otherBall.getMidpoint();
                             var rect:FlxRect = new FlxRect(mid1.x - rad1, mid1.y - rad1, 2*rad1, 2*rad1);
                             var rect2:FlxRect = new FlxRect(mid2.x - rad2, mid2.y - rad2, 2*rad2, 2*rad2);
-                            if (rect.overlaps(rect2)) {
+                            if (rect.overlaps(rect2))
                                 light.join(otherBall);
-                            }
                         }
-                    }
+                    });
+                _entities.forEachOfType(LightBall, function(otherBall:LightBall):Void {
+                    if (otherBall.doneFirstPath)
+                        if (light != otherBall && otherBall.alive)
+                            if (light.overlaps(otherBall))
+                                light.absorb(otherBall);
                 });
             }
         });

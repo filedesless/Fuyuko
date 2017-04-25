@@ -1,5 +1,6 @@
 package entity.misc;
 
+import flixel.FlxObject;
 import flixel.math.FlxPoint;
 import flixel.util.FlxPath;
 import flixel.FlxG;
@@ -11,6 +12,7 @@ class LightBall extends Entity implements ILightSource {
     var _cnt:Int = 0;
     var _lightcnt:Int = 0;
     public var baseLight:Int = 128;
+    public var doneFirstPath:Bool = false;
 
     public override function new(X:Float, Y:Float, player:Player, level:FlxTilemap) {
         super(X, Y, player, level);
@@ -20,6 +22,8 @@ class LightBall extends Entity implements ILightSource {
         updateHitbox();
 
         health = 5;
+
+        elasticity = 1;
         
         animation.add("idle", [1,2,13,14,13,2], 8, true);
         animation.play("idle");
@@ -31,6 +35,14 @@ class LightBall extends Entity implements ILightSource {
         immovable = false;
         FlxG.collide(this, _level);
         immovable = true;
+
+        if (!doneFirstPath) {
+            if (isTouching(FlxObject.ANY))
+                doneFirstPath = true;
+            else if (path != null && path.finished)
+                doneFirstPath = true;
+        }
+            
 
         if (overlaps(_player)) {
             if (_player.heal(health))
