@@ -1,5 +1,6 @@
 package scene;
 
+import flixel.util.FlxColor;
 import flash.display.BlendMode;
 import flixel.group.FlxGroup;
 import entity.Player;
@@ -29,11 +30,17 @@ class Darkmap extends FlxSprite {
     }
 
     override public function update(elapsed:Float):Void {
+        var injured:Bool = (_player.health < 50);
+        var lineStyle:LineStyle = { 
+            color: if (injured) FlxColor.RED else FlxColor.BLUE,
+            thickness:  if (injured) _player.getLightRadius() * ((50 - _player.health) / 50) else 0
+        };
+        
         makeGraphic(FlxG.width, FlxG.height, 0xFE000000, true);
         FlxSpriteUtil.drawCircle(this, 
             _player.getScreenPosition().x + _player.width / 2, 
             _player.getScreenPosition().y + _player.height / 2,
-            _player.getLightRadius(), 0xFFD0D0FF
+            _player.getLightRadius(), 0xFFD0D0FF, lineStyle
         );
         _entities.forEachAlive(function(entity:Entity):Void {
             if (Std.is(entity, ILightSource)) {

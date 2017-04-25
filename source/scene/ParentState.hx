@@ -137,7 +137,7 @@ class ParentState extends FlxState {
 
     function handleLight():Void {
         if (FlxG.mouse.justReleased) {
-            if (_player.health > 20 && !FlxFlicker.isFlickering(_player)) {
+            if (_player.health > 20 && !FlxFlicker.isFlickering(_player) && _player.canShoot) {
                 _player.hurt(5);
                 var lilThing:LightBall = null;
                 var found = false;
