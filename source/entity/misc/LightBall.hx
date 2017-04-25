@@ -1,5 +1,7 @@
 package entity.misc;
 
+import flixel.math.FlxPoint;
+import flixel.util.FlxPath;
 import flixel.FlxG;
 import entity.Entity;
 import entity.Player;
@@ -14,9 +16,11 @@ class LightBall extends Entity implements ILightSource {
         super(X, Y, player, level);
         loadGraphic(AssetPaths.orb__png, true, 32, 32);
 
-        scale.set(2, 2);
+        scale.set(1.5, 1.5);
         updateHitbox();
 
+        health = 5;
+        
         animation.add("idle", [1,2,13,14,13,2], 8, true);
         animation.play("idle");
     }
@@ -29,14 +33,26 @@ class LightBall extends Entity implements ILightSource {
         immovable = true;
 
         if (overlaps(_player)) {
-            if (_player.heal(5))
+            if (_player.heal(health))
                 kill();
         }
 
         super.update(elapsed);
     }
 
+    public function join(otherBall:LightBall):Void {
+        path = new FlxPath();
+        var points:Array<FlxPoint> = [new FlxPoint(otherBall.x, otherBall.y)];
+        trace(points);
+        path.start(points, 400, FlxPath.FORWARD);
+    }
+
+    public function absorb(otherBall:LightBall):Void {
+        health += otherBall.health;
+        otherBall.kill();
+    }
+
     public function getLightRadius():Float {
-        return (baseLight + 3 * Math.sin(Math.floor(_lightcnt++ / 15)));
+        return (baseLight + 3 * Math.sin(Math.floor(_lightcnt++ / 15))) + health;
     }
 }

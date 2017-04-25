@@ -21,13 +21,18 @@ class Player extends FlxSprite implements ILightSource
     var _hurtSound:FlxSound = new FlxSound();
     var _healSound:FlxSound = new FlxSound();
     var _cnt:Int = 0;
+    var _isShooting:Bool = false;
 
-    public var baseLight:Int = 160;
+    public var baseLight:Int = 200;
     public var center:FlxPoint = new FlxPoint();
     
     public function new(?X:Float=0, ?Y:Float=0)
     {
         super(X, Y);
+
+        felix.FelixSound.register(_heartSound);
+        felix.FelixSound.register(_hurtSound);
+        felix.FelixSound.register(_healSound);
 
         health = 100;
         solid = true;
@@ -115,6 +120,9 @@ class Player extends FlxSprite implements ILightSource
         else
             velocity.x = 0;
 
+        if (_isShooting)
+            animation.play("push");            
+
         _cnt++;
 
         center = getMidpoint(center);
@@ -163,6 +171,6 @@ class Player extends FlxSprite implements ILightSource
     }
 
     public function getLightRadius():Float {
-        return (baseLight + 8 * Math.sin(Math.floor(_cnt / 15))) * (health + 10) / 100 ;
+        return (baseLight + 8 * Math.sin(Math.floor(_cnt / 15))) * if (health >= 50) health / 100 else 0.5;
     }
 }

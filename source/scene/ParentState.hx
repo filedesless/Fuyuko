@@ -138,10 +138,10 @@ class ParentState extends FlxState {
         if (FlxG.mouse.justReleased) {
             if (_player.health > 20 && !FlxFlicker.isFlickering(_player)) {
                 _player.hurt(5);
-                var lilThing:entity.misc.LightBall = null;
+                var lilThing:LightBall = null;
                 _entities.forEachDead(function(entity:Entity):Void {
                     try {
-                        lilThing = cast (entity, entity.misc.LightBall);
+                        lilThing = cast (entity, LightBall);
                     } catch (err:String) if (err != "Class cast error") throw err;
                 });
                 if (lilThing == null)
@@ -159,14 +159,37 @@ class ParentState extends FlxState {
             }
         }
 
-        _entities.forEachOfType(ICollectableLight, function(light:ICollectableLight):Void {
+        _entities.forEachAlive(function(entity:Entity):Void {
             // lousy overlap check
-            var rad:Float = light.getLightRadius();
-            var rect:FlxRect = new FlxRect(light.center.x - rad, light.center.y - rad, 2*rad, 2*rad);
-            if (rect.containsPoint(_player.center)) {
-                _player.health += 1;
-                light.health -= 1;
-            }
+            try {
+                var light = cast (entity, ICollectableLight);
+                var rad:Float = light.getLightRadius();
+                var rect:FlxRect = new FlxRect(light.center.x - rad, light.center.y - rad, 2*rad, 2*rad);
+                if (rect.containsPoint(_player.center)) {
+                    _player.health += 1;
+                    light.health -= 1;
+                }
+            } catch (err:String) if (err != "Class cast error") throw err;
+            try {
+                var light = cast (entity, LightBall);
+                _entities.forEachOfType(LightBall, function(otherBall:LightBall):Void {
+                    if (light != otherBall && otherBall.alive) {
+                        if (light.overlaps(otherBall))
+                            light.absorb(otherBall);
+                        else {
+                            var rad1:Float = light.getLightRadius();
+                            var mid1:FlxPoint = light.getMidpoint();
+                            var rad2:Float = otherBall.getLightRadius();
+                            var mid2:FlxPoint = otherBall.getMidpoint();
+                            var rect:FlxRect = new FlxRect(mid1.x - rad1, mid1.y - rad1, 2*rad1, 2*rad1);
+                            var rect2:FlxRect = new FlxRect(mid2.x - rad2, mid2.y - rad2, 2*rad2, 2*rad2);
+                            if (rect.overlaps(rect2)) {
+                                light.join(otherBall);
+                            }
+                        }
+                    }
+                });
+            } catch (err:String) if (err != "Class cast error") throw err;
         });
     }
 }

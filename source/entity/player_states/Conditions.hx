@@ -54,4 +54,7 @@ class Conditions
     public static function isNotPushing(owner:Player):Bool {
         return !isPushing(owner);
     }
+    public static function isShooting(owner:Player):Bool {
+        return FlxG.mouse.justReleased;
+    }
 }

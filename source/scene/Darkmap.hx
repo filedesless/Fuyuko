@@ -29,7 +29,7 @@ class Darkmap extends FlxSprite {
     }
 
     override public function update(elapsed:Float):Void {
-        makeGraphic(FlxG.width, FlxG.height, 0xFA000000, true);
+        makeGraphic(FlxG.width, FlxG.height, 0xFE000000, true);
         FlxSpriteUtil.drawCircle(this, 
             _player.getScreenPosition().x + _player.width / 2, 
             _player.getScreenPosition().y + _player.height / 2,
