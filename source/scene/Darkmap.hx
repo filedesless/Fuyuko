@@ -36,7 +36,7 @@ class Darkmap extends FlxSprite {
             _player.getLightRadius(), 0xFFD0D0FF
         );
         _entities.forEachAlive(function(entity:Entity):Void {
-            try {
+            if (Std.is(entity, ILightSource)) {
                 var lightSource:ILightSource = cast(entity, ILightSource);
                 if (entity.isOnScreen())
                     FlxSpriteUtil.drawCircle(this, 
@@ -44,7 +44,7 @@ class Darkmap extends FlxSprite {
                         entity.getScreenPosition().y + entity.height / 2, 
                         lightSource.getLightRadius(), 0xFFD0D0FF
                     );
-            } catch (err:String) if (err != "Class cast error") throw err;
+            }
         });
 
         _cnt++;

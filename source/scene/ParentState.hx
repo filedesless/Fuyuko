@@ -1,5 +1,6 @@
 package scene;
 
+import flixel.util.FlxSpriteUtil;
 import flixel.effects.FlxFlicker;
 import flixel.util.FlxPath;
 import flixel.tile.FlxTilemap;
@@ -139,29 +140,29 @@ class ParentState extends FlxState {
             if (_player.health > 20 && !FlxFlicker.isFlickering(_player)) {
                 _player.hurt(5);
                 var lilThing:LightBall = null;
+                var found = false;
                 _entities.forEachDead(function(entity:Entity):Void {
-                    try {
+                    if (!found && Std.is(entity, LightBall)) {
                         lilThing = cast (entity, LightBall);
-                    } catch (err:String) if (err != "Class cast error") throw err;
+                        lilThing.reset(_player.x, _player.y);
+                        lilThing.health = 5;
+                        found = true;
+                    }
                 });
-                if (lilThing == null)
-                    lilThing = new entity.misc.LightBall(_player.x, _player.y, _player, _level);
-                else {
-                    lilThing.revive();
-                    lilThing.reset(_player.x, _player.y);
+                if (!found) {
+                    lilThing = new LightBall(_player.x, _player.y, _player, _level);
+                    _entities.add(lilThing);
                 }
-
                 var path = new FlxPath();
                 var points:Array<FlxPoint> = [new FlxPoint(FlxG.mouse.x, FlxG.mouse.y)];
                 lilThing.path = path;
                 path.start(points, 400, FlxPath.FORWARD);
-                _entities.add(lilThing);
             }
         }
 
         _entities.forEachAlive(function(entity:Entity):Void {
             // lousy overlap check
-            try {
+            if (Std.is(entity, ICollectableLight)) {
                 var light = cast (entity, ICollectableLight);
                 var rad:Float = light.getLightRadius();
                 var rect:FlxRect = new FlxRect(light.center.x - rad, light.center.y - rad, 2*rad, 2*rad);
@@ -169,10 +170,12 @@ class ParentState extends FlxState {
                     _player.health += 1;
                     light.health -= 1;
                 }
-            } catch (err:String) if (err != "Class cast error") throw err;
-            try {
+            }
+
+            if (Std.is(entity, LightBall)) {
                 var light = cast (entity, LightBall);
                 _entities.forEachOfType(LightBall, function(otherBall:LightBall):Void {
+                    trace(otherBall == light);
                     if (light != otherBall && otherBall.alive) {
                         if (light.overlaps(otherBall))
                             light.absorb(otherBall);
@@ -189,7 +192,7 @@ class ParentState extends FlxState {
                         }
                     }
                 });
-            } catch (err:String) if (err != "Class cast error") throw err;
+            }
         });
     }
 }

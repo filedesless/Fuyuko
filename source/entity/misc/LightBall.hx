@@ -43,7 +43,6 @@ class LightBall extends Entity implements ILightSource {
     public function join(otherBall:LightBall):Void {
         path = new FlxPath();
         var points:Array<FlxPoint> = [new FlxPoint(otherBall.x, otherBall.y)];
-        trace(points);
         path.start(points, 400, FlxPath.FORWARD);
     }
 
