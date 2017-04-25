@@ -24,6 +24,7 @@ class Player extends FlxSprite implements ILightSource
 
     public var baseLight:Int = 200;
     public var center:FlxPoint = new FlxPoint();
+    public var action:String = "";
     
     public function new(?X:Float=0, ?Y:Float=0)
     {
@@ -151,6 +152,13 @@ class Player extends FlxSprite implements ILightSource
 
     public override function hurt(damage:Float) {
         if (alive && !FlxFlicker.isFlickering(this)) {
+            action = "spawnCorruptedLightBall";
+            decrease_life(damage, true);
+        }
+    }
+
+    public function decrease_life(damage:Float, checked:Bool = false) {
+        if (checked || (alive && !FlxFlicker.isFlickering(this))) {
             health -= damage;
             FlxFlicker.flicker(this, 1, 0.1, true);
 

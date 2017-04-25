@@ -124,6 +124,11 @@ class ParentState extends FlxState {
         if (!_player.inWorldBounds())
             _player.kill();
 
+        switch (_player.action) {
+            case "spawnCorruptedLightBall": spawnCorruptedLightBall();
+        }
+        _player.action = "";
+
         handleLight();
     }
 
@@ -134,28 +139,49 @@ class ParentState extends FlxState {
         FlxG.camera.setScrollBoundsRect(_rect.x, _rect.y, _rect.width, _rect.height);
     }
 
+    function spawnLightBall():Void {
+        var lilThing:LightBall = null;
+        var found = false;
+        _entities.forEachDead(function(entity:Entity):Void {
+            if (!found && Std.is(entity, LightBall)) {
+                lilThing = cast (entity, LightBall);
+                lilThing.reset(_player.x, _player.y);
+                lilThing.health = 5;
+                found = true;
+            }
+        });
+        if (!found) {
+            lilThing = new LightBall(_player.x, _player.y, _player, _level);
+            _entities.add(lilThing);
+        }
+        var path = new FlxPath();
+        var points:Array<FlxPoint> = [new FlxPoint(FlxG.mouse.x, FlxG.mouse.y)];
+        lilThing.path = path;
+        path.start(points, 400, FlxPath.FORWARD);
+    }
+
+    function spawnCorruptedLightBall():Void {
+        var lilThing:CorruptedLightBall = null;
+        var found = false;
+        _entities.forEachDead(function(entity:Entity):Void {
+            if (!found && Std.is(entity, CorruptedLightBall)) {
+                lilThing = cast (entity, CorruptedLightBall);
+                lilThing.reset(_player.x, _player.y);
+                lilThing.health = 5;
+                found = true;
+            }
+        });
+        if (!found) {
+            lilThing = new CorruptedLightBall(_player.x, _player.y, _player, _level);
+            _entities.add(lilThing);
+        }
+    }
+
     function handleLight():Void {
         if (FlxG.mouse.justReleased) {
             if (_player.health > 20 && !FlxFlicker.isFlickering(_player)) {
-                _player.hurt(5);
-                var lilThing:LightBall = null;
-                var found = false;
-                _entities.forEachDead(function(entity:Entity):Void {
-                    if (!found && Std.is(entity, LightBall)) {
-                        lilThing = cast (entity, LightBall);
-                        lilThing.reset(_player.x, _player.y);
-                        lilThing.health = 5;
-                        found = true;
-                    }
-                });
-                if (!found) {
-                    lilThing = new LightBall(_player.x, _player.y, _player, _level);
-                    _entities.add(lilThing);
-                }
-                var path = new FlxPath();
-                var points:Array<FlxPoint> = [new FlxPoint(FlxG.mouse.x, FlxG.mouse.y)];
-                lilThing.path = path;
-                path.start(points, 400, FlxPath.FORWARD);
+                _player.decrease_life(5);
+                spawnLightBall();
             }
         }
 

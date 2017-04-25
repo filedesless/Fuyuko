@@ -15,8 +15,9 @@ class Stalagmite extends Entity {
     }
 
     public override function update(elapsed:Float):Void {
-        if (FlxG.pixelPerfectOverlap(_player, this))
+        if (FlxG.pixelPerfectOverlap(_player, this)) {
             _player.hurt(damage * _player.diffFactor);
+        }
 
         super.update(elapsed);
     }
