@@ -10,6 +10,7 @@ import flixel.FlxSprite;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
 import flixel.group.FlxGroup;
+import flixel.FlxObject;
 
 import entity.obstacles.*;
 import entity.monsters.*;
@@ -95,7 +96,7 @@ class ParentState extends FlxState {
                 case "circle":
                     // _circleFactor.set(obj.width, obj.height);
                 case "checkpoint":
-                    _entities.add(new Torch(obj.x, obj.y, _player, _level));
+                    _entities.add(new Crystal_Blue(obj.x, obj.y, _player, _level));
                 case "ekunaa":
                     _entities.add(new Ekunaa(obj.x, obj.y, _player, _level));
                 case "lightball":
@@ -128,6 +129,9 @@ class ParentState extends FlxState {
             case "spawnCorruptedLightBall": spawnCorruptedLightBall();
         }
         _player.action = "";
+
+        if (_level.overlapsPoint(_player.getMidpoint()))
+            _player.kill();
 
         handleLight();
     }
@@ -178,6 +182,53 @@ class ParentState extends FlxState {
         }
     }
 
+    function checkCollectableLight(entity:Entity):Void {
+        if (entity.alive && Std.is(entity, ICollectableLight)) {
+            var light = cast (entity, ICollectableLight);
+            var rad:Float = light.getLightRadius();
+            var rect:FlxRect = new FlxRect(light.center.x - rad, light.center.y - rad, 2*rad, 2*rad);
+            if (rect.containsPoint(_player.center) && light.health > 0) {
+                _player.health += 1;
+                light.health -= 1;
+            }
+        }
+    }
+
+    function checkLightBall(entity:Entity):Void {
+        if (entity.alive && Std.is(entity, LightBall)) {
+            var light = cast (entity, LightBall);
+            _entities.forEachOfType(LightBall, function(otherBall:LightBall):Void {
+                if (light != otherBall && otherBall.alive) {
+                    if (light.overlaps(otherBall))
+                        light.absorb(otherBall);
+                    else {
+                        var rad1:Float = light.getLightRadius();
+                        var mid1:FlxPoint = light.getMidpoint();
+                        var rad2:Float = otherBall.getLightRadius();
+                        var mid2:FlxPoint = otherBall.getMidpoint();
+                        var rect:FlxRect = new FlxRect(mid1.x - rad1, mid1.y - rad1, 2*rad1, 2*rad1);
+                        var rect2:FlxRect = new FlxRect(mid2.x - rad2, mid2.y - rad2, 2*rad2, 2*rad2);
+                        if (rect.overlaps(rect2)) {
+                            light.join(otherBall);
+                        }
+                    }
+                }
+            });
+        }
+    }
+
+    function checkEkunaa(entity:Entity):Void {
+        if (entity.alive && Std.is(entity, Ekunaa)) {
+            var ekunaa = cast (entity, Ekunaa);
+            var found:Bool = false;
+            _entities.forEachOfType(LightBall, function(light:LightBall):Void {
+                if (light.alive && ekunaa.overlaps(light))
+                    found = true;
+            });
+            ekunaa.isTouchingLight = found;
+        }
+    }
+
     function handleLight():Void {
         if (FlxG.mouse.justReleased) {
             if (_player.health > 20 && !FlxFlicker.isFlickering(_player)) {
@@ -186,6 +237,7 @@ class ParentState extends FlxState {
             }
         }
 
+<<<<<<< HEAD
         // steal light from collectables (crystal, fire, torch)
         _entities.forEachAlive(function(entity:Entity):Void {
             // lousy overlap check
@@ -222,6 +274,13 @@ class ParentState extends FlxState {
                                 light.absorb(otherBall);
                 });
             }
+=======
+        _entities.forEach(function(entity:Entity):Void {
+            // lousy overlap check
+            checkCollectableLight(entity);
+            checkLightBall(entity);
+            checkEkunaa(entity);
+>>>>>>> 98f39782c82ac76d2b076edb636b22ef60656eee
         });
     }
 }
