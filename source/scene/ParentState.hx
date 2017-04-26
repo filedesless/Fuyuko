@@ -96,7 +96,7 @@ class ParentState extends FlxState {
                 case "circle":
                     // _circleFactor.set(obj.width, obj.height);
                 case "checkpoint":
-                    _entities.add(new Torch(obj.x, obj.y, _player, _level));
+                    _entities.add(new Crystal_Blue(obj.x, obj.y, _player, _level));
                 case "ekunaa":
                     _entities.add(new Ekunaa(obj.x, obj.y, _player, _level));
                 case "lightball":
@@ -186,7 +186,7 @@ class ParentState extends FlxState {
             var light = cast (entity, ICollectableLight);
             var rad:Float = light.getLightRadius();
             var rect:FlxRect = new FlxRect(light.center.x - rad, light.center.y - rad, 2*rad, 2*rad);
-            if (rect.containsPoint(_player.center)) {
+            if (rect.containsPoint(_player.center) && light.health > 0) {
                 _player.health += 1;
                 light.health -= 1;
             }
