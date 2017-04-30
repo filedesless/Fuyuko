@@ -187,7 +187,7 @@ class ParentState extends FlxState {
             var light = cast (entity, ICollectableLight);
             var rad:Float = light.getLightRadius();
             var rect:FlxRect = new FlxRect(light.center.x - rad, light.center.y - rad, 2*rad, 2*rad);
-            if (rect.containsPoint(_player.center) && light.health > 0) {
+            if (_player.overlapsPoint(light.center) && light.health > 0) {
                 _player.health += 1;
                 light.health -= 1;
             }
@@ -199,9 +199,9 @@ class ParentState extends FlxState {
             var light = cast (entity, LightBall);
             _entities.forEachOfType(LightBall, function(otherBall:LightBall):Void {
                 if (light != otherBall && otherBall.alive) {
-                    if (light.overlaps(otherBall))
+                    if (light.overlaps(otherBall) && otherBall.doneFirstPath)
                         light.absorb(otherBall);
-                    else {
+                    else if (light.doneFirstPath) {
                         var rad1:Float = light.getLightRadius();
                         var mid1:FlxPoint = light.getMidpoint();
                         var rad2:Float = otherBall.getLightRadius();

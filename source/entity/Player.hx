@@ -140,7 +140,7 @@ class Player extends FlxSprite implements ILightSource
 
         if (health <= 50) {
             var percent = (50 - health) / 50; // 0 to 1
-            FlxG.camera.shake(percent * 0.01, 1);
+            FlxG.camera.shake(percent * 0.0025, 0.1);
         }
 
         _cnt++;

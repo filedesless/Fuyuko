@@ -22,24 +22,33 @@ class Crystal_Blue extends Entity implements ICollectableLight {
         animation.add("full", [for (i in 8...12) i], 4, true);
         animation.add("half", [for (i in 4...8) i], 4, true);
         animation.add("low", [0,1,2,3,2,1,0], 4, true);
+        animation.add("empty", [0], 8, true);
         animation.play("full");
 
         center = getMidpoint(center);
     }
 
     public override function update(elapsed:Float):Void {
-        trace(health);
-        if (animation.name != "half" && health < 75)
-            animation.play("half");
-        else if (animation.name != "low" && health < 25)
-            animation.play("low");
-        else if (animation.name != "full" && health > 75)
-            animation.play("full");
+        alive = (health != 0);
+
+        if (health == 0) {
+            if (animation.name != "empty")
+                animation.play("empty");
+        } else if (health < 25) {
+            if (animation.name != "low")
+                animation.play("low");
+        } else if (health < 75) {
+            if (animation.name != "half")
+                animation.play("half");
+        } else {
+            if (animation.name != "full")
+                animation.play("full");
+        }
 
         super.update(elapsed);
     }
 
     public function getLightRadius():Float {
-        return (baseLight + 3 * Math.sin(Math.floor((_cnt++ + 2) / 18))) * if (health >= 40) health / 100 else 0.4;
+        return (baseLight + 3 * Math.sin(Math.floor((_cnt++ + 2) / 18))) * health / 100;
     }
 }
