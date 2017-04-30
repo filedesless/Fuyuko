@@ -29,16 +29,12 @@ class ParentState extends FlxState {
     var _level:FlxTilemap;
     var _lvlConfig:String;
     var _rect:FlxRect = new FlxRect();
-
-    var _circle:FlxSprite = new FlxSprite();
+    var _shokuka:Shokuka;
 
     var _entities:FlxTypedGroup<Entity> = new FlxTypedGroup<Entity>();
     var _darkness:Darkmap;
 
     override public function create():Void {
-        FlxG.watch.add(FlxG, "worldBounds");
-        FlxG.watch.add(this, "subState");
-
         loadEvents();
         setCamera();
 
@@ -79,6 +75,7 @@ class ParentState extends FlxState {
         }
     
     function loadEvents() {
+        _shokuka = new Shokuka(0, 0, _player, _level, _entities);
         var json:scene.levels.EntityList = haxe.Json.parse(_lvlConfig);
         for (obj in json.objects)
         {
@@ -93,17 +90,19 @@ class ParentState extends FlxState {
                     player_start.set(obj.x, obj.y);
                 case "moveable_blox":
                     _entities.add(new LightCube(obj.x, obj.y, _player, _level));
-                case "circle":
-                    // _circleFactor.set(obj.width, obj.height);
                 case "checkpoint":
                     _entities.add(new Crystal_Blue(obj.x, obj.y, _player, _level));
                 case "ekunaa":
                     _entities.add(new Ekunaa(obj.x, obj.y, _player, _level));
                 case "lightball":
                     _entities.add(new LightBall(obj.x, obj.y, _player, _level));
+                case "shokuka":
+                    _shokuka = new Shokuka(obj.x, obj.y, _player, _level, _entities);
+                    _entities.add(_shokuka);
             }
         }
 
+        _shokuka.loadCheckpoints();
         _player.setPosition(player_start.x, player_start.y);
         _darkness = new Darkmap(0, 0, _player, _entities);
         add(_entities);
@@ -185,11 +184,11 @@ class ParentState extends FlxState {
     function checkCollectableLight(entity:Entity):Void {
         if (entity.alive && Std.is(entity, ICollectableLight)) {
             var light = cast (entity, ICollectableLight);
-            var rad:Float = light.getLightRadius();
-            var rect:FlxRect = new FlxRect(light.center.x - rad, light.center.y - rad, 2*rad, 2*rad);
             if (_player.overlapsPoint(light.center) && light.health > 0) {
                 _player.health += 1;
-                light.health -= 1;
+                _entities.forEachOfType(ICollectableLight, function(otherLight:ICollectableLight):Void {
+                    otherLight.health -= 1;
+                });
             }
         }
     }

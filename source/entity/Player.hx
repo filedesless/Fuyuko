@@ -183,8 +183,8 @@ class Player extends FlxSprite implements ILightSource
         if (alive && !FlxFlicker.isFlickering(this)) {
             health += damage;
 
-            felix.FelixSound.playGeneric(AssetPaths.load__ogg, 
-                _healSound, felix.FelixSave.get_sound_effects(), false);
+            felix.FelixSound.playGeneric(AssetPaths.heal__ogg, 
+                _healSound, felix.FelixSave.get_sound_effects(), false, false);
             
             if (health < 50)
                 felix.FelixSound.playGeneric(AssetPaths.heartbeat_fast__ogg, 

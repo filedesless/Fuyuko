@@ -239,7 +239,7 @@ class BestiaryState extends FlxState {
         }
         
         if (_cnt == 55) {
-            _entityShokuka.animation.add("idle", [for (i in 0...10) i], 6, true);
+            _entityShokuka.animation.add("idle", [0,1,2,3,4,5], 8, true);
             _entityShokuka.animation.play("idle");
         }
         
