@@ -237,50 +237,11 @@ class ParentState extends FlxState {
             }
         }
 
-<<<<<<< HEAD
-        // steal light from collectables (crystal, fire, torch)
-        _entities.forEachAlive(function(entity:Entity):Void {
-            // lousy overlap check
-            if (Std.is(entity, ICollectableLight)) {
-                var light = cast (entity, ICollectableLight);
-                var rad:Float = light.getLightRadius();
-                var rect:FlxRect = new FlxRect(light.center.x - rad, light.center.y - rad, 2*rad, 2*rad);
-                if (rect.containsPoint(_player.center)) {
-                    _player.health += 1;
-                    light.health -= 1;
-                }
-            }
-
-            // Lightballs movement
-            if (Std.is(entity, LightBall)) {
-                var light = cast (entity, LightBall);
-                if (light.doneFirstPath) 
-                    _entities.forEachOfType(LightBall, function(otherBall:LightBall):Void {
-                        if (light != otherBall && otherBall.alive) {
-                            var rad1:Float = light.getLightRadius();
-                            var mid1:FlxPoint = light.getMidpoint();
-                            var rad2:Float = otherBall.getLightRadius();
-                            var mid2:FlxPoint = otherBall.getMidpoint();
-                            var rect:FlxRect = new FlxRect(mid1.x - rad1, mid1.y - rad1, 2*rad1, 2*rad1);
-                            var rect2:FlxRect = new FlxRect(mid2.x - rad2, mid2.y - rad2, 2*rad2, 2*rad2);
-                            if (rect.overlaps(rect2))
-                                light.join(otherBall);
-                        }
-                    });
-                _entities.forEachOfType(LightBall, function(otherBall:LightBall):Void {
-                    if (otherBall.doneFirstPath)
-                        if (light != otherBall && otherBall.alive)
-                            if (light.overlaps(otherBall))
-                                light.absorb(otherBall);
-                });
-            }
-=======
         _entities.forEach(function(entity:Entity):Void {
             // lousy overlap check
             checkCollectableLight(entity);
             checkLightBall(entity);
             checkEkunaa(entity);
->>>>>>> 98f39782c82ac76d2b076edb636b22ef60656eee
         });
     }
 }
