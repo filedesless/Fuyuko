@@ -99,6 +99,8 @@ class ParentState extends FlxState {
                 case "shokuka":
                     _shokuka = new Shokuka(obj.x, obj.y, _player, _level, _entities);
                     _entities.add(_shokuka);
+                case "climbplatform":
+                    _entities.add(new ClimbPlatform(obj.x, obj.y, _player, _level));
             }
         }
 
