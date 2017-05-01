@@ -7,6 +7,7 @@ import flixel.util.FlxColor;
 import flixel.util.FlxAxes;
 
 import scene.levels.Lvl1;
+import scene.levels.NextLvl;
 
 import felix.FelixMagicButton;
 
@@ -167,7 +168,7 @@ class MenuState extends FlxState
         #if !html5
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         #end
-        FlxG.switchState(new NextLvl());
+        FlxG.switchState(new NextLvl(felix.FelixSave.get_level_completed()));
     }
 
     function quitter():Void {

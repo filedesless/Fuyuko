@@ -1,6 +1,17 @@
 package scene.levels;
 
+import flixel.FlxG;
+import flixel.util.FlxColor;
+import flixel.FlxState;
+
 class NextLvl extends FlxState {
+    var _lvl:Int = 0;
+
+    public override function new(lvl:Int) {
+        super();
+        _lvl = lvl;
+    }
+
     override public function create():Void {
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, false, actuallyQuit);
     }

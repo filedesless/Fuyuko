@@ -21,6 +21,7 @@ import entity.Player;
 import entity.Entity;
 
 import scene.PauseSubState;
+import scene.levels.NextLvl;
 
 /**
  Helper for creating a level, should be extended by all level class
@@ -255,5 +256,6 @@ class ParentState extends FlxState {
     function next_level():Void {
         felix.FelixSave.set_level_completed(_lvl);
         felix.FelixSound.closeSounds();
-        FlxG.switchState(new NextLvl());
+        FlxG.switchState(new NextLvl(_lvl));
+    }
 }
