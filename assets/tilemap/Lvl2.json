@@ -60,17 +60,6 @@
      "y":520
     }, 
     {
-      "height":128,
-      "id":2,
-      "name":"shokuka",
-      "rotation":0,
-      "type":"",
-      "visible":true,
-      "width":64,
-      "x":500,
-      "y":128
-    },
-    {
      "height":128,
      "id":5,
      "name":"moveable_blox",

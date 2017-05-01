@@ -1,5 +1,7 @@
 package scene;
 
+import scene.levels.*;
+import flixel.util.FlxColor;
 import flixel.effects.FlxFlicker;
 import flixel.util.FlxPath;
 import flixel.tile.FlxTilemap;
@@ -30,6 +32,7 @@ class ParentState extends FlxState {
     var _lvlConfig:String;
     var _rect:FlxRect = new FlxRect();
     var _shokuka:Shokuka;
+    var _lvl:Int = 0;
 
     var _entities:FlxTypedGroup<Entity> = new FlxTypedGroup<Entity>();
     var _darkness:Darkmap;
@@ -101,6 +104,8 @@ class ParentState extends FlxState {
                     _entities.add(_shokuka);
                 case "climbplatform":
                     _entities.add(new ClimbPlatform(obj.x, obj.y, _player, _level));
+                case "end":
+                    _entities.add(new EndOfLevel(obj.x, obj.y, _player, _level));
             }
         }
 
@@ -128,6 +133,7 @@ class ParentState extends FlxState {
 
         switch (_player.action) {
             case "spawnCorruptedLightBall": spawnCorruptedLightBall();
+            case "next_level": next_level();
         }
         _player.action = "";
 
@@ -245,4 +251,9 @@ class ParentState extends FlxState {
             checkEkunaa(entity);
         });
     }
+
+    function next_level():Void {
+        felix.FelixSave.set_level_completed(_lvl);
+        felix.FelixSound.closeSounds();
+        FlxG.switchState(new NextLvl());
 }

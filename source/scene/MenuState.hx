@@ -35,7 +35,6 @@ class MenuState extends FlxState
         #if mac
         if (!felix.FelixSave.get_setup_done()) {
             Sys.command("defaults write -g ApplePressAndHoldEnabled -bool false");
-            trace("executed");
         }
         #end
 
@@ -66,7 +65,7 @@ class MenuState extends FlxState
         btnContinue = new FelixMagicButton(
             FlxG.camera.width / 2 + 20,
             FlxG.camera.height * 4 / 10,
-            this, "Continuer", clickPlay
+            this, "Continuer", last_level
         );
 
         btnNewGame = new FelixMagicButton(
@@ -162,6 +161,13 @@ class MenuState extends FlxState
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         #end
         FlxG.switchState(new BestiaryState());
+    }
+
+    function last_level():Void {
+        #if !html5
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
+        #end
+        FlxG.switchState(new NextLvl());
     }
 
     function quitter():Void {
