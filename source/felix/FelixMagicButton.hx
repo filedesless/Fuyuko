@@ -53,6 +53,11 @@ class FelixMagicButton extends FlxSpriteGroup {
         }
     }
 
+    override public function kill():Void {
+        _emitter.kill();
+        super.kill();
+    }
+
     override public function update(elapsed:Float):Void {
         _emitter.setPosition(
             FlxG.camera.scroll.x + button.x + button.width / 2,

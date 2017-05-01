@@ -84,7 +84,7 @@ class MenuState extends FlxState
         btnBonus = new FelixMagicButton(
             FlxG.camera.width / 2 - btnOptions.width - 20,
             FlxG.camera.height * 6 / 10,
-            this, "Bonus"
+            this, "Bonus", clickBonus
         );
 
         btnBestiaire = new FelixMagicButton(
@@ -141,6 +141,21 @@ class MenuState extends FlxState
         #else
         FlxG.camera.fade(FlxColor.BLACK, 0.5, false, bestiary);
         #end
+    }
+
+    function clickBonus():Void {
+        #if html5
+        bonus();
+        #else
+        FlxG.camera.fade(FlxColor.BLACK, 0.5, false, bonus);
+        #end
+    }
+
+    function bonus():Void {
+        #if !html5
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
+        #end
+        FlxG.switchState(new QuizState());
     }
 
     function start_lvl1():Void {
