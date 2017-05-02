@@ -10,7 +10,7 @@ class Question1 extends FelixQuestion {
                 "Rouge",
                 "Bleu",
                 "Vert",
-                "Tous les crystaux rouges"
+                "Peachpuff"
             ], 2, 1
         );
     }

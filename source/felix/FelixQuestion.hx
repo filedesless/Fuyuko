@@ -4,7 +4,7 @@ class FelixQuestion {
     public var question:String;
     public var choix:Array<String>;
     public var reponse:Int;
-    public var correct:Bool;
+    public var givenAnswer:Int;
     public var niveau:Int;
 
     public function new(question:String, choix:Array<String>, reponse:Int, niveau:Int) {
