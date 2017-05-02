@@ -1,0 +1,70 @@
+{  
+   "questions":{  
+      "faciles":[  
+         {  
+            "question":"some meaningful question?",
+            "choix":[  
+               "a",
+               "b",
+               "c"
+            ],
+            "correctAnswer":0,
+            "givenAnswer":3
+         },
+         {  
+            "question":"some meaningful question?",
+            "choix":[  
+               "a",
+               "b",
+               "c"
+            ],
+            "correctAnswer":0,
+            "givenAnswer":3
+         }
+      ],
+      "moyennes":[  
+         {  
+            "question":"some meaningful question?",
+            "choix":[  
+               "a",
+               "b",
+               "c"
+            ],
+            "correctAnswer":0,
+            "givenAnswer":3
+         },
+         {  
+            "question":"some meaningful question?",
+            "choix":[  
+               "a",
+               "b",
+               "c"
+            ],
+            "correctAnswer":0,
+            "givenAnswer":3
+         }
+      ],
+      "difficiles":[  
+         {  
+            "question":"some meaningful question?",
+            "choix":[  
+               "a",
+               "b",
+               "c"
+            ],
+            "correctAnswer":0,
+            "givenAnswer":3
+         },
+         {  
+            "question":"some meaningful question?",
+            "choix":[  
+               "a",
+               "b",
+               "c"
+            ],
+            "correctAnswer":0,
+            "givenAnswer":3
+         }
+      ]
+   }
+}
