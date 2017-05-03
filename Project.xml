@@ -40,6 +40,7 @@
     <assets path="assets/sounds/walk" include="*.ogg" unless="flash" />
     <assets path="assets/sounds" include="*.wav" />
     <assets path="assets/tilemap" include="*.csv|*.json" />
+    <assets path="assets/data" include="*.json" />
     <assets path="assets/tileset" include="*.png" />
     <assets path="assets/fonts" include="*.ttf" />
     <!--<assets path="music" include="*.mp3" if="flash" />-->
