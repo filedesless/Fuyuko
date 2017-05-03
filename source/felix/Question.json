@@ -154,7 +154,7 @@
                 "givenAnswer": -1
             },
             {
-                "question": "Peut-on tuer le Shokaku?",
+                "question": "Peut-on tuer le Shokuka?",
                 "choix": [
                     "Vrai",
                     "Faux"
@@ -174,7 +174,7 @@
                 "givenAnswer": -1
             },
             {
-                "question": "Le shokaku rapporte la lumière où?",
+                "question": "Le Shokuka rapporte la lumière où?",
                 "choix": [
                     "Au Suraimu",
                     "À Fuyuko",
@@ -207,10 +207,10 @@
                 "givenAnswer": -1
             },
             {
-                "question": "Qui peut détruire les blocs de glace?",
+                "question": "Qui peut détruire les cubes de glace?",
                 "choix": [
                     "L’ékunaa",
-                    "Le Shokaku",
+                    "Le Shokuka",
                     "Le Surimii Rouge",
                     "Toutes ces réponses"
                 ],
