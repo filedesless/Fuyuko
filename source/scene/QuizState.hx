@@ -9,6 +9,7 @@ import felix.FelixQuestion;
 import felix.FelixMagicButton;
 import flixel.text.FlxText;
 import scene.questions.*;
+import felix.FelixMusicScroller;
 
 class QuizState extends FlxState {
     var _questions:Array<FelixQuestion> = [
@@ -16,12 +17,14 @@ class QuizState extends FlxState {
     ];
     var _currentQuestion:Int = -1;
     var _group:FlxSpriteGroup = new FlxSpriteGroup();
+    var music:FelixMusicScroller = new FelixMusicScroller(FlxG.width - 150, 20);
 
     override public function create():Void {
         add(new FelixMagicButton(
             FlxG.width - 320, FlxG.height - 120,
             this, "Retour", click_quitter
         ));
+        add(music);
         nextQuestion();
     }
 
