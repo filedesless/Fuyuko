@@ -58,7 +58,6 @@ class FelixMusicScroller extends FlxSpriteGroup {
         list[_index].y = y + 40;
         list[_index].bold = true;
         add(list[_index]);
-        trace(list[_index]);
         felix.FelixSound.playBackground(musicPath + list[_index].text);
         
 
