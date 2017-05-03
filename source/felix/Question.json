@@ -144,25 +144,80 @@
         ],
         "difficiles": [
             {
-                "question": "some meaningful question?",
+                "question": "Comment se débarrasse-ton d’un Suraimu Bleu?",
                 "choix": [
-                    "a",
-                    "b",
-                    "c"
+                    "Sauter",
+                    "Courrir",
+                    "Lui lancer de la lumière"
                 ],
                 "correctAnswer": 0,
-                "givenAnswer": 3
+                "givenAnswer": -1
             },
             {
-                "question": "some meaningful question?",
+                "question": "Peut-on tuer le Shokaku?",
                 "choix": [
-                    "a",
-                    "b",
-                    "c"
+                    "Vrai",
+                    "Faux"
                 ],
                 "correctAnswer": 0,
-                "givenAnswer": 3
+                "givenAnswer": -1
+            },
+            {
+                "question": "Pourquoi le Shukaku dévore la lumière rouge ?",
+                "choix": [
+                    "Pour se nourrir",
+                    "Pour nuire à Fuyuko",
+                    "Pour la purifier",
+                    "Pour nourrir son maître"
+                ],
+                "correctAnswer": 2,
+                "givenAnswer": -1
+            },
+            {
+                "question": "Le shokaku rapporte la lumière où?",
+                "choix": [
+                    "Au Suraimu",
+                    "À Fuyuko",
+                    "Au Crystal rouge",
+                    "Au Crystal Bleu"
+                ],
+                "correctAnswer": 3,
+                "givenAnswer": -1
+            },
+            {
+                "question": "Comment tuer l’Ékunaa?",
+                "choix": [
+                    "Le faire foncer dans un mur",
+                    "Le faire tomber de haut",
+                    "Il est immortel",
+                    "Lui lancer de la lumière"
+                ],
+                "correctAnswer": 2,
+                "givenAnswer": -1
+            },
+            {
+                "question": "Qu'arrive-t-il lorsque l'Ékunaa est au contacte de la lumière de Fuyuko?",
+                "choix": [
+                    "Il meurt",
+                    "Il s'immobilise",
+                    "Rien ne se passe",
+                    "Il la fuit"
+                ],
+                "correctAnswer": 1,
+                "givenAnswer": -1
+            },
+            {
+                "question": "Qui peut détruire les blocs de glace?",
+                "choix": [
+                    "L’ékunaa",
+                    "Le Shokaku",
+                    "Le Surimii Rouge",
+                    "Toutes ces réponses"
+                ],
+                "correctAnswer": 0,
+                "givenAnswer": -1
             }
+
         ]
     }
 }
