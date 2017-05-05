@@ -1,16 +1,17 @@
 package entity;
 
+import flixel.group.FlxGroup.FlxTypedGroup;
+import flixel.tile.FlxTilemap;
+import scene.levels.JsonEntity;
 import flixel.effects.FlxFlicker;
 import flixel.FlxObject;
-import flixel.FlxSprite;
 import flixel.FlxG;
 import entity.player_states.*;
 import addons.FlxFSM;
 import flixel.system.FlxSound;
 import flixel.math.FlxPoint;
-import entity.misc.ILightSource;
 
-class Player extends FlxSprite implements ILightSource
+class Player extends Entity
 {
     var GRAVITY:Int = 600;
     var fsm:FlxFSM<Player>;
@@ -20,15 +21,13 @@ class Player extends FlxSprite implements ILightSource
     var _heartSound:FlxSound = new FlxSound();
     var _hurtSound:FlxSound = new FlxSound();
     var _healSound:FlxSound = new FlxSound();
-    var _cnt:Int = 0;
 
-    public var baseLight:Int = 200;
     public var center:FlxPoint = new FlxPoint();
     public var action:String = "";
     
-    public function new(?X:Float=0, ?Y:Float=0)
+    public function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>)
     {
-        super(X, Y);
+        super(json, player, level, entities);
 
         felix.FelixSound.register(_heartSound);
         felix.FelixSound.register(_hurtSound);
@@ -87,8 +86,6 @@ class Player extends FlxSprite implements ILightSource
         drag.x = 100;
 
         loadGraphic(AssetPaths.charsheet_fuyuko__png, true, 128, 256);
-        scale.set(0.45, 0.45);
-        updateHitbox();
 
         animation.add("push", [for (i in 30...38) i], 6, true);
         animation.add("shoot", [for (i in 30...38) i], 24, false);
@@ -99,12 +96,6 @@ class Player extends FlxSprite implements ILightSource
         animation.add("fall", [for (i in 0...3) 24-i], 6, false);
         animation.add("reco", [for (i in 25...30) i], 24, false);
         animation.add("crouch", [for (i in 0...4) 29-i], 24, false);
-
-        FlxG.watch.add(velocity, "x", "VelocityX");
-        FlxG.watch.add(velocity, "y", "VelocityY");
-        FlxG.watch.add(this, "x");
-        FlxG.watch.add(this, "y");
-        FlxG.watch.add(this, "health");
 
         setFacingFlip(FlxObject.RIGHT, false, false);
         setFacingFlip(FlxObject.LEFT, true, false);
@@ -142,8 +133,6 @@ class Player extends FlxSprite implements ILightSource
             var percent = (50 - health) / 50; // 0 to 1
             FlxG.camera.shake(percent * 0.0025, 0.1);
         }
-
-        _cnt++;
 
         center = getMidpoint(center);
         fsm.update(elapsed);
@@ -195,9 +184,5 @@ class Player extends FlxSprite implements ILightSource
             return true;
         }
         return false;
-    }
-
-    public function getLightRadius():Float {
-        return (baseLight + 8 * Math.sin(Math.floor(_cnt / 15))) * if (health >= 50) health / 100 else 0.5;
     }
 }

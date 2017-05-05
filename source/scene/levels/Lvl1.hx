@@ -1,9 +1,6 @@
 package scene.levels;
 
 import scene.ParentState;
-import flixel.FlxG;
-import flixel.FlxSprite;
-import entity.*;
 
 class Lvl1 extends ParentState {
     override public function create() {

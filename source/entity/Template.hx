@@ -1,24 +1,18 @@
-package entity.obstacles;
+package entity.misc;
 
 import flixel.group.FlxGroup.FlxTypedGroup;
 import scene.levels.JsonEntity;
-import flixel.FlxObject;
-import flixel.FlxG;
+import entity.Entity;
+import entity.Player;
 import flixel.tile.FlxTilemap;
 
-class Platform extends Entity {
-    public var damage:Float = 10;
-    
+class Template extends Entity {
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
-        loadGraphic(AssetPaths.climbPlatform__png, false, 64, 16);
-        immovable = true;
-        allowCollisions = FlxObject.UP;
     }
 
     public override function update(elapsed:Float):Void {
-        if (_player.animation.name != "crouch")
-            FlxG.collide(this, _player);
+
         super.update(elapsed);
     }
 }

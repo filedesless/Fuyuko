@@ -1,5 +1,6 @@
 package entity.monsters;
 
+import scene.levels.JsonEntity;
 import flixel.FlxObject;
 import flixel.FlxG;
 import entity.Entity;
@@ -14,18 +15,13 @@ class Ekunaa extends Entity {
     public var isTouchingLight:Bool = false;
     public var playerInSight:Bool = false;
     public var direction:Int = FlxObject.LEFT;
-    public var entities:FlxTypedGroup<Entity> = new FlxTypedGroup<Entity>();
     var viewBox:FlxRect;
 
-    public override function new(X:Float, Y:Float, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>):Void {
-        super(X, Y, player, level);
-        this.entities = entities;
+    public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>):Void {
+        super(json, player, level, entities);
 
         loadGraphic(AssetPaths.charsheet_ekunaa__png, true, 320, 256);
-        scale.set(0.45, 0.45);
-        updateHitbox();
-        solid = true;
-
+        
         animation.add("idle", [for (i in 0...10) i], 8, true);
         animation.add("walk", [for (i in 10...20) i], 12, true);
         animation.add("charge", [for (i in 20...30) i], 24, true);

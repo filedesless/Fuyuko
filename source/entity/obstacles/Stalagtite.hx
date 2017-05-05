@@ -1,24 +1,25 @@
 package entity.obstacles;
 
+import flixel.group.FlxGroup.FlxTypedGroup;
+import scene.levels.JsonEntity;
 import flixel.FlxG;
 import flixel.tile.FlxTilemap;
-import entity.obstacles.stalagtite_ice_states.*;
+import entity.obstacles.stalagtite_states.*;
 import addons.FlxFSM;
 
-class Stalagtite_ice extends Entity {
+class Stalagtite extends Entity {
     public var triggered:Bool = false;
     public var ready:Bool = false;
     public var damage:Float = 5;
-    var fsm:FlxFSM<Stalagtite_ice>;
+    var fsm:FlxFSM<Stalagtite>;
 
-    public override function new(X:Float, Y:Float, player:Player, level:FlxTilemap) {
-        super(X, Y, player, level);
+    public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
+        super(json, player, level, entities);
         loadGraphic(AssetPaths.iceStalactites__png, false, 128, 128);
-        _player = player;
 
         immovable = true;
 
-        fsm = new FlxFSM<Stalagtite_ice>(this);
+        fsm = new FlxFSM<Stalagtite>(this);
         fsm.transitions
             .add(Idle, Triggered, Conditions.isTriggered)
             .add(Triggered, Falling, Conditions.isReady)

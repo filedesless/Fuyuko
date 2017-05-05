@@ -1,7 +1,6 @@
 package scene;
 
 import scene.levels.*;
-import flixel.util.FlxColor;
 import flixel.effects.FlxFlicker;
 import flixel.util.FlxPath;
 import flixel.tile.FlxTilemap;
@@ -12,13 +11,12 @@ import flixel.FlxSprite;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
 import flixel.group.FlxGroup;
-import flixel.FlxObject;
 
-import entity.obstacles.*;
 import entity.monsters.*;
 import entity.misc.*;
 import entity.Player;
 import entity.Entity;
+import entity.EntityBuilder;
 
 import scene.PauseSubState;
 import scene.levels.NextLvl;
@@ -70,48 +68,23 @@ class ParentState extends FlxState {
 
             _level = new FlxTilemap();
             _level.loadMapFromCSV(tileMap, tileSet, tileWidth, tileHeight);
-            
-            _player = new Player();
-
             add(_level);
 
             FlxG.worldBounds.setSize(_level.width, _level.width);
         }
     
     function loadEvents() {
-        _shokuka = new Shokuka(0, 0, _player, _level, _entities);
+        var cnf:JsonEntity = {
+            name: "shokuka", desc: "", x:0, y:0,
+            light:128, scale:1, damage:0
+        };
+        _shokuka = new Shokuka(cnf, _player, _level, _entities);
         var json:scene.levels.EntityList = haxe.Json.parse(_lvlConfig);
+        var builder:EntityBuilder = new EntityBuilder(_player, _level, _entities);
         for (obj in json.objects)
-        {
-            switch (obj.name) {
-                case "platform":
-                    _entities.add(new Platform(obj.x, obj.y, _player, _level));
-                case "stalagmite":
-                    _entities.add(new Stalagmite(obj.x, obj.y, _player, _level));
-                case "stalagtite":
-                    _entities.add(new Stalagtite_ice(obj.x, obj.y, _player, _level));
-                case "spawn":
-                    player_start.set(obj.x, obj.y);
-                case "moveable_blox":
-                    _entities.add(new LightCube(obj.x, obj.y, _player, _level));
-                case "checkpoint":
-                    _entities.add(new Crystal_Blue(obj.x, obj.y, _player, _level));
-                case "ekunaa":
-                    _entities.add(new Ekunaa(obj.x, obj.y, _player, _level));
-                case "lightball":
-                    _entities.add(new LightBall(obj.x, obj.y, _player, _level));
-                case "shokuka":
-                    _shokuka = new Shokuka(obj.x, obj.y, _player, _level, _entities);
-                    _entities.add(_shokuka);
-                case "climbplatform":
-                    _entities.add(new ClimbPlatform(obj.x, obj.y, _player, _level));
-                case "end":
-                    _entities.add(new EndOfLevel(obj.x, obj.y, _player, _level));
-            }
-        }
+            if (obj.name == "Player") _player = new Player(obj, _player, _level, _entities);
+            else _entities.add(builder.build(obj));
 
-        _shokuka.loadCheckpoints();
-        _player.setPosition(player_start.x, player_start.y);
         _darkness = new Darkmap(0, 0, _player, _entities);
         add(_entities);
         add(_player);
@@ -164,7 +137,11 @@ class ParentState extends FlxState {
             }
         });
         if (!found) {
-            lilThing = new LightBall(_player.x, _player.y, _player, _level);
+            var cnf:JsonEntity = {
+                name: "LightBall", desc: "", x:_player.x, y:_player.y,
+                light:128, scale:1, damage:0
+            };
+            lilThing = new LightBall(cnf, _player, _level, _entities);
             _entities.add(lilThing);
         }
         var path = new FlxPath();
@@ -185,7 +162,11 @@ class ParentState extends FlxState {
             }
         });
         if (!found) {
-            lilThing = new CorruptedLightBall(_player.x, _player.y, _player, _level);
+            var cnf:JsonEntity = {
+                name: "CorruptedLightBall", desc: "", x:_player.x, y:_player.y,
+                light:128, scale:1, damage:0
+            };
+            lilThing = new CorruptedLightBall(cnf, _player, _level, _entities);
             _entities.add(lilThing);
         }
     }

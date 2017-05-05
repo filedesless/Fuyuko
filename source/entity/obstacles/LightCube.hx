@@ -1,5 +1,7 @@
 package entity.obstacles;
 
+import flixel.group.FlxGroup.FlxTypedGroup;
+import scene.levels.JsonEntity;
 import flixel.FlxG;
 import flixel.FlxObject;
 import flixel.tile.FlxTilemap;
@@ -8,8 +10,8 @@ import flixel.system.FlxSound;
 class LightCube extends Entity {
     var _soundChannel:FlxSound = new FlxSound();
 
-    public override function new(X:Float, Y:Float, player:Player, level:FlxTilemap) {
-        super(X, Y, player, level);
+    public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
+        super(json, player, level, entities);
         loadGraphic(AssetPaths.lightCube__png, false, 128, 128);
         acceleration.y = 1200;
     }

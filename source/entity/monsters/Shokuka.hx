@@ -1,27 +1,25 @@
 package entity.monsters;
 
+import scene.levels.JsonEntity;
 import flixel.FlxObject;
 import entity.misc.CorruptedLightBall;
 import entity.misc.LightBall;
 import flixel.tile.FlxTilemap;
-import entity.misc.ILightSource;
-import entity.misc.Crystal_Blue;
+import entity.misc.CrystalBlue;
 import entity.Entity;
 import flixel.group.FlxGroup;
 import entity.shokuka_states.*;
 import addons.FlxFSM;
 
-class Shokuka extends Entity implements ILightSource {
-    public var baseLight:Int = 100;
+class Shokuka extends Entity {
     var fsm:FlxFSM<Shokuka>;
     var _lightcnt:Int = 0;
     public var numberOfLights:Int = 0;
-    public var entities:FlxTypedGroup<Entity> = new FlxTypedGroup<Entity>();
-    public var checkpoints:Array<Crystal_Blue> = new Array<Crystal_Blue>();
+    public var checkpoints:Array<CrystalBlue> = new Array<CrystalBlue>();
+    var _checkpointsLoaded:Bool = false;
 
-    public override function new(X:Float, Y:Float, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>):Void {
-        super(X, Y, player, level);
-        this.entities = entities;
+    public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>):Void {
+        super(json, player, level, entities);
 
         health = 0;
 
@@ -33,14 +31,15 @@ class Shokuka extends Entity implements ILightSource {
         .start(Idle);
 
         loadGraphic(AssetPaths.charsheet_shokuka__png, true, 317, 534);
-        scale.set(0.2, 0.2);
-        updateHitbox();
 
         animation.add("idle", [0,1,2,3,4,5], 8, true);
         animation.play("idle");
     }
 
     public override function update(elapsed:Float):Void {
+        if (!_checkpointsLoaded)
+            loadCheckpoints();
+            
         numberOfLights = 0;
         entities.forEach(function(entity:Entity) {
             if (entity.alive)
@@ -51,10 +50,10 @@ class Shokuka extends Entity implements ILightSource {
                     } else
                         ++numberOfLights;
                 }
-            if (Std.is(entity, Crystal_Blue)) {
+            if (Std.is(entity, CrystalBlue)) {
                 FlxObject.updateTouchingFlags(this, entity);
                 if (overlaps(entity)) {
-                    entities.forEachOfType(Crystal_Blue, function(checkpoint:Crystal_Blue):Void {
+                    entities.forEachOfType(CrystalBlue, function(checkpoint:CrystalBlue):Void {
                         checkpoint.health += health;
                     });
                     health = 0;
@@ -66,12 +65,8 @@ class Shokuka extends Entity implements ILightSource {
         super.update(elapsed);
     }
 
-    public function getLightRadius():Float {
-        return (baseLight + 11 * Math.sin(Math.floor(_lightcnt++ / 17))) + health;
-    }
-
     public function loadCheckpoints():Void {
-        entities.forEachOfType(Crystal_Blue, function(crystal:Crystal_Blue):Void {
+        entities.forEachOfType(CrystalBlue, function(crystal:CrystalBlue):Void {
             checkpoints.push(crystal);
         });
     }

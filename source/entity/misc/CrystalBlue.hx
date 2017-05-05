@@ -2,22 +2,17 @@ package entity.misc;
 
 import flixel.tile.FlxTilemap;
 import flixel.math.FlxPoint;
+import scene.levels.JsonEntity;
+import flixel.group.FlxGroup.FlxTypedGroup;
 
-class Crystal_Blue extends Entity implements ICollectableLight {
-    public var baseLight:Int = 128;
+class CrystalBlue extends Entity implements ICollectableLight {
     public var center:FlxPoint = new FlxPoint();
-    var _cnt:Int = 0;
 
-    public override function new(X:Float, Y:Float, player:Player, level:FlxTilemap) {
-        super(X, Y, player, level);
+    public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
+        super(json, player, level, entities);
         loadGraphic(AssetPaths.crystal_blue__png, true, 416, 1033);
 
-        scale.set(0.12, 0.12);
-        updateHitbox();
-
         immovable = true;
-
-        health = 100;
 
         animation.add("full", [for (i in 8...12) i], 4, true);
         animation.add("half", [for (i in 4...8) i], 4, true);
@@ -46,9 +41,5 @@ class Crystal_Blue extends Entity implements ICollectableLight {
         }
 
         super.update(elapsed);
-    }
-
-    public function getLightRadius():Float {
-        return (baseLight + 3 * Math.sin(Math.floor((_cnt++ + 2) / 18))) * health / 100;
     }
 }

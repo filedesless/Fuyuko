@@ -1,10 +1,12 @@
 package entity.misc;
 
+import flixel.group.FlxGroup.FlxTypedGroup;
+import scene.levels.JsonEntity;
 import flixel.tile.FlxTilemap;
 
 class EndOfLevel extends Entity {
-    public override function new(X:Float, Y:Float, player:Player, level:FlxTilemap) {
-        super(X, Y, player, level);
+    public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
+        super(json, player, level, entities);
         loadGraphic(AssetPaths.iceCube__png);
         immovable = true;
         solid = false;
