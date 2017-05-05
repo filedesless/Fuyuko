@@ -31,6 +31,7 @@ class Shokuka extends Entity {
         .start(Idle);
 
         loadGraphic(AssetPaths.charsheet_shokuka__png, true, 317, 534);
+        rescale();
 
         animation.add("idle", [0,1,2,3,4,5], 8, true);
         animation.play("idle");

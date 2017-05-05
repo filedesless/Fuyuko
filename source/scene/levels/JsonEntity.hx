@@ -2,7 +2,7 @@ package scene.levels;
 
 typedef JsonEntity = {
     var name:String;
-    var desc:String;
+    var desc:Null<String>;
     var x:Float;
     var y:Float;
     var light:Int;

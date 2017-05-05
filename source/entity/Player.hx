@@ -86,6 +86,7 @@ class Player extends Entity
         drag.x = 100;
 
         loadGraphic(AssetPaths.charsheet_fuyuko__png, true, 128, 256);
+        rescale();
 
         animation.add("push", [for (i in 30...38) i], 6, true);
         animation.add("shoot", [for (i in 30...38) i], 24, false);

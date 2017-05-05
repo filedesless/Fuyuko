@@ -80,10 +80,13 @@ class ParentState extends FlxState {
         };
         _shokuka = new Shokuka(cnf, _player, _level, _entities);
         var json:scene.levels.EntityList = haxe.Json.parse(_lvlConfig);
-        var builder:EntityBuilder = new EntityBuilder(_player, _level, _entities);
         for (obj in json.objects)
             if (obj.name == "Player") _player = new Player(obj, _player, _level, _entities);
-            else _entities.add(builder.build(obj));
+
+        var builder:EntityBuilder = new EntityBuilder(_player, _level, _entities);
+        for (obj in json.objects)
+            if (obj.name != "Player")
+                _entities.add(builder.build(obj));
 
         _darkness = new Darkmap(0, 0, _player, _entities);
         add(_entities);

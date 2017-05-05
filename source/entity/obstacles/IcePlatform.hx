@@ -17,6 +17,7 @@ class IcePlatform extends Entity {
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
         loadGraphic(AssetPaths.icePlatform__png, false, 64, 64);
+        rescale();
         immovable = true;
         initialPosition = new FlxPoint(x, y);
 

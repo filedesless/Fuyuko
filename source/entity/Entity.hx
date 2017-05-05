@@ -9,6 +9,7 @@ import flixel.math.FlxRandom;
 
 class Entity extends FlxSprite implements ILightSource {
     var _player:Player;
+    var _json:JsonEntity;
     var _level:FlxTilemap;
     var _cnt:Float;
     var _lightStart:Float;
@@ -21,19 +22,20 @@ class Entity extends FlxSprite implements ILightSource {
         super(json.x, json.y);
         this._cnt = 0;
         this._player = player;
+        this._json = json;
         this._level = level;
         this.entities = entities;
-
-        if (json.scale != 1) {
-            scale.set(json.scale, json.scale);
-            updateHitbox();
-        }
 
         baseLight = json.light;
 
         var rnd:FlxRandom = new FlxRandom();
-        _lightStart = rnd.float(0, 32);
-        _lightSpeed = rnd.float(1, 16);
+        _lightStart = rnd.float(10, 16);
+        _lightSpeed = rnd.float(10, 16);
+    }
+
+    function rescale():Void {
+        scale.set(_json.scale, _json.scale);
+        updateHitbox();
     }
 
     public override function update(elapsed:Float):Void {
@@ -42,6 +44,7 @@ class Entity extends FlxSprite implements ILightSource {
     }
 
     public function getLightRadius():Float {
-        return (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * if (health >= 50) health / 100 else 0.5;
+        return if (baseLight == 0) 0 
+            else (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * if (health >= 50) health / 100 else 0.5;
     }
 }

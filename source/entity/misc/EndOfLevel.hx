@@ -8,6 +8,7 @@ class EndOfLevel extends Entity {
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
         loadGraphic(AssetPaths.iceCube__png);
+        rescale();
         immovable = true;
         solid = false;
     }

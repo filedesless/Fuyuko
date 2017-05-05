@@ -21,6 +21,7 @@ class Ekunaa extends Entity {
         super(json, player, level, entities);
 
         loadGraphic(AssetPaths.charsheet_ekunaa__png, true, 320, 256);
+        rescale();
         
         animation.add("idle", [for (i in 0...10) i], 8, true);
         animation.add("walk", [for (i in 10...20) i], 12, true);

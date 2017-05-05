@@ -45,12 +45,15 @@ class Darkmap extends FlxSprite {
         _entities.forEachAlive(function(entity:Entity):Void {
             if (Std.is(entity, ILightSource)) {
                 var lightSource:ILightSource = cast(entity, ILightSource);
-                if (entity.isOnScreen())
-                    FlxSpriteUtil.drawCircle(this, 
-                        entity.getScreenPosition().x + entity.width / 2,
-                        entity.getScreenPosition().y + entity.height / 2, 
-                        lightSource.getLightRadius(), 0xFFD0D0FF
-                    );
+                if (entity.isOnScreen()) {
+                    var lrad:Float = lightSource.getLightRadius();
+                    if (lrad > 0)
+                        FlxSpriteUtil.drawCircle(this, 
+                            entity.getScreenPosition().x + entity.width / 2,
+                            entity.getScreenPosition().y + entity.height / 2, 
+                            lrad, 0xFFD0D0FF
+                        );
+                }
             }
         });
 

@@ -13,6 +13,7 @@ class LightCube extends Entity {
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
         loadGraphic(AssetPaths.lightCube__png, false, 128, 128);
+        rescale();
         acceleration.y = 1200;
     }
 

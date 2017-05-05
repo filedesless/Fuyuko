@@ -11,6 +11,7 @@ class CorruptedLightBall extends Entity {
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
         loadGraphic(AssetPaths.orb__png, true, 32, 32);
+        rescale();
 
         health = 5;
         

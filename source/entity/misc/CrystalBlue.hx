@@ -11,6 +11,7 @@ class CrystalBlue extends Entity implements ICollectableLight {
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
         loadGraphic(AssetPaths.crystal_blue__png, true, 416, 1033);
+        rescale();
 
         immovable = true;
 

@@ -11,6 +11,7 @@ class Stalagmite extends Entity {
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
         loadGraphic(AssetPaths.stalactites__png, false, 128, 128);
+        rescale();
         flipY = true;
         immovable = true;
         solid = false;
