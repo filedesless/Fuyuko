@@ -111,6 +111,7 @@ class FelixMagicButton extends FlxSpriteGroup {
         button.color = _oldBtn.color;
         button.label.borderColor = _oldBtn.label.borderColor;
         button.label.color = _oldBtn.label.color;
+        button.setSounds();
         enabled = true;
     }
 }

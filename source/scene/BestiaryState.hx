@@ -26,6 +26,7 @@ class BestiaryState extends FlxState {
     var _entityShokuka:FlxSprite;
 
     var _groups:FlxSpriteGroup = new FlxSpriteGroup();
+    var _btnGroups:FlxSpriteGroup = new FlxSpriteGroup();
     var _cnt:Int = 0;
 
     var _btnRetour:FelixMagicButton;
@@ -43,7 +44,7 @@ class BestiaryState extends FlxState {
     }
 
     override public function update(elapsed:Float):Void {
-        if (_cnt <= 85) {
+        if (_cnt <= 55) {
             buildFuyuko();
             buildEkunaa();
             buildShokuka();
@@ -55,30 +56,32 @@ class BestiaryState extends FlxState {
     }
 
     function buildUI():Void {
-        if (_cnt == 65) {
+        if (_cnt == 47) {
+            _groups.add(_btnGroups);
             _btnRetour = new FelixMagicButton(
                 25, FlxG.height - 100, this, "Retour", clickQuitter
             );
 
-            add(_groups);
+            add(_groupFuyuko);
+            add(_btnGroups);
         }
         
-        if (_cnt == 70)
+        if (_cnt == 49)
         _btnFuyuko = new FelixMagicButton(
             -50, 150, this, "Fuyuko", showFuyuko
         );
 
-        if (_cnt == 75)
+        if (_cnt == 51)
         _btnEkunaa = new FelixMagicButton(
             -50, 250, this, "Ekunaa", showEkunaa
         );
 
-        if (_cnt == 80)
+        if (_cnt == 53)
         _btnShokuka = new FelixMagicButton(
             -50, 350, this, "Shokuka", showShokuka
         );
 
-        if (_cnt == 85) {
+        if (_cnt == 55) {
             add(_btnRetour);
             add(_btnFuyuko);
             add(_btnEkunaa);
@@ -97,7 +100,7 @@ class BestiaryState extends FlxState {
             _entityFuyuko.loadGraphic(AssetPaths.charsheet_fuyuko__png, true, 128, 256);
             _entityFuyuko.scale.set(0.6, 0.6);
             _entityFuyuko.updateHitbox();
-            _entityFuyuko.setPosition(165, 110);
+            _entityFuyuko.setPosition(90, 40);
         }
         
         if (_cnt == 10) {
@@ -113,7 +116,7 @@ class BestiaryState extends FlxState {
             _entityFuyuko.animation.finishCallback = fuyukoAnimFinished;
         }
         
-        if (_cnt == 15) {
+        if (_cnt == 12) {
             _btnGroupFuyuko = new FlxSpriteGroup();
             _btnGroupFuyuko.add(new FelixMagicButton(
                 FlxG.width, 0, this, "Idle", function() { _entityFuyuko.animation.play("idle"); }
@@ -136,13 +139,14 @@ class BestiaryState extends FlxState {
             _btnGroupFuyuko.screenCenter(FlxAxes.Y);
         }
         
-        if (_cnt == 20) {
+        if (_cnt == 15) {
             _groupFuyuko = new FlxSpriteGroup();
             _groupFuyuko.add(_canvasFuyuko);
             _groupFuyuko.add(_entityFuyuko);
-            _groupFuyuko.screenCenter(FlxAxes.XY);
+            _groupFuyuko.screenCenter(FlxAxes.X);
+            _groupFuyuko.y = 40;
 
-            _groups.add(_btnGroupFuyuko);
+            _btnGroups.add(_btnGroupFuyuko);
             _groups.add(_groupFuyuko);
         }
         
@@ -152,9 +156,10 @@ class BestiaryState extends FlxState {
         _btnGroupEkunaa.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
             FlxTween.tween(btn, { x: FlxG.width }, 0.5);
         });
-        _groupEkunaa.kill();
-        _groupShokuka.kill();
-        _groupFuyuko.revive();
+
+        remove(_groupEkunaa);
+        remove(_groupShokuka);
+        add(_groupFuyuko);
 
         _btnFuyuko.disable();
         _btnEkunaa.enable();
@@ -166,27 +171,27 @@ class BestiaryState extends FlxState {
     }
 
     function buildEkunaa():Void {
-        if (_cnt == 25) {
+        if (_cnt == 17) {
             _canvasEkunaa = new FlxSprite(0, 0, AssetPaths.beast_ekuna__png);
         }
         
-        if (_cnt == 30) {
+        if (_cnt == 22) {
             _entityEkunaa = new FlxSprite();
             _entityEkunaa.loadGraphic(AssetPaths.charsheet_ekunaa__png, true, 320, 256);
-            _entityEkunaa.scale.set(0.5, 0.5);
+            _entityEkunaa.scale.set(0.75, 0.75);
             _entityEkunaa.updateHitbox();
             _entityEkunaa.flipX = true;
-            _entityEkunaa.setPosition(115, 120);
+            _entityEkunaa.setPosition(60, 60);
         }
         
-        if (_cnt == 35) {
+        if (_cnt == 27) {
             _entityEkunaa.animation.add("idle", [for (i in 0...10) i], 8, true);
             _entityEkunaa.animation.add("walk", [for (i in 10...20) i], 12, true);
             _entityEkunaa.animation.add("charge", [for (i in 20...30) i], 24, true);
             _entityEkunaa.animation.play("idle");
         }
         
-        if (_cnt == 40) {
+        if (_cnt == 30) {
             _btnGroupEkunaa = new FlxSpriteGroup();
             _btnGroupEkunaa.add(new FelixMagicButton(
                 FlxG.width, 0, this, "Idle", function() { _entityEkunaa.animation.play("idle"); }
@@ -200,13 +205,14 @@ class BestiaryState extends FlxState {
             _btnGroupEkunaa.screenCenter(FlxAxes.Y);
         }
         
-        if (_cnt == 45) {
+        if (_cnt == 32) {
             _groupEkunaa = new FlxSpriteGroup();
             _groupEkunaa.add(_canvasEkunaa);
             _groupEkunaa.add(_entityEkunaa);
-            _groupEkunaa.screenCenter(FlxAxes.XY);
+            _groupEkunaa.screenCenter(FlxAxes.X);
+            _groupEkunaa.y = 40;
 
-            _groups.add(_btnGroupEkunaa);
+            _btnGroups.add(_btnGroupEkunaa);
             _groups.add(_groupEkunaa);
         }
     }
@@ -215,9 +221,10 @@ class BestiaryState extends FlxState {
         _btnGroupFuyuko.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
             FlxTween.tween(btn, { x: FlxG.width }, 0.5);
         });
-        _groupFuyuko.kill();
-        _groupShokuka.kill();
-        _groupEkunaa.revive();
+
+        remove(_groupFuyuko);
+        remove(_groupShokuka);
+        add(_groupEkunaa);
 
         _btnFuyuko.enable();
         _btnEkunaa.disable();
@@ -229,25 +236,26 @@ class BestiaryState extends FlxState {
     }
 
     function buildShokuka():Void {
-        if (_cnt == 50) {
+        if (_cnt == 35) {
             _canvasShokuka = new FlxSprite(0, 0, AssetPaths.beast_Shokuka__png);
             _entityShokuka = new FlxSprite();
             _entityShokuka.loadGraphic(AssetPaths.charsheet_shokuka__png, true, 317, 534);
             _entityShokuka.scale.set(0.38, 0.38);
             _entityShokuka.updateHitbox();
-            _entityShokuka.setPosition(135, 80);
+            _entityShokuka.setPosition(80, 20);
         }
         
-        if (_cnt == 55) {
+        if (_cnt == 40) {
             _entityShokuka.animation.add("idle", [0,1,2,3,4,5], 8, true);
             _entityShokuka.animation.play("idle");
         }
         
-        if (_cnt == 60) {
+        if (_cnt == 45) {
             _groupShokuka = new FlxSpriteGroup();
             _groupShokuka.add(_canvasShokuka);
             _groupShokuka.add(_entityShokuka);
-            _groupShokuka.screenCenter(FlxAxes.XY);
+            _groupShokuka.screenCenter(FlxAxes.X);
+            _groupShokuka.y = 40;
             _groups.add(_groupShokuka);
         }
     }
@@ -259,9 +267,10 @@ class BestiaryState extends FlxState {
         _btnGroupEkunaa.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
             FlxTween.tween(btn, { x: FlxG.width }, 0.5);
         });
-        _groupFuyuko.kill();
-        _groupEkunaa.kill();
-        _groupShokuka.revive();
+
+        remove(_groupFuyuko);
+        remove(_groupEkunaa);
+        add(_groupShokuka);
 
         _btnFuyuko.enable();
         _btnEkunaa.enable();

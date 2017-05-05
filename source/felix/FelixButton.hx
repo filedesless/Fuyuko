@@ -24,6 +24,10 @@ class FelixButton extends FlxButton {
         var center:FlxPoint = new FlxPoint(width / 2 - label.width / 2, height / 2 - label.height / 2);
         labelOffsets = [ center, center, center ];
 
+        setSounds();
+    }
+
+    public function setSounds():Void {
         #if flash
         onOver.sound = FlxG.sound.load(AssetPaths.sharp_echo__wav, felix.FelixSave.get_sound_effects() * 0.01);
         onUp.sound = FlxG.sound.load(AssetPaths.load__wav, felix.FelixSave.get_sound_effects() * 0.01);
