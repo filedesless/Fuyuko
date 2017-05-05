@@ -7,16 +7,19 @@ import flixel.tile.FlxTilemap;
 import entity.ekunaa_states.*;
 import addons.FlxFSM;
 import flixel.math.FlxRect;
+import flixel.group.FlxGroup;
 
 class Ekunaa extends Entity {
     var fsm:FlxFSM<Ekunaa>;
     public var isTouchingLight:Bool = false;
     public var playerInSight:Bool = false;
     public var direction:Int = FlxObject.LEFT;
+    public var entities:FlxTypedGroup<Entity> = new FlxTypedGroup<Entity>();
     var viewBox:FlxRect;
 
-    public override function new(X:Float, Y:Float, player:Player, level:FlxTilemap):Void {
+    public override function new(X:Float, Y:Float, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>):Void {
         super(X, Y, player, level);
+        this.entities = entities;
 
         loadGraphic(AssetPaths.charsheet_ekunaa__png, true, 320, 256);
         scale.set(0.45, 0.45);
