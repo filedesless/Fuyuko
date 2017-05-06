@@ -34,7 +34,7 @@ class Conditions
         return !isCrouching(owner);
     }
     public static function isJumping(owner:Player):Bool {
-        return FlxG.keys.anyPressed([SPACE, W]) && isGrounded(owner);
+        return FlxG.keys.anyPressed([SPACE, W]) && isGrounded(owner) && !owner.cantJump;
     }
     public static function isFalling(owner:Player):Bool {
         return (owner.velocity.y >= 20);

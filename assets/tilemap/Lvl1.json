@@ -37,11 +37,11 @@
             "damage": 0
         },
         {
-            "name": "CrystalRed",
+            "name": "SuraimuGreen",
             "x": 320,
             "y": 512,
-            "light": 20,
-            "scale": 0.15,
+            "light": 0,
+            "scale": 0.25,
             "damage": 0
         },
         {

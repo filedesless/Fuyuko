@@ -17,6 +17,7 @@ class Player extends Entity
     var fsm:FlxFSM<Player>;
     public var speedFactor:Float = 1;
     public var diffFactor:Float = 1;
+    public var cantJump:Bool = false;
 
     var _heartSound:FlxSound = new FlxSound();
     var _hurtSound:FlxSound = new FlxSound();

@@ -31,6 +31,7 @@ class EntityBuilder {
             case "LightBall": new LightBall(json, _player, _level, _entities);
             case "Wisp": new Wisp(json, _player, _level, _entities);
             case "Shokuka": new Shokuka(json, _player, _level, _entities);
+            case "SuraimuGreen": new SuraimuGreen(json, _player, _level, _entities);
             case "Platform": new Platform(json, _player, _level, _entities);
             case "EndOfLevel": new EndOfLevel(json, _player, _level, _entities);
             case _: throw "Objet JSON invalide: " + json.name;
