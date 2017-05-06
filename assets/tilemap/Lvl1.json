@@ -42,12 +42,12 @@
             "y": 524,
             "light": 0,
             "scale": 0.45,
-            "damage": 0
+            "damage": 5
         },
         {
             "name": "IceCube",
-            "x": 1000,
-            "y": 524,
+            "x": 320,
+            "y": 512,
             "light": 0,
             "scale": 1,
             "damage": 0
@@ -56,7 +56,7 @@
             "name": "CrystalBlue",
             "desc": "Kind of like a checkpoint",
             "x": 3800,
-            "y": 520,
+            "y": 524,
             "light": 128,
             "scale": 0.1,
             "damage": 0

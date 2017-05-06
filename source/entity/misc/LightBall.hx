@@ -29,6 +29,7 @@ class LightBall extends Entity {
 
         immovable = false;
         FlxG.collide(this, _level);
+        FlxG.collide(this, entities);
         immovable = true;
 
         if (!doneFirstPath) {

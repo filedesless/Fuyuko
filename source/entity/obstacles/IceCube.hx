@@ -15,13 +15,14 @@ class IceCube extends Entity {
 
     public override function update(elapsed:Float):Void {
         FlxG.collide(this, _player);
+        FlxG.collide(this, entities);
         super.update(elapsed);
     }
 
     public function shatter():Void {
         loadGraphic(AssetPaths.icecube_animation__png, true, 128, 128);
         rescale();
-        animation.add("break", [for (i in 0...8) i], 6, false);
+        animation.add("break", [for (i in 0...8) i], 12, false);
         animation.play("break");
         animation.finishCallback = function(a:String) { kill(); }
     }

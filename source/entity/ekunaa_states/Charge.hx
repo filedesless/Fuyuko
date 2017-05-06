@@ -27,7 +27,7 @@ class Charge extends FlxFSMState<Ekunaa>
             if (Std.is(entity, IceCube)) {
                 var iceCube:IceCube = cast (entity, IceCube);
                 FlxObject.updateTouchingFlags(owner, iceCube);
-                if (owner.isTouching(FlxObject.WALL)) {
+                if (owner.overlaps(iceCube)) {
                     iceCube.shatter();
                 }
             }

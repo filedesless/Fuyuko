@@ -64,6 +64,8 @@ class Ekunaa extends Entity {
             if (isTouching(FlxObject.WALL))
                 FlxObject.separate(this, _player);
         }
+        if (overlapsPoint(_player.getMidpoint()))
+            _player.kill();
         super.update(elapsed);
     }
 }
