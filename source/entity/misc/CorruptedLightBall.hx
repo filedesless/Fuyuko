@@ -9,6 +9,7 @@ import flixel.tile.FlxTilemap;
 
 class CorruptedLightBall extends Entity {
     var _seed:Float;
+    var _projecting:Bool = false;
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
         loadGraphic(AssetPaths.orb__png, true, 32, 32);
@@ -23,12 +24,20 @@ class CorruptedLightBall extends Entity {
     }
 
     public override function update(elapsed:Float):Void {
-        velocity.y = Math.sin((_cnt + _seed) * 0.1) * 25;
+        if (!_projecting)
+            velocity.y = Math.sin((_cnt + _seed) * 0.1) * 25;
+        else if (velocity.y == 0) _projecting = false;
 
         immovable = false;
         FlxG.collide(this, _level);
         immovable = true;
 
         super.update(elapsed);
+    }
+
+    public function projection(i:Int) {
+        velocity.set(Math.cos(i * 3 * Math.PI / 4)*200, Math.sin(i * 3 * Math.PI / 4)*200);
+        drag.set(100, 100);
+        _projecting = true;
     }
 }

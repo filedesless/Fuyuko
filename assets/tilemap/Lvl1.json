@@ -37,19 +37,11 @@
             "damage": 0
         },
         {
-            "name": "Ekunaa",
-            "x": 2000,
-            "y": 524,
-            "light": 0,
-            "scale": 0.45,
-            "damage": 5
-        },
-        {
-            "name": "Wisp",
+            "name": "CrystalRed",
             "x": 320,
             "y": 512,
-            "light": 128,
-            "scale": 1,
+            "light": 20,
+            "scale": 0.15,
             "damage": 0
         },
         {

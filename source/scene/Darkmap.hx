@@ -1,5 +1,6 @@
 package scene;
 
+import entity.misc.CrystalRed;
 import flixel.util.FlxColor;
 import flash.display.BlendMode;
 import flixel.group.FlxGroup;
@@ -51,7 +52,7 @@ class Darkmap extends FlxSprite {
                         FlxSpriteUtil.drawCircle(this, 
                             entity.getScreenPosition().x + entity.width / 2,
                             entity.getScreenPosition().y + entity.height / 2, 
-                            lrad, 0xFFD0D0FF
+                            lrad, if (Std.is(entity, CrystalRed)) 0x50F000D0 else 0xFFD0D0FF
                         );
                 }
             }

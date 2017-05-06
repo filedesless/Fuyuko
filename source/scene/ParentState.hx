@@ -1,5 +1,7 @@
 package scene;
 
+import flixel.FlxObject;
+import flixel.util.FlxSort;
 import scene.levels.*;
 import flixel.effects.FlxFlicker;
 import flixel.util.FlxPath;
