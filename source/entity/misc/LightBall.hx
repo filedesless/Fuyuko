@@ -12,6 +12,7 @@ import flixel.tile.FlxTilemap;
 
 class LightBall extends Entity {
     public var doneFirstPath:Bool = false;
+    var _seed:Float;
 
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
@@ -22,10 +23,12 @@ class LightBall extends Entity {
         
         animation.add("idle", [1,2,13,14,13,2], 8, true);
         animation.play("idle");
+
+        _seed = _rnd.float(0,10);
     }
 
     public override function update(elapsed:Float):Void {
-        velocity.y = Math.sin(_cnt * 0.1) * 25;
+        velocity.y = Math.sin((_cnt + _seed) * 0.1) * 25;
 
         immovable = false;
         FlxG.collide(this, _level);

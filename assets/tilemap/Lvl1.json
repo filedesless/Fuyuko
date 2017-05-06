@@ -45,10 +45,10 @@
             "damage": 5
         },
         {
-            "name": "IceCube",
+            "name": "Wisp",
             "x": 320,
             "y": 512,
-            "light": 0,
+            "light": 128,
             "scale": 1,
             "damage": 0
         },
