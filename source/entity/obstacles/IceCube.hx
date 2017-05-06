@@ -1,5 +1,6 @@
 package entity.obstacles;
 
+import flixel.FlxG;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import scene.levels.JsonEntity;
 import flixel.tile.FlxTilemap;
@@ -10,6 +11,11 @@ class IceCube extends Entity {
         loadGraphic(AssetPaths.iceCube__png, true, 128, 128);
         rescale();
         immovable = true;
+    }
+
+    public override function update(elapsed:Float):Void {
+        FlxG.collide(this, _player);
+        super.update(elapsed);
     }
 
     public function shatter():Void {

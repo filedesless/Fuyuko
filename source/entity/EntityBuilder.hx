@@ -24,13 +24,14 @@ class EntityBuilder {
             case "Stalagmite": new Stalagmite(json, _player, _level, _entities);
             case "Stalagtite": new Stalagtite(json, _player, _level, _entities);
             case "LightCube": new LightCube(json, _player, _level, _entities);
+            case "IceCube": new IceCube(json, _player, _level, _entities);
             case "CrystalBlue": new CrystalBlue(json, _player, _level, _entities);
             case "Ekunaa": new Ekunaa(json, _player, _level, _entities);
             case "LightBall": new LightBall(json, _player, _level, _entities);
             case "Shokuka": new Shokuka(json, _player, _level, _entities);
             case "Platform": new Platform(json, _player, _level, _entities);
             case "EndOfLevel": new EndOfLevel(json, _player, _level, _entities);
-            case _: throw "Fichier de config invalide!";
+            case _: throw "Objet JSON invalide: " + json.name;
         }
     }
 }
