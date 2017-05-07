@@ -76,10 +76,10 @@ class ParentState extends FlxState {
     function loadEvents() {
         var cnf:JsonEntity = {
             name: "shokuka", desc: "", x:0, y:0,
-            light:128, scale:1, damage:0
+            light:128, scale:1, damage:0, health:5, moveX:0, moveY:0
         };
         _shokuka = new Shokuka(cnf, _player, _level, _entities);
-        var json:scene.levels.EntityList = haxe.Json.parse(_lvlConfig);
+        var json:EntityList = haxe.Json.parse(_lvlConfig);
         for (obj in json.objects)
             if (obj.name == "Player") _player = new Player(obj, _player, _level, _entities);
 
@@ -142,7 +142,7 @@ class ParentState extends FlxState {
         if (!found) {
             var cnf:JsonEntity = {
                 name: "LightBall", desc: "", x:_player.x, y:_player.y,
-                light:128, scale:1, damage:0
+                light:128, scale:1, damage:0, health:5, moveX:0, moveY:0
             };
             lilThing = new LightBall(cnf, _player, _level, _entities);
             _entities.add(lilThing);
@@ -167,7 +167,7 @@ class ParentState extends FlxState {
         if (!found) {
             var cnf:JsonEntity = {
                 name: "CorruptedLightBall", desc: "", x:_player.x, y:_player.y,
-                light:128, scale:1, damage:0
+                light:128, scale:1, damage:0, health:5, moveX:0, moveY:0
             };
             lilThing = new CorruptedLightBall(cnf, _player, _level, _entities);
             _entities.add(lilThing);

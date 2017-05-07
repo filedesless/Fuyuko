@@ -18,6 +18,7 @@ class Player extends Entity
     public var speedFactor:Float = 1;
     public var diffFactor:Float = 1;
     public var cantJump:Bool = false;
+    public var externalSpeedFactor:Float = 1;
 
     var _heartSound:FlxSound = new FlxSound();
     var _hurtSound:FlxSound = new FlxSound();
@@ -34,8 +35,7 @@ class Player extends Entity
         felix.FelixSound.register(_hurtSound);
         felix.FelixSound.register(_healSound);
 
-        health = 100;
-        solid = true;
+        health = if (json.health == null) 100 else json.health;  
 
         fsm = new FlxFSM<Player>(this);
         fsm.transitions
@@ -107,21 +107,17 @@ class Player extends Entity
         var pressingLeft:Bool = FlxG.keys.pressed.A;
         var pressingRight:Bool = FlxG.keys.pressed.D;
 
-        if (pressingLeft && !pressingRight) {
-            velocity.x = -300 * speedFactor;
-            facing = FlxObject.LEFT;
-        }
-
-        if (pressingRight && !pressingLeft) {
-            velocity.x = 300 * speedFactor;
-            facing = FlxObject.RIGHT;
-        }
-
-        facing = switch ([pressingLeft, pressingRight, animation.name == "shoot"]) {
-            case [_, _, true]: if (FlxG.mouse.x > x) FlxObject.RIGHT else FlxObject.LEFT;
-            case [true, false, false]: FlxObject.LEFT;
-            case [false, true, false]: FlxObject.RIGHT;
-            case _: facing;
+        switch ([pressingLeft, pressingRight, animation.name == "shoot"]) {
+            case [_, _, true]: facing = if (FlxG.mouse.x > x) FlxObject.RIGHT else FlxObject.LEFT;
+            case [true, false, false]: 
+                facing = FlxObject.LEFT;
+                velocity.x = -300 * speedFactor * externalSpeedFactor;
+            case [false, true, false]: 
+                facing = FlxObject.RIGHT;
+                velocity.x = 300 * speedFactor * externalSpeedFactor;
+            case _: 
+                facing = if (FlxG.mouse.x > x) FlxObject.RIGHT else FlxObject.LEFT;
+                velocity.x = 0;
         }
 
         if (velocity.x < -20)

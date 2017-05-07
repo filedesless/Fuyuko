@@ -8,6 +8,13 @@ typedef JsonEntity = {
     var light:Int;
     var scale:Float;
     var damage:Float;
+
+    // For use with wisps
+    var moveX:Null<Float>;
+    var moveY:Null<Float>;
+
+    // For use with crystals
+    var health:Null<Float>;
 }
 
 /**

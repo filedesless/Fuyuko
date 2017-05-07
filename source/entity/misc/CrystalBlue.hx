@@ -7,11 +7,14 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 
 class CrystalBlue extends Entity implements ICollectableLight {
     public var center:FlxPoint = new FlxPoint();
+    public var baseHealth:Float;
 
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
         loadGraphic(AssetPaths.crystal_blue__png, true, 416, 1033);
         rescale();
+
+        baseHealth = health = if (json.health == null) 20 else json.health;
 
         immovable = true;
 
@@ -42,5 +45,9 @@ class CrystalBlue extends Entity implements ICollectableLight {
         }
 
         super.update(elapsed);
+    }
+
+    override public function getLightRadius():Float {
+        return (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * health / baseHealth;
     }
 }

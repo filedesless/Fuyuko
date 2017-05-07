@@ -6,13 +6,14 @@ import scene.levels.JsonEntity;
 import flixel.group.FlxGroup.FlxTypedGroup;
 
 class CrystalRed extends Entity {
+    public var baseHealth:Float;
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
         loadGraphic(AssetPaths.crystal_red__png, true, 416, 1033);
         rescale();
 
         immovable = true;
-        health = baseLight;
+        baseHealth = health = if (json.health == null) 20 else json.health;
 
         animation.add("full", [for (i in 8...12) i], 4, true);
         animation.add("half", [for (i in 4...8) i], 4, true);
@@ -53,22 +54,22 @@ class CrystalRed extends Entity {
         super.update(elapsed);
     }
 
-    override public function getLightRadius():Float {
-        return ( (baseLight*5) + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * health / baseLight;
-    }
-
     override public function kill():Void {
         var numBalls:Int = Math.floor((baseLight - health) / 5);
         var cnf:JsonEntity = {
             name: "CorruptedLightBall", desc: "", x:x, y:y,
-            light:128, scale:1, damage:0
+            light:128, scale:1, damage:0, health:5, moveX:0, moveY:0
         }
         for (i in 0...numBalls) {
-            var ball = new entity.misc.CorruptedLightBall(cnf, _player, _level, entities);
+            var ball = new CorruptedLightBall(cnf, _player, _level, entities);
             ball.projection(i);
             entities.add(ball);
         }
 
         super.kill();
+    }
+
+    override public function getLightRadius():Float {
+        return (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * health / baseHealth;
     }
 }
