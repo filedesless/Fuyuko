@@ -27,6 +27,7 @@ class EntityBuilder {
             case "IceCube": new IceCube(json, _player, _level, _entities);
             case "CrystalBlue": new CrystalBlue(json, _player, _level, _entities);
             case "CrystalRed": new CrystalRed(json, _player, _level, _entities);
+            case "CrystalYellow": new CrystalYellow(json, _player, _level, _entities);
             case "Ekunaa": new Ekunaa(json, _player, _level, _entities);
             case "LightBall": new LightBall(json, _player, _level, _entities);
             case "Wisp": new Wisp(json, _player, _level, _entities);

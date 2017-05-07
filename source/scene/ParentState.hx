@@ -1,7 +1,5 @@
 package scene;
 
-import flixel.FlxObject;
-import flixel.util.FlxSort;
 import scene.levels.*;
 import flixel.effects.FlxFlicker;
 import flixel.util.FlxPath;
@@ -60,12 +58,12 @@ class ParentState extends FlxState {
         tileHeight:Int = 64):Void
         {
             var bg:FlxSprite = new FlxSprite();
-            bg.loadGraphic(AssetPaths.grunge__png , true, 715, 250);
-            bg.animation.add("def", [for (i in 0...4) i], 24, true);
-            bg.animation.play("def");
-            bg.setGraphicSize(FlxG.width, FlxG.height);
-            bg.updateHitbox();
-            bg.scrollFactor.set();
+            bg.loadGraphic(AssetPaths.cavebg5__png);
+            //bg.animation.add("def", [for (i in 0...4) i], 24, true);
+            //bg.animation.play("def");
+            //bg.setGraphicSize(FlxG.width, FlxG.height);
+            //bg.updateHitbox();
+            //bg.scrollFactor.set();
             add(bg);
 
             _level = new FlxTilemap();

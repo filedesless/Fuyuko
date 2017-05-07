@@ -1,7 +1,6 @@
 package entity.misc;
 
-import flixel.effects.particles.FlxEmitter.FlxEmitterMode;
-import flixel.effects.particles.FlxEmitter;
+import flixel.FlxG;
 import flixel.tile.FlxTilemap;
 import scene.levels.JsonEntity;
 import flixel.group.FlxGroup.FlxTypedGroup;
@@ -23,6 +22,7 @@ class CrystalRed extends Entity {
     }
 
     public override function update(elapsed:Float):Void {
+        FlxG.collide(this, _player);
         entities.forEachAlive(function(entity:Entity):Void {
             if (overlaps(entity) && Std.is(entity, LightBall)) {
                 var light:LightBall = cast(entity, LightBall);
