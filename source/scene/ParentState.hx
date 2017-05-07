@@ -40,6 +40,12 @@ class ParentState extends FlxState {
         loadEvents();
         setCamera();
 
+        #if flash
+        felix.FelixSound.playBackground(AssetPaths.lvl1__mp3);
+        #else
+        felix.FelixSound.playBackground(AssetPaths.cave_theme__ogg);
+        #end
+
         super.create();
     }
 

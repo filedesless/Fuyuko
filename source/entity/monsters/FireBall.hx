@@ -1,6 +1,5 @@
-package entity.misc;
+package entity.monsters;
 
-import flixel.util.FlxColor;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import scene.levels.JsonEntity;
 import flixel.FlxG;
