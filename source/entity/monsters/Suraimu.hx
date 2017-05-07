@@ -8,17 +8,16 @@ import flixel.tile.FlxTilemap;
 import entity.suraimu_states.*;
 import addons.FlxFSM;
 import flixel.group.FlxGroup;
-import flixel.math.FlxPoint;
 
 class Suraimu extends Entity {
     var fsm:FlxFSM<Suraimu>;
+    var _sticking:Bool = false;
     public var seesPlayer:Bool = false;
     public var nearPlayer:Bool = false;
     public var touchPlayer:Bool = false;
     public var falling:Bool = false;
     public var grounded:Bool = false;
-    public var freed:Bool = false;
-    public var target:FlxPoint = new FlxPoint();
+    public var speedFactor:Float;
 
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>, graphic:String):Void {
         super(json, player, level, entities);
@@ -36,30 +35,24 @@ class Suraimu extends Entity {
 
         fsm = new FlxFSM<Suraimu>(this);
         fsm.transitions
-            .add(Idle, Walk, Conditions.seePlayer)
+            .add(Idle, Walk, Conditions.seePlayerWithItsEyes)
             .add(Idle, Jump, Conditions.nearPlayer)
             .add(Idle, Air, Conditions.falling)
             
             .add(Walk, Jump, Conditions.nearPlayer)
             .add(Walk, Air, Conditions.falling)
             .add(Walk, Idle, Conditions.notSeePlayer)
+            .add(Walk, Idle, Conditions.touchesPlayer)
 
             .add(Jump, Air, Conditions.finished)
-
             .add(Air, Splash, Conditions.grounded)
-            .add(Air, Sticky, Conditions.touchesPlayer)
-
-            .add(Sticky, Fall, Conditions.freed)
-
-            .add(Fall, Splash, Conditions.grounded)
 
             .add(Splash, Reco, Conditions.finished)
-
             .add(Reco, Idle, Conditions.finished)
             
         .start(Idle);
 
-        acceleration.y = 600;
+        acceleration.y = 450;
 
         setFacingFlip(FlxObject.RIGHT, true, false);
         setFacingFlip(FlxObject.LEFT, false, false);
@@ -67,35 +60,36 @@ class Suraimu extends Entity {
 
     public override function update(elapsed:Float):Void {
         immovable = false;
-        FlxG.collide(this, _level);
-        entities.forEachOfType(Suraimu, function(other:Suraimu):Void {
+        entities.forEachOfType(Suraimu, function(other:Suraimu) {
             FlxG.collide(this, other);
         });
+        FlxG.collide(this, _level);
+        immovable = true;
+        
         grounded = isTouching(FlxObject.DOWN);
         falling = !grounded && velocity.y > 0;
-        seesPlayer = Math.abs(x - _player.x) <= FlxG.width / 3 && Math.abs(y - _player.y) <= FlxG.height / 3;
+        seesPlayer = Math.abs(x - _player.x) <= FlxG.width / 2 && Math.abs(y - _player.y) <= FlxG.height / 2;
         facing = if (x - _player.x < 0) FlxObject.RIGHT else FlxObject.LEFT;
-        nearPlayer = Math.abs(x - _player.x) <= 150 && Math.abs(y - _player.y) <= 150;
-        immovable = true;
+        nearPlayer = _player.nearBox.containsPoint(getMidpoint()) && !_player.proximityBox.containsPoint(getMidpoint());
+        touchPlayer = overlaps(_player);
 
-        touchPlayer = _player.overlapsPoint(getMidpoint());
-        if (touchPlayer) target = _player.getMidpoint();
-        checkFreed();
+        if (touchPlayer && !_sticking) {
+            stickPlayer();
+            _sticking = true;
+        } else if (!touchPlayer && _sticking) {
+            unStickPlayer();
+            _sticking = false;
+        }
         
-
         fsm.update(elapsed);
         super.update(elapsed);
     }
 
-    public function checkFreed():Void {
-        freed = _player.velocity.x >= 450 || _player.velocity.y >= 100;
-    }
-
     public function stickPlayer():Void {
-        _player.cantJump = true;
+        
     }
 
     public function unStickPlayer():Void {
-        _player.cantJump = false;
+        
     }
 }

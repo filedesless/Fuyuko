@@ -92,6 +92,10 @@ class ParentState extends FlxState {
         add(_entities);
         add(_player);
         add(_darkness);
+
+        _entities.forEachOfType(Wisp, function(navy:Wisp):Void {
+            add(navy.txt);
+        });
     }
 
     override public function update(elapsed:Float):Void {
@@ -105,8 +109,10 @@ class ParentState extends FlxState {
             setCamera();
         }
 
+        #if !debug
         if (!_player.inWorldBounds())
             _player.kill();
+        #end
 
         switch (_player.action) {
             case "spawnCorruptedLightBall": spawnCorruptedLightBall();
@@ -114,8 +120,10 @@ class ParentState extends FlxState {
         }
         _player.action = "";
 
+        #if !debug
         if (_level.overlapsPoint(_player.getMidpoint()))
             _player.kill();
+        #end
 
         handleLight();
     }

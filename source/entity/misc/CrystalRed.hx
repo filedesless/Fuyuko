@@ -55,14 +55,14 @@ class CrystalRed extends Entity {
     }
 
     override public function kill():Void {
-        var numBalls:Int = Math.floor((baseLight - health) / 5);
+        var numBalls:Int = Math.floor(baseHealth / 5);
         var cnf:JsonEntity = {
             name: "CorruptedLightBall", desc: "", x:x, y:y,
             light:128, scale:1, damage:0, health:5, moveX:0, moveY:0
         }
         for (i in 0...numBalls) {
             var ball = new CorruptedLightBall(cnf, _player, _level, entities);
-            ball.projection(i);
+            ball.projection(i*2*Math.PI/numBalls);
             entities.add(ball);
         }
 
@@ -70,6 +70,6 @@ class CrystalRed extends Entity {
     }
 
     override public function getLightRadius():Float {
-        return (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * health / baseHealth;
+        return (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * health / 100;
     }
 }

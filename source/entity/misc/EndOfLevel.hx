@@ -15,7 +15,7 @@ class EndOfLevel extends Entity {
         animation.add("idle", [81,82,83,90,91,92,93,94,95,94,93,92,91,90,83,82], 3, true);
         animation.play("idle");
 
-        _seed = _rnd.float(0,10);
+        _seed = rnd.float(0,10);
     }
 
     public override function update(elapsed:Float):Void {

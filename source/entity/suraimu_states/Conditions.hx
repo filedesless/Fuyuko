@@ -7,6 +7,10 @@ class Conditions
     public static function seePlayer(owner:Suraimu):Bool {
         return owner.seesPlayer;
     }
+    public static function seePlayerWithItsEyes(owner:Suraimu):Bool { // Not its hands
+        // even tho it doesn't have neither one nor the other
+        return owner.seesPlayer && !touchesPlayer(owner);
+    }
     public static function notSeePlayer(owner:Suraimu):Bool {
         return !owner.seesPlayer;
     }
@@ -16,6 +20,9 @@ class Conditions
     public static function notNearPlayer(owner:Suraimu):Bool {
         return !owner.nearPlayer;
     }
+    public static function touchesPlayer(owner:Suraimu):Bool {
+        return owner.touchPlayer;
+    }
     public static function falling(owner:Suraimu):Bool {
         return owner.falling;
     }
@@ -24,12 +31,6 @@ class Conditions
     }
     public static function finished(owner:Suraimu):Bool {
         return owner.animation.finished;
-    }
-    public static function touchesPlayer(owner:Suraimu):Bool {
-        return owner.touchPlayer;
-    }
-    public static function freed(owner:Suraimu):Bool {
-        return owner.freed;
     }
 
 }

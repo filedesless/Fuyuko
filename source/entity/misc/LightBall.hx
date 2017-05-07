@@ -24,7 +24,7 @@ class LightBall extends Entity {
         animation.add("idle", [1,2,13,14,13,2], 8, true);
         animation.play("idle");
 
-        _seed = _rnd.float(0,10);
+        _seed = rnd.float(0,10);
     }
 
     public override function update(elapsed:Float):Void {

@@ -148,6 +148,7 @@
         {
             "name": "CrystalRed",
             "light": 20,
+            "health": 40,
             "damage": 0,
             "scale": 0.154,
             "x": 1534,
@@ -160,6 +161,14 @@
             "scale": 0.186,
             "x": 4544,
             "y": 636
+        },
+        {
+            "name": "CrystalBlue",
+            "light": 128,
+            "damage": 0,
+            "scale": 0.186,
+            "x": 5380,
+            "y": 1470
         },
         {
             "name": "SuraimuGreen",

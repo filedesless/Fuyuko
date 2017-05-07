@@ -14,8 +14,8 @@ class Entity extends FlxSprite implements ILightSource {
     var _cnt:Float;
     var _lightStart:Float;
     var _lightSpeed:Float;
-    var _rnd:FlxRandom;
 
+    public var rnd:FlxRandom;
     public var entities:FlxTypedGroup<Entity>;
     public var baseLight:Int;
 
@@ -29,9 +29,9 @@ class Entity extends FlxSprite implements ILightSource {
 
         baseLight = json.light;
 
-        _rnd = new FlxRandom();
-        _lightStart = _rnd.float(5, 16);
-        _lightSpeed = _rnd.float(8, 15);
+        rnd = new FlxRandom();
+        _lightStart = rnd.float(5, 16);
+        _lightSpeed = rnd.float(8, 15);
     }
 
     function rescale():Void {

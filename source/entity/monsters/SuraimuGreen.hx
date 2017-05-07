@@ -8,4 +8,12 @@ class SuraimuGreen extends Suraimu {
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>):Void {
         super(json, player, level, entities, AssetPaths.charsheet_suraimu_vert_charsheet__png);
     }
+
+    override public function stickPlayer():Void {
+        _player.cantJump++;
+    }
+
+    override public function unStickPlayer():Void {
+        _player.cantJump--;
+    }
 }

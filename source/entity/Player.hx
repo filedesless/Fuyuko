@@ -10,6 +10,7 @@ import entity.player_states.*;
 import addons.FlxFSM;
 import flixel.system.FlxSound;
 import flixel.math.FlxPoint;
+import flixel.math.FlxRect;
 
 class Player extends Entity
 {
@@ -17,8 +18,8 @@ class Player extends Entity
     var fsm:FlxFSM<Player>;
     public var speedFactor:Float = 1;
     public var diffFactor:Float = 1;
-    public var cantJump:Bool = false;
-    public var externalSpeedFactor:Float = 1;
+    public var cantJump:Int = 0;
+    public var slowedBy:Int = 0;
 
     var _heartSound:FlxSound = new FlxSound();
     var _hurtSound:FlxSound = new FlxSound();
@@ -26,6 +27,8 @@ class Player extends Entity
 
     public var center:FlxPoint = new FlxPoint();
     public var action:String = "";
+    public var nearBox:FlxRect = new FlxRect();
+    public var proximityBox:FlxRect = new FlxRect();
     
     public function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>)
     {
@@ -107,14 +110,24 @@ class Player extends Entity
         var pressingLeft:Bool = FlxG.keys.pressed.A;
         var pressingRight:Bool = FlxG.keys.pressed.D;
 
+        nearBox = new FlxRect(getMidpoint().x - 3 * 64, getMidpoint().y - 3 * 64, 6 * 64, 6 * 64);
+        proximityBox = new FlxRect(getMidpoint().x - 2 * 64, getMidpoint().y - 2 * 64, 4 * 64, 4 * 64);
+
+        #if debug
+        FlxG.watch.add(this, "slowedBy");
+        FlxG.watch.add(this, "cantJump");
+        if (FlxG.mouse.justPressedRight)
+            setPosition(FlxG.mouse.getPosition().x, FlxG.mouse.getPosition().y);
+        #end
+
         switch ([pressingLeft, pressingRight, animation.name == "shoot"]) {
             case [_, _, true]: facing = if (FlxG.mouse.x > x) FlxObject.RIGHT else FlxObject.LEFT;
             case [true, false, false]: 
                 facing = FlxObject.LEFT;
-                velocity.x = -300 * speedFactor * externalSpeedFactor;
+                velocity.x = -300 * speedFactor * if (slowedBy > 0) 0.2 else 1;
             case [false, true, false]: 
                 facing = FlxObject.RIGHT;
-                velocity.x = 300 * speedFactor * externalSpeedFactor;
+                velocity.x = 300 * speedFactor * if (slowedBy > 0) 0.2 else 1;
             case _: 
                 facing = if (FlxG.mouse.x > x) FlxObject.RIGHT else FlxObject.LEFT;
                 velocity.x = 0;

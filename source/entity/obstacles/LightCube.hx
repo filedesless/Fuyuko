@@ -18,6 +18,7 @@ class LightCube extends Entity {
     }
 
     public override function update(elapsed:Float):Void {
+        immovable = false;
         FlxG.collide(this, _level);
 
         if (overlaps(_player))
@@ -25,6 +26,7 @@ class LightCube extends Entity {
         else if (_soundChannel.playing)
             _soundChannel.stop();
 
+        immovable = true;
         super.update(elapsed);
     }
 

@@ -48,6 +48,6 @@ class CrystalBlue extends Entity implements ICollectableLight {
     }
 
     override public function getLightRadius():Float {
-        return (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * health / baseHealth;
+        return (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * health / 100;
     }
 }
