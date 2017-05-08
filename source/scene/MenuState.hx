@@ -20,6 +20,7 @@ class MenuState extends FlxState
     var btnOptions:FelixMagicButton;
     var btnBestiaire:FelixMagicButton;
     var btnQuitter:FelixMagicButton;
+    var _flxMusic:felix.FelixMusic;
 
     override public function create():Void
     {
@@ -47,11 +48,8 @@ class MenuState extends FlxState
         bgColor = FlxColor.TRANSPARENT;
 
         // starts music
-        #if flash
-        felix.FelixSound.playBackground(AssetPaths.menu__mp3);
-        #else
-        felix.FelixSound.playBackground(AssetPaths.forest__ogg);
-        #end
+        _flxMusic = new felix.FelixMusic();
+        add(_flxMusic);
 
         var logo = new FlxSprite(0, 0, AssetPaths.logo_transparent__png);
         logo.setGraphicSize(600);

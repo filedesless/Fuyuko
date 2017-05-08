@@ -37,10 +37,13 @@ class OptionSubState extends FlxSubState {
         super.create();
         FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
 
+        FlxG.watch.add(this, "_sfxVolume");
+
         _backgroundVolume = Math.floor(FelixSound.getBackgroundVolume());
-        _sfxVolume = Math.floor(felix.FelixSave.get_sound_effects());
+        _sfxVolume = Math.floor(felix.FelixSave.get_sound_effects() / 0.3);
+        trace(felix.FelixSave.get_sound_effects());
         _ambientVolume = Math.floor(felix.FelixSave.get_ambient_music());
-        _uiVolume = Math.floor(FelixSound.getUiVolume());
+        _uiVolume = Math.floor(FelixSound.getUiVolume() / 0.1);
         _refreshRate = Math.floor(felix.FelixSave.get_refreshRate());
 
         _backgroundSlider = new FlxSlider(

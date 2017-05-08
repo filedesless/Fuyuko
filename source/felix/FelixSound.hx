@@ -51,6 +51,12 @@ class FelixSound {
             bgCurentlyPlaying = path;
         }
     }
+
+    static public function stopBackground():Void {
+        if (background.playing)
+            background.stop();
+    }
+
     /**
         Get the volume from the background music channel
 
