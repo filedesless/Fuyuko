@@ -341,13 +341,13 @@ class BestiaryState extends FlxState {
                 FlxG.width, 75, this, "Marche", function() { _entitySuraimu.animation.play("walk"); }
             ));
             _btnGroupSuraimu.add(new FelixMagicButton(
-                FlxG.width, 150, this, "Saut", function() { _entitySuraimu.animation.play("Jump"); }
+                FlxG.width, 150, this, "Saut", function() { _entitySuraimu.animation.play("jump"); }
             ));
             _btnGroupSuraimu.add(new FelixMagicButton(
-                FlxG.width, 225, this, "Bubble", function() { _entitySuraimu.animation.play("Bubble"); }
+                FlxG.width, 225, this, "Bubble", function() { _entitySuraimu.animation.play("bubble"); }
             ));
             _btnGroupSuraimu.add(new FelixMagicButton(
-                FlxG.width, 300, this, "Splash", function() { _entitySuraimu.animation.play("Splash"); }
+                FlxG.width, 300, this, "Splash", function() { _entitySuraimu.animation.play("splash"); }
             ));
             _btnGroupSuraimu.screenCenter(FlxAxes.Y);
         }

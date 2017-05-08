@@ -19,14 +19,16 @@ class Suraimu extends Entity {
     public var falling:Bool = false;
     public var grounded:Bool = false;
     public var speedFactor:Float;
+    
 
     var _jumpSound:FlxSound = new FlxSound();
     var _walkSound:FlxSound = new FlxSound();
     var _splashSound:FlxSound = new FlxSound();
+    var _soundSeed:Int;
 
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>, graphic:String):Void {
         super(json, player, level, entities);
-
+        _soundSeed = rnd.int(0,100);
         loadGraphic(graphic, true, 256, 192);
         rescale();
         
@@ -61,6 +63,13 @@ class Suraimu extends Entity {
 
         setFacingFlip(FlxObject.RIGHT, true, false);
         setFacingFlip(FlxObject.LEFT, false, false);
+
+         _jumpSound = FlxG.sound.load(AssetPaths.slimeJump__ogg,0.01 * felix.FelixSave.get_ambient_music(),false);
+         //_jumpSound.proximity(x,y,FlxG.camera.target, FlxG.width);
+         _walkSound = FlxG.sound.load(AssetPaths.slimeWalk__ogg,0.01 * felix.FelixSave.get_ambient_music(),false);
+         //_walkSound.proximity(x,y,FlxG.camera.target, FlxG.width);
+         _splashSound = FlxG.sound.load(AssetPaths.slimeSplash__ogg,0.01 * felix.FelixSave.get_ambient_music(),false);
+         //_splashSound.proximity(x,y,FlxG.camera.target, FlxG.width);
     }
 
     public override function update(elapsed:Float):Void {
@@ -87,6 +96,12 @@ class Suraimu extends Entity {
         }
         
         fsm.update(elapsed);
+        //_jumpSound.setPosition(x + frameWidth / 2, y + height);
+        //_walkSound.setPosition(x + frameWidth / 2, y + height);
+        //_splashSound.setPosition(x + frameWidth / 2, y + height);
+        _jumpSound.volume = 0.01 * felix.FelixSave.get_ambient_music();
+        _walkSound.volume = 0.01 * felix.FelixSave.get_ambient_music();
+        _splashSound.volume = 0.01 * felix.FelixSave.get_ambient_music();
         super.update(elapsed);
     }
 
@@ -99,20 +114,18 @@ class Suraimu extends Entity {
     }
 
     public function playWalk():Void{
-        if(!_walkSound.playing)
-            felix.FelixSound.playGeneric(AssetPaths.slimeWalk__ogg, 
-                    _walkSound, felix.FelixSave.get_ambient_music(),false);
+        if((_soundSeed + _cnt) %15 == 0) 
+            if(!_walkSound.playing)
+                _walkSound.play();
     }
 
     public function playJump():Void{
         if(!_jumpSound.playing)
-            felix.FelixSound.playGeneric(AssetPaths.slimeJump__ogg, 
-                    _jumpSound, felix.FelixSave.get_ambient_music(),false);
+            _jumpSound.play();
     }
 
     public function playSplash():Void{
         if(!_splashSound.playing)
-            felix.FelixSound.playGeneric(AssetPaths.slimeSplash__ogg, 
-                    _splashSound, felix.FelixSave.get_ambient_music(),false);
+            _splashSound.play();
     }
 }
