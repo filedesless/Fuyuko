@@ -16,7 +16,6 @@ import flash.system.System;
 class MenuState extends FlxState
 {
     var btnNewGame:FelixMagicButton;
-    var btnContinue:FelixMagicButton;
     var btnBonus:FelixMagicButton;
     var btnOptions:FelixMagicButton;
     var btnBestiaire:FelixMagicButton;
@@ -93,11 +92,7 @@ class MenuState extends FlxState
         btnQuitter.disable();
         #end
 
-        if (felix.FelixSave.get_level_completed() <= 0)
-            btnContinue.disable();
-
         add(btnNewGame);
-        add(btnContinue);
         add(btnBonus);
         add(btnBestiaire);
         add(btnOptions);
