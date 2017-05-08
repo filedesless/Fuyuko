@@ -17,7 +17,6 @@ class Charge extends FlxFSMState<Ekunaa>
 
     override public function update(elapsed:Float, owner:Ekunaa, fsm:FlxFSM<Ekunaa>):Void 
     {
-        trace(owner.isTouching(owner.direction));
         if (owner.isTouching(owner.direction))
             owner.direction = if (owner.direction == FlxObject.RIGHT) FlxObject.LEFT else FlxObject.RIGHT;
 

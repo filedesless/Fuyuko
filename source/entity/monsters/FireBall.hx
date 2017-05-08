@@ -1,5 +1,6 @@
 package entity.monsters;
 
+import flixel.util.FlxPath;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import scene.levels.JsonEntity;
 import flixel.FlxG;
@@ -7,6 +8,7 @@ import entity.Entity;
 import entity.Player;
 import flixel.tile.FlxTilemap;
 import flixel.text.FlxText;
+import flixel.math.FlxPoint;
 
 class FireBall extends Entity {
     var _seed:Float;
@@ -17,6 +19,10 @@ class FireBall extends Entity {
         super(json, player, level, entities);
         loadGraphic(AssetPaths.orb__png, true, 32, 32);
         rescale();
+
+        path = new FlxPath();
+        path.start([new FlxPoint(x + json.moveX, y + json.moveY),
+                new FlxPoint(x, y)], 60, FlxPath.YOYO);
         
         animation.add("idle", [33,34,35,42,43,44,45,46,47,46,45,44,43,42,35,34], 3, true);
         animation.play("idle");
@@ -31,6 +37,9 @@ class FireBall extends Entity {
         immovable = false;
         FlxG.collide(this, _level);
         immovable = true;
+
+        if (overlaps(_player))
+            _player.hurt(5);
 
         super.update(elapsed);
     }
