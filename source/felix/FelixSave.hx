@@ -324,4 +324,21 @@ class FelixSave {
         }
         return brightness;
     }
+
+    @:isVar static var refreshRate(get, set):Float = 2;
+
+    public static function get_refreshRate():Float {
+        if (FlxG.save.data.refreshRate != null)
+            return FlxG.save.data.refreshRate;
+        return 2;
+    }
+
+    public static function set_refreshRate(newValue:Float):Float {
+        if (newValue != refreshRate) {
+            FlxG.save.data.refreshRate = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return refreshRate;
+    }
 }

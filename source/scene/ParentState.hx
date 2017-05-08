@@ -37,6 +37,7 @@ class ParentState extends FlxState {
     var _darkness:Darkmap;
 
     override public function create():Void {
+        FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
         loadEvents();
         setCamera();
 

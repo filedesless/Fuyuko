@@ -24,6 +24,7 @@ class MenuState extends FlxState
     override public function create():Void
     {
         super.create();
+        FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
         persistentDraw = false;
         FlxG.scaleMode = new flixel.system.scaleModes.FillScaleMode();
         FlxG.watch.addMouse();

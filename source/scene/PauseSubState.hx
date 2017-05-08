@@ -28,6 +28,7 @@ class PauseSubState extends FlxSubState {
 
     override public function create():Void {
         super.create();
+        FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
 
         persistentDraw = false;
 

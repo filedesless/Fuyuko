@@ -12,6 +12,7 @@ class Entity extends FlxSprite implements ILightSource {
     var _json:JsonEntity;
     var _level:FlxTilemap;
     var _cnt:Float;
+    var _lightCnt:Float;
     var _lightStart:Float;
     var _lightSpeed:Float;
 
@@ -34,6 +35,7 @@ class Entity extends FlxSprite implements ILightSource {
         rnd = new FlxRandom();
         _lightStart = rnd.float(5, 16);
         _lightSpeed = rnd.float(8, 15);
+        _lightCnt = 0;
     }
 
     function rescale():Void {
@@ -49,6 +51,6 @@ class Entity extends FlxSprite implements ILightSource {
     public function getLightRadius():Float {
         var percent = health / baseHealth;
         return if (baseLight == 0) 0 
-            else (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * felix.FelixSave.get_light() * if (health >= baseHealth / 2) percent else 0.5;
+            else (baseLight + _lightStart * Math.sin(Math.floor(_lightCnt++ / _lightSpeed))) * felix.FelixSave.get_light() * if (health >= baseHealth / 2) percent else 0.5;
     }
 }

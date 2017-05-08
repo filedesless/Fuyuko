@@ -22,6 +22,7 @@ class QuizState extends FlxState {
     var title:FlxText;
 
     override public function create():Void {
+        FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
         add(new FelixMagicButton(
             FlxG.width - 320, FlxG.height - 120,
             this, "Retour", click_quitter

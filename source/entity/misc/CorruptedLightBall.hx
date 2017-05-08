@@ -17,6 +17,8 @@ class CorruptedLightBall extends Entity {
 
         health = if (json.health == null) 5 else json.health;
 
+        baseLight = 25;
+
         animation.add("idle", [49,50,61,62,61,50], 8, true);
         animation.play("idle");
 

@@ -31,7 +31,7 @@ class Darkmap extends FlxSprite {
     }
 
     override public function update(elapsed:Float):Void {
-        if (_cnt % 3 == 0) {
+        if (_cnt % felix.FelixSave.get_refreshRate() == 0) {
             var player_rad = _player.getLightRadius();
             var injured:Bool = (_player.health < 50);
             var lineStyle:LineStyle = { 

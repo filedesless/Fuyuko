@@ -70,6 +70,6 @@ class CrystalRed extends Entity {
     }
 
     override public function getLightRadius():Float {
-        return (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * health / baseHealth;
+        return (baseLight + _lightStart * Math.sin(Math.floor(_lightCnt++ / _lightSpeed))) * health / baseHealth;
     }
 }

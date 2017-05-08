@@ -22,6 +22,9 @@ class OptionSubState extends FlxSubState {
     var _uiVolume:Int = 100;
     var _uiSlider:FlxSlider;
 
+    var _refreshRate:Int = 2;
+    var _refreshRateSlider:FlxSlider;
+
     var _btnAntialiasing:FelixMagicButton;
 
     var i:Int = 0;
@@ -32,15 +35,17 @@ class OptionSubState extends FlxSubState {
 
     override public function create():Void {
         super.create();
+        FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
 
         _backgroundVolume = Math.floor(FelixSound.getBackgroundVolume());
         _sfxVolume = Math.floor(felix.FelixSave.get_sound_effects());
         _ambientVolume = Math.floor(felix.FelixSave.get_ambient_music());
         _uiVolume = Math.floor(FelixSound.getUiVolume());
+        _refreshRate = Math.floor(felix.FelixSave.get_refreshRate());
 
         _backgroundSlider = new FlxSlider(
             this, "_backgroundVolume",
-            FlxG.camera.width / 2 - 450,
+            FlxG.camera.width / 2 - 400,
             FlxG.camera.height / 2 - 100 - 15 - 45,
             0, 100, 300, 30, 6,
             FlxColor.WHITE, FlxColor.CYAN);
@@ -49,7 +54,7 @@ class OptionSubState extends FlxSubState {
 
         _sfxSlider = new FlxSlider(
             this, "_sfxVolume", 
-            FlxG.camera.width / 2 - 450,
+            FlxG.camera.width / 2 - 400,
             FlxG.camera.height / 2 - 15 - 45,
             0, 100, 300, 30, 5,
             FlxColor.WHITE, FlxColor.CYAN);
@@ -58,7 +63,7 @@ class OptionSubState extends FlxSubState {
 
         _ambientSlider = new FlxSlider(
             this, "_ambientVolume",
-            FlxG.camera.width / 2 - 450,
+            FlxG.camera.width / 2 - 400,
             FlxG.camera.height / 2 - 15 + 45,
             0, 100, 300, 30, 5,
             FlxColor.WHITE, FlxColor.CYAN);
@@ -67,16 +72,25 @@ class OptionSubState extends FlxSubState {
 
         _uiSlider = new FlxSlider(
             this, "_uiVolume",
-            FlxG.camera.width / 2 - 450,
+            FlxG.camera.width / 2 - 400,
             FlxG.camera.height / 2 - 15 + 45*3,
             0, 100, 300, 30, 5,
             FlxColor.WHITE, FlxColor.CYAN);
         _uiSlider.setTexts("Volume de l'interface");
         _uiSlider.scrollFactor.set(); // makes it follow camera around
 
-        _btnAntialiasing = new FelixMagicButton(
+
+        _refreshRateSlider = new FlxSlider(
+            this, "_refreshRate",
             FlxG.camera.width / 2 + 100, FlxG.camera.height / 2 - 100 - 15 - 45, 
-            this, if (felix.FelixSave.get_antialiasing()) "Lissage: Off" else "Lissage: On", function() { 
+            1, 4, 300, 30, 5,
+            FlxColor.WHITE, FlxColor.CYAN);
+        _refreshRateSlider.setTexts("Taux de rafraîchissement de l'éclairage");
+        _refreshRateSlider.scrollFactor.set(); // makes it follow camera around
+
+        _btnAntialiasing = new FelixMagicButton(
+            FlxG.camera.width / 2 + 130, FlxG.camera.height / 2 - 100 - 15 + 45, 
+            this, if (!felix.FelixSave.get_antialiasing()) "Lissage: Off" else "Lissage: On", function() { 
                 FlxG.camera.antialiasing = !FlxG.camera.antialiasing; 
                 _btnAntialiasing.button.text = if (_btnAntialiasing.button.text == "Lissage: Off") "Lissage: On" else "Lissage: Off";
                 felix.FelixSave.set_antialiasing(FlxG.camera.antialiasing);
@@ -84,14 +98,6 @@ class OptionSubState extends FlxSubState {
         );
         _btnAntialiasing.scrollFactor.set();
 
-        _uiSlider = new FlxSlider(
-            this, "_uiVolume",
-            FlxG.camera.width / 2 - 450,
-            FlxG.camera.height / 2 - 15 + 45*3,
-            0, 100, 300, 30, 5,
-            FlxColor.WHITE, FlxColor.CYAN);
-        _uiSlider.setTexts("Volume de l'interface");
-        _uiSlider.scrollFactor.set(); // makes it follow camera around
 
         var btn:FelixMagicButton = new FelixMagicButton(
             null, FlxG.camera.height * 5 / 6, 
@@ -117,14 +123,16 @@ class OptionSubState extends FlxSubState {
         add(_sfxSlider);
         add(_ambientSlider);
         add(_uiSlider);
+        add(_refreshRateSlider);
     }
     
     override public function update(elapsed:Float):Void {
         switch (i++) {
-            case 15: FelixSound.setBackgroundVolume(_backgroundVolume);
-            case 30: felix.FelixSave.set_ambient_music(_ambientVolume);
-            case 45: felix.FelixSave.set_sound_effects(_sfxVolume);
-            case 60: FelixSound.setUiVolume(_uiVolume); i = 0;
+            case 10: FelixSound.setBackgroundVolume(_backgroundVolume);
+            case 20: felix.FelixSave.set_ambient_music(_ambientVolume);
+            case 30: felix.FelixSave.set_sound_effects(_sfxVolume);
+            case 40: FelixSound.setUiVolume(_uiVolume);
+            case 50: felix.FelixSave.set_refreshRate(_refreshRate); i = 0;
         }
 
         if (FlxG.keys.anyJustPressed([ESCAPE])) {
