@@ -6,9 +6,6 @@ import flixel.FlxSprite;
 import flixel.util.FlxColor;
 import flixel.util.FlxAxes;
 
-import scene.levels.Lvl1;
-import scene.levels.NextLvl;
-
 import felix.FelixMagicButton;
 
 import flash.system.System;
@@ -63,39 +60,33 @@ class MenuState extends FlxState
         logo.y += 30;
         add(logo);
 
-        btnContinue = new FelixMagicButton(
-            FlxG.camera.width / 2 + 20,
-            FlxG.camera.height * 4 / 10,
-            this, "Continuer", last_level
-        );
-
-        btnNewGame = new FelixMagicButton(
-            FlxG.camera.width / 2 - btnContinue.width - 20,
-            FlxG.camera.height * 4 / 10,
-            this, "Nouvelle partie", clickPlay, 26
-        );
-
         btnOptions = new FelixMagicButton(
-            null,
-            FlxG.camera.height * 5 / 10,
+            FlxG.camera.width / 2 + 20,
+            FlxG.camera.height * 5 / 12,
             this, "Options", clickOptions
         );
 
-        btnBonus = new FelixMagicButton(
+        btnNewGame = new FelixMagicButton(
             FlxG.camera.width / 2 - btnOptions.width - 20,
-            FlxG.camera.height * 6 / 10,
-            this, "Bonus", clickBonus
+            FlxG.camera.height * 5 / 12,
+            this, "Jouer", clickPlay, 26
         );
 
         btnBestiaire = new FelixMagicButton(
-            FlxG.camera.width / 2 + 20,
-            FlxG.camera.height * 6 / 10,
+            FlxG.camera.width / 2 - btnOptions.width - 20,
+            FlxG.camera.height * 6 / 11,
             this, "Bestiaire", clickBestiaire
+        );
+
+        btnBonus = new FelixMagicButton(
+            FlxG.camera.width / 2 + 20,
+            FlxG.camera.height * 6 / 11,
+            this, "Bonus", clickBonus
         );
      
         btnQuitter = new FelixMagicButton(
             null,
-            FlxG.camera.height * 8 / 10,
+            FlxG.camera.height * 7 / 10,
             this, "Quitter", quitter
         );
         #if html5
@@ -162,7 +153,7 @@ class MenuState extends FlxState
         #if !html5
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         #end
-        FlxG.switchState(new Lvl1());
+        FlxG.switchState(new DifficultyState());
     }
 
     function options():Void {
@@ -177,13 +168,6 @@ class MenuState extends FlxState
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         #end
         FlxG.switchState(new BestiaryState());
-    }
-
-    function last_level():Void {
-        #if !html5
-        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
-        #end
-        FlxG.switchState(new NextLvl(felix.FelixSave.get_level_completed()));
     }
 
     function quitter():Void {
