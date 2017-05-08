@@ -65,11 +65,8 @@ class Suraimu extends Entity {
         setFacingFlip(FlxObject.LEFT, false, false);
 
          _jumpSound = FlxG.sound.load(AssetPaths.slimeJump__ogg,0.01 * felix.FelixSave.get_ambient_music(),false);
-         _jumpSound.proximity(x,y,FlxG.camera.target, FlxG.width);
          _walkSound = FlxG.sound.load(AssetPaths.slimeWalk__ogg,0.01 * felix.FelixSave.get_ambient_music(),false);
-         _walkSound.proximity(x,y,FlxG.camera.target, FlxG.width);
          _splashSound = FlxG.sound.load(AssetPaths.slimeSplash__ogg,0.01 * felix.FelixSave.get_ambient_music(),false);
-         _splashSound.proximity(x,y,FlxG.camera.target, FlxG.width);
     }
 
     public override function update(elapsed:Float):Void {
@@ -96,12 +93,13 @@ class Suraimu extends Entity {
         }
         
         fsm.update(elapsed);
-        _jumpSound.setPosition(x + frameWidth / 2, y + height);
-        _walkSound.setPosition(x + frameWidth / 2, y + height);
-        _splashSound.setPosition(x + frameWidth / 2, y + height);
-        _jumpSound.volume = 0.01 * felix.FelixSave.get_ambient_music();
-        _walkSound.volume = 0.01 * felix.FelixSave.get_ambient_music();
-        _splashSound.volume = 0.01 * felix.FelixSave.get_ambient_music();
+        if(_cnt % 50 == 0)
+        {
+            _jumpSound.volume = 0.008 * felix.FelixSave.get_ambient_music();
+            _walkSound.volume = 0.008 * felix.FelixSave.get_ambient_music();
+            _splashSound.volume = 0.008 * felix.FelixSave.get_ambient_music();
+        }
+        
         super.update(elapsed);
     }
 
@@ -114,7 +112,7 @@ class Suraimu extends Entity {
     }
 
     public function playWalk():Void{
-        if((_soundSeed + _cnt) %30 == 0) 
+        if((_soundSeed + _cnt) %25 == 0) 
             if(!_walkSound.playing)
                 _walkSound.play();
     }
