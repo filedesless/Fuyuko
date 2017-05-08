@@ -48,7 +48,8 @@ class Darkmap extends FlxSprite {
                         FlxSpriteUtil.drawCircle(this, 
                             entity.getScreenPosition().x + entity.width / 2,
                             entity.getScreenPosition().y + entity.height / 2, 
-                            lrad, if (Std.is(entity, CrystalRed)) 0x50F000D0 else 0xFFD0D0FF
+                            lrad, if (Std.is(entity, CrystalRed)) FlxColor.fromRGB(240, 0, 208, Math.floor(80 * felix.FelixSave.get_brightness())) 
+                                else FlxColor.fromRGB(208, 208, 255, Math.floor(120 * felix.FelixSave.get_brightness()))
                         );
                 }
             }
@@ -56,7 +57,7 @@ class Darkmap extends FlxSprite {
         FlxSpriteUtil.drawCircle(this, 
             _player.getScreenPosition().x + _player.width / 2, 
             _player.getScreenPosition().y + _player.height / 2,
-            _player.getLightRadius(), 0x60D0D0D0, lineStyle
+            _player.getLightRadius(), FlxColor.fromRGB(208, 208, 208, Math.floor(96 * felix.FelixSave.get_brightness())), lineStyle
         );
         _cnt++;
         super.update(elapsed);

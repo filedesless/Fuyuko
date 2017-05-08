@@ -10,7 +10,7 @@ class Jump extends FlxFSMState<Suraimu>
     {
         owner.animation.play("jump");
         owner.velocity.y = -350 * owner.rnd.float(0.5, 1.5);
-        owner.velocity.x = 150 * if (owner.facing == FlxObject.RIGHT) 1 else -1 * owner.rnd.float(0.5, 1.5);
+        owner.velocity.x = 150 * felix.FelixSave.get_vitMob() * if (owner.facing == FlxObject.RIGHT) 1 else -1 * owner.rnd.float(0.5, 1.5);
     }
     
     override public function update(elapsed:Float, owner:Suraimu, fsm:FlxFSM<Suraimu>):Void 

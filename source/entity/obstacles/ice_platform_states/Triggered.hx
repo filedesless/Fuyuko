@@ -13,12 +13,12 @@ class Triggered extends FlxFSMState<IcePlatform>
 
     override public function update(elapsed:Float, owner:IcePlatform, fsm:FlxFSM<IcePlatform>):Void 
     {
-        if (++i >= 32) {
+        if (++i >= 32 / felix.FelixSave.get_vitObstacles()) {
             if (owner.angularVelocity == 0)
                 owner.angularVelocity = 90;
             if (i % 5 == 0)
                 owner.angularVelocity *= -1;
-            if (i >= 64)        
+            if (i >= 64 / felix.FelixSave.get_vitObstacles())        
                 owner.ready = true;
         }
     }

@@ -31,7 +31,7 @@ class IcePlatform extends Entity {
     }
 
     public override function update(elapsed:Float) {
-        if (!visible && ++reviveTimer >= 512) {
+        if (!visible && ++reviveTimer >= 384) {
             reset(initialPosition.x, initialPosition.y);
             visible = true;
         }

@@ -34,6 +34,6 @@ class Charge extends FlxFSMState<Ekunaa>
         }
 
         if (_cnt > 120)
-            owner.velocity.x = if (owner.direction == FlxObject.RIGHT) 400 else -400;
+            owner.velocity.x = felix.FelixSave.get_vitMob() * if (owner.direction == FlxObject.RIGHT) 400 else -400;
     }
 }

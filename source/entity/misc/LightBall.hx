@@ -60,4 +60,9 @@ class LightBall extends Entity {
         health += otherBall.health;
         otherBall.kill();
     }
+
+    override public function getLightRadius():Float {
+        var modifier = 1 + 0.02 * (health - 5);
+        return (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * felix.FelixSave.get_light() * modifier;
+    }
 }

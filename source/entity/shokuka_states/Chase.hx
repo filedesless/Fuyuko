@@ -27,7 +27,7 @@ class Chase extends FlxFSMState<Shokuka>
         }
         
         if (points.length > 0)
-            owner.path.start(points, 400, FlxPath.FORWARD);
+            owner.path.start(points, 400 * felix.FelixSave.get_vitMob(), FlxPath.FORWARD);
     }
 
     override public function enter(owner:Shokuka, fsm:FlxFSM<Shokuka>):Void 

@@ -6,7 +6,7 @@ class Falling extends FlxFSMState<IcePlatform>
 {
     override public function enter(owner:IcePlatform, fsm:FlxFSM<IcePlatform>):Void 
     {
-        owner.velocity.y = 600;
+        owner.velocity.y = 500 * felix.FelixSave.get_vitObstacles();
     }
 
     override public function update(elapsed:Float, owner:IcePlatform, fsm:FlxFSM<IcePlatform>):Void 

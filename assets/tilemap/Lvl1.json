@@ -35,8 +35,8 @@
         },
         {
             "name": "CrystalRed",
-            "light": 20,
-            "health": 40,
+            "light": 128,
+            "health": 20,
             "damage": 0,
             "scale": 0.154,
             "x": 1534,
@@ -44,7 +44,8 @@
         },
         {
             "name": "CrystalRed",
-            "light": 20,
+            "light": 128,
+            "health": 20,
             "damage": 0,
             "scale": 0.154,
             "x": 3904,

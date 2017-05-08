@@ -38,7 +38,7 @@ class Player extends Entity
         felix.FelixSound.register(_hurtSound);
         felix.FelixSound.register(_healSound);
 
-        baseHealth = health = felix.FelixSave.get_health() * if (json.health == null) 150 else json.health;  
+        baseHealth = health = Math.floor(felix.FelixSave.get_health() * 0.2 * if (json.health == null) 150 else json.health) * 5;  
 
         fsm = new FlxFSM<Player>(this);
         fsm.transitions

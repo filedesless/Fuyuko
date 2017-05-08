@@ -6,7 +6,7 @@ class Falling extends FlxFSMState<Stalagtite>
 {
     override public function enter(owner:Stalagtite, fsm:FlxFSM<Stalagtite>):Void 
     {
-        owner.velocity.y = 600;
+        owner.velocity.y = 500 * felix.FelixSave.get_vitObstacles();
         owner.damage = 50;
     }
 
