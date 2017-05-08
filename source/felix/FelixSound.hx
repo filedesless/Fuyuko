@@ -31,30 +31,30 @@ class FelixSound {
         if (sound.playing)
             sound.fadeOut(1, 0);
 
-        sound.loadEmbedded(path, looped);
+        sound.loadEmbedded(path, looped, false);
         sound.play(forceRestart);
         sound.volume = volume * 0.01;
         sound.fadeIn(1, 0, sound.volume);
     }
 
     static var background:FlxSound = new FlxSound();
-    static var bgCurentlyPlaying:String = "";
     /**
         Plays the given sound as the background music, taking volume from saved settings
 
         @param  path    String pointing to the music file.
     **/
-    static public function playBackground(path:String):Void {
-        
-        if (path != bgCurentlyPlaying)  {
-            playGeneric(path, background, getBackgroundVolume());
-            bgCurentlyPlaying = path;
-        }
+    static public function playBackground(path:String, looped:Bool = true):Void {
+        playGeneric(path, background, getBackgroundVolume(), looped);
     }
 
     static public function stopBackground():Void {
-        if (background.playing)
+        if (background.playing) {
             background.stop();
+        }
+    }
+
+    static public function isBackgroundPlaying():Bool {
+        return background.playing;
     }
 
     /**

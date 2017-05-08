@@ -116,8 +116,6 @@ class Player extends Entity
         proximityBox = new FlxRect(getMidpoint().x - 2 * 64, getMidpoint().y - 2 * 64, 4 * 64, 4 * 64);
 
         #if debug
-        FlxG.watch.add(this, "slowedBy");
-        FlxG.watch.add(this, "cantJump");
         if (FlxG.mouse.justPressedRight)
             setPosition(FlxG.mouse.getPosition().x, FlxG.mouse.getPosition().y);
         #end

@@ -58,7 +58,8 @@ class FelixMusicScroller extends FlxSpriteGroup {
         list[_index].y = y + 40;
         list[_index].bold = true;
         add(list[_index]);
-        felix.FelixSound.playBackground(musicPath + list[_index].text);
+        felix.FelixSound.stopBackground();
+        felix.FelixSound.playBackground(musicPath + list[_index].text, false);
         
 
         if (_index < list.length-1) {
@@ -70,6 +71,21 @@ class FelixMusicScroller extends FlxSpriteGroup {
     }
 
     public override function update(elapsed:Float):Void {
+        if (!felix.FelixSound.isBackgroundPlaying()) {
+            
+            if (_index == list.length-1) {
+                remove(list[_index]);
+                if (list.length > 1) remove(list[_index-1]);
+                if (list.length > 2) remove(list[_index-2]);
+                _index = 0;
+            } else {
+                if (_index > 0) remove(list[_index-1]);
+                _index++;
+            }
+            trace(_index);
+            show();
+        }
+
         if (FlxG.mouse.justReleased) {
             if (_upperRect.containsPoint(FlxG.mouse.getPosition())) {
                 if (_index > 0) {

@@ -1,13 +1,13 @@
 package felix;
 
+import flixel.FlxG;
 import flixel.FlxSprite;
-import flixel.system.FlxSound;
 import flixel.math.FlxRandom;
 
 class FelixMusic extends FlxSprite {
     var list:Array<String> = new Array<String>();
-    public var sound:FlxSound = new FlxSound();
     var _rnd:FlxRandom = new FlxRandom();
+    var _index:Int = 0;
 
     var musicPath:String = "assets/music/darkwinter/";
 
@@ -37,9 +37,10 @@ class FelixMusic extends FlxSprite {
     }
 
     public override function update(elapsed:Float):Void {
-        if (!sound.playing) {
-            felix.FelixSound.playGeneric(musicPath + list[_rnd.int(0, list.length-1)],
-                sound, felix.FelixSave.get_background_music(), false, true);
+        if (!felix.FelixSound.isBackgroundPlaying()) {
+            _index = _rnd.int(0, list.length-1);
+            trace("play!");
+            felix.FelixSound.playBackground(musicPath + list[_index]);
         }
     }
 }
