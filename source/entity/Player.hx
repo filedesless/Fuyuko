@@ -1,5 +1,6 @@
 package entity;
 
+import entity.misc.CorruptedLightBall;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.tile.FlxTilemap;
 import scene.levels.JsonEntity;
@@ -153,7 +154,7 @@ class Player extends Entity
 
     public override function hurt(damage:Float) {
         if (alive && !FlxFlicker.isFlickering(this)) {
-            action = "spawnCorruptedLightBall";
+            spawnCorruptedLightBall(damage);
             decrease_life(damage, true);
         }
     }
@@ -200,5 +201,26 @@ class Player extends Entity
             return true;
         }
         return false;
+    }
+
+    function spawnCorruptedLightBall(life:Float):Void {
+        var lilThing:CorruptedLightBall = null;
+        var found = false;
+        entities.forEachDead(function(entity:Entity):Void {
+            if (!found && Std.is(entity, CorruptedLightBall)) {
+                lilThing = cast (entity, CorruptedLightBall);
+                lilThing.reset(x, y);
+                lilThing.health = life;
+                found = true;
+            }
+        });
+        if (!found) {
+            var cnf:JsonEntity = {
+                name: "CorruptedLightBall", desc: "", x:x, y:y,
+                light:128, scale:1, damage:0, health:life, moveX:0, moveY:0
+            };
+            lilThing = new CorruptedLightBall(cnf, this, _level, entities);
+            entities.add(lilThing);
+        }
     }
 }
