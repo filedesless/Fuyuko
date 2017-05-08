@@ -8,11 +8,6 @@ class Lvl1 extends ParentState {
         _lvlConfig = openfl.Assets.getText(AssetPaths.Lvl1__json);
         _lvl = 1;
 
-        #if flash
-        felix.FelixSound.playBackground(AssetPaths.lvl1__mp3);
-        #else
-        felix.FelixSound.playBackground(AssetPaths.cave_theme__ogg);
-        #end
         super.create();
     }
 }

@@ -13,6 +13,8 @@ class CrystalBlue extends Entity implements ICollectableLight {
         loadGraphic(AssetPaths.crystal_blue__png, true, 416, 1033);
         rescale();
 
+        baseHealth = health = if (json.health == null) 20 else json.health;
+
         immovable = true;
 
         animation.add("full", [for (i in 8...12) i], 4, true);
@@ -42,5 +44,9 @@ class CrystalBlue extends Entity implements ICollectableLight {
         }
 
         super.update(elapsed);
+    }
+
+    override public function getLightRadius():Float {
+        return (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * health / _player.baseHealth;
     }
 }

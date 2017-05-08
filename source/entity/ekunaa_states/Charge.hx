@@ -17,14 +17,14 @@ class Charge extends FlxFSMState<Ekunaa>
 
     override public function update(elapsed:Float, owner:Ekunaa, fsm:FlxFSM<Ekunaa>):Void 
     {
-        if (owner.isTouching(FlxObject.WALL))
+        if (owner.isTouching(owner.direction))
             owner.direction = if (owner.direction == FlxObject.RIGHT) FlxObject.LEFT else FlxObject.RIGHT;
 
         if (_cnt++ == 120)
             owner.animation.play("charge");
 
         for (entity in owner.entities) {
-            if (Std.is(entity, IceCube)) {
+            if (entity.alive && Std.is(entity, IceCube)) {
                 var iceCube:IceCube = cast (entity, IceCube);
                 FlxObject.updateTouchingFlags(owner, iceCube);
                 if (owner.overlaps(iceCube)) {
@@ -34,6 +34,6 @@ class Charge extends FlxFSMState<Ekunaa>
         }
 
         if (_cnt > 120)
-            owner.velocity.x = if (owner.facing == FlxObject.RIGHT) 400 else -400;
+            owner.velocity.x = felix.FelixSave.get_vitMob() * if (owner.direction == FlxObject.RIGHT) 400 else -400;
     }
 }

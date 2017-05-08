@@ -168,4 +168,139 @@ class FelixSave {
         return ui_sound; // calls getter
     }
 
+    @:isVar static var vitMob(get, set):Float = 1;
+
+    public static function get_vitMob():Float {
+        if (FlxG.save.data.vitMob != null)
+            return FlxG.save.data.vitMob;
+        return 1;
+    }
+
+    public static function set_vitMob(newValue:Float):Float {
+        if (newValue != vitMob) {
+            FlxG.save.data.vitMob = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return vitMob;
+    }
+
+    @:isVar static var vitObstacles(get, set):Float = 1;
+
+    public static function get_vitObstacles():Float {
+        if (FlxG.save.data.vitObstacles != null)
+            return FlxG.save.data.vitObstacles;
+        return 1;
+    }
+
+    public static function set_vitObstacles(newValue:Float):Float {
+        if (newValue != vitObstacles) {
+            FlxG.save.data.vitObstacles = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return vitObstacles;
+    }
+
+    @:isVar static var recoTime(get, set):Float = 1;
+
+    public static function get_recoTime():Float {
+        if (FlxG.save.data.recoTime != null)
+            return FlxG.save.data.recoTime;
+        return 1;
+    }
+
+    public static function set_recoTime(newValue:Float):Float {
+        if (newValue != recoTime) {
+            FlxG.save.data.recoTime = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return recoTime;
+    }
+
+    @:isVar static var health(get, set):Float = 1;
+
+    public static function get_health():Float {
+        if (FlxG.save.data.health != null)
+            return FlxG.save.data.health;
+        return 1;
+    }
+
+    public static function set_health(newValue:Float):Float {
+        if (newValue != health) {
+            FlxG.save.data.health = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return health;
+    }
+
+    @:isVar static var dmgMonster(get, set):Float = 1;
+
+    public static function get_dmgMonster():Float {
+        if (FlxG.save.data.dmgMonster != null)
+            return FlxG.save.data.dmgMonster;
+        return 1;
+    }
+
+    public static function set_dmgMonster(newValue:Float):Float {
+        if (newValue != dmgMonster) {
+            FlxG.save.data.dmgMonster = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return dmgMonster;
+    }
+
+    @:isVar static var dmgObstacles(get, set):Float = 1;
+
+    public static function get_dmgObstacles():Float {
+        if (FlxG.save.data.dmgObstacles != null)
+            return FlxG.save.data.dmgObstacles;
+        return 1;
+    }
+
+    public static function set_dmgObstacles(newValue:Float):Float {
+        if (newValue != dmgObstacles) {
+            FlxG.save.data.dmgObstacles = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return dmgObstacles;
+    }
+
+    @:isVar static var light(get, set):Float = 1;
+
+    public static function get_light():Float {
+        if (FlxG.save.data.light != null)
+            return FlxG.save.data.light;
+        return 1;
+    }
+
+    public static function set_light(newValue:Float):Float {
+        if (newValue != light) {
+            FlxG.save.data.light = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return light;
+    }
+
+    @:isVar static var brightness(get, set):Float = 1;
+
+    public static function get_brightness():Float {
+        if (FlxG.save.data.brightness != null)
+            return FlxG.save.data.brightness;
+        return 1;
+    }
+
+    public static function set_brightness(newValue:Float):Float {
+        if (newValue != brightness) {
+            FlxG.save.data.brightness = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return brightness;
+    }
 }

@@ -29,6 +29,6 @@ class Report extends FlxFSMState<Shokuka>
         var path = new FlxPath();
         var points:Array<FlxPoint> = [dest];
         owner.path = path;
-        path.start(points, 400, FlxPath.FORWARD);
+        path.start(points, 400 * felix.FelixSave.get_vitMob(), FlxPath.FORWARD);
     }
 }

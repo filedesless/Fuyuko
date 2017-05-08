@@ -3,213 +3,444 @@
         {
             "name": "Player",
             "desc": "That Fuyuko tho",
-            "x": 320,
+            "x": 576,
             "y": 64,
             "light": 200,
             "scale": 0.45,
             "damage": 0
         },
         {
-            "name": "EndOfLevel",
-            "desc": "That's it. It's where it ends",
-            "x": 3200,
-            "y": 520,
-            "light": 0,
-            "scale": 1,
-            "damage": 0
-        },
-        {
-            "name": "Platform",
-            "desc": "The clouuuud",
-            "x": 2562,
-            "y": 800,
-            "light": 0,
-            "scale": 1,
-            "damage": 0
-        },
-        {
             "name": "CrystalBlue",
-            "desc": "Kind of like a checkpoint",
-            "x": 2000,
-            "y": 524,
-            "light": 128,
-            "scale": 0.1,
-            "damage": 0
-        },
-        {
-            "name": "SuraimuGreen",
+            "light": 192,
+            "damage": 0,
+            "scale": 0.186,
             "x": 320,
-            "y": 512,
-            "light": 0,
-            "scale": 0.25,
-            "damage": 0
+            "y": 1660
         },
         {
             "name": "CrystalBlue",
-            "desc": "Kind of like a checkpoint",
-            "x": 3800,
-            "y": 524,
             "light": 128,
-            "scale": 0.1,
-            "damage": 0
+            "damage": 0,
+            "scale": 0.186,
+            "x": 4544,
+            "y": 636
         },
         {
-            "name": "Shokuka",
-            "x": 500,
-            "y": 128,
+            "name": "CrystalBlue",
             "light": 128,
-            "scale": 0.25,
-            "damage": 0
+            "damage": 0,
+            "scale": 0.186,
+            "x": 5380,
+            "y": 1470
+        },
+        {
+            "name": "CrystalRed",
+            "light": 128,
+            "health": 20,
+            "damage": 0,
+            "scale": 0.154,
+            "x": 1534,
+            "y": 928
+        },
+        {
+            "name": "CrystalRed",
+            "light": 128,
+            "health": 20,
+            "damage": 0,
+            "scale": 0.154,
+            "x": 3904,
+            "y": 1505
+        },
+        {
+            "name": "CrystalYellow",
+            "light": 40,
+            "damage": 0,
+            "scale": 0.248,
+            "x": 5822,
+            "y": 1412
+        },
+        {
+            "name": "EndOfLevel",
+            "desc": "Par ici! Lance de la lumiere sur lui!",
+            "light": 192,
+            "damage": 0,
+            "scale": 5,
+            "x": 6017,
+            "y": 1518
+        },
+        {
+            "name": "IcePlatform",
+            "light": 0,
+            "damage": 0,
+            "scale": 1,
+            "x": 2752,
+            "y": 1150
+        },
+        {
+            "name": "IcePlatform",
+            "light": 0,
+            "damage": 0,
+            "scale": 1,
+            "x": 2528,
+            "y": 1118
+        },
+        {
+            "name": "IcePlatform",
+            "light": 0,
+            "damage": 0,
+            "scale": 1,
+            "x": 2944,
+            "y": 1186
+        },
+        {
+            "name": "IcePlatform",
+            "light": 0,
+            "damage": 0,
+            "scale": 1,
+            "x": 2304,
+            "y": 1088
         },
         {
             "name": "LightCube",
-            "x": 4736,
-            "y": 1792,
-            "light": 128,
-            "scale": 0.45,
-            "damage": 0
+            "light": 0,
+            "damage": 0,
+            "scale": 1.5,
+            "x": 1166,
+            "y": 1654
         },
         {
             "name": "Platform",
-            "desc": "The clouuuud",
-            "x": 4032,
-            "y": 1920,
             "light": 0,
+            "damage": 0,
             "scale": 1,
-            "damage": 0
-        },
-        {
-            "name": "Platform",
-            "desc": "The clouuuud",
-            "x": 3839,
-            "y": 1855,
-            "light": 0,
-            "scale": 1,
-            "damage": 0
-        },
-        {
-            "name": "Platform",
-            "desc": "The clouuuud",
-            "x": 3648,
-            "y": 1792,
-            "light": 0,
-            "scale": 1,
-            "damage": 0
-        },
-        {
-            "name": "Platform",
-            "desc": "The clouuuud",
-            "x": 3456,
-            "y": 1792,
-            "light": 0,
-            "scale": 1,
-            "damage": 0
-        },
-        {
-            "name": "Platform",
-            "desc": "The clouuuud",
-            "x": 3264,
-            "y": 1792,
-            "light": 0,
-            "scale": 1,
-            "damage": 0
-        },
-        {
-            "name": "Platform",
-            "desc": "The clouuuud",
-            "x": 3072,
-            "y": 1792,
-            "light": 0,
-            "scale": 1,
-            "damage": 0
-        },
-        {
-            "name": "Stalagmite",
-            "x": 3072,
-            "y": 2240,
-            "light": 0,
-            "scale": 1,
-            "damage": 0
-        },
-        {
-            "name": "Stalagmite",
-            "x": 3200,
-            "y": 2240,
-            "light": 0,
-            "scale": 1,
-            "damage": 0
-        },
-        {
-            "name": "Stalagmite",
             "x": 3328,
-            "y": 2240,
+            "y": 1648
+        },
+        {
+            "name": "Platform",
             "light": 0,
+            "damage": 0,
             "scale": 1,
-            "damage": 0
+            "x": 3328,
+            "y": 1520
+        },
+        {
+            "name": "Platform",
+            "light": 0,
+            "damage": 0,
+            "scale": 1,
+            "x": 3328,
+            "y": 1264
+        },
+        {
+            "name": "Platform",
+            "light": 0,
+            "damage": 0,
+            "scale": 1,
+            "x": 3328,
+            "y": 1456
+        },
+        {
+            "name": "Platform",
+            "light": 0,
+            "damage": 0,
+            "scale": 1,
+            "x": 3328,
+            "y": 1712
+        },
+        {
+            "name": "Platform",
+            "light": 0,
+            "damage": 0,
+            "scale": 1,
+            "x": 3328,
+            "y": 1776
+        },
+        {
+            "name": "Platform",
+            "light": 0,
+            "damage": 0,
+            "scale": 1,
+            "x": 3328,
+            "y": 1840
+        },
+        {
+            "name": "Platform",
+            "light": 0,
+            "damage": 0,
+            "scale": 1,
+            "x": 3328,
+            "y": 1584
+        },
+        {
+            "name": "Platform",
+            "light": 0,
+            "damage": 0,
+            "scale": 1,
+            "x": 3328,
+            "y": 1392
+        },
+        {
+            "name": "Platform",
+            "light": 0,
+            "damage": 0,
+            "scale": 1,
+            "x": 3328,
+            "y": 1329
+        },
+        {
+            "name": "Shokuka",
+            "light": 256,
+            "damage": 0,
+            "scale": 0.25,
+            "x": 1660,
+            "y": 942
         },
         {
             "name": "Stalagmite",
-            "x": 3456,
-            "y": 2240,
             "light": 0,
+            "damage": 0,
             "scale": 1,
-            "damage": 0
+            "x": 3648,
+            "y": 1856
         },
         {
             "name": "Stalagmite",
-            "x": 3584,
-            "y": 2240,
             "light": 0,
+            "damage": 0,
             "scale": 1,
-            "damage": 0
+            "x": 3776,
+            "y": 1856
         },
         {
             "name": "Stalagmite",
-            "x": 3712,
-            "y": 2240,
             "light": 0,
+            "damage": 0,
             "scale": 1,
-            "damage": 0
+            "x": 3905,
+            "y": 1856
         },
         {
             "name": "Stalagmite",
-            "x": 3840,
-            "y": 2240,
             "light": 0,
+            "damage": 0,
             "scale": 1,
-            "damage": 0
+            "x": 4034,
+            "y": 1856
         },
         {
             "name": "Stalagmite",
-            "x": 2432,
-            "y": 1344,
             "light": 0,
+            "damage": 0,
             "scale": 1,
-            "damage": 0
+            "x": 2496,
+            "y": 2112
         },
         {
             "name": "Stalagmite",
-            "x": 2240,
-            "y": 1344,
             "light": 0,
+            "damage": 0,
             "scale": 1,
-            "damage": 0
+            "x": 2368,
+            "y": 2112
         },
         {
-            "name": "Stalagmite",
-            "x": 2048,
-            "y": 1344,
+            "name": "Stalagtite",
             "light": 0,
-            "scale": 1,
-            "damage": 0
+            "damage": 0,
+            "scale": 0.5,
+            "x": 4672,
+            "y": 1342
         },
         {
-            "name": "Stalagmite",
-            "x": 1855,
-            "y": 1344,
+            "name": "Stalagtite",
             "light": 0,
+            "damage": 0,
+            "scale": 0.5,
+            "x": 5056,
+            "y": 1342
+        },
+        {
+            "name": "Stalagtite",
+            "light": 0,
+            "damage": 0,
+            "scale": 0.5,
+            "x": 4800,
+            "y": 1342
+        },
+        {
+            "name": "Stalagtite",
+            "light": 0,
+            "damage": 0,
+            "scale": 0.5,
+            "x": 4928,
+            "y": 1342
+        },
+        {
+            "name": "SuraimuGreen",
+            "light": 0,
+            "damage": 0,
+            "scale": 0.25,
+            "x": 4800,
+            "y": 318
+        },
+        {
+            "name": "SuraimuGreen",
+            "light": 0,
+            "damage": 0,
+            "scale": 0.25,
+            "x": 3800,
+            "y": 318
+        },
+        {
+            "name": "SuraimuGreen",
+            "light": 0,
+            "damage": 0,
+            "scale": 0.25,
+            "x": 4000,
+            "y": 318
+        },
+        {
+            "name": "SuraimuGreen",
+            "light": 0,
+            "damage": 0,
+            "scale": 0.25,
+            "x": 4300,
+            "y": 318
+        },
+        {
+            "name": "SuraimuGreen",
+            "light": 0,
+            "damage": 0,
+            "scale": 0.25,
+            "x": 4414,
+            "y": 318
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
             "scale": 1,
-            "damage": 0
+            "desc": "Aller! Pousse le cube!",
+            "x": 1092,
+            "y": 1620
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
+            "scale": 1,
+            "desc": "Aller! Saute!",
+            "x": 830,
+            "y": 1429
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
+            "scale": 1,
+            "desc": "Lumière! Juste pour toi!",
+            "x": 4778,
+            "y": 630
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
+            "scale": 1,
+            "desc": "Hey! Lance lui de la lumière!",
+            "x": 4130,
+            "y": 1648
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
+            "scale": 1,
+            "desc": "Attention! Cours et ne t'arrete pas!",
+            "x": 4618,
+            "y": 1728
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
+            "scale": 1,
+            "desc": "Cours! Sa va plus vite!",
+            "x": 2268,
+            "y": 294
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
+            "scale": 1,
+            "desc": "Attention! Monstre collant! Cours!",
+            "x": 3680,
+            "y": 285
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
+            "scale": 1,
+            "desc": "Encore! Ensuite des petits saut!",
+            "x": 3246,
+            "y": 1878
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
+            "scale": 1,
+            "desc": "Attention! C'est dangereux!",
+            "x": 2497,
+            "y": 1886
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
+            "scale": 1,
+            "desc": "On Saute!",
+            "x": 2060,
+            "y": 1913
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
+            "scale": 1,
+            "desc": "Aller! Un Grand Saut!",
+            "x": 2999,
+            "y": 1959
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
+            "scale": 1,
+            "desc": "Attention! Elle tombe!",
+            "x": 3110,
+            "y": 1042
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
+            "scale": 1,
+            "desc": "Hey! Lance de la lumière dessus!",
+            "x": 1660,
+            "y": 942
+        },
+        {
+            "name": "Wisp",
+            "light": 192,
+            "damage": 0,
+            "scale": 1,
+            "desc": "Hey! A tu détruis les 2 rouges?",
+            "x": 5541,
+            "y": 1519
         }
     ]
 }

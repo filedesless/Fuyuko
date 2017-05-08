@@ -24,7 +24,7 @@ class LightBall extends Entity {
         animation.add("idle", [1,2,13,14,13,2], 8, true);
         animation.play("idle");
 
-        _seed = _rnd.float(0,10);
+        _seed = rnd.float(0,10);
     }
 
     public override function update(elapsed:Float):Void {
@@ -59,5 +59,10 @@ class LightBall extends Entity {
     public function absorb(otherBall:LightBall):Void {
         health += otherBall.health;
         otherBall.kill();
+    }
+
+    override public function getLightRadius():Float {
+        var modifier = 1 + 0.02 * (health - 5);
+        return (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * felix.FelixSave.get_light() * modifier;
     }
 }

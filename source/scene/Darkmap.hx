@@ -33,16 +33,13 @@ class Darkmap extends FlxSprite {
     override public function update(elapsed:Float):Void {
         var injured:Bool = (_player.health < 50);
         var lineStyle:LineStyle = { 
-            color: if (injured) FlxColor.RED else FlxColor.BLUE,
-            thickness:  if (injured) _player.getLightRadius() * ((50 - _player.health) / 50) else 0
+            color: if (injured) FlxColor.RED else FlxColor.TRANSPARENT,
+            thickness:  if (injured) _player.getLightRadius() * ((_player.baseHealth / 2 - _player.health) / (_player.baseHealth / 2)) else 0
         };
         
         makeGraphic(FlxG.width, FlxG.height, 0xFE000000, true);
-        FlxSpriteUtil.drawCircle(this, 
-            _player.getScreenPosition().x + _player.width / 2, 
-            _player.getScreenPosition().y + _player.height / 2,
-            _player.getLightRadius(), 0xFFD0D0FF, lineStyle
-        );
+        var brit = felix.FelixSave.get_brightness();
+        
         _entities.forEachAlive(function(entity:Entity):Void {
             if (Std.is(entity, ILightSource)) {
                 var lightSource:ILightSource = cast(entity, ILightSource);
@@ -52,12 +49,17 @@ class Darkmap extends FlxSprite {
                         FlxSpriteUtil.drawCircle(this, 
                             entity.getScreenPosition().x + entity.width / 2,
                             entity.getScreenPosition().y + entity.height / 2, 
-                            lrad, if (Std.is(entity, CrystalRed)) 0x50F000D0 else 0xFFD0D0FF
+                            lrad, if (Std.is(entity, CrystalRed)) FlxColor.fromRGB(240, 0, 208, Math.floor(80 * brit)) 
+                                else FlxColor.fromRGB(208, 208, 255, Math.floor(120 * brit))
                         );
                 }
             }
         });
-
+        FlxSpriteUtil.drawCircle(this, 
+            _player.getScreenPosition().x + _player.width / 2, 
+            _player.getScreenPosition().y + _player.height / 2,
+            _player.getLightRadius(), FlxColor.fromRGB(208, 208, 208, Math.floor(96 * brit)), lineStyle
+        );
         _cnt++;
         super.update(elapsed);
     }

@@ -1,5 +1,6 @@
 package entity;
 
+import entity.misc.CorruptedLightBall;
 import flixel.group.FlxGroup.FlxTypedGroup;
 import flixel.tile.FlxTilemap;
 import scene.levels.JsonEntity;
@@ -10,6 +11,7 @@ import entity.player_states.*;
 import addons.FlxFSM;
 import flixel.system.FlxSound;
 import flixel.math.FlxPoint;
+import flixel.math.FlxRect;
 
 class Player extends Entity
 {
@@ -17,7 +19,8 @@ class Player extends Entity
     var fsm:FlxFSM<Player>;
     public var speedFactor:Float = 1;
     public var diffFactor:Float = 1;
-    public var cantJump:Bool = false;
+    public var cantJump:Int = 0;
+    public var slowedBy:Int = 0;
 
     var _heartSound:FlxSound = new FlxSound();
     var _hurtSound:FlxSound = new FlxSound();
@@ -25,6 +28,8 @@ class Player extends Entity
 
     public var center:FlxPoint = new FlxPoint();
     public var action:String = "";
+    public var nearBox:FlxRect = new FlxRect();
+    public var proximityBox:FlxRect = new FlxRect();
     
     public function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>)
     {
@@ -34,8 +39,7 @@ class Player extends Entity
         felix.FelixSound.register(_hurtSound);
         felix.FelixSound.register(_healSound);
 
-        health = 100;
-        solid = true;
+        baseHealth = health = Math.floor(felix.FelixSave.get_health() * 0.2 * if (json.health == null) 150 else json.health) * 5;  
 
         fsm = new FlxFSM<Player>(this);
         fsm.transitions
@@ -98,6 +102,7 @@ class Player extends Entity
         animation.add("fall", [for (i in 0...3) 24-i], 6, false);
         animation.add("reco", [for (i in 25...30) i], 24, false);
         animation.add("crouch", [for (i in 0...4) 29-i], 24, false);
+        animation.add("before_run", [for (i in 0...4) 29-i], 24, false);
 
         setFacingFlip(FlxObject.RIGHT, false, false);
         setFacingFlip(FlxObject.LEFT, true, false);
@@ -107,21 +112,27 @@ class Player extends Entity
         var pressingLeft:Bool = FlxG.keys.pressed.A;
         var pressingRight:Bool = FlxG.keys.pressed.D;
 
-        if (pressingLeft && !pressingRight) {
-            velocity.x = -300 * speedFactor;
-            facing = FlxObject.LEFT;
-        }
+        nearBox = new FlxRect(getMidpoint().x - 3 * 64, getMidpoint().y - 3 * 64, 6 * 64, 6 * 64);
+        proximityBox = new FlxRect(getMidpoint().x - 2 * 64, getMidpoint().y - 2 * 64, 4 * 64, 4 * 64);
 
-        if (pressingRight && !pressingLeft) {
-            velocity.x = 300 * speedFactor;
-            facing = FlxObject.RIGHT;
-        }
+        #if debug
+        FlxG.watch.add(this, "slowedBy");
+        FlxG.watch.add(this, "cantJump");
+        if (FlxG.mouse.justPressedRight)
+            setPosition(FlxG.mouse.getPosition().x, FlxG.mouse.getPosition().y);
+        #end
 
-        facing = switch ([pressingLeft, pressingRight, animation.name == "shoot"]) {
-            case [_, _, true]: if (FlxG.mouse.x > x) FlxObject.RIGHT else FlxObject.LEFT;
-            case [true, false, false]: FlxObject.LEFT;
-            case [false, true, false]: FlxObject.RIGHT;
-            case _: facing;
+        switch ([pressingLeft, pressingRight, animation.name == "shoot"]) {
+            case [_, _, true]: facing = if (FlxG.mouse.x > x) FlxObject.RIGHT else FlxObject.LEFT;
+            case [true, false, false]: 
+                facing = FlxObject.LEFT;
+                velocity.x = -300 * speedFactor * if (slowedBy > 0) 0.2 else 1;
+            case [false, true, false]: 
+                facing = FlxObject.RIGHT;
+                velocity.x = 300 * speedFactor * if (slowedBy > 0) 0.2 else 1;
+            case _: 
+                facing = if (FlxG.mouse.x > x) FlxObject.RIGHT else FlxObject.LEFT;
+                velocity.x = 0;
         }
 
         if (velocity.x < -20)
@@ -131,8 +142,8 @@ class Player extends Entity
         else
             velocity.x = 0;
 
-        if (health <= 50) {
-            var percent = (50 - health) / 50; // 0 to 1
+        if (health <= _json.health) {
+            var percent = (_json.health - health) / _json.health; // 0 to 1
             FlxG.camera.shake(percent * 0.0025, 0.1);
         }
 
@@ -143,7 +154,7 @@ class Player extends Entity
 
     public override function hurt(damage:Float) {
         if (alive && !FlxFlicker.isFlickering(this)) {
-            action = "spawnCorruptedLightBall";
+            spawnCorruptedLightBall(damage);
             decrease_life(damage, true);
         }
     }
@@ -151,7 +162,7 @@ class Player extends Entity
     public function decrease_life(damage:Float, checked:Bool = false) {
         if (checked || (alive && !FlxFlicker.isFlickering(this))) {
             health -= damage;
-            FlxFlicker.flicker(this, 1, 0.1, true);
+            FlxFlicker.flicker(this, felix.FelixSave.get_recoTime(), 0.1, true);
 
             felix.FelixSound.playGeneric(AssetPaths.hurt2__ogg, 
                 _hurtSound, felix.FelixSave.get_sound_effects(), false);
@@ -162,6 +173,7 @@ class Player extends Entity
             else if (health < 80)
                 felix.FelixSound.playGeneric(AssetPaths.heartbeat_slow__ogg, 
                     _heartSound, felix.FelixSave.get_ambient_music());
+            else _heartSound.stop();
 
             FlxG.camera.shake(0.005, 0.1);
             if (health <= 0) {
@@ -174,8 +186,9 @@ class Player extends Entity
         if (alive && !FlxFlicker.isFlickering(this)) {
             health += damage;
 
-            felix.FelixSound.playGeneric(AssetPaths.heal__ogg, 
-                _healSound, felix.FelixSave.get_sound_effects(), false, false);
+            if (!_healSound.playing)
+                felix.FelixSound.playGeneric(AssetPaths.heal__ogg, 
+                    _healSound, felix.FelixSave.get_sound_effects(), false, false);
             
             if (health < 50)
                 felix.FelixSound.playGeneric(AssetPaths.heartbeat_fast__ogg, 
@@ -183,8 +196,31 @@ class Player extends Entity
             else if (health < 80)
                 felix.FelixSound.playGeneric(AssetPaths.heartbeat_slow__ogg, 
                     _heartSound, felix.FelixSave.get_ambient_music());
+            else if (_heartSound.playing) _heartSound.stop();
+
             return true;
         }
         return false;
+    }
+
+    function spawnCorruptedLightBall(life:Float):Void {
+        var lilThing:CorruptedLightBall = null;
+        var found = false;
+        entities.forEachDead(function(entity:Entity):Void {
+            if (!found && Std.is(entity, CorruptedLightBall)) {
+                lilThing = cast (entity, CorruptedLightBall);
+                lilThing.reset(x, y);
+                lilThing.health = life;
+                found = true;
+            }
+        });
+        if (!found) {
+            var cnf:JsonEntity = {
+                name: "CorruptedLightBall", desc: "", x:x, y:y,
+                light:128, scale:1, damage:0, health:life, moveX:0, moveY:0
+            };
+            lilThing = new CorruptedLightBall(cnf, this, _level, entities);
+            entities.add(lilThing);
+        }
     }
 }

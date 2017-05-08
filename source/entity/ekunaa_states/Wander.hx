@@ -15,9 +15,9 @@ class Wander extends FlxFSMState<Ekunaa>
 
     override public function update(elapsed:Float, owner:Ekunaa, fsm:FlxFSM<Ekunaa>):Void 
     {
-        if (owner.isTouching(FlxObject.WALL))
+        if (owner.isTouching(owner.direction))
             owner.direction = if (owner.direction == FlxObject.RIGHT) FlxObject.LEFT else FlxObject.RIGHT;
 
-        owner.velocity.x = (Math.sin(_cnt++ / 100) + 1.5) * if (owner.direction == FlxObject.RIGHT) 75 else -75;
+        owner.velocity.x = (Math.sin(_cnt++ / 100) + 1.5) * felix.FelixSave.get_vitMob() * if (owner.direction == FlxObject.RIGHT) 75 else -75;
     }
 }

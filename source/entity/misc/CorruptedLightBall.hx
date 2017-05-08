@@ -15,12 +15,12 @@ class CorruptedLightBall extends Entity {
         loadGraphic(AssetPaths.orb__png, true, 32, 32);
         rescale();
 
-        health = 5;
-        
+        health = if (json.health == null) 5 else json.health;
+
         animation.add("idle", [49,50,61,62,61,50], 8, true);
         animation.play("idle");
 
-        _seed = _rnd.float(0,10);
+        _seed = rnd.float(0,10);
     }
 
     public override function update(elapsed:Float):Void {
@@ -35,8 +35,8 @@ class CorruptedLightBall extends Entity {
         super.update(elapsed);
     }
 
-    public function projection(i:Int) {
-        velocity.set(Math.cos(i * 3 * Math.PI / 4)*200, Math.sin(i * 3 * Math.PI / 4)*200);
+    public function projection(angle:Float) {
+        velocity.set(Math.cos(angle)*200, Math.sin(angle)*200);
         drag.set(100, 100);
         _projecting = true;
     }

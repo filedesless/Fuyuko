@@ -1,7 +1,5 @@
 package scene;
 
-import flixel.FlxObject;
-import flixel.util.FlxSort;
 import scene.levels.*;
 import flixel.effects.FlxFlicker;
 import flixel.util.FlxPath;
@@ -42,6 +40,12 @@ class ParentState extends FlxState {
         loadEvents();
         setCamera();
 
+        #if flash
+        felix.FelixSound.playBackground(AssetPaths.lvl1__mp3);
+        #else
+        felix.FelixSound.playBackground(AssetPaths.cave_theme__ogg);
+        #end
+
         super.create();
     }
 
@@ -60,12 +64,12 @@ class ParentState extends FlxState {
         tileHeight:Int = 64):Void
         {
             var bg:FlxSprite = new FlxSprite();
-            bg.loadGraphic(AssetPaths.grunge__png , true, 715, 250);
-            bg.animation.add("def", [for (i in 0...4) i], 24, true);
-            bg.animation.play("def");
-            bg.setGraphicSize(FlxG.width, FlxG.height);
-            bg.updateHitbox();
-            bg.scrollFactor.set();
+            bg.loadGraphic(AssetPaths.cavebg5__png);
+            //bg.animation.add("def", [for (i in 0...4) i], 24, true);
+            //bg.animation.play("def");
+            //bg.setGraphicSize(FlxG.width, FlxG.height);
+            //bg.updateHitbox();
+            //bg.scrollFactor.set();
             add(bg);
 
             _level = new FlxTilemap();
@@ -78,10 +82,10 @@ class ParentState extends FlxState {
     function loadEvents() {
         var cnf:JsonEntity = {
             name: "shokuka", desc: "", x:0, y:0,
-            light:128, scale:1, damage:0
+            light:128, scale:1, damage:0, health:5, moveX:0, moveY:0
         };
         _shokuka = new Shokuka(cnf, _player, _level, _entities);
-        var json:scene.levels.EntityList = haxe.Json.parse(_lvlConfig);
+        var json:EntityList = haxe.Json.parse(_lvlConfig);
         for (obj in json.objects)
             if (obj.name == "Player") _player = new Player(obj, _player, _level, _entities);
 
@@ -94,6 +98,10 @@ class ParentState extends FlxState {
         add(_entities);
         add(_player);
         add(_darkness);
+
+        _entities.forEachOfType(Wisp, function(navy:Wisp):Void {
+            add(navy.txt);
+        });
     }
 
     override public function update(elapsed:Float):Void {
@@ -107,8 +115,10 @@ class ParentState extends FlxState {
             setCamera();
         }
 
+        #if !debug
         if (!_player.inWorldBounds())
             _player.kill();
+        #end
 
         switch (_player.action) {
             case "spawnCorruptedLightBall": spawnCorruptedLightBall();
@@ -116,8 +126,10 @@ class ParentState extends FlxState {
         }
         _player.action = "";
 
+        #if !debug
         if (_level.overlapsPoint(_player.getMidpoint()))
             _player.kill();
+        #end
 
         handleLight();
     }
@@ -144,7 +156,7 @@ class ParentState extends FlxState {
         if (!found) {
             var cnf:JsonEntity = {
                 name: "LightBall", desc: "", x:_player.x, y:_player.y,
-                light:128, scale:1, damage:0
+                light:128, scale:1, damage:0, health:5, moveX:0, moveY:0
             };
             lilThing = new LightBall(cnf, _player, _level, _entities);
             _entities.add(lilThing);
@@ -169,7 +181,7 @@ class ParentState extends FlxState {
         if (!found) {
             var cnf:JsonEntity = {
                 name: "CorruptedLightBall", desc: "", x:_player.x, y:_player.y,
-                light:128, scale:1, damage:0
+                light:128, scale:1, damage:0, health:5, moveX:0, moveY:0
             };
             lilThing = new CorruptedLightBall(cnf, _player, _level, _entities);
             _entities.add(lilThing);
@@ -180,10 +192,10 @@ class ParentState extends FlxState {
         if (entity.alive && Std.is(entity, ICollectableLight)) {
             var light = cast (entity, ICollectableLight);
             if (_player.overlapsPoint(light.center) && light.health > 0) {
-                _player.health += 1;
-                _entities.forEachOfType(ICollectableLight, function(otherLight:ICollectableLight):Void {
-                    otherLight.health -= 1;
-                });
+                if (_player.heal(5))
+                    _entities.forEachOfType(ICollectableLight, function(otherLight:ICollectableLight):Void {
+                        otherLight.health -= 5;
+                    });
             }
         }
     }

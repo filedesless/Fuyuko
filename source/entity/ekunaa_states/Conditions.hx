@@ -24,7 +24,6 @@ class Conditions
 
     public static function hitWall(owner:Ekunaa):Bool {
         if (owner.isTouching(FlxObject.WALL)) {
-            owner.direction = if (owner.direction == FlxObject.RIGHT) FlxObject.LEFT else FlxObject.RIGHT;
             FlxG.camera.shake(0.05, 0.5);
             return true;
         } else return false;

@@ -1,5 +1,7 @@
 package entity.monsters;
 
+import flixel.util.FlxColor;
+import flixel.util.FlxSpriteUtil;
 import scene.levels.JsonEntity;
 import flixel.FlxObject;
 import flixel.FlxG;
@@ -43,6 +45,7 @@ class Ekunaa extends Entity {
 
         setFacingFlip(FlxObject.RIGHT, true, false);
         setFacingFlip(FlxObject.LEFT, false, false);
+        FlxG.watch.add(this, "direction");
     }
 
     public override function update(elapsed:Float):Void {
@@ -57,11 +60,11 @@ class Ekunaa extends Entity {
             viewBox = new FlxRect(getMidpoint().x - FlxG.width * 1.5, y - height / 2, FlxG.width * 1.5, height * 2);
 
         playerInSight = viewBox.containsPoint(_player.getMidpoint());
-
+        
         fsm.update(elapsed);
         FlxObject.updateTouchingFlags(this, _player);
         if (overlaps(_player)) {
-            _player.hurt(_json.damage);
+            _player.hurt(_json.damage * felix.FelixSave.get_dmgMonster());
             if (isTouching(FlxObject.WALL))
                 FlxObject.separate(this, _player);
         }
