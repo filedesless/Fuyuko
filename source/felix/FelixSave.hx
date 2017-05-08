@@ -48,6 +48,27 @@ class FelixSave {
         return setup_done;
     }
 
+    @:isVar static var antialiasing(get, set):Bool = false;
+
+    public static function get_antialiasing():Bool {
+        if (FlxG.save.data.antialiasing != null)
+            return FlxG.save.data.antialiasing;
+        return false;
+    }
+    /**
+        Sets the setup flag to true or false
+        @param  newValue    A boolean value indicating wether or not the setup was done
+        @return The value saved
+    **/
+    public static function set_antialiasing(newValue:Bool):Bool {
+        if (newValue != antialiasing) {
+            FlxG.save.data.antialiasing = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return antialiasing;
+    }
+
     /** Volume of the ambient music, from 0 to 100 **/
     @:isVar static var ambient_music(get, set):Float = -1;
     /**

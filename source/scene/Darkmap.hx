@@ -31,35 +31,38 @@ class Darkmap extends FlxSprite {
     }
 
     override public function update(elapsed:Float):Void {
-        var injured:Bool = (_player.health < 50);
-        var lineStyle:LineStyle = { 
-            color: if (injured) FlxColor.RED else FlxColor.TRANSPARENT,
-            thickness:  if (injured) _player.getLightRadius() * ((_player.baseHealth / 2 - _player.health) / (_player.baseHealth / 2)) else 0
-        };
-        
-        makeGraphic(FlxG.width, FlxG.height, 0xFE000000, true);
-        var brit = felix.FelixSave.get_brightness();
-        
-        _entities.forEachAlive(function(entity:Entity):Void {
-            if (Std.is(entity, ILightSource)) {
-                var lightSource:ILightSource = cast(entity, ILightSource);
+        if (_cnt % 3 == 0) {
+            var player_rad = _player.getLightRadius();
+            var injured:Bool = (_player.health < 50);
+            var lineStyle:LineStyle = { 
+                color: if (injured) FlxColor.RED else FlxColor.TRANSPARENT,
+                thickness:  if (injured) player_rad * ((_player.baseHealth / 2 - _player.health) / (_player.baseHealth / 2)) else 0
+            };
+
+            makeGraphic(FlxG.width, FlxG.height, 0xFE000000, true);
+            var brit = felix.FelixSave.get_brightness();
+            
+            _entities.forEachAlive(function(entity:Entity):Void {
                 if (entity.isOnScreen()) {
-                    var lrad:Float = lightSource.getLightRadius();
-                    if (lrad > 0)
-                        FlxSpriteUtil.drawCircle(this, 
-                            entity.getScreenPosition().x + entity.width / 2,
-                            entity.getScreenPosition().y + entity.height / 2, 
-                            lrad, if (Std.is(entity, CrystalRed)) FlxColor.fromRGB(240, 0, 208, Math.floor(80 * brit)) 
-                                else FlxColor.fromRGB(208, 208, 255, Math.floor(120 * brit))
-                        );
+                    var lightSource:ILightSource = cast(entity, ILightSource);
+                    if (Std.is(entity, ILightSource)) {
+                        var lrad:Float = lightSource.getLightRadius();
+                        if (lrad > 0)
+                            FlxSpriteUtil.drawCircle(this, 
+                                entity.getScreenPosition().x + entity.width / 2,
+                                entity.getScreenPosition().y + entity.height / 2, 
+                                lrad, if (Std.is(entity, CrystalRed)) FlxColor.fromRGB(240, 0, 208, Math.floor(80 * brit)) 
+                                    else FlxColor.fromRGB(208, 208, 255, Math.floor(120 * brit))
+                            );
+                    }
                 }
-            }
-        });
-        FlxSpriteUtil.drawCircle(this, 
-            _player.getScreenPosition().x + _player.width / 2, 
-            _player.getScreenPosition().y + _player.height / 2,
-            _player.getLightRadius(), FlxColor.fromRGB(208, 208, 208, Math.floor(96 * brit)), lineStyle
-        );
+            });
+            FlxSpriteUtil.drawCircle(this, 
+                _player.getScreenPosition().x + _player.width / 2, 
+                _player.getScreenPosition().y + _player.height / 2,
+                player_rad, FlxColor.fromRGB(208, 208, 208, Math.floor(96 * brit)), lineStyle
+            );
+        }
         _cnt++;
         super.update(elapsed);
     }

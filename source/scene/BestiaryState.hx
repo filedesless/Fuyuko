@@ -42,6 +42,7 @@ class BestiaryState extends FlxState {
     var _load:Loading;
 
     override public function create():Void {
+        FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
         _load = new Loading();
         _load.screenCenter(FlxAxes.XY);
         add(_load);
@@ -50,7 +51,7 @@ class BestiaryState extends FlxState {
     }
 
     override public function update(elapsed:Float):Void {
-        if (_cnt <= 55) {
+        if (_cnt <= 75) {
             buildFuyuko();
             buildEkunaa();
             buildShokuka();
@@ -89,7 +90,7 @@ class BestiaryState extends FlxState {
         );
 
         if (_cnt == 75)
-        _btnShokuka = new FelixMagicButton(
+        _btnSuraimu = new FelixMagicButton(
             -50, 375, this, "Suraimu", showSuraimu
         );
 
@@ -169,14 +170,19 @@ class BestiaryState extends FlxState {
         _btnGroupEkunaa.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
             FlxTween.tween(btn, { x: FlxG.width }, 0.5);
         });
+        _btnGroupSuraimu.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
+            FlxTween.tween(btn, { x: FlxG.width }, 0.5);
+        });
 
         remove(_groupEkunaa);
         remove(_groupShokuka);
         add(_groupFuyuko);
+        remove(_groupSuraimu);
 
         _btnFuyuko.disable();
         _btnEkunaa.enable();
         _btnShokuka.enable();
+        _btnSuraimu.enable();
 
         _btnGroupFuyuko.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
             FlxTween.tween(btn, { x: FlxG.width - btn.width + 50 }, 0.5);
@@ -234,14 +240,19 @@ class BestiaryState extends FlxState {
         _btnGroupFuyuko.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
             FlxTween.tween(btn, { x: FlxG.width }, 0.5);
         });
+        _btnGroupSuraimu.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
+            FlxTween.tween(btn, { x: FlxG.width }, 0.5);
+        });
 
         remove(_groupFuyuko);
         remove(_groupShokuka);
         add(_groupEkunaa);
+        remove(_groupSuraimu);
 
         _btnFuyuko.enable();
         _btnEkunaa.disable();
         _btnShokuka.enable();
+        _btnSuraimu.enable();
 
         _btnGroupEkunaa.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
             FlxTween.tween(btn, { x: FlxG.width - btn.width + 50 }, 0.5);
@@ -280,14 +291,19 @@ class BestiaryState extends FlxState {
         _btnGroupEkunaa.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
             FlxTween.tween(btn, { x: FlxG.width }, 0.5);
         });
+        _btnGroupSuraimu.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
+            FlxTween.tween(btn, { x: FlxG.width }, 0.5);
+        });
 
         remove(_groupFuyuko);
         remove(_groupEkunaa);
         add(_groupShokuka);
+        remove(_groupSuraimu);
 
         _btnFuyuko.enable();
         _btnEkunaa.enable();
         _btnShokuka.disable();
+        _btnSuraimu.enable();
     }
 
     function fuyukoAnimFinished(name:String):Void {
@@ -352,7 +368,7 @@ class BestiaryState extends FlxState {
         _btnGroupFuyuko.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
             FlxTween.tween(btn, { x: FlxG.width }, 0.5);
         });
-        _btnGroupSuraimu.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
+        _btnGroupEkunaa.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
             FlxTween.tween(btn, { x: FlxG.width }, 0.5);
         });
 
@@ -365,6 +381,10 @@ class BestiaryState extends FlxState {
         _btnEkunaa.enable();
         _btnShokuka.enable();
         _btnSuraimu.disable();
+
+        _btnGroupSuraimu.forEachOfType(FelixMagicButton, function(btn:FelixMagicButton):Void {
+            FlxTween.tween(btn, { x: FlxG.width - btn.width + 50 }, 0.5);
+        });
     }
 
     function clickQuitter():Void {

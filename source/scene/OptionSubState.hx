@@ -22,6 +22,8 @@ class OptionSubState extends FlxSubState {
     var _uiVolume:Int = 100;
     var _uiSlider:FlxSlider;
 
+    var _btnAntialiasing:FelixMagicButton;
+
     var i:Int = 0;
 
     override public function new(bgColor = 0xB0000000) {
@@ -38,7 +40,7 @@ class OptionSubState extends FlxSubState {
 
         _backgroundSlider = new FlxSlider(
             this, "_backgroundVolume",
-            FlxG.camera.width / 2 - 150,
+            FlxG.camera.width / 2 - 450,
             FlxG.camera.height / 2 - 100 - 15 - 45,
             0, 100, 300, 30, 6,
             FlxColor.WHITE, FlxColor.CYAN);
@@ -47,7 +49,7 @@ class OptionSubState extends FlxSubState {
 
         _sfxSlider = new FlxSlider(
             this, "_sfxVolume", 
-            FlxG.camera.width / 2 - 150,
+            FlxG.camera.width / 2 - 450,
             FlxG.camera.height / 2 - 15 - 45,
             0, 100, 300, 30, 5,
             FlxColor.WHITE, FlxColor.CYAN);
@@ -56,7 +58,7 @@ class OptionSubState extends FlxSubState {
 
         _ambientSlider = new FlxSlider(
             this, "_ambientVolume",
-            FlxG.camera.width / 2 - 150,
+            FlxG.camera.width / 2 - 450,
             FlxG.camera.height / 2 - 15 + 45,
             0, 100, 300, 30, 5,
             FlxColor.WHITE, FlxColor.CYAN);
@@ -65,7 +67,26 @@ class OptionSubState extends FlxSubState {
 
         _uiSlider = new FlxSlider(
             this, "_uiVolume",
-            FlxG.camera.width / 2 - 150,
+            FlxG.camera.width / 2 - 450,
+            FlxG.camera.height / 2 - 15 + 45*3,
+            0, 100, 300, 30, 5,
+            FlxColor.WHITE, FlxColor.CYAN);
+        _uiSlider.setTexts("Volume de l'interface");
+        _uiSlider.scrollFactor.set(); // makes it follow camera around
+
+        _btnAntialiasing = new FelixMagicButton(
+            FlxG.camera.width / 2 + 100, FlxG.camera.height / 2 - 100 - 15 - 45, 
+            this, if (felix.FelixSave.get_antialiasing()) "Lissage: Off" else "Lissage: On", function() { 
+                FlxG.camera.antialiasing = !FlxG.camera.antialiasing; 
+                _btnAntialiasing.button.text = if (_btnAntialiasing.button.text == "Lissage: Off") "Lissage: On" else "Lissage: Off";
+                felix.FelixSave.set_antialiasing(FlxG.camera.antialiasing);
+            }
+        );
+        _btnAntialiasing.scrollFactor.set();
+
+        _uiSlider = new FlxSlider(
+            this, "_uiVolume",
+            FlxG.camera.width / 2 - 450,
             FlxG.camera.height / 2 - 15 + 45*3,
             0, 100, 300, 30, 5,
             FlxColor.WHITE, FlxColor.CYAN);
@@ -91,6 +112,7 @@ class OptionSubState extends FlxSubState {
         #end
 
         add(btn);
+        add(_btnAntialiasing);
         add(_backgroundSlider);
         add(_sfxSlider);
         add(_ambientSlider);
