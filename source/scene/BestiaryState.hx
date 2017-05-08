@@ -261,7 +261,7 @@ class BestiaryState extends FlxState {
 
     function buildShokuka():Void {
         if (_cnt == 35) {
-            _canvasShokuka = new FlxSprite(0, 0, AssetPaths.beast_Shokuka__png);
+            _canvasShokuka = new FlxSprite(0, 0, AssetPaths.beast_shokuka__png);
             _entityShokuka = new FlxSprite();
             _entityShokuka.loadGraphic(AssetPaths.charsheet_shokuka__png, true, 317, 534);
             _entityShokuka.scale.set(0.38, 0.38);
@@ -318,9 +318,9 @@ class BestiaryState extends FlxState {
             _canvasSuraimu = new FlxSprite(0, 0, AssetPaths.beast_suraimu_vert__png);
             _entitySuraimu = new FlxSprite();
             _entitySuraimu.loadGraphic(AssetPaths.charsheet_suraimu_vert_charsheet__png, true, 256, 192);
-            _entitySuraimu.scale.set(0.25, 0.25);
+            _entitySuraimu.scale.set(0.5, 0.5);
             _entitySuraimu.updateHitbox();
-            _entitySuraimu.setPosition(80, 20);
+            _entitySuraimu.setPosition(100, 50);
         }
         
         if (_cnt == 55) {
