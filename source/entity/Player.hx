@@ -184,8 +184,9 @@ class Player extends Entity
         if (alive && !FlxFlicker.isFlickering(this)) {
             health += damage;
 
-            felix.FelixSound.playGeneric(AssetPaths.heal__ogg, 
-                _healSound, felix.FelixSave.get_sound_effects(), false, false);
+            if (!_healSound.playing)
+                felix.FelixSound.playGeneric(AssetPaths.heal__ogg, 
+                    _healSound, felix.FelixSave.get_sound_effects(), false, false);
             
             if (health < 50)
                 felix.FelixSound.playGeneric(AssetPaths.heartbeat_fast__ogg, 
@@ -193,7 +194,7 @@ class Player extends Entity
             else if (health < 80)
                 felix.FelixSound.playGeneric(AssetPaths.heartbeat_slow__ogg, 
                     _heartSound, felix.FelixSave.get_ambient_music());
-            else _heartSound.stop();
+            else if (_heartSound.playing) _heartSound.stop();
 
             return true;
         }
