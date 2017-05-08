@@ -34,7 +34,7 @@ class Darkmap extends FlxSprite {
         var injured:Bool = (_player.health < 50);
         var lineStyle:LineStyle = { 
             color: if (injured) FlxColor.RED else FlxColor.TRANSPARENT,
-            thickness:  if (injured) _player.getLightRadius() * ((50 - _player.health) / 50) else 0
+            thickness:  if (injured) _player.getLightRadius() * ((_player.baseHealth / 2 - _player.health) / (_player.baseHealth / 2)) else 0
         };
         
         makeGraphic(FlxG.width, FlxG.height, 0xFE000000, true);

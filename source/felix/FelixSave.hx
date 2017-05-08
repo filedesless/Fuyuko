@@ -224,7 +224,7 @@ class FelixSave {
     public static function get_health():Float {
         if (FlxG.save.data.health != null)
             return FlxG.save.data.health;
-        return 150;
+        return 1;
     }
 
     public static function set_health(newValue:Float):Float {
@@ -241,7 +241,7 @@ class FelixSave {
     public static function get_dmgMonster():Float {
         if (FlxG.save.data.dmgMonster != null)
             return FlxG.save.data.dmgMonster;
-        return 2;
+        return 1;
     }
 
     public static function set_dmgMonster(newValue:Float):Float {
@@ -258,7 +258,7 @@ class FelixSave {
     public static function get_dmgObstacles():Float {
         if (FlxG.save.data.dmgObstacles != null)
             return FlxG.save.data.dmgObstacles;
-        return 2;
+        return 1;
     }
 
     public static function set_dmgObstacles(newValue:Float):Float {
