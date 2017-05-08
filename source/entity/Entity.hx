@@ -18,6 +18,7 @@ class Entity extends FlxSprite implements ILightSource {
     public var rnd:FlxRandom;
     public var entities:FlxTypedGroup<Entity>;
     public var baseLight:Int;
+    public var baseHealth:Float;
 
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json.x, json.y);
@@ -28,6 +29,7 @@ class Entity extends FlxSprite implements ILightSource {
         this.entities = entities;
 
         baseLight = json.light;
+        baseHealth = health = if (json.health == null) 100 else json.health;  
 
         rnd = new FlxRandom();
         _lightStart = rnd.float(5, 16);
@@ -45,7 +47,8 @@ class Entity extends FlxSprite implements ILightSource {
     }
 
     public function getLightRadius():Float {
+        var percent = health / baseHealth;
         return if (baseLight == 0) 0 
-            else (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * felix.FelixSave.get_light() * if (health >= _json.health / 2) health / _json.health else 0.5;
+            else (baseLight + _lightStart * Math.sin(Math.floor(_cnt / _lightSpeed))) * felix.FelixSave.get_light() * if (health >= baseHealth / 2) percent else 0.5;
     }
 }

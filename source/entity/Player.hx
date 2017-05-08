@@ -20,7 +20,6 @@ class Player extends Entity
     public var diffFactor:Float = 1;
     public var cantJump:Int = 0;
     public var slowedBy:Int = 0;
-    public var baseHealth:Float;
 
     var _heartSound:FlxSound = new FlxSound();
     var _hurtSound:FlxSound = new FlxSound();

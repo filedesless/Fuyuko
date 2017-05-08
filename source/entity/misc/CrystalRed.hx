@@ -6,7 +6,6 @@ import scene.levels.JsonEntity;
 import flixel.group.FlxGroup.FlxTypedGroup;
 
 class CrystalRed extends Entity {
-    public var baseHealth:Float;
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
         loadGraphic(AssetPaths.crystal_red__png, true, 416, 1033);

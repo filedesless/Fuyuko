@@ -7,7 +7,6 @@ import flixel.group.FlxGroup.FlxTypedGroup;
 
 class CrystalBlue extends Entity implements ICollectableLight {
     public var center:FlxPoint = new FlxPoint();
-    public var baseHealth:Float;
 
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
