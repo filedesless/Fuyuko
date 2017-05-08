@@ -127,6 +127,8 @@ class DifficultyState extends FlxState {
     }
     
     override public function update(elapsed:Float):Void {
+        _dmgMobs = Math.floor(_dmgMobs/0.5)*0.5;
+        _dmgObstacles = Math.floor(_dmgObstacles/0.5)*0.5;
         switch (i++) {
             case 10: felix.FelixSave.set_vitMob(_vitMobs);
             case 20: felix.FelixSave.set_vitObstacles(_vitObstacles);

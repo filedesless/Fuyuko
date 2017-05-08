@@ -25,6 +25,9 @@ class FireBall extends Entity {
                 new FlxPoint(x, y)], 60 * felix.FelixSave.get_vitObstacles(), FlxPath.YOYO);
 
         solid = false;
+
+        baseHealth = health = 10;
+        baseLight = 25;
         
         animation.add("idle", [33,34,35,42,43,44,45,46,47,46,45,44,43,42,35,34], 3, true);
         animation.play("idle");
@@ -41,7 +44,7 @@ class FireBall extends Entity {
         immovable = true;
 
         if (overlaps(_player))
-            _player.hurt(5);
+            _player.hurt(_json.damage * felix.FelixSave.get_dmgObstacles());
 
         super.update(elapsed);
     }

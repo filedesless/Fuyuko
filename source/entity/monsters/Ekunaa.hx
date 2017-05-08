@@ -64,7 +64,7 @@ class Ekunaa extends Entity {
         fsm.update(elapsed);
         FlxObject.updateTouchingFlags(this, _player);
         if (overlaps(_player)) {
-            _player.hurt(_json.damage);
+            _player.hurt(_json.damage * felix.FelixSave.get_dmgMonster());
             if (isTouching(FlxObject.WALL))
                 FlxObject.separate(this, _player);
         }
