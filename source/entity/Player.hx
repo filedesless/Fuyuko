@@ -101,6 +101,7 @@ class Player extends Entity
         animation.add("fall", [for (i in 0...3) 24-i], 6, false);
         animation.add("reco", [for (i in 25...30) i], 24, false);
         animation.add("crouch", [for (i in 0...4) 29-i], 24, false);
+        animation.add("before_run", [for (i in 0...4) 29-i], 24, false);
 
         setFacingFlip(FlxObject.RIGHT, false, false);
         setFacingFlip(FlxObject.LEFT, true, false);
