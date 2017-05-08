@@ -192,10 +192,10 @@ class ParentState extends FlxState {
         if (entity.alive && Std.is(entity, ICollectableLight)) {
             var light = cast (entity, ICollectableLight);
             if (_player.overlapsPoint(light.center) && light.health > 0) {
-                _player.health += 1;
-                _entities.forEachOfType(ICollectableLight, function(otherLight:ICollectableLight):Void {
-                    otherLight.health -= 1;
-                });
+                if (_player.heal(1))
+                    _entities.forEachOfType(ICollectableLight, function(otherLight:ICollectableLight):Void {
+                        otherLight.health -= 1;
+                    });
             }
         }
     }

@@ -20,6 +20,7 @@ class Player extends Entity
     public var diffFactor:Float = 1;
     public var cantJump:Int = 0;
     public var slowedBy:Int = 0;
+    public var baseHealth:Float;
 
     var _heartSound:FlxSound = new FlxSound();
     var _hurtSound:FlxSound = new FlxSound();
@@ -38,7 +39,7 @@ class Player extends Entity
         felix.FelixSound.register(_hurtSound);
         felix.FelixSound.register(_healSound);
 
-        health = if (json.health == null) 100 else json.health;  
+        baseHealth = health = felix.FelixSave.get_health() * if (json.health == null) 150 else json.health;  
 
         fsm = new FlxFSM<Player>(this);
         fsm.transitions
@@ -140,8 +141,8 @@ class Player extends Entity
         else
             velocity.x = 0;
 
-        if (health <= 50) {
-            var percent = (50 - health) / 50; // 0 to 1
+        if (health <= _json.health) {
+            var percent = (_json.health - health) / _json.health; // 0 to 1
             FlxG.camera.shake(percent * 0.0025, 0.1);
         }
 
@@ -160,7 +161,7 @@ class Player extends Entity
     public function decrease_life(damage:Float, checked:Bool = false) {
         if (checked || (alive && !FlxFlicker.isFlickering(this))) {
             health -= damage;
-            FlxFlicker.flicker(this, 1, 0.1, true);
+            FlxFlicker.flicker(this, felix.FelixSave.get_recoTime(), 0.1, true);
 
             felix.FelixSound.playGeneric(AssetPaths.hurt2__ogg, 
                 _hurtSound, felix.FelixSave.get_sound_effects(), false);
@@ -171,6 +172,7 @@ class Player extends Entity
             else if (health < 80)
                 felix.FelixSound.playGeneric(AssetPaths.heartbeat_slow__ogg, 
                     _heartSound, felix.FelixSave.get_ambient_music());
+            else _heartSound.stop();
 
             FlxG.camera.shake(0.005, 0.1);
             if (health <= 0) {
@@ -192,6 +194,8 @@ class Player extends Entity
             else if (health < 80)
                 felix.FelixSound.playGeneric(AssetPaths.heartbeat_slow__ogg, 
                     _heartSound, felix.FelixSave.get_ambient_music());
+            else _heartSound.stop();
+
             return true;
         }
         return false;
