@@ -8,6 +8,7 @@ import flixel.tile.FlxTilemap;
 import entity.suraimu_states.*;
 import addons.FlxFSM;
 import flixel.group.FlxGroup;
+import flixel.system.FlxSound;
 
 class Suraimu extends Entity {
     var fsm:FlxFSM<Suraimu>;
@@ -18,6 +19,10 @@ class Suraimu extends Entity {
     public var falling:Bool = false;
     public var grounded:Bool = false;
     public var speedFactor:Float;
+
+    var _jumpSound:FlxSound = new FlxSound();
+    var _walkSound:FlxSound = new FlxSound();
+    var _splashSound:FlxSound = new FlxSound();
 
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>, graphic:String):Void {
         super(json, player, level, entities);
@@ -91,5 +96,23 @@ class Suraimu extends Entity {
 
     public function unStickPlayer():Void {
         
+    }
+
+    public function playWalk():Void{
+        if(!_walkSound.playing)
+            felix.FelixSound.playGeneric(AssetPaths.slimeWalk__ogg, 
+                    _walkSound, felix.FelixSave.get_ambient_music(),false);
+    }
+
+    public function playJump():Void{
+        if(!_jumpSound.playing)
+            felix.FelixSound.playGeneric(AssetPaths.slimeJump__ogg, 
+                    _jumpSound, felix.FelixSave.get_ambient_music(),false);
+    }
+
+    public function playSplash():Void{
+        if(!_splashSound.playing)
+            felix.FelixSound.playGeneric(AssetPaths.slimeSplash__ogg, 
+                    _splashSound, felix.FelixSave.get_ambient_music(),false);
     }
 }

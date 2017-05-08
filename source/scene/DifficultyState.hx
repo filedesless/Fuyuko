@@ -156,7 +156,7 @@ class DifficultyState extends FlxState {
         #if !html5
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         #end
-        FlxG.switchState(new scene.levels.Lvl4());
+        FlxG.switchState(new scene.levels.Lvl1());
     }
 
     function click_exit():Void {

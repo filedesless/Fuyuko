@@ -9,6 +9,7 @@ class Splash extends FlxFSMState<Suraimu>
     {
         owner.animation.play("splash");
         owner.velocity.x = 0;
+        owner.playSplash();
     }
     
     override public function update(elapsed:Float, owner:Suraimu, fsm:FlxFSM<Suraimu>):Void 
