@@ -1,2059 +1,1112 @@
 {
-         "objects":[
-                {
-                 "height":16,
-                 "id":50,
-                 "name":"FireBall",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":128,
-                     "moveX":384,
-                     "moveY":384,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":3807.15151515152,
-                 "y":1307.15151515152
-                }, 
-                {
-                 "height":16,
-                 "id":51,
-                 "name":"FireBall",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":192,
-                     "moveX":1152,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":2643.51515151515,
-                 "y":1240.63636363636
-                }, 
-                {
-                 "height":16,
-                 "id":55,
-                 "name":"FireBall",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":192,
-                     "moveX":964,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":4929.66666666667,
-                 "y":540.484848484848
-                }, 
-                {
-                 "height":16,
-                 "id":56,
-                 "name":"FireBall",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":192,
-                     "moveX":0,
-                     "moveY":256,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":4950.66666666667,
-                 "y":153
-                }, 
-                {
-                 "height":16,
-                 "id":57,
-                 "name":"FireBall",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":192,
-                     "moveX":0,
-                     "moveY":256,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":5465.36363636364,
-                 "y":278.787878787879
-                }, 
-                {
-                 "height":16,
-                 "id":58,
-                 "name":"FireBall",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":192,
-                     "moveX":0,
-                     "moveY":-384,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":5717.33333333333,
-                 "y":602
-                }, 
-                {
-                 "height":16,
-                 "id":59,
-                 "name":"FireBall",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":192,
-                     "moveX":0,
-                     "moveY":-384,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":5652.66666666667,
-                 "y":604
-                }, 
-                {
-                 "height":16,
-                 "id":60,
-                 "name":"FireBall",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":192,
-                     "moveX":0,
-                     "moveY":960,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":1338,
-                 "y":596
-                }, 
-                {
-                 "height":16,
-                 "id":61,
-                 "name":"FireBall",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":192,
-                     "moveX":0,
-                     "moveY":-960,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":2292,
-                 "y":732
-                }, 
-                {
-                 "height":16,
-                 "id":84,
-                 "name":"FireBall",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":192,
-                     "moveX":640,
-                     "moveY":-640,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":16,
-                 "x":2073.87878787879,
-                 "y":1821.33333333333
-                }, 
-                {
-                 "height":13.3333,
-                 "id":4,
-                 "name":"Wisp",
-                 
-                     "desc":"Hehe! Bravo! Mais attention, ici c'est un vrai labyrinthe",
-                     "light":128,
-                     "scale":1
-                    ,
-                 
-                     "desc":"string",
-                     "light":"int",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":12,
-                 "x":434.606243939394,
-                 "y":801.759259090909
-                }, 
-                {
-                 "height":13.3333,
-                 "id":75,
-                 "name":"Wisp",
-                 
-                     "desc":"Par ici! Un crystal rouge en haut!",
-                     "light":128,
-                     "scale":1
-                    ,
-                 
-                     "desc":"string",
-                     "light":"int",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":12,
-                 "x":1886,
-                 "y":611.33335
-                }, 
-                {
-                 "height":13.3333,
-                 "id":76,
-                 "name":"Wisp",
-                 
-                     "desc":"Attention! Le Roi des Suraimu bleu est proche!",
-                     "light":128,
-                     "scale":1
-                    ,
-                 
-                     "desc":"string",
-                     "light":"int",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":12,
-                 "x":2652,
-                 "y":351.33335
-                }, 
-                {
-                 "height":13.3333,
-                 "id":82,
-                 "name":"Wisp",
-                 
-                     "desc":"Hey! Il peut t'aider pour aller plus haut!",
-                     "light":128,
-                     "scale":1
-                    ,
-                 
-                     "desc":"string",
-                     "light":"int",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":12,
-                 "x":848.545454545455,
-                 "y":1799.39395606061
-                }, 
-                {
-                 "height":13.3333,
-                 "id":85,
-                 "name":"Wisp",
-                 
-                     "desc":"Tu est presque arriv\u00e9! As-tu d\u00e9truis les 3 rouges?",
-                     "light":128,
-                     "scale":1
-                    ,
-                 
-                     "desc":"string",
-                     "light":"int",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":12,
-                 "x":5178.84848484848,
-                 "y":438.787895454545
-                }, 
-                {
-                 "height":13.3333,
-                 "id":83,
-                 "name":"Wisp",
-                 
-                     "desc":"Par ici! Un crystal rouge a gauche!",
-                     "light":128,
-                     "scale":1
-                    ,
-                 
-                     "desc":"string",
-                     "light":"int",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":12,
-                 "x":1427.33333333333,
-                 "y":1369.09092575758
-                }, 
-                {
-                 "height":28,
-                 "id":2,
-                 "name":"SuraimuOrange",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.25
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":1595.39393939394,
-                 "y":1015.06060606061
-                }, 
-                {
-                 "height":28,
-                 "id":12,
-                 "name":"SuraimuOrange",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.25
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":1949,
-                 "y":1022
-                }, 
-                {
-                 "height":28,
-                 "id":13,
-                 "name":"SuraimuOrange",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.25
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":2235,
-                 "y":1128
-                }, 
-                {
-                 "height":28,
-                 "id":14,
-                 "name":"SuraimuOrange",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.25
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":3065.90909090909,
-                 "y":838.909090909091
-                }, 
-                {
-                 "height":28,
-                 "id":1,
-                 "name":"SuraimuOrange",
-                 
-                     "damage":5,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.25
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":1200.30303030303,
-                 "y":837.242424242424
-                }, 
-                {
-                 "height":28,
-                 "id":19,
-                 "name":"SuraimuGreen",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.25
-                    ,
-                 
-                     "damage":"int",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":1204,
-                 "y":1995.09090909091
-                }, 
-                {
-                 "height":28,
-                 "id":20,
-                 "name":"SuraimuGreen",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.25
-                    ,
-                 
-                     "damage":"int",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":1434,
-                 "y":1962
-                }, 
-                {
-                 "height":28,
-                 "id":3,
-                 "name":"SuraimuBlue",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.25
-                    ,
-                 
-                     "damage":"int",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":4284.15151515152,
-                 "y":1907.69696969697
-                }, 
-                {
-                 "height":28,
-                 "id":16,
-                 "name":"SuraimuBlue",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.25
-                    ,
-                 
-                     "damage":"int",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":5218.33333333333,
-                 "y":1892.06060606061
-                }, 
-                {
-                 "height":28,
-                 "id":17,
-                 "name":"SuraimuBlue",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"int",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":4781.9696969697,
-                 "y":1886
-                }, 
-                {
-                 "height":28,
-                 "id":18,
-                 "name":"SuraimuBlue",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.25
-                    ,
-                 
-                     "damage":"int",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":4503.18181818182,
-                 "y":1910.24242424242
-                }, 
-                {
-                 "height":28,
-                 "id":62,
-                 "name":"SuraimuBlue",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.25
-                    ,
-                 
-                     "damage":"int",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":2983,
-                 "y":444
-                }, 
-                {
-                 "height":28,
-                 "id":63,
-                 "name":"SuraimuBlue",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.25
-                    ,
-                 
-                     "damage":"int",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":3165,
-                 "y":440
-                }, 
-                {
-                 "height":28,
-                 "id":64,
-                 "name":"SuraimuBlue",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"int",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":3470,
-                 "y":352
-                }, 
-                {
-                 "height":28,
-                 "id":65,
-                 "name":"SuraimuBlue",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.25
-                    ,
-                 
-                     "damage":"int",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":30,
-                 "x":3787,
-                 "y":424
-                }, 
-                {
-                 "height":0,
-                 "id":6,
-                 "name":"EndOfLevel",
-                 
-                     "damage":0,
-                     "desc":"Par ici! Tu est sur la bonne voie!",
-                     "health":0,
-                     "light":384,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":5
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":0,
-                 "x":6048.48484848485,
-                 "y":412.121212121212
-                }, 
-                {
-                 "height":192,
-                 "id":7,
-                 "name":"CrystalBlue",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":192,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.186
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":514,
-                 "y":1338
-                }, 
-                {
-                 "height":192,
-                 "id":8,
-                 "name":"CrystalBlue",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":192,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.186
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":3706.60606060606,
-                 "y":1532
-                }, 
-                {
-                 "height":192,
-                 "id":9,
-                 "name":"CrystalRed",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":20,
-                     "light":192,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.186
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":3968,
-                 "y":320
-                }, 
-                {
-                 "height":192,
-                 "id":10,
-                 "name":"CrystalRed",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":20,
-                     "light":192,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.186
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":1854,
-                 "y":126
-                }, 
-                {
-                 "height":192,
-                 "id":11,
-                 "name":"CrystalRed",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":20,
-                     "light":192,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.186
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":1152,
-                 "y":1342
-                }, 
-                {
-                 "height":256,
-                 "id":54,
-                 "name":"CrystalYellow",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":5,
-                     "light":100,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":0.248
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":5792.24242424242,
-                 "y":314.424242424242
-                }, 
-                {
-                 "height":64,
-                 "id":21,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3486.54545454545,
-                 "y":1152.84848484848
-                }, 
-                {
-                 "height":64,
-                 "id":22,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3576,
-                 "y":1153.33333333333
-                }, 
-                {
-                 "height":64,
-                 "id":23,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3682.66666666667,
-                 "y":1152
-                }, 
-                {
-                 "height":64,
-                 "id":24,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3529.33333333333,
-                 "y":1153.33333333333
-                }, 
-                {
-                 "height":64,
-                 "id":25,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3629.33333333333,
-                 "y":1152
-                }, 
-                {
-                 "height":64,
-                 "id":26,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3078,
-                 "y":1152
-                }, 
-                {
-                 "height":64,
-                 "id":27,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":2918,
-                 "y":1150
-                }, 
-                {
-                 "height":64,
-                 "id":28,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":2758,
-                 "y":1150
-                }, 
-                {
-                 "height":64,
-                 "id":29,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3208,
-                 "y":1150
-                }, 
-                {
-                 "height":64,
-                 "id":30,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":850,
-                 "y":447
-                }, 
-                {
-                 "height":64,
-                 "id":32,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":971,
-                 "y":446
-                }, 
-                {
-                 "height":64,
-                 "id":34,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":1092,
-                 "y":447
-                }, 
-                {
-                 "height":64,
-                 "id":36,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":1217,
-                 "y":448
-                }, 
-                {
-                 "height":64,
-                 "id":66,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":2962,
-                 "y":127
-                }, 
-                {
-                 "height":64,
-                 "id":67,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3090,
-                 "y":128
-                }, 
-                {
-                 "height":64,
-                 "id":68,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3219,
-                 "y":126
-                }, 
-                {
-                 "height":64,
-                 "id":69,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3346,
-                 "y":128
-                }, 
-                {
-                 "height":64,
-                 "id":70,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3472,
-                 "y":128
-                }, 
-                {
-                 "height":64,
-                 "id":71,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3597,
-                 "y":127
-                }, 
-                {
-                 "height":64,
-                 "id":72,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3726,
-                 "y":127
-                }, 
-                {
-                 "height":64,
-                 "id":73,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":3859,
-                 "y":127
-                }, 
-                {
-                 "height":64,
-                 "id":74,
-                 "name":"Stalagtite",
-                 
-                     "damage":20,
-                     "health":0,
-                     "scale":0.5
-                    ,
-                 
-                     "damage":"float",
-                     "health":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":32,
-                 "x":2831,
-                 "y":128
-                }, 
-                {
-                 "height":16,
-                 "id":37,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":3968,
-                 "y":751.545454545455
-                }, 
-                {
-                 "height":16,
-                 "id":38,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":3968,
-                 "y":688
-                }, 
-                {
-                 "height":16,
-                 "id":39,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":3967.75,
-                 "y":623.75
-                }, 
-                {
-                 "height":16,
-                 "id":40,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":3967.75,
-                 "y":559.75
-                }, 
-                {
-                 "height":16,
-                 "id":41,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":1792,
-                 "y":1264.09090909091
-                }, 
-                {
-                 "height":16,
-                 "id":42,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":1792,
-                 "y":1200.25
-                }, 
-                {
-                 "height":16,
-                 "id":43,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":1791.5,
-                 "y":1135.75
-                }, 
-                {
-                 "height":16,
-                 "id":44,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":1663.79545454545,
-                 "y":1711.90575757576
-                }, 
-                {
-                 "height":16,
-                 "id":45,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":1663.65909090909,
-                 "y":1647.95121212121
-                }, 
-                {
-                 "height":16,
-                 "id":46,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":1663.79545454545,
-                 "y":1775.56393939394
-                }, 
-                {
-                 "height":16,
-                 "id":47,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":1664.06818181818,
-                 "y":1519.66333333333
-                }, 
-                {
-                 "height":16,
-                 "id":49,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":1663.97727272727,
-                 "y":1584.1396969697
-                }, 
-                {
-                 "height":16,
-                 "id":77,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":255.795,
-                 "y":1647.34
-                }, 
-                {
-                 "height":16,
-                 "id":78,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":256.115,
-                 "y":1583.53
-                }, 
-                {
-                 "height":16,
-                 "id":79,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":256.205,
-                 "y":1519.05
-                }, 
-                {
-                 "height":16,
-                 "id":80,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":255.935,
-                 "y":1774.95
-                }, 
-                {
-                 "height":16,
-                 "id":81,
-                 "name":"Platform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":255.935,
-                 "y":1711.3
-                }, 
-                {
-                 "height":64,
-                 "id":52,
-                 "name":"IcePlatform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":4864.9696969697,
-                 "y":444.151515151515
-                }, 
-                {
-                 "height":64,
-                 "id":53,
-                 "name":"IcePlatform",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":64,
-                 "x":5504.36363636364,
-                 "y":510.424242424242
-                }, 
-                {
-                 "height":128,
-                 "id":15,
-                 "name":"LightCube",
-                 
-                     "damage":0,
-                     "desc":"",
-                     "health":0,
-                     "light":0,
-                     "moveX":0,
-                     "moveY":0,
-                     "scale":1
-                    ,
-                 
-                     "damage":"float",
-                     "desc":"string",
-                     "health":"float",
-                     "light":"int",
-                     "moveX":"float",
-                     "moveY":"float",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":128,
-                 "x":812,
-                 "y":1908
-                }, 
-                {
-                 "height":134.667,
-                 "id":5,
-                 "name":"Player",
-                 
-                     "health":100,
-                     "light":200,
-                     "scale":1
-                    ,
-                 
-                     "health":"float",
-                     "light":"int",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":100,
-                 "x":74.6058772727272,
-                 "y":597.028653030303
-                }, 
-                {
-                 "height":13.3333,
-                 "id":87,
-                 "name":"Wisp",
-                 
-                     "desc":"Attention! Les oranges sont dangereuses",
-                     "light":200,
-                     "scale":1
-                    ,
-                 
-                     "desc":"string",
-                     "light":"int",
-                     "scale":"float"
-                    ,"rotation":0,
-                 "type":"",
-                 "visible":true,
-                 "width":12,
-                 "x":938,
-                 "y":749.33335
-                }]
+    "objects": [
+        {
+            "height": 134.667,
+            "id": 5,
+            "name": "Player",
+            "health": 100,
+            "light": 200,
+            "scale": 1,
+            "width": 100,
+            "x": 74.6058772727272,
+            "y": 597.028653030303
+        },
+        {
+            "name": "Shokuka",
+            "light": 256,
+            "damage": 0,
+            "scale": 0.25,
+            "x": 2432,
+            "y": 1278
+        },
+        {
+            "height": 16,
+            "id": 50,
+            "name": "FireBall",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 128,
+            "moveX": 384,
+            "moveY": 384,
+            "scale": 1,
+            "x": 3807.15151515152,
+            "y": 1307.15151515152
+        },
+        {
+            "height": 16,
+            "id": 51,
+            "name": "FireBall",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 192,
+            "moveX": 1152,
+            "moveY": 0,
+            "scale": 1,
+            "x": 2643.51515151515,
+            "y": 1240.63636363636
+        },
+        {
+            "height": 16,
+            "id": 55,
+            "name": "FireBall",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 192,
+            "moveX": 964,
+            "moveY": 0,
+            "scale": 1,
+            "x": 4929.66666666667,
+            "y": 540.484848484848
+        },
+        {
+            "height": 16,
+            "id": 56,
+            "name": "FireBall",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 192,
+            "moveX": 0,
+            "moveY": 256,
+            "scale": 1,
+            "x": 4950.66666666667,
+            "y": 153
+        },
+        {
+            "height": 16,
+            "id": 57,
+            "name": "FireBall",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 192,
+            "moveX": 0,
+            "moveY": 256,
+            "scale": 1,
+            "x": 5465.36363636364,
+            "y": 278.787878787879
+        },
+        {
+            "height": 16,
+            "id": 58,
+            "name": "FireBall",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 192,
+            "moveX": 0,
+            "moveY": -384,
+            "scale": 1,
+            "x": 5717.33333333333,
+            "y": 602
+        },
+        {
+            "height": 16,
+            "id": 59,
+            "name": "FireBall",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 192,
+            "moveX": 0,
+            "moveY": -384,
+            "scale": 1,
+            "x": 5652.66666666667,
+            "y": 604
+        },
+        {
+            "height": 16,
+            "id": 60,
+            "name": "FireBall",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 192,
+            "moveX": 0,
+            "moveY": 960,
+            "scale": 1,
+            "x": 1338,
+            "y": 596
+        },
+        {
+            "height": 16,
+            "id": 61,
+            "name": "FireBall",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 192,
+            "moveX": 0,
+            "moveY": -960,
+            "scale": 1,
+            "x": 2292,
+            "y": 732
+        },
+        {
+            "height": 16,
+            "id": 84,
+            "name": "FireBall",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 192,
+            "moveX": 640,
+            "moveY": -640,
+            "scale": 1,
+            "x": 2073.87878787879,
+            "y": 1821.33333333333
+        },
+        {
+            "height": 13.3333,
+            "id": 4,
+            "name": "Wisp",
+            "desc": "Hehe! Bravo! Mais attention, ici c'est un vrai labyrinthe",
+            "light": 128,
+            "scale": 1,
+            "width": 12,
+            "x": 434.606243939394,
+            "y": 801.759259090909
+        },
+        {
+            "height": 13.3333,
+            "id": 75,
+            "name": "Wisp",
+            "desc": "Par ici! Un crystal rouge en haut!",
+            "light": 128,
+            "scale": 1,
+            "width": 12,
+            "x": 1886,
+            "y": 611.33335
+        },
+        {
+            "height": 13.3333,
+            "id": 76,
+            "name": "Wisp",
+            "desc": "Attention! Le Roi des Suraimu bleu est proche!",
+            "light": 128,
+            "scale": 1,
+            "width": 12,
+            "x": 2652,
+            "y": 351.33335
+        },
+        {
+            "height": 13.3333,
+            "id": 82,
+            "name": "Wisp",
+            "desc": "Hey! Il peut t'aider pour aller plus haut!",
+            "light": 128,
+            "scale": 1,
+            "width": 12,
+            "x": 848.545454545455,
+            "y": 1799.39395606061
+        },
+        {
+            "height": 13.3333,
+            "id": 85,
+            "name": "Wisp",
+            "desc": "Tu est presque arrivé! As-tu détruis les 3 rouges?",
+            "light": 128,
+            "scale": 1,
+            "width": 12,
+            "x": 5178.84848484848,
+            "y": 438.787895454545
+        },
+        {
+            "height": 13.3333,
+            "id": 83,
+            "name": "Wisp",
+            "desc": "Par ici! Un crystal rouge a gauche!",
+            "light": 128,
+            "scale": 1,
+            "width": 12,
+            "x": 1427.33333333333,
+            "y": 1369.09092575758
+        },
+        {
+            "height": 28,
+            "id": 2,
+            "name": "SuraimuOrange",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.25,
+            "width": 30,
+            "x": 1595.39393939394,
+            "y": 1015.06060606061
+        },
+        {
+            "height": 28,
+            "id": 12,
+            "name": "SuraimuOrange",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.25,
+            "width": 30,
+            "x": 1949,
+            "y": 1022
+        },
+        {
+            "height": 28,
+            "id": 13,
+            "name": "SuraimuOrange",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.25,
+            "width": 30,
+            "x": 2235,
+            "y": 1128
+        },
+        {
+            "height": 28,
+            "id": 14,
+            "name": "SuraimuOrange",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.25,
+            "width": 30,
+            "x": 3065.90909090909,
+            "y": 838.909090909091
+        },
+        {
+            "height": 28,
+            "id": 1,
+            "name": "SuraimuOrange",
+            "damage": 5,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.25,
+            "width": 30,
+            "x": 1200.30303030303,
+            "y": 837.242424242424
+        },
+        {
+            "height": 28,
+            "id": 19,
+            "name": "SuraimuGreen",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.25,
+            "width": 30,
+            "x": 1204,
+            "y": 1995.09090909091
+        },
+        {
+            "height": 28,
+            "id": 20,
+            "name": "SuraimuGreen",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.25,
+            "width": 30,
+            "x": 1434,
+            "y": 1962
+        },
+        {
+            "height": 28,
+            "id": 3,
+            "name": "SuraimuBlue",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.25,
+            "width": 30,
+            "x": 4284.15151515152,
+            "y": 1907.69696969697
+        },
+        {
+            "height": 28,
+            "id": 16,
+            "name": "SuraimuBlue",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.25,
+            "width": 30,
+            "x": 5218.33333333333,
+            "y": 1892.06060606061
+        },
+        {
+            "height": 28,
+            "id": 17,
+            "name": "SuraimuBlue",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.5,
+            "width": 30,
+            "x": 4781.9696969697,
+            "y": 1886
+        },
+        {
+            "height": 28,
+            "id": 18,
+            "name": "SuraimuBlue",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.25,
+            "width": 30,
+            "x": 4503.18181818182,
+            "y": 1910.24242424242
+        },
+        {
+            "height": 28,
+            "id": 62,
+            "name": "SuraimuBlue",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.25,
+            "width": 30,
+            "x": 2983,
+            "y": 444
+        },
+        {
+            "height": 28,
+            "id": 63,
+            "name": "SuraimuBlue",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.25,
+            "width": 30,
+            "x": 3165,
+            "y": 440
+        },
+        {
+            "height": 28,
+            "id": 64,
+            "name": "SuraimuBlue",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 30,
+            "x": 3470,
+            "y": 352
+        },
+        {
+            "height": 28,
+            "id": 65,
+            "name": "SuraimuBlue",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.25,
+            "width": 30,
+            "x": 3787,
+            "y": 424
+        },
+        {
+            "height": 0,
+            "id": 6,
+            "name": "EndOfLevel",
+            "damage": 0,
+            "desc": "Par ici! Tu est sur la bonne voie!",
+            "health": 0,
+            "light": 384,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 5,
+            "width": 0,
+            "x": 6048.48484848485,
+            "y": 412.121212121212
+        },
+        {
+            "height": 192,
+            "id": 7,
+            "name": "CrystalBlue",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 192,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.186,
+            "width": 64,
+            "x": 514,
+            "y": 1338
+        },
+        {
+            "height": 192,
+            "id": 8,
+            "name": "CrystalBlue",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 192,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.186,
+            "width": 64,
+            "x": 3706.60606060606,
+            "y": 1532
+        },
+        {
+            "height": 192,
+            "id": 9,
+            "name": "CrystalRed",
+            "damage": 0,
+            "desc": "",
+            "health": 20,
+            "light": 192,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.186,
+            "width": 64,
+            "x": 3968,
+            "y": 320
+        },
+        {
+            "height": 192,
+            "id": 10,
+            "name": "CrystalRed",
+            "damage": 0,
+            "desc": "",
+            "health": 20,
+            "light": 192,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.186,
+            "width": 64,
+            "x": 1854,
+            "y": 126
+        },
+        {
+            "height": 192,
+            "id": 11,
+            "name": "CrystalRed",
+            "damage": 0,
+            "desc": "",
+            "health": 20,
+            "light": 192,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.186,
+            "width": 64,
+            "x": 1152,
+            "y": 1342
+        },
+        {
+            "height": 256,
+            "id": 54,
+            "name": "CrystalYellow",
+            "damage": 0,
+            "desc": "",
+            "health": 5,
+            "light": 100,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 0.248,
+            "width": 64,
+            "x": 5792.24242424242,
+            "y": 314.424242424242
+        },
+        {
+            "height": 64,
+            "id": 21,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3486.54545454545,
+            "y": 1152.84848484848
+        },
+        {
+            "height": 64,
+            "id": 22,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3576,
+            "y": 1153.33333333333
+        },
+        {
+            "height": 64,
+            "id": 23,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3682.66666666667,
+            "y": 1152
+        },
+        {
+            "height": 64,
+            "id": 24,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3529.33333333333,
+            "y": 1153.33333333333
+        },
+        {
+            "height": 64,
+            "id": 25,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3629.33333333333,
+            "y": 1152
+        },
+        {
+            "height": 64,
+            "id": 26,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3078,
+            "y": 1152
+        },
+        {
+            "height": 64,
+            "id": 27,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 2918,
+            "y": 1150
+        },
+        {
+            "height": 64,
+            "id": 28,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 2758,
+            "y": 1150
+        },
+        {
+            "height": 64,
+            "id": 29,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3208,
+            "y": 1150
+        },
+        {
+            "height": 64,
+            "id": 30,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 850,
+            "y": 447
+        },
+        {
+            "height": 64,
+            "id": 32,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 971,
+            "y": 446
+        },
+        {
+            "height": 64,
+            "id": 34,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 1092,
+            "y": 447
+        },
+        {
+            "height": 64,
+            "id": 36,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 1217,
+            "y": 448
+        },
+        {
+            "height": 64,
+            "id": 66,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 2962,
+            "y": 127
+        },
+        {
+            "height": 64,
+            "id": 67,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3090,
+            "y": 128
+        },
+        {
+            "height": 64,
+            "id": 68,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3219,
+            "y": 126
+        },
+        {
+            "height": 64,
+            "id": 69,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3346,
+            "y": 128
+        },
+        {
+            "height": 64,
+            "id": 70,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3472,
+            "y": 128
+        },
+        {
+            "height": 64,
+            "id": 71,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3597,
+            "y": 127
+        },
+        {
+            "height": 64,
+            "id": 72,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3726,
+            "y": 127
+        },
+        {
+            "height": 64,
+            "id": 73,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 3859,
+            "y": 127
+        },
+        {
+            "height": 64,
+            "id": 74,
+            "name": "Stalagtite",
+            "damage": 20,
+            "health": 0,
+            "scale": 0.5,
+            "width": 32,
+            "x": 2831,
+            "y": 128
+        },
+        {
+            "height": 16,
+            "id": 37,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 3968,
+            "y": 751.545454545455
+        },
+        {
+            "height": 16,
+            "id": 38,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 3968,
+            "y": 688
+        },
+        {
+            "height": 16,
+            "id": 39,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 3967.75,
+            "y": 623.75
+        },
+        {
+            "height": 16,
+            "id": 40,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 3967.75,
+            "y": 559.75
+        },
+        {
+            "height": 16,
+            "id": 41,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 1792,
+            "y": 1264.09090909091
+        },
+        {
+            "height": 16,
+            "id": 42,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 1792,
+            "y": 1200.25
+        },
+        {
+            "height": 16,
+            "id": 43,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 1791.5,
+            "y": 1135.75
+        },
+        {
+            "height": 16,
+            "id": 44,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 1663.79545454545,
+            "y": 1711.90575757576
+        },
+        {
+            "height": 16,
+            "id": 45,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 1663.65909090909,
+            "y": 1647.95121212121
+        },
+        {
+            "height": 16,
+            "id": 46,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 1663.79545454545,
+            "y": 1775.56393939394
+        },
+        {
+            "height": 16,
+            "id": 47,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 1664.06818181818,
+            "y": 1519.66333333333
+        },
+        {
+            "height": 16,
+            "id": 49,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 1663.97727272727,
+            "y": 1584.1396969697
+        },
+        {
+            "height": 16,
+            "id": 77,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 255.795,
+            "y": 1647.34
+        },
+        {
+            "height": 16,
+            "id": 78,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 256.115,
+            "y": 1583.53
+        },
+        {
+            "height": 16,
+            "id": 79,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 256.205,
+            "y": 1519.05
+        },
+        {
+            "height": 16,
+            "id": 80,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 255.935,
+            "y": 1774.95
+        },
+        {
+            "height": 16,
+            "id": 81,
+            "name": "Platform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 255.935,
+            "y": 1711.3
+        },
+        {
+            "height": 64,
+            "id": 52,
+            "name": "IcePlatform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 4864.9696969697,
+            "y": 444.151515151515
+        },
+        {
+            "height": 64,
+            "id": 53,
+            "name": "IcePlatform",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 64,
+            "x": 5504.36363636364,
+            "y": 510.424242424242
+        },
+        {
+            "height": 128,
+            "id": 15,
+            "name": "LightCube",
+            "damage": 0,
+            "desc": "",
+            "health": 0,
+            "light": 0,
+            "moveX": 0,
+            "moveY": 0,
+            "scale": 1,
+            "width": 128,
+            "x": 812,
+            "y": 1908
+        },
+        {
+            "height": 13.3333,
+            "id": 87,
+            "name": "Wisp",
+            "desc": "Attention! Les oranges sont dangereuses",
+            "light": 200,
+            "scale": 1,
+            "width": 12,
+            "x": 938,
+            "y": 749.33335
+        }
+    ]
 }
