@@ -19,6 +19,8 @@ class NextLvl extends FlxState {
     function actuallyQuit():Void {
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         var lvl:ParentState = switch (_lvl) {
+            case 3: new Lvl4();
+            case 2: new Lvl3();
             case 1: new Lvl2();
             case _: new Lvl1();
         }

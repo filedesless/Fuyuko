@@ -6,7 +6,7 @@
             "name": "Player",
             "health": 100,
             "light": 200,
-            "scale": 1,
+            "scale": 0.45,
             "width": 100,
             "x": 74.6058772727272,
             "y": 597.028653030303
@@ -125,8 +125,8 @@
             "desc": "",
             "health": 0,
             "light": 192,
-            "moveX": 0,
-            "moveY": 960,
+            "moveX": 960,
+            "moveY": 0,
             "scale": 1,
             "x": 1338,
             "y": 596
@@ -139,8 +139,8 @@
             "desc": "",
             "health": 0,
             "light": 192,
-            "moveX": 0,
-            "moveY": -960,
+            "moveX": -960,
+            "moveY": 0,
             "scale": 1,
             "x": 2292,
             "y": 732

@@ -5,7 +5,7 @@ typedef JsonEntity = {
     var desc:Null<String>;
     var x:Float;
     var y:Float;
-    var light:Int;
+    var light:Null<Int>;
     var scale:Float;
     var damage:Float;
 

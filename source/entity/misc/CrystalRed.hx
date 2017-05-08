@@ -13,6 +13,7 @@ class CrystalRed extends Entity {
 
         immovable = true;
         baseHealth = health = if (json.health == null) 20 else json.health;
+        trace(baseHealth, json.health);
 
         animation.add("full", [for (i in 8...12) i], 4, true);
         animation.add("half", [for (i in 4...8) i], 4, true);
@@ -33,7 +34,7 @@ class CrystalRed extends Entity {
             }
         });
 
-        if (health <= 0)
+        if (alive && health <= 0)
             kill();
 
         if (health == 0) {

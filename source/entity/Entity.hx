@@ -28,7 +28,7 @@ class Entity extends FlxSprite implements ILightSource {
         this._level = level;
         this.entities = entities;
 
-        baseLight = json.light;
+        baseLight = if (json.light == null) 0 else json.light;
         baseHealth = health = if (json.health == null) 100 else json.health;  
 
         rnd = new FlxRandom();

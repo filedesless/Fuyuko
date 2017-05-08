@@ -6,7 +6,7 @@
             "name": "Player",
             "health": 100,
             "light": 200,
-            "scale": 1,
+            "scale": 0.45,
             "width": 100,
             "x": 90,
             "y": 436

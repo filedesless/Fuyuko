@@ -23,6 +23,8 @@ class FireBall extends Entity {
         path = new FlxPath();
         path.start([new FlxPoint(x + json.moveX, y + json.moveY),
                 new FlxPoint(x, y)], 60 * felix.FelixSave.get_vitObstacles(), FlxPath.YOYO);
+
+        solid = false;
         
         animation.add("idle", [33,34,35,42,43,44,45,46,47,46,45,44,43,42,35,34], 3, true);
         animation.play("idle");

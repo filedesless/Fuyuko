@@ -111,7 +111,7 @@ class DifficultyState extends FlxState {
 
         var btnStart:FelixMagicButton = new FelixMagicButton(
             FlxG.camera.width * 4 / 6, FlxG.camera.height * 5 / 6, 
-            this, "Choix du niveau", click_start
+            this, "Suivant", click_start
         );
 
         add(btnRetour);
@@ -153,7 +153,7 @@ class DifficultyState extends FlxState {
         #if !html5
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         #end
-        FlxG.switchState(new scene.levels.Lvl1());
+        FlxG.switchState(new scene.levels.Lvl4());
     }
 
     function click_exit():Void {
