@@ -64,9 +64,9 @@ class Suraimu extends Entity {
         setFacingFlip(FlxObject.RIGHT, true, false);
         setFacingFlip(FlxObject.LEFT, false, false);
 
-         _jumpSound = FlxG.sound.load(AssetPaths.slimeJump__ogg,0.01 * felix.FelixSave.get_ambient_music(),false);
-         _walkSound = FlxG.sound.load(AssetPaths.slimeWalk__ogg,0.01 * felix.FelixSave.get_ambient_music(),false);
-         _splashSound = FlxG.sound.load(AssetPaths.slimeSplash__ogg,0.01 * felix.FelixSave.get_ambient_music(),false);
+         _jumpSound = FlxG.sound.load(AssetPaths.slimeJump__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
+         _walkSound = FlxG.sound.load(AssetPaths.slimeWalk__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
+         _splashSound = FlxG.sound.load(AssetPaths.slimeSplash__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
     }
 
     public override function update(elapsed:Float):Void {
@@ -95,9 +95,9 @@ class Suraimu extends Entity {
         fsm.update(elapsed);
         if(_cnt % 50 == 0)
         {
-            _jumpSound.volume = 0.008 * felix.FelixSave.get_ambient_music();
-            _walkSound.volume = 0.008 * felix.FelixSave.get_ambient_music();
-            _splashSound.volume = 0.008 * felix.FelixSave.get_ambient_music();
+            _jumpSound.volume = 0.003 * felix.FelixSave.get_ambient_music();
+            _walkSound.volume = 0.003 * felix.FelixSave.get_ambient_music();
+            _splashSound.volume = 0.003 * felix.FelixSave.get_ambient_music();
         }
         
         super.update(elapsed);
