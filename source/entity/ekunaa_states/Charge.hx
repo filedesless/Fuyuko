@@ -18,7 +18,11 @@ class Charge extends FlxFSMState<Ekunaa>
     override public function update(elapsed:Float, owner:Ekunaa, fsm:FlxFSM<Ekunaa>):Void 
     {
         if (owner.isTouching(owner.direction))
+        {
             owner.direction = if (owner.direction == FlxObject.RIGHT) FlxObject.LEFT else FlxObject.RIGHT;
+            owner.playHitWall();
+        }
+            
 
         if (_cnt++ == 120)
             owner.animation.play("charge");

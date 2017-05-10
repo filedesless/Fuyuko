@@ -33,17 +33,22 @@ class PauseSubState extends FlxSubState {
         persistentDraw = false;
 
         add(new FelixMagicButton(
-            null, FlxG.camera.height / 3,
+            null, FlxG.camera.height / 4,
             this, "Retour", exit
         ));
 
         add(new FelixMagicButton(
-            null, null, 
+            null, FlxG.camera.height * 3 / 8,  
             this, "Options", options
         ));
         
         add(new FelixMagicButton(
-            null, FlxG.camera.height * 2 / 3, 
+            null, FlxG.camera.height * 5 / 8,  
+            this, "Recommencer", restart
+        ));
+
+        add(new FelixMagicButton(
+            null, FlxG.camera.height * 3 / 4, 
             this, "Quitter", click_quitter
         ));
     }
@@ -67,6 +72,10 @@ class PauseSubState extends FlxSubState {
     function options():Void {
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         openSubState(new OptionSubState(0xF0000015));
+    }
+
+    function restart():Void {
+
     }
 
     function click_quitter():Void {

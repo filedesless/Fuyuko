@@ -9,11 +9,15 @@ import entity.Player;
 import flixel.tile.FlxTilemap;
 import flixel.text.FlxText;
 import flixel.math.FlxPoint;
+import flixel.system.FlxSound;
+
 
 class FireBall extends Entity {
     var _seed:Float;
     var _seedWide:Float;
     public var txt:FlxText;
+
+    var _hitPlayer:FlxSound = new FlxSound();
 
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>) {
         super(json, player, level, entities);
@@ -34,6 +38,8 @@ class FireBall extends Entity {
 
         _seed = rnd.float(0,1000);
         _seedWide = rnd.float(5, 12);
+
+        _hitPlayer = FlxG.sound.load(AssetPaths.hitFire__ogg ,0.003 * felix.FelixSave.get_ambient_music(),false);
     }
 
     public override function update(elapsed:Float):Void {
@@ -44,8 +50,21 @@ class FireBall extends Entity {
         immovable = true;
 
         if (overlaps(_player))
+        {
             _player.hurt(_json.damage * felix.FelixSave.get_dmgObstacles());
+            playHitPlayer();
+        }
+            
 
         super.update(elapsed);
+    }
+
+    function playHitPlayer():Void
+    {
+       if(!_hitPlayer.playing)
+        {
+            _hitPlayer.volume = 0.003 * felix.FelixSave.get_ambient_music();
+            _hitPlayer.play();
+        }
     }
 }

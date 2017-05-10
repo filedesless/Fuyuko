@@ -11,6 +11,7 @@ class SuraimuOrange extends Suraimu {
 
     override public function stickPlayer():Void {
         _player.hurt(_json.damage);
+
     }
 
     override public function unStickPlayer():Void {

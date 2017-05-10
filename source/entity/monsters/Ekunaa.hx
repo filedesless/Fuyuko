@@ -20,6 +20,7 @@ class Ekunaa extends Entity {
     public var direction:Int = FlxObject.LEFT;
     var viewBox:FlxRect;
 
+    var _hitWallSound:FlxSound = new FlxSound();
     var _chargeSound:FlxSound = new FlxSound();
     var _walkSound:FlxSound = new FlxSound();
     var _growlSound:FlxSound = new FlxSound();
@@ -51,6 +52,7 @@ class Ekunaa extends Entity {
         //_chargeSound = FlxG.sound.load(AssetPaths.ekunaaCharge__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
         _walkSound = FlxG.sound.load(AssetPaths.ekunaaWalk__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
         _growlSound = FlxG.sound.load(AssetPaths.ekunaaGrowl__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
+        _hitWallSound = FlxG.sound.load(AssetPaths.ekunaaWall__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
 
         setFacingFlip(FlxObject.RIGHT, true, false);
         setFacingFlip(FlxObject.LEFT, false, false);
@@ -95,6 +97,11 @@ class Ekunaa extends Entity {
     public function playCharge():Void{
         //if(!_chargeSound.playing)
           //  _chargeSound.play();
+    }
+
+    public function playHitWall():Void{
+        if(!_hitWallSound.playing)
+            _hitWallSound.play();
     }
 
     public function playGrowl():Void{
