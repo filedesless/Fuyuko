@@ -49,7 +49,7 @@ class Ekunaa extends Entity {
 
         acceleration.y = 600;
 
-        //_chargeSound = FlxG.sound.load(AssetPaths.ekunaaCharge__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
+        _chargeSound = FlxG.sound.load(AssetPaths.ekunaaCharge__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
         _walkSound = FlxG.sound.load(AssetPaths.ekunaaWalk__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
         _growlSound = FlxG.sound.load(AssetPaths.ekunaaGrowl__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
         _hitWallSound = FlxG.sound.load(AssetPaths.ekunaaWall__ogg,0.01 * felix.FelixSave.get_ambient_music(),false);
@@ -95,8 +95,11 @@ class Ekunaa extends Entity {
     }
 
     public function playCharge():Void{
-        //if(!_chargeSound.playing)
-          //  _chargeSound.play();
+        if(!_hitWallSound.playing)
+        {
+            _chargeSound.volume = 0.015 * felix.FelixSave.get_ambient_music();
+            _chargeSound.play();
+        }
     }
 
     public function playHitWall():Void{

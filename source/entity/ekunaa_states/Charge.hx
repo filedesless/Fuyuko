@@ -26,6 +26,8 @@ class Charge extends FlxFSMState<Ekunaa>
 
         if (_cnt++ == 120)
             owner.animation.play("charge");
+            
+            
 
         for (entity in owner.entities) {
             if (entity.alive && Std.is(entity, IceCube)) {
@@ -38,6 +40,10 @@ class Charge extends FlxFSMState<Ekunaa>
         }
 
         if (_cnt > 120)
-            owner.velocity.x = felix.FelixSave.get_vitMob() * if (owner.direction == FlxObject.RIGHT) 400 else -400;
+        {
+            owner.velocity.x = felix.FelixSave.get_vitMob() * if (owner.direction == FlxObject.RIGHT) 550 else -550;
+            owner.playCharge();
+        }
+            
     }
 }
