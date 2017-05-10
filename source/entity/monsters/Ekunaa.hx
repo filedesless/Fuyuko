@@ -11,6 +11,7 @@ import entity.ekunaa_states.*;
 import addons.FlxFSM;
 import flixel.math.FlxRect;
 import flixel.group.FlxGroup;
+import flixel.system.FlxSound;
 
 class Ekunaa extends Entity {
     var fsm:FlxFSM<Ekunaa>;
@@ -18,6 +19,10 @@ class Ekunaa extends Entity {
     public var playerInSight:Bool = false;
     public var direction:Int = FlxObject.LEFT;
     var viewBox:FlxRect;
+
+    var _chargeSound:FlxSound = new FlxSound();
+    var _walkSound:FlxSound = new FlxSound();
+    var _growlSound:FlxSound = new FlxSound();
 
     public override function new(json:JsonEntity, player:Player, level:FlxTilemap, entities:FlxTypedGroup<Entity>):Void {
         super(json, player, level, entities);
@@ -43,6 +48,10 @@ class Ekunaa extends Entity {
 
         acceleration.y = 600;
 
+        //_chargeSound = FlxG.sound.load(AssetPaths.ekunaaCharge__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
+        _walkSound = FlxG.sound.load(AssetPaths.ekunaaWalk__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
+        _growlSound = FlxG.sound.load(AssetPaths.ekunaaGrowl__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
+
         setFacingFlip(FlxObject.RIGHT, true, false);
         setFacingFlip(FlxObject.LEFT, false, false);
         FlxG.watch.add(this, "direction");
@@ -53,7 +62,7 @@ class Ekunaa extends Entity {
         FlxG.collide(this, _level);
         immovable = true;
         facing = direction;
-
+        playGrowl();
         if (facing == FlxObject.RIGHT) 
             viewBox = new FlxRect(getMidpoint().x, y - height / 2, FlxG.width * 1.5, height * 2);
         else
@@ -71,5 +80,31 @@ class Ekunaa extends Entity {
         if (overlapsPoint(_player.getMidpoint()))
             _player.kill();
         super.update(elapsed);
+    }
+
+    public function playWalk():Void{
+        if((_cnt) %15 == 0) 
+            if(!_walkSound.playing)
+            {
+                _walkSound.volume = 0.01 * felix.FelixSave.get_ambient_music();
+                _walkSound.play();
+            }
+                
+    }
+
+    public function playCharge():Void{
+        //if(!_chargeSound.playing)
+          //  _chargeSound.play();
+    }
+
+    public function playGrowl():Void{
+        if((_cnt) %1200 == 0) 
+            if(!_growlSound.playing)
+            {
+                _growlSound.volume = 0.01 * felix.FelixSave.get_ambient_music();
+                _growlSound.play();
+                
+            }
+                
     }
 }
