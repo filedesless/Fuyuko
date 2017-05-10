@@ -1,0 +1,19 @@
+digraph graphname {
+n33095 [shape=box,label="(33095)"];
+n33094 [shape=box,label="<loop-head>
+(33094)"];
+n33093 [shape=box,label="(33093)"];
+n33092 [shape=box,label="(33092)\nvar `1 = 0\nvar ` = bdW"];
+n33092 -> n33093[style="dashed",color="gray",label="merge"];
+n33091 [shape=box,label="(33091)\nvar bd = Bitmap\nvar Bitmap = Bitmap.get_width()\nvar Bitmap = Bitmap * Scale\nvar Bitmap = Bitmap.get_height()\nvar Bitmap = Bitmap * Scale\nBitmap = new openfl._legacy.display.BitmapData(Bitmap, Bitmap, null, null, null)\nvar bdW = bd.get_width()\nvar bdH = bd.get_height()\nvar pCol = 0"];
+n33090 [shape=box,label="(33090)\nvar _hx_tmp = Scale > 1\n@:cond-branch _hx_tmp"];
+n33089 [shape=box,label="(33089)\nScale = 1"];
+n33088 [shape=box,label="<function-end>
+(33088)"];
+n33087 [shape=box,label="<function-begin>
+(33087)\nvar _hx_tmp = Scale < 1\n@:cond-branch _hx_tmp"];
+n33087 -> n33089[style="dashed",color="gray",label="then"];
+n33087 -> n33090[style="dashed",color="gray",label="next"];
+n1 [shape=box,label="<root>
+(1)"];
+}

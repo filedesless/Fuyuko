@@ -1,0 +1,60 @@
+digraph graphname {
+	node [shape=plaintext];
+n33095[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(33095) BKNormal</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n33094[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(33094) BKLoopHead</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n33093[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(33093) BKNormal</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n33092[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(33092) BKSub</td></tr>
+	<tr><td port="e0" align="left">var `1 = 0</td></tr>
+	<tr><td port="e1" align="left">var ` = bdW</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n33091[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(33091) BKConditional</td></tr>
+	<tr><td port="e0" align="left">var bd = Bitmap</td></tr>
+	<tr><td port="e1" align="left">var Bitmap = Bitmap.get_width()</td></tr>
+	<tr><td port="e2" align="left">var Bitmap = Bitmap * Scale</td></tr>
+	<tr><td port="e3" align="left">var Bitmap = Bitmap.get_height()</td></tr>
+	<tr><td port="e4" align="left">var Bitmap = Bitmap * Scale</td></tr>
+	<tr><td port="e5" align="left">Bitmap = new openfl._legacy.display.BitmapData(Bitmap, Bitmap, null, null, null)</td></tr>
+	<tr><td port="e6" align="left">var bdW = bd.get_width()</td></tr>
+	<tr><td port="e7" align="left">var bdH = bd.get_height()</td></tr>
+	<tr><td port="e8" align="left">var pCol = 0</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n33090[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(33090) BKNormal</td></tr>
+	<tr><td port="e0" align="left">var _hx_tmp = Scale &gt; 1</td></tr>
+	<tr><td port="e1" align="left">@:cond-branch _hx_tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n33089[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(33089) BKConditional</td></tr>
+	<tr><td port="e0" align="left">Scale = 1</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n33088[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(33088) BKFunctionEnd</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n33087[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(33087) BKFunctionBegin</td></tr>
+	<tr><td port="e0" align="left">var _hx_tmp = Scale &lt; 1</td></tr>
+	<tr><td port="e1" align="left">@:cond-branch _hx_tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n1[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(1) BKRoot</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n1:out -> n33087:in[label="CFGFunction"];
+}

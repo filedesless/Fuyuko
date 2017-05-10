@@ -6,7 +6,7 @@
             "name": "Player",
             "health": 100,
             "light": 200,
-            "scale": 0.45,
+            "scale": 0.38,
             "width": 100,
             "x": 74.6058772727272,
             "y": 597.028653030303
@@ -228,7 +228,7 @@
         {
             "height": 28,
             "id": 2,
-            "name": "SuraimuOrange",
+            "name": "SuraimuBlue",
             "damage": 5,
             "desc": "",
             "health": 0,
@@ -243,7 +243,7 @@
         {
             "height": 28,
             "id": 12,
-            "name": "SuraimuOrange",
+            "name": "SuraimuBlue",
             "damage": 5,
             "desc": "",
             "health": 0,
@@ -273,7 +273,7 @@
         {
             "height": 28,
             "id": 14,
-            "name": "SuraimuOrange",
+            "name": "SuraimuBlue",
             "damage": 5,
             "desc": "",
             "health": 0,
@@ -523,7 +523,7 @@
             "scale": 0.186,
             "width": 64,
             "x": 1854,
-            "y": 126
+            "y": 190
         },
         {
             "height": 192,
