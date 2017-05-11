@@ -23,9 +23,9 @@ class Conditions
     }
 
     public static function hitWall(owner:Ekunaa):Bool {
-        if (owner.isTouching(FlxObject.WALL)) {
-            FlxG.camera.shake(0.05, 0.5);
+        if (owner.isTouching(FlxObject.WALL))
             return true;
-        } else return false;
+        else 
+            return false;
     }
 }

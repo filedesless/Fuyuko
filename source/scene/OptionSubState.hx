@@ -30,9 +30,11 @@ class OptionSubState extends FlxSubState {
     var _btnFlushSave:FelixMagicButton;
 
     var i:Int = 0;
+    var _enableErase = false;
 
-    override public function new(bgColor = 0xB0000000) {
+    override public function new(bgColor = 0xB0000000, enableErase:Bool = true) {
         super(bgColor);
+        _enableErase = enableErase;
     }
 
     override public function create():Void {
@@ -82,7 +84,7 @@ class OptionSubState extends FlxSubState {
             FlxG.camera.width / 2 + 100, FlxG.camera.height / 2 - 100 - 15 - 45, 
             1, 4, 300, 30, 5,
             FlxColor.WHITE, FlxColor.CYAN);
-        _refreshRateSlider.setTexts("Taux de rafraîchissement de l'éclairage");
+        _refreshRateSlider.setTexts("Délai de rafraîchissement de l'éclairage");
         _refreshRateSlider.scrollFactor.set(); // makes it follow camera around
 
         _btnAntialiasing = new FelixMagicButton(
@@ -99,12 +101,14 @@ class OptionSubState extends FlxSubState {
             FlxG.camera.width / 2 + 130, FlxG.camera.height / 2 + 15 + 3*45, 
             this, "Effacer la partie", function() { felix.FelixSave.erase(); loadData(); }
         );
-        _btnFlushSave.button.label.size = 14;
-        _btnFlushSave.button.label.setBorderStyle(OUTLINE, FlxColor.RED, 1);
+        _btnFlushSave.button.label.size = 18;
+        _btnFlushSave.button.label.setBorderStyle(OUTLINE, FlxColor.RED, 1.5);
         var center:FlxPoint = new FlxPoint(_btnFlushSave.button.width / 2 - _btnFlushSave.button.label.width / 2, 
             _btnFlushSave.button.height / 2 - _btnFlushSave.button.label.height / 2);
         _btnFlushSave.button.labelOffsets = [ center, center, center ];
         _btnFlushSave.scrollFactor.set();
+        if (!_enableErase)
+            _btnFlushSave.disable();
 
 
         var btn:FelixMagicButton = new FelixMagicButton(

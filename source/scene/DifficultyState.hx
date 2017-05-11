@@ -38,6 +38,7 @@ class DifficultyState extends FlxState {
 
     override public function create():Void {
         super.create();
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
 
         _vitMobs = FelixSave.get_vitMob();

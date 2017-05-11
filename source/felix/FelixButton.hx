@@ -28,13 +28,8 @@ class FelixButton extends FlxButton {
     }
 
     public function setSounds():Void {
-        #if flash
-        onOver.sound = FlxG.sound.load(AssetPaths.sharp_echo__wav, felix.FelixSound.getUiVolume() * 0.01);
-        onUp.sound = FlxG.sound.load(AssetPaths.load__wav, felix.FelixSound.getUiVolume() * 0.01);
-        #else
         onOver.sound = FlxG.sound.load(AssetPaths.sharp_echo__ogg, felix.FelixSound.getUiVolume() * 0.01);
         onUp.sound = FlxG.sound.load(AssetPaths.load__ogg, felix.FelixSound.getUiVolume() * 0.01);
-        #end
     }
 
     public override function update(elapsed:Float) {

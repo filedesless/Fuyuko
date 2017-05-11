@@ -129,38 +129,23 @@ class MenuState extends FlxState
     }
 
     function clickBonus():Void {
-        #if html5
-        bonus();
-        #else
         FlxG.camera.fade(FlxColor.BLACK, 0.5, false, bonus);
-        #end
     }
 
     function bonus():Void {
-        #if !html5
-        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
-        #end
         FlxG.switchState(new QuizState());
     }
 
     function start_lvl1():Void {
-        #if !html5
-        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
-        #end
         FlxG.switchState(new DifficultyState());
     }
 
     function options():Void {
-        #if !html5
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
-        #end
         openSubState(new OptionSubState());
     }
 
     function bestiary():Void {
-        #if !html5
-        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
-        #end
         FlxG.switchState(new BestiaryState());
     }
 

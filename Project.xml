@@ -38,14 +38,11 @@
     <assets path="assets/sprites/object" include="*.png" />
     <assets path="assets/sounds" include="*.ogg" unless="flash" />
     <assets path="assets/sounds/walk" include="*.ogg" unless="flash" />
-    <assets path="assets/sounds" include="*.wav" />
     <assets path="assets/tilemap" include="*.csv|*.json|*.png" />
     <assets path="assets/data" include="*.json" />
     <assets path="assets/tileset" include="*.png" />
     <assets path="assets/fonts" include="*.ttf" />
-    <!--<assets path="music" include="*.mp3" if="flash" />-->
     <assets path="assets/music" include="*.ogg" unless="flash" />
-    <!--<assets path="sounds" include="*.mp3" if="flash" />-->
 
 
     <!-- _______________________________ Libraries ______________________________ -->

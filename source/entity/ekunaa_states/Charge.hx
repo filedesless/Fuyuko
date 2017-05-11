@@ -1,5 +1,6 @@
  package entity.ekunaa_states;
 
+import flixel.FlxG;
 import flixel.FlxObject;
 import addons.FlxFSM;
 import entity.monsters.Ekunaa;
@@ -26,8 +27,6 @@ class Charge extends FlxFSMState<Ekunaa>
 
         if (_cnt++ == 120)
             owner.animation.play("charge");
-            
-            
 
         for (entity in owner.entities) {
             if (entity.alive && Std.is(entity, IceCube)) {

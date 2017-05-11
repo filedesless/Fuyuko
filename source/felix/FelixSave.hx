@@ -90,6 +90,7 @@ class FelixSave {
         light = 1;
         brightness = 1;
         refreshRate = 2;
+        deathCount = 0;
     }
 
     /** Volume of the ambient music, from 0 to 100 **/
@@ -363,5 +364,22 @@ class FelixSave {
             return newValue;
         }
         return refreshRate;
+    }
+
+    @:isVar static var deathCount(get, set):Float = 0;
+
+    public static function get_deathCount():Float {
+        if (FlxG.save.data.deathCount != null)
+            return FlxG.save.data.deathCount;
+        return 0;
+    }
+
+    public static function set_deathCount(newValue:Float):Float {
+        if (newValue != deathCount) {
+            FlxG.save.data.deathCount = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return deathCount;
     }
 }

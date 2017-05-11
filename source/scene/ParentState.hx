@@ -68,10 +68,6 @@ class ParentState extends FlxState {
         tileWidth:Int = 64,
         tileHeight:Int = 64):Void
         {
-            var bg:FlxSprite = new FlxSprite();
-            bg.loadGraphic(AssetPaths.cavebg5__png);
-            add(bg);
-
             _level = new FlxTilemap();
             _level.loadMapFromCSV(tileMap, tileSet, tileWidth, tileHeight);
 
@@ -89,7 +85,7 @@ class ParentState extends FlxState {
             if (obj.name == "Player") _player = new Player(obj, _player, _level, _entities);
 
         var bg:FlxSprite = new FlxSprite();
-        bg.loadGraphic(json.header.background);
+        bg.loadGraphic('assets/${json.header.background}');
         add(bg);
         add(_level);
 
@@ -134,6 +130,7 @@ class ParentState extends FlxState {
         switch (_player.action) {
             case "spawnCorruptedLightBall": spawnCorruptedLightBall();
             case "next_level": next_level();
+            case "death": death();
         }
         _player.action = "";
 
@@ -193,11 +190,11 @@ class ParentState extends FlxState {
     }
 
     function checkCollectableLight(entity:Entity):Void {
-        if (entity.alive && Std.is(entity, ICollectableLight)) {
-            var light = cast (entity, ICollectableLight);
-            if (_player.overlapsPoint(light.center) && light.health > 0) {
+        if (entity.alive && Std.is(entity, CrystalBlue)) {
+            var light = cast (entity, CrystalBlue);
+            if (_player.overlaps(light) && light.health > 0) {
                 if (_player.heal(5))
-                    _entities.forEachOfType(ICollectableLight, function(otherLight:ICollectableLight):Void {
+                    _entities.forEachOfType(CrystalBlue, function(otherLight:CrystalBlue):Void {
                         otherLight.health -= 5;
                     });
             }
@@ -258,6 +255,13 @@ class ParentState extends FlxState {
     function next_level():Void {
         felix.FelixSave.set_level_completed(_lvl);
         felix.FelixSound.closeSounds();
-        FlxG.switchState(new ParentState(_lvl + 1));
+        FlxG.camera.fade(FlxColor.BLACK, 0.5, false, function() {
+            FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
+            FlxG.switchState(new LevelSelectionState(_lvl + 1));
+        });
+    }
+
+    function death():Void {
+        FlxG.switchState(new scene.GameOverSubState(_lvl));
     }
 }

@@ -52,7 +52,7 @@ class Ekunaa extends Entity {
         _chargeSound = FlxG.sound.load(AssetPaths.ekunaaCharge__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
         _walkSound = FlxG.sound.load(AssetPaths.ekunaaWalk__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
         _growlSound = FlxG.sound.load(AssetPaths.ekunaaGrowl__ogg,0.003 * felix.FelixSave.get_ambient_music(),false);
-        _hitWallSound = FlxG.sound.load(AssetPaths.ekunaaWall__ogg,0.01 * felix.FelixSave.get_ambient_music(),false);
+        _hitWallSound = FlxG.sound.load(AssetPaths.ekunaaWall__ogg,0.08 * felix.FelixSave.get_ambient_music(),false);
 
         setFacingFlip(FlxObject.RIGHT, true, false);
         setFacingFlip(FlxObject.LEFT, false, false);
@@ -95,7 +95,7 @@ class Ekunaa extends Entity {
     }
 
     public function playCharge():Void{
-        if(!_hitWallSound.playing)
+        if(!_chargeSound.playing)
         {
             _chargeSound.volume = 0.015 * felix.FelixSave.get_ambient_music();
             _chargeSound.play();
@@ -104,10 +104,10 @@ class Ekunaa extends Entity {
 
     public function playHitWall():Void{
         if(!_hitWallSound.playing)
-    {
-        _hitWallSound.volume = 0.01 * felix.FelixSave.get_ambient_music();
-        _hitWallSound.play();
-    }
+        {
+            _hitWallSound.volume = 0.08 * felix.FelixSave.get_ambient_music();
+            _hitWallSound.play();
+        }
             
     }
 
@@ -116,9 +116,7 @@ class Ekunaa extends Entity {
             if(!_growlSound.playing)
             {
                 _growlSound.volume = 0.01 * felix.FelixSave.get_ambient_music();
-                _growlSound.play();
-                
+                _growlSound.play();   
             }
-                
     }
 }

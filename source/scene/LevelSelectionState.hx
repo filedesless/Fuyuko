@@ -25,11 +25,18 @@ class LevelSelectionState extends FlxState {
     var _lvlChosen:Int = 1;
     var i:Int = 0;
 
+    override public function new(?lvlChosen:Int):Void {
+
+        if (lvlChosen == null)
+            _lvlChosen = felix.FelixSave.get_level_completed() + 1;
+        else
+            _lvlChosen = lvlChosen;
+        super();
+    }
+
     override public function create():Void {
         super.create();
         FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
-
-        _lvlChosen = felix.FelixSave.get_level_completed() + 1;
         
         var fileList = FileSystem.readDirectory("assets/tilemap/");
         fileList = fileList.filter(function(f:String):Bool { return f.endsWith(".json"); });
