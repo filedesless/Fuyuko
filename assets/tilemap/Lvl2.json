@@ -1,4 +1,10 @@
 {
+    "header": {
+        "name": "Roi des Suraimu Bleu",
+        "lvl": 2,
+        "background": "images/level/cavebg4.png",
+        "thumbnail": "Lvl2.png"
+    },
     "objects": [
         {
             "height": 134.667,

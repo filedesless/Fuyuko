@@ -69,6 +69,18 @@ class FelixSave {
         return antialiasing;
     }
 
+    /**
+     *  Erase all save data and reset cache
+     *  
+     */
+    public static function erase():Void {
+        background_music = 50;
+        ui_sound = 50;
+        sound_effects = 50;
+        ambient_music = 50;
+        FlxG.save.erase();
+    }
+
     /** Volume of the ambient music, from 0 to 100 **/
     @:isVar static var ambient_music(get, set):Float = -1;
     /**

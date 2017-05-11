@@ -1,5 +1,9 @@
 package scene;
 
+import flixel.util.FlxColor;
+import flixel.tweens.FlxTween;
+import flixel.util.FlxAxes;
+import flixel.text.FlxText;
 import scene.levels.*;
 import flixel.effects.FlxFlicker;
 import flixel.util.FlxPath;
@@ -19,7 +23,6 @@ import entity.Entity;
 import entity.EntityBuilder;
 
 import scene.PauseSubState;
-import scene.levels.NextLvl;
 
 /**
  Helper for creating a level, should be extended by all level class
@@ -29,18 +32,24 @@ class ParentState extends FlxState {
     public var player_start:FlxPoint = new FlxPoint(128, 128);
     var _level:FlxTilemap;
     var _lvlConfig:String;
-    var _rect:FlxRect = new FlxRect();
     var _shokuka:Shokuka;
     var _lvl:Int = 0;
 
     var _entities:FlxTypedGroup<Entity> = new FlxTypedGroup<Entity>();
     var _darkness:Darkmap;
 
+    override public function new(lvl:Int = 1) {
+        super();
+        _lvl = lvl;
+        _lvlConfig = openfl.Assets.getText('assets/tilemap/Lvl${lvl}.json');
+
+        loadMap('assets/tilemap/Lvl${lvl}.csv');
+    }
+
     override public function create():Void {
         FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
         loadEvents();
-        setCamera();
-
+        FlxG.camera.follow(_player, FlxCameraFollowStyle.PLATFORMER);
 
         super.create();
     }
@@ -61,16 +70,10 @@ class ParentState extends FlxState {
         {
             var bg:FlxSprite = new FlxSprite();
             bg.loadGraphic(AssetPaths.cavebg5__png);
-            //bg.animation.add("def", [for (i in 0...4) i], 24, true);
-            //bg.animation.play("def");
-            //bg.setGraphicSize(FlxG.width, FlxG.height);
-            //bg.updateHitbox();
-            //bg.scrollFactor.set();
             add(bg);
 
             _level = new FlxTilemap();
             _level.loadMapFromCSV(tileMap, tileSet, tileWidth, tileHeight);
-            add(_level);
 
             FlxG.worldBounds.setSize(_level.width, _level.width);
         }
@@ -85,6 +88,18 @@ class ParentState extends FlxState {
         for (obj in json.objects)
             if (obj.name == "Player") _player = new Player(obj, _player, _level, _entities);
 
+        var bg:FlxSprite = new FlxSprite();
+        bg.loadGraphic(json.header.background);
+        add(bg);
+        add(_level);
+
+        var title:FlxText = new FlxText(0, 0, 0, json.header.name, 52);
+        title.screenCenter(FlxAxes.X);
+        title.y = 40;
+        title.scrollFactor.set();
+        title.setBorderStyle(OUTLINE, FlxColor.BLUE, 2);
+        FlxTween.tween(title, { alpha: 0 }, 2, { startDelay: 1 });
+
         var builder:EntityBuilder = new EntityBuilder(_player, _level, _entities);
         for (obj in json.objects)
             if (obj.name != "Player")
@@ -94,6 +109,7 @@ class ParentState extends FlxState {
         add(_entities);
         add(_player);
         add(_darkness);
+        add(title);
 
         _entities.forEachOfType(Wisp, function(navy:Wisp):Void {
             add(navy.txt);
@@ -107,8 +123,7 @@ class ParentState extends FlxState {
         FlxG.collide(_player, _level);
 
         if (FlxG.keys.anyJustPressed([ESCAPE, P])) {
-            openSubState(new PauseSubState(_player, _rect));
-            setCamera();
+            openSubState(new PauseSubState(_lvl));
         }
 
         #if !debug
@@ -128,13 +143,6 @@ class ParentState extends FlxState {
         #end
 
         handleLight();
-    }
-
-
-    function setCamera():Void {
-        FlxG.camera.follow(_player, FlxCameraFollowStyle.PLATFORMER);
-        _rect = _level.getBounds(_rect);
-        FlxG.camera.setScrollBoundsRect(_rect.x, _rect.y, _rect.width, _rect.height);
     }
 
     function spawnLightBall():Void {
@@ -250,6 +258,6 @@ class ParentState extends FlxState {
     function next_level():Void {
         felix.FelixSave.set_level_completed(_lvl);
         felix.FelixSound.closeSounds();
-        FlxG.switchState(new NextLvl(_lvl));
+        FlxG.switchState(new ParentState(_lvl + 1));
     }
 }

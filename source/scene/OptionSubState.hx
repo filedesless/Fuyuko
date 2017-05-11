@@ -26,6 +26,7 @@ class OptionSubState extends FlxSubState {
     var _refreshRateSlider:FlxSlider;
 
     var _btnAntialiasing:FelixMagicButton;
+    var _btnFlushSave:FelixMagicButton;
 
     var i:Int = 0;
 
@@ -35,13 +36,8 @@ class OptionSubState extends FlxSubState {
 
     override public function create():Void {
         super.create();
-        FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
-
-        _backgroundVolume = Math.floor(FelixSound.getBackgroundVolume());
-        _sfxVolume = Math.floor(felix.FelixSave.get_sound_effects());
-        _ambientVolume = Math.floor(felix.FelixSave.get_ambient_music());
-        _uiVolume = Math.floor(FelixSound.getUiVolume());
-        _refreshRate = Math.floor(felix.FelixSave.get_refreshRate());
+         
+         loadData();
 
         _backgroundSlider = new FlxSlider(
             this, "_backgroundVolume",
@@ -98,6 +94,12 @@ class OptionSubState extends FlxSubState {
         );
         _btnAntialiasing.scrollFactor.set();
 
+        _btnAntialiasing = new FelixMagicButton(
+            FlxG.camera.width / 2 + 130, FlxG.camera.height / 2 + 15 + 3*45, 
+            this, "Effacer la sauvegarde", function() { felix.FelixSave.erase(); loadData(); }
+        );
+        _btnAntialiasing.scrollFactor.set();
+
 
         var btn:FelixMagicButton = new FelixMagicButton(
             null, FlxG.camera.height * 5 / 6, 
@@ -126,6 +128,16 @@ class OptionSubState extends FlxSubState {
         add(_refreshRateSlider);
     }
     
+    function loadData():Void {
+        FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
+
+        _backgroundVolume = Math.floor(FelixSound.getBackgroundVolume());
+        _sfxVolume = Math.floor(felix.FelixSave.get_sound_effects());
+        _ambientVolume = Math.floor(felix.FelixSave.get_ambient_music());
+        _uiVolume = Math.floor(FelixSound.getUiVolume());
+        _refreshRate = Math.floor(felix.FelixSave.get_refreshRate());
+    }
+
     override public function update(elapsed:Float):Void {
         switch (i++) {
             case 10: FelixSound.setBackgroundVolume(_backgroundVolume);

@@ -1,13 +1,10 @@
 package scene;
 
 import flixel.util.FlxColor;
-import flixel.math.FlxRect;
 import flixel.FlxSubState;
 import flixel.FlxG;
 
 import scene.OptionSubState;
-
-import entity.Player;
 
 import felix.FelixMagicButton;
 
@@ -16,13 +13,10 @@ import felix.FelixMagicButton;
 */
 class PauseSubState extends FlxSubState {
 
-    private var _player:Player;
-    private var _rect:FlxRect;
+    var _lvl:Int = 1;
 
-    public override function new(player:Player, rect:FlxRect, bgColor = 0xB0000000) {
-        _player = player;
-        _rect = rect;
-
+    public override function new(lvl:Int = 1, bgColor = 0xB0000000) {
+        _lvl = lvl;
         super(bgColor);
     }
 
@@ -44,7 +38,7 @@ class PauseSubState extends FlxSubState {
         
         add(new FelixMagicButton(
             null, FlxG.camera.height * 5 / 8,  
-            this, "Recommencer", restart
+            this, "Recommencer", click_restart
         ));
 
         add(new FelixMagicButton(
@@ -74,8 +68,12 @@ class PauseSubState extends FlxSubState {
         openSubState(new OptionSubState(0xF0000015));
     }
 
-    function restart():Void {
+    function click_restart():Void {
+        FlxG.camera.fade(FlxColor.BLACK, 0.5, false, restart);
+    }
 
+    function restart():Void {
+        FlxG.switchState(new ParentState(_lvl));
     }
 
     function click_quitter():Void {

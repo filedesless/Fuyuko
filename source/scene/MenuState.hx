@@ -49,7 +49,6 @@ class MenuState extends FlxState
 
         // starts music
         _flxMusic = new felix.FelixMusic();
-        add(_flxMusic);
 
         var logo = new FlxSprite(0, 0, AssetPaths.logo_transparent__png);
         logo.setGraphicSize(600);
@@ -100,6 +99,7 @@ class MenuState extends FlxState
 
     override public function update(elapsed:Float):Void
     {
+        _flxMusic.update(elapsed);
         super.update(elapsed);
     }
 

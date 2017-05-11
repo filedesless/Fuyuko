@@ -1,4 +1,10 @@
 {
+    "header": {
+        "name": "Introduction",
+        "lvl": 1,
+        "background": "images/level/cavebg3.png",
+        "thumbnail": "Lvl1.png"
+    },
     "objects": [
         {
             "name": "Player",
