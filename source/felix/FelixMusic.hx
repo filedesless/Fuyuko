@@ -39,7 +39,6 @@ class FelixMusic extends FlxSprite {
     public override function update(elapsed:Float):Void {
         if (!felix.FelixSound.isBackgroundPlaying()) {
             _index = _rnd.int(0, list.length-1);
-            trace("play!");
             felix.FelixSound.playBackground(musicPath + list[_index]);
         }
     }

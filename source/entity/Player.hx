@@ -180,6 +180,12 @@ class Player extends Entity
         }
     }
 
+    override public function kill():Void {
+        action = "death";
+        felix.FelixSave.set_deathCount(felix.FelixSave.get_deathCount() + 1);
+        super.kill();
+    }
+
     public function heal(damage:Float):Bool {
         if (alive && !FlxFlicker.isFlickering(this)) {
             health += damage;

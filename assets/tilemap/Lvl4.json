@@ -1,4 +1,10 @@
 {
+    "header": {
+        "name": "Les Wisps de Feu",
+        "lvl": 4,
+        "background": "images/level/cavebg6.png",
+        "thumbnail": "Lvl4.png"
+    },
     "objects": [
          {
             "height": 134.667,

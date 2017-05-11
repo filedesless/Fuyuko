@@ -1,5 +1,8 @@
 package scene;
 
+import flixel.tweens.FlxTween;
+import flixel.util.FlxAxes;
+import flixel.text.FlxText;
 import flixel.util.FlxColor;
 import flixel.FlxSubState;
 import flixel.FlxG;
@@ -9,13 +12,12 @@ import scene.OptionSubState;
 import felix.FelixMagicButton;
 
 /*
-    When the player presses pause
+    When the player dies
 */
-class PauseSubState extends FlxSubState {
-
+class GameOverSubState extends FlxSubState {
     var _lvl:Int = 1;
 
-    public override function new(lvl:Int = 1, bgColor = 0xB0000000) {
+    public override function new(lvl:Int = 1, bgColor = 0x20300010) {
         _lvl = lvl;
         super(bgColor);
     }
@@ -26,15 +28,23 @@ class PauseSubState extends FlxSubState {
 
         persistentDraw = false;
 
-        add(new FelixMagicButton(
-            null, FlxG.camera.height / 4,
-            this, "Retour", exit
-        ));
+        var title:FlxText = new FlxText(0, 0, 0,'Vous êtes mort!', 66);
+        title.screenCenter(FlxAxes.X);
+        title.y = 40;
+        title.scrollFactor.set();
+        title.setBorderStyle(OUTLINE, FlxColor.RED, 5);
+        title.alpha = 0;
+        FlxTween.tween(title, { alpha: 1 }, 2);
+        add(title);
 
-        add(new FelixMagicButton(
-            null, FlxG.camera.height * 3 / 8,  
-            this, "Options", options
-        ));
+        var sub:FlxText = new FlxText(0, 0, 0,'(${felix.FelixSave.get_deathCount()} fois)', 48);
+        sub.screenCenter(FlxAxes.X);
+        sub.y = title.height + 40 + 20;
+        sub.scrollFactor.set();
+        sub.setBorderStyle(OUTLINE, FlxColor.BLUE, 2);
+        sub.alpha = 0;
+        FlxTween.tween(sub, { alpha: 1 }, 2, { startDelay: 1 });
+        add(sub);
         
         add(new FelixMagicButton(
             null, FlxG.camera.height * 5 / 8,  
@@ -48,24 +58,7 @@ class PauseSubState extends FlxSubState {
     }
 
     override public function update(elapsed:Float):Void {
-        if (FlxG.keys.anyJustPressed([ESCAPE, P])) {
-            exit();
-        }
-
         super.update(elapsed);
-    }
-
-    function exit():Void {
-        close();
-    }
-
-    function click_options():Void {
-        FlxG.camera.fade(FlxColor.BLACK, 0.5, false, options);
-    }
-
-    function options():Void {
-        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
-        openSubState(new OptionSubState(0xF0000015, false));
     }
 
     function click_restart():Void {

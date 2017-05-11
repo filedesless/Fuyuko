@@ -19,7 +19,7 @@ class FelixSave {
         @return The value saved
     **/
     public static function set_level_completed(newValue:Int):Int {
-        if (newValue > level_completed) {
+        if (newValue > level_completed || newValue == 0) {
             FlxG.save.data.level_completed = newValue;
             FlxG.save.flush();
             return newValue;
@@ -67,6 +67,30 @@ class FelixSave {
             return newValue;
         }
         return antialiasing;
+    }
+
+    /**
+     *  Erase all save data and reset cache
+     *  
+     */
+    public static function erase():Void {
+        background_music = 50;
+        ui_sound = 50;
+        sound_effects = 50;
+        ambient_music = 50;
+        setup_done = false;
+        level_completed = 0;
+        antialiasing = false;
+        vitMob = 1;
+        vitObstacles = 1;
+        recoTime = 1;
+        health = 1;
+        dmgMonster = 1;
+        dmgObstacles = 1;
+        light = 1;
+        brightness = 1;
+        refreshRate = 2;
+        deathCount = 0;
     }
 
     /** Volume of the ambient music, from 0 to 100 **/
@@ -340,5 +364,22 @@ class FelixSave {
             return newValue;
         }
         return refreshRate;
+    }
+
+    @:isVar static var deathCount(get, set):Float = 0;
+
+    public static function get_deathCount():Float {
+        if (FlxG.save.data.deathCount != null)
+            return FlxG.save.data.deathCount;
+        return 0;
+    }
+
+    public static function set_deathCount(newValue:Float):Float {
+        if (newValue != deathCount) {
+            FlxG.save.data.deathCount = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return deathCount;
     }
 }

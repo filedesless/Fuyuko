@@ -38,6 +38,7 @@ class DifficultyState extends FlxState {
 
     override public function create():Void {
         super.create();
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
 
         _vitMobs = FelixSave.get_vitMob();
@@ -111,7 +112,7 @@ class DifficultyState extends FlxState {
         );
 
         var btnStart:FelixMagicButton = new FelixMagicButton(
-            FlxG.camera.width * 4 / 6, FlxG.camera.height * 5 / 6, 
+            FlxG.camera.width * 5 / 6 - btnRetour.width, FlxG.camera.height * 5 / 6, 
             this, "Suivant", click_start
         );
 
@@ -156,7 +157,7 @@ class DifficultyState extends FlxState {
         #if !html5
         FlxG.camera.fade(FlxColor.TRANSPARENT, 0.5, true);
         #end
-        FlxG.switchState(new scene.levels.Lvl1());
+        FlxG.switchState(new LevelSelectionState());
     }
 
     function click_exit():Void {

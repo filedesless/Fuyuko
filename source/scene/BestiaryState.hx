@@ -42,6 +42,7 @@ class BestiaryState extends FlxState {
     var _load:Loading;
 
     override public function create():Void {
+        FlxG.camera.fade(FlxColor.TRANSPARENT, 2, true);
         FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
         _load = new Loading();
         _load.screenCenter(FlxAxes.XY);
