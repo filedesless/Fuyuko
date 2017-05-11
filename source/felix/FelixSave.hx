@@ -19,7 +19,7 @@ class FelixSave {
         @return The value saved
     **/
     public static function set_level_completed(newValue:Int):Int {
-        if (newValue > level_completed) {
+        if (newValue > level_completed || newValue == 0) {
             FlxG.save.data.level_completed = newValue;
             FlxG.save.flush();
             return newValue;
@@ -78,7 +78,18 @@ class FelixSave {
         ui_sound = 50;
         sound_effects = 50;
         ambient_music = 50;
-        FlxG.save.erase();
+        setup_done = false;
+        level_completed = 0;
+        antialiasing = false;
+        vitMob = 1;
+        vitObstacles = 1;
+        recoTime = 1;
+        health = 1;
+        dmgMonster = 1;
+        dmgObstacles = 1;
+        light = 1;
+        brightness = 1;
+        refreshRate = 2;
     }
 
     /** Volume of the ambient music, from 0 to 100 **/

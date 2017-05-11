@@ -851,7 +851,7 @@
         {
             "id": 94,
             "name": "Wisp",
-            "desc": "Hey! Bonne chance! Je ne peux te guider plus loin!",
+            "desc": "Hey! Bonne chance! Je ne peux pas te guider plus loin!",
             "light": 200,
             "scale": 1,
             "x": 390.666666666667,

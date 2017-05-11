@@ -354,7 +354,7 @@
             "light": 192,
             "damage": 0,
             "scale": 1,
-            "desc": "Hey! Lance lui de la lumière!",
+            "desc": "Hey! Lance-lui de la lumière!",
             "x": 4130,
             "y": 1648
         },
@@ -363,7 +363,7 @@
             "light": 192,
             "damage": 0,
             "scale": 1,
-            "desc": "Attention! Cours et ne t'arrete pas!",
+            "desc": "Attention! Cours et ne t'arrête pas!",
             "x": 4618,
             "y": 1728
         },
@@ -372,7 +372,7 @@
             "light": 192,
             "damage": 0,
             "scale": 1,
-            "desc": "Cours! Sa va plus vite!",
+            "desc": "Cours! Ça va plus vite!",
             "x": 2268,
             "y": 294
         },
@@ -381,7 +381,7 @@
             "light": 192,
             "damage": 0,
             "scale": 1,
-            "desc": "Attention! Monstre collant! Cours!",
+            "desc": "Attention! Monstres collants! Cours!",
             "x": 3680,
             "y": 285
         },
@@ -390,7 +390,7 @@
             "light": 192,
             "damage": 0,
             "scale": 1,
-            "desc": "Encore! Ensuite des petits saut!",
+            "desc": "Encore! Ensuite des petits sauts!",
             "x": 3246,
             "y": 1878
         },
@@ -426,7 +426,7 @@
             "light": 192,
             "damage": 0,
             "scale": 1,
-            "desc": "Attention! Elle tombe!",
+            "desc": "Attention! Elles tombent!",
             "x": 3110,
             "y": 1042
         },
@@ -444,7 +444,7 @@
             "light": 192,
             "damage": 0,
             "scale": 1,
-            "desc": "Hey! A tu détruis les 2 rouges?",
+            "desc": "Hey! A-tu détruis les 2 rouges?",
             "x": 5541,
             "y": 1519
         }

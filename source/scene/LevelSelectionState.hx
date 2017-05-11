@@ -1,5 +1,6 @@
 package scene;
 
+import felix.FelixLvlButton;
 import flixel.math.FlxRect;
 import flixel.FlxSprite;
 import flixel.util.FlxAxes;
@@ -27,6 +28,8 @@ class LevelSelectionState extends FlxState {
     override public function create():Void {
         super.create();
         FlxG.camera.antialiasing = felix.FelixSave.get_antialiasing();
+
+        _lvlChosen = felix.FelixSave.get_level_completed() + 1;
         
         var fileList = FileSystem.readDirectory("assets/tilemap/");
         fileList = fileList.filter(function(f:String):Bool { return f.endsWith(".json"); });
@@ -72,7 +75,7 @@ class LevelSelectionState extends FlxState {
             var cnt:Int = 1;
             for (sprite in _spriteGroup) {
                 var rect:FlxRect = new FlxRect(sprite.x, sprite.y, sprite.width, sprite.height);
-                if (rect.containsPoint(FlxG.mouse.getPosition()))
+                if (cnt <= felix.FelixSave.get_level_completed() + 1 && rect.containsPoint(FlxG.mouse.getPosition()))
                 {
                     _lvlChosen = cnt;
                     drawLines();
@@ -85,6 +88,17 @@ class LevelSelectionState extends FlxState {
 
     function drawLines():Void {
         var cnt:Int = 1;
+        for (btn in _group) {
+            if (Std.is(btn, FelixLvlButton)) {
+                var button = cast(btn, FelixLvlButton);
+                if (cnt++ <= felix.FelixSave.get_level_completed() + 1) {
+                    button.enable();
+                } else {
+                    button.disable();
+                }
+            }
+        }
+        cnt = 1;
         for (sprite in _spriteGroup) {
             if (cnt == _lvlChosen) {
                 FlxSpriteUtil.drawRect(sprite, 0, 0, sprite.width, sprite.height, FlxColor.TRANSPARENT, { thickness: 10, color: FlxColor.RED });

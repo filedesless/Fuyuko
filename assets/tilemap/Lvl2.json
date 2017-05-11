@@ -1,6 +1,6 @@
 {
     "header": {
-        "name": "Roi des Suraimu Bleu",
+        "name": "Roi des Suraimus Bleus",
         "lvl": 2,
         "background": "images/level/cavebg4.png",
         "thumbnail": "Lvl2.png"
@@ -191,7 +191,7 @@
             "height": 13.3333,
             "id": 76,
             "name": "Wisp",
-            "desc": "Attention! Le Roi des Suraimu bleu est proche!",
+            "desc": "Attention! Le Roi des Suraimus bleus est proche!",
             "light": 128,
             "scale": 1,
             "width": 12,
@@ -213,7 +213,7 @@
             "height": 13.3333,
             "id": 85,
             "name": "Wisp",
-            "desc": "Tu est presque arrivé! As-tu détruis les 3 rouges?",
+            "desc": "Tu es presque arrivé! As-tu détruis les 3 rouges?",
             "light": 128,
             "scale": 1,
             "width": 12,
@@ -224,7 +224,7 @@
             "height": 13.3333,
             "id": 83,
             "name": "Wisp",
-            "desc": "Par ici! Un crystal rouge a gauche!",
+            "desc": "Par ici! Un crystal rouge à gauche!",
             "light": 128,
             "scale": 1,
             "width": 12,

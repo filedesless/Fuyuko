@@ -1,5 +1,6 @@
 package scene;
 
+import flixel.math.FlxPoint;
 import flixel.FlxSubState;
 import flixel.FlxG;
 import flixel.util.FlxColor;
@@ -94,11 +95,16 @@ class OptionSubState extends FlxSubState {
         );
         _btnAntialiasing.scrollFactor.set();
 
-        _btnAntialiasing = new FelixMagicButton(
+        _btnFlushSave = new FelixMagicButton(
             FlxG.camera.width / 2 + 130, FlxG.camera.height / 2 + 15 + 3*45, 
-            this, "Effacer la sauvegarde", function() { felix.FelixSave.erase(); loadData(); }
+            this, "Effacer la partie", function() { felix.FelixSave.erase(); loadData(); }
         );
-        _btnAntialiasing.scrollFactor.set();
+        _btnFlushSave.button.label.size = 14;
+        _btnFlushSave.button.label.setBorderStyle(OUTLINE, FlxColor.RED, 1);
+        var center:FlxPoint = new FlxPoint(_btnFlushSave.button.width / 2 - _btnFlushSave.button.label.width / 2, 
+            _btnFlushSave.button.height / 2 - _btnFlushSave.button.label.height / 2);
+        _btnFlushSave.button.labelOffsets = [ center, center, center ];
+        _btnFlushSave.scrollFactor.set();
 
 
         var btn:FelixMagicButton = new FelixMagicButton(
@@ -126,6 +132,7 @@ class OptionSubState extends FlxSubState {
         add(_ambientSlider);
         add(_uiSlider);
         add(_refreshRateSlider);
+        add(_btnFlushSave);
     }
     
     function loadData():Void {
