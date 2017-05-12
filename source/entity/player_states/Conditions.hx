@@ -7,13 +7,13 @@ import flixel.FlxG;
 class Conditions
 {
     public static function isIdle(owner:Player):Bool {
-        return !FlxG.keys.anyPressed([A, S, D, W]);
+        return !(owner.controls.getLeftPressed() || owner.controls.getRightPressed() || owner.controls.getUpPressed() || owner.controls.getDownPressed());
     }
     public static function isWalking(owner:Player):Bool {
-        return FlxG.keys.anyPressed([A, D]);
+        return owner.controls.getLeftPressed() || owner.controls.getRightPressed();
     }
     public static function isRunning(owner:Player):Bool {
-        return FlxG.keys.pressed.SHIFT && isWalking(owner);
+        return owner.controls.getModifierPressed() && isWalking(owner);
     }
     public static function isNotRunning(owner:Player):Bool {
         return !isRunning(owner);
@@ -28,13 +28,13 @@ class Conditions
         return isWalking(owner) && isNotRunning(owner);
     }
     public static function isCrouching(owner:Player):Bool {
-        return FlxG.keys.pressed.S;
+        return owner.controls.getDownPressed();
     }
     public static function isNotCrouching(owner:Player):Bool {
         return !isCrouching(owner);
     }
     public static function isJumping(owner:Player):Bool {
-        return FlxG.keys.anyPressed([SPACE, W]) && isGrounded(owner) && owner.cantJump == 0;
+        return owner.controls.getUpPressed() && isGrounded(owner) && owner.cantJump == 0;
     }
     public static function isFalling(owner:Player):Bool {
         return (owner.velocity.y >= 20);
@@ -49,8 +49,8 @@ class Conditions
         return owner.animation.finished;
     }
     public static function isPushing(owner:Player):Bool {
-        return (FlxG.keys.pressed.A && owner.isTouching(FlxObject.LEFT)) ||
-            (FlxG.keys.pressed.D && owner.isTouching(FlxObject.RIGHT));
+        return (owner.controls.getLeftPressed() && owner.isTouching(FlxObject.LEFT)) ||
+            (owner.controls.getRightPressed() && owner.isTouching(FlxObject.RIGHT));
     }
     public static function isNotPushing(owner:Player):Bool {
         return !isPushing(owner);

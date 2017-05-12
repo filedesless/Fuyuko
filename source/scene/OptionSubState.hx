@@ -27,6 +27,7 @@ class OptionSubState extends FlxSubState {
     var _refreshRateSlider:FlxSlider;
 
     var _btnAntialiasing:FelixMagicButton;
+    var _btnControls:FelixMagicButton;
     var _btnFlushSave:FelixMagicButton;
 
     var i:Int = 0;
@@ -97,6 +98,15 @@ class OptionSubState extends FlxSubState {
         );
         _btnAntialiasing.scrollFactor.set();
 
+        _btnControls = new FelixMagicButton(
+            FlxG.camera.width / 2 + 130, FlxG.camera.height / 2 - 100 - 15 + 3*45, 
+            this, if (felix.FelixSave.get_controls() == "Righty") "Droitier" else "Gaucher", function() { 
+                _btnControls.button.text = if (_btnControls.button.text == "Droitier") "Gaucher" else "Droitier";
+                felix.FelixSave.set_controls(if (_btnControls.button.text == "Droitier") "Gaucher" else "Droitier");
+            }
+        );
+        _btnControls.scrollFactor.set();
+
         _btnFlushSave = new FelixMagicButton(
             FlxG.camera.width / 2 + 130, FlxG.camera.height / 2 + 15 + 3*45, 
             this, "Effacer la partie", function() { felix.FelixSave.erase(); loadData(); }
@@ -137,6 +147,7 @@ class OptionSubState extends FlxSubState {
         add(_uiSlider);
         add(_refreshRateSlider);
         add(_btnFlushSave);
+        add(_btnControls);
     }
     
     function loadData():Void {

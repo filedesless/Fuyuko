@@ -14,7 +14,7 @@ class Main extends Sprite
 
         #if debug
         FlxG.debugger.visible = true;
-        FlxG.debugger.drawDebug = true;
+        FlxG.debugger.drawDebug = true;        
         felix.FelixSound.debug();
         #end
         //trace(felix.FelixSave.get_level_completed());

@@ -12,6 +12,9 @@ import addons.FlxFSM;
 import flixel.system.FlxSound;
 import flixel.math.FlxPoint;
 import flixel.math.FlxRect;
+import felix.input.IFelixController;
+import felix.input.Righty;
+import felix.input.Lefty;
 
 class Player extends Entity
 {
@@ -21,6 +24,7 @@ class Player extends Entity
     public var diffFactor:Float = 1;
     public var cantJump:Int = 0;
     public var slowedBy:Int = 0;
+    public var controls:IFelixController;
 
     var _heartSound:FlxSound = new FlxSound();
     var _hurtSound:FlxSound = new FlxSound();
@@ -39,7 +43,9 @@ class Player extends Entity
         felix.FelixSound.register(_hurtSound);
         felix.FelixSound.register(_healSound);
 
-        baseHealth = health = Math.floor(felix.FelixSave.get_health() * 0.2 * if (json.health == null) 150 else json.health) * 5;  
+        baseHealth = health = Math.floor(felix.FelixSave.get_health() * 0.2 * if (json.health == null) 150 else json.health) * 5;
+        controls = if (felix.FelixSave.get_controls() == "Righty") new Righty() else new Lefty();
+        trace(felix.FelixSave.get_controls());
 
         fsm = new FlxFSM<Player>(this);
         fsm.transitions
@@ -109,8 +115,8 @@ class Player extends Entity
     }
 
     public override function update(elapsed:Float):Void {
-        var pressingLeft:Bool = FlxG.keys.pressed.A;
-        var pressingRight:Bool = FlxG.keys.pressed.D;
+        var pressingLeft:Bool = controls.getLeftPressed();
+        var pressingRight:Bool = controls.getRightPressed();
 
         nearBox = new FlxRect(getMidpoint().x - 3 * 64, getMidpoint().y - 3 * 64, 6 * 64, 6 * 64);
         proximityBox = new FlxRect(getMidpoint().x - 2 * 64, getMidpoint().y - 2 * 64, 4 * 64, 4 * 64);

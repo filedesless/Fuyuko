@@ -69,6 +69,27 @@ class FelixSave {
         return antialiasing;
     }
 
+    @:isVar static var controls(get, set):String = "Righty";
+
+    public static function get_controls():String {
+        if (FlxG.save.data.controls != null)
+            return FlxG.save.data.controls;
+        return "Righty";
+    }
+    /**
+        Sets the setup flag to true or false
+        @param  newValue    A boolean value indicating wether or not the setup was done
+        @return The value saved
+    **/
+    public static function set_controls(newValue:String):String {
+        if (newValue != controls) {
+            FlxG.save.data.controls = newValue;
+            FlxG.save.flush();
+            return newValue;
+        }
+        return controls;
+    }
+
     /**
      *  Erase all save data and reset cache
      *  
@@ -91,6 +112,7 @@ class FelixSave {
         brightness = 1;
         refreshRate = 2;
         deathCount = 0;
+        controls = "Righty";
     }
 
     /** Volume of the ambient music, from 0 to 100 **/
